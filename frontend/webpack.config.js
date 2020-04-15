@@ -95,6 +95,16 @@ module.exports = {
       filename: 'index.html',
       minify: false,
     }),
+    new HTMLplugin({
+      template: path.resolve(__dirname, 'pug', 'pages', 'card.pug'),
+      filename: 'card.html',
+      minify: false,
+    }),
+    new HTMLplugin({
+      template: path.resolve(__dirname, 'pug', 'pages', 'personal.pug'),
+      filename: 'personal.html',
+      minify: false,
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
     })
