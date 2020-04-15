@@ -11,13 +11,7 @@
 */
 
 @media (min-width: 768px) {
-  h1 {
-    text-align: left;
-    font-size: 3rem;
-  }
-  h2, h3 {
-    font-size: 2rem;
-  }
+
 }
 
 /*
@@ -41,5 +35,11 @@
 */
 
 @media (min-width: 1200px) {
+  h1 {
+    font-size: 2.625rem;
+  }
+}
+
+@media (min-width: 1440px) {
 
 }

@@ -219,3 +219,9 @@ xl > 1200
     }
   }
 }
+
+@media (min-width: 1440px) {
+  ._container {
+    max-width: 1368px;
+  }
+}

@@ -24,6 +24,8 @@ body {
   display: flex;
   flex: 1 0 auto;
   flex-direction: column;
+  padding-top: 69px;
+  box-sizing: border-box;
 }
 
 .main {
@@ -38,16 +40,18 @@ body {
   display: inline-block;
   text-decoration: none;
   outline: none;
-  color: $g-text-color;
-  font-weight: 700;
+  color: $p-text-color;
+  font-weight: 400;
+  transition: all .7s ease;
+  &._s {
+    color: $s-text-color;
+  }
   &:hover,
   &:active,
   &:focus,
   &._active {
     color: $p-active-color;
-  }
-  &._o {
-    color: $o-text-color;
+    cursor: pointer;
   }
 }
 
@@ -59,13 +63,14 @@ body {
 
 h1, h2, h3, h4, h5, h6, .body0 {
   margin: 0;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+h1 {
   font-size: 1.5rem;
   font-weight: 700;
   text-align: center;
-}
-
-h2, h3, .body0 {
-
 }
 
 .body1 {
@@ -108,56 +113,62 @@ strong {
 .button,
 .input {
   width: 100%;
-  max-width: 184px;
-  min-height: 36px;
+  max-width: 230px;
+  min-height: 44px;
   display: flex;
   justify-content: center;
   border: 1px solid transparent;
   padding: 5px 8px;
-  border-radius: 18px;
+  border-radius: 4px;
   text-align: center;
-  font-size: 0.875rem;
+  font-size: 1.125rem;
   outline: none;
   box-sizing: border-box;
+  transition: all .7s ease;
 }
 
 .button {
   align-items: center;
-  font-weight: 700;
+  font-weight: 500;
   color: $s-text-color;
-  background-color: $s-background-color;
-  box-shadow: 0 4px 10px 0 rgba(255, 141, 44, 0.25);
+  background-color: $p-active-color;
+  border: 1px solid $p-active-color;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12);
   text-transform: none;
   text-decoration: none;
-  border: 1px solid $s-background-color;
   cursor: pointer;
   &:focus, &:active, &:hover {
-    color: $s-active-color;
+    color: $p-active-color;
     background-color: $background-color;
+    box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
   }
   &._s {
-    color: $s-active-color;
+    color: $p-text-color;
     background-color: $background-color;
     &:focus, &:active, &:hover {
       color: $s-text-color;
-      background-color: $s-background-color;
+      background-color: $p-active-color;
     }
   }
 }
 
 .input {
-  max-width: 332px;
-  min-height: 40px;
-  padding-top: 10px;
-  background-color: #f4f8f7;
-  border-radius: 2px;
+  max-width: 230px;
+  background-color: $background-color;
+  border-color: $p-active-color;
   text-align: left;
+  &._s {
+    border-radius: 0;
+    border-color: transparent;
+    border-bottom-color: $p-active-color;
+  }
   &:focus, &:active, &:hover {
-    border: 1px solid $s-active-color;
+    border: 1px solid $b-text-color;
+    border-radius: 4px;
   }
   &:invalid:not(:placeholder-shown),
   &._error {
-    border: 1px solid #FF0000;
+    background-color: rgba(255, 117, 117, 0.8);
   }
   &:focus + label,
   &:valid:not(:placeholder-shown) + label {
