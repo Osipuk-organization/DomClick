@@ -1,0 +1,120 @@
+.user-profile {
+    padding: 64px 48px 48px 48px;
+}
+
+.user-edit {
+    padding: 0 0 0 15px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: #ff7373;
+}
+
+.page-name._col-12 h2 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 37px;
+    color: #ff7373;
+}
+
+.user-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-image img {
+    border-radius: 100%;
+}
+
+.user-info {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.user-info ul {
+    padding-left: 0px;
+}
+
+.user-profile-p {
+    margin: 0px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: #828282;
+}
+
+.user-info ul li {
+    list-style-type: none;
+    padding-bottom: 24px;
+}
+
+.user-info ul li:last-child {
+    padding-bottom: 9px;
+}
+
+.user-profile-h3 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #333333;
+}
+
+.user-balance h1 {
+    text-align: left;
+}
+
+.rate-info {
+    padding-top: 52px;
+}
+
+.rate-info h4 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #8cc3e2;
+}
+
+.line-info{
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 30px;
+}
+
+.rate-info span {
+    padding-left: 4px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #3f3f3f;
+}
+
+.info-line {
+    width: 324px;
+    height: 12px;
+    background-color: #e7e7e7;
+    border-radius: 6px;
+}
+
+.progress-line {
+    width: 60%;
+    height: 100%;
+    background-color: #ff7373;
+    border-radius: 6px;
+}
+
+.btn-vip{
+    width: 200px;
+    height: 40px;    
+}

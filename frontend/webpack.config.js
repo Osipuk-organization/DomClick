@@ -105,6 +105,11 @@ module.exports = {
       filename: 'personal.html',
       minify: false,
     }),
+    new HTMLplugin({
+      template: path.resolve(__dirname, 'pug', 'pages', 'user-profile.pug'),
+      filename: 'user-profile.html',
+      minify: false,
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
     })

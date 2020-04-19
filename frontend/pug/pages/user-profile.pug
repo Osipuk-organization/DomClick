@@ -1,0 +1,61 @@
+extends layout/main
+
+block content
+  ._container._row.user-profile
+    .page-name._col-12
+      h2
+        |Личный кабинет
+    ._col-8._offset-4.user-edit
+      |Редактировать
+    ._col-4.user-image
+      img(src="https://placehold.it/211x211" alt="user-image")
+    ._col-4
+      .user-info
+        ul
+          li
+            p.user-profile-p
+              |ФИО
+            h3.user-profile-h3
+              |Белоцерковский Александр Александрович
+          li
+            p.user-profile-p
+              |Дата рождения
+            h3.user-profile-h3
+              |18.06.1990
+          li
+            p.user-profile-p
+              |Номер телефона
+            h3.user-profile-h3
+              |8 (425) 987-56-25
+          li
+            p.user-profile-p
+              |E-mail
+            h3.user-profile-h3
+              |belotserkovskiaa@gmail.com
+    ._col-4.user-rate
+      p.user-profile-p
+        |Мой тариф:
+      h3.user-profile-h3
+        |Стандарт
+      .rate-info
+        .info-line
+          .progress-line
+        .line-info
+          h4
+            |5/7
+          span
+            |экспертных оценок объекта
+        .info-line
+          .progress-line
+        .line-info
+          h4
+            |9/12
+          span
+            |видеопросмотров объекта
+        .button.btn-vip
+          |ТАРИФ VIP
+    ._col-8._offset-4.user-balance
+      p.user-profile-p
+        |Мой баланс
+      h1
+        |24 000 ₽      
