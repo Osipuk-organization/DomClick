@@ -1,0 +1,59 @@
+extends layout/main
+
+block content
+    ._container._row.user-profile
+        .user-profile-header._col-12
+            h2
+                |Личный кабинет
+        ._col-8._offset-4.user-edit
+            |Редактировать
+        ._col-4.user-photo
+            .user-avatar
+                img(src="https://placehold.it/211x211" alt="user-image")
+                .plus-btn
+                    p
+                        |+
+        ._col-4
+            .user-info
+                ul
+                    li
+                        p
+                            |ФИО
+                        input.input._s.edit-input(type="text" pattern="[abc]*" placeholder="Белоцерковский Александр Александрович")  
+                    li
+                        p
+                            |Дата рождения
+                        input.input._s.edit-input(type="text" pattern="[abc]*" placeholder="18.06.1990")
+                    li
+                        p
+                            |Номер телефона
+                        input.input._s.edit-input(type="text" pattern="[abc]*" placeholder="8 (425) 987-56-25")
+                    li
+                        p
+                            |E-mail
+                        input.input._s.edit-input(type="text" pattern="[abc]*" placeholder="belotserkovskiaa@gmail.com")
+        ._col-4.user-rate
+            p
+                |Мой тариф:
+            h3
+                |Стандарт
+            .rate-info
+                .info-line
+                    .info-line.progress
+                .line-info
+                    h4
+                        |5/7
+                    span
+                        |экспертных оценок объекта
+                .info-line
+                    .info-line.progress
+                .line-info
+                    h4
+                        |9/12
+                    span
+                        |видеопросмотров объекта
+                .button.btn-buy-vip
+                    |ТАРИФ VIP
+        ._col-4._offset-4.apply-edit
+            button.button(type="button") Сохранить
+            button.button(type="button") Отменить    
