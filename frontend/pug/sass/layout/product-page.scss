@@ -1,0 +1,129 @@
+.product-navigation {
+    display: flex;
+    & p {
+        padding-left: 8px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        color: #ff7373;
+        &:first-child {
+            padding-left: 0px;
+        }
+    }
+}
+
+.product-name {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 37px;
+    color: #ff7373;
+}
+
+.product-image {
+    width: 660px;
+    height: 615px;
+    position: relative;
+}
+
+.img-info {
+    display: flex;
+    width: 578px;
+    height: 114px;
+    background: #f8f8f8;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    left: 44px;
+    top: 570px;
+    & ._col-3 {
+        justify-content: center;
+        align-self: center;
+        & ._col-12 {
+            justify-content: space-around;
+            display: flex;
+            & p {
+                align-self: flex-end;
+                padding-bottom: 5px;
+            }
+        }
+    }
+    & p {
+        margin: 0px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+        color: #3f3f3f;
+    }
+}
+
+.product-info {
+    & p {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 21px;
+        color: #333333;
+    }
+    & ul {
+        padding-left: 15px;
+    }
+    & .product-price {
+        padding: 0px;
+        display: flex;
+        & h1 {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 48px;
+            line-height: 56px;
+        }
+        & p {
+            padding-left: 5px;
+            padding-top: 15px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 16px;
+            color: #3f3f3f;
+        }
+    }
+}
+
+.show-phone {
+    padding-left: 15px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #ff7373;
+}
+
+.get-assessment {
+    display: flex;
+    padding-top: 79px;
+    & button {
+        max-width: 318px;
+        height: 52px;
+        margin-right: 35px;
+    } 
+}
+
+.get-video {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        text-decoration-line: underline;
+        color: #8cc3e2;
+    }
