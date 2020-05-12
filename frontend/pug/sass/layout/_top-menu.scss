@@ -5,6 +5,7 @@
   left: 0;
   right: 0;
   min-height: 69px;
+  background-color: #fff;
   &__row {
     align-items: stretch;
   }
@@ -44,9 +45,8 @@
   }
   &__icon {
     display: block;
-    width: 25px;
-    height: 25px;
-    padding: 15px;
+    min-width: 25px + 30;
+    min-height: 25px + 30;
     border-radius: 50%;
     background-repeat: no-repeat;
     background-position: center center;
@@ -56,6 +56,11 @@
     }
     &._bell {
       background-image: url(../svg/bell.svg);
+    }
+    &._offers {
+      min-width: 44px;
+      min-height: 44px;
+      margin-left: 15px;
     }
     &:hover,
     &:active,

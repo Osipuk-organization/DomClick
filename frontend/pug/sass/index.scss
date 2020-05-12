@@ -65,6 +65,7 @@ h1, h2, h3, h4, h5, h6, .body0 {
   margin: 0;
   font-size: 1.25rem;
   font-weight: 400;
+  color: #ff7373;
 }
 
 h1 {
@@ -158,6 +159,7 @@ strong {
   border-color: $p-active-color;
   text-align: left;
   &._s {
+    color: $p-text-color;
     border-radius: 0;
     border-color: transparent;
     border-bottom-color: $p-active-color;
