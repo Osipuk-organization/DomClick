@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: $background-color;
+  font-family: $default-font;
 }
 
 .wrapper {
@@ -15,7 +16,6 @@ body {
   min-width: 320px;
   min-height: 320px;
   margin: 0 auto;
-  font-family: $default-font;
   font-weight: 400;
   color: $p-text-color;
 }
@@ -30,6 +30,7 @@ body {
 
 .main {
   position: relative;
+  padding-bottom: 65px;
 }
 
 .footer {
