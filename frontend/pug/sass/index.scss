@@ -292,12 +292,10 @@ strong {
 }
 .swiper {
   &-container {
-    padding: 15px;
+    padding: 15px 15px 48px;
     box-sizing: border-box;
   }
   &-slide {
-    border-radius: 8px;
-    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
     background-color: $background-color;
     overflow: hidden;
     &:hover .portfolio__text,
@@ -310,46 +308,23 @@ strong {
   &__btn-next {
     position: absolute;
     z-index: 5;
-    top: 50%;
+    bottom: 0;
     width: 32px;
     height: 32px;
-    background-color: $s-background-color;
-    border-radius: 2px;
-    //background-image: url(../svg/slide-btn.svg);
+    background-image: url(../svg/icon_arrow.svg);
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: 0 0;
     outline: none;
     cursor: pointer;
-    &:hover,
-    &:active,
-    &:focus {
-
+    &.swiper-button-disabled {
+      background-position: -32px - 16 0;
     }
   }
   &__btn-prev {
-    left: 0;
-    transform: translateY(-50%);
+    right: 15px + 16 + 32;
   }
   &__btn-next {
-    right: 0;
-    transform: translateY(-50%) rotate(180deg);
-  }
-  &__pagination {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0 15px 13px;
-    box-sizing: border-box;
-  }
-  &-pagination-bullet {
-    width: 24px;
-    height: 2px;
-    background-color: #c6cacf;
-    border-radius: 0;
-    opacity: 1;
-    margin: 7px 6px;
-  }
-  &-pagination-bullet-active {
-    background-color: $s-background-color;
+    right: 15px;
+    transform: rotate(180deg);
   }
 }

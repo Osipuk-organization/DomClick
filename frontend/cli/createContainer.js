@@ -9,11 +9,9 @@ const nameLowerCase = componentName.toLowerCase();
 
 fs.mkdirSync(path.resolve(__dirname, '..', 'src', 'components', componentName));
 
-const componentCode = `import './${componentName}.scss';
+const componentCode = `import React, {Fragment, useState, useEffect} from 'react';
 
-import React, {Fragment, useState, useEffect} from 'react';
-
-const ${componentName} = function(props) {
+export const ${componentName} = function(props) {
     //props
     const {myProps} = props
     //state
@@ -32,9 +30,7 @@ const ${componentName} = function(props) {
             /* context */
         </Fragment>
     );
-}
-
-export default ${componentName};`;
+}`;
 
 const containerCode = `import React from 'react';
 import { connect } from 'react-redux';
@@ -65,12 +61,7 @@ fs.writeFileSync(
 
 fs.writeFileSync(
     path.resolve(__dirname, '..', 'src', 'components', componentName, 'index.js'),
-    `export {default} from './${componentName}';`
-);
-
-fs.writeFileSync(
-    path.resolve(__dirname, '..', 'src', 'components', componentName, `${componentName}.scss`),
-    `.${componentName.toLowerCase()} {}`
+    `export {${componentName}} from './${componentName}';`
 );
 
 fs.writeFileSync(

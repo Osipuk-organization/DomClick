@@ -1,9 +1,10 @@
 import Hello from 'components/Hello';
+import { Index } from 'layouts/index';
 
 export default [
   {
     path: '/',
-    component: Hello,
+    component: Index,
     exact: true
     },
   {

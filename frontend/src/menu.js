@@ -1,7 +1,18 @@
 export default [
   {
     link: "/",
-    title: "Home",
-    access: 0
-    },
+    title: "Услуги"
+  },
+  {
+    link: "/",
+    title: "Застройщики",
+  },
+  {
+    link: "/",
+    title: "Ипотека",
+  },
+  {
+    link: "/",
+    title: "Контакты",
+  },
 ];

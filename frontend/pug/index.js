@@ -1,9 +1,29 @@
 import 'normalize.css';
-import '../node_modules/swiper/css/swiper.css';
+import './swiper.min.css';
 import './sass/index.scss';
 
-//import Swiper from 'swiper';
-
+const Swiper = require('./swiper.min');
+for (let i of document.querySelectorAll('.swiper-container')) {
+  let s = new Swiper(`#${i.id}`, {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    breakpoints: {
+      767: {
+        slidesPerView: 1,
+      },
+      991: {
+        slidesPerView: 2,
+      },
+      1439: {
+        slidesPerView: 3,
+      },
+    },
+    navigation: {
+      prevEl: `#${i.id}-prev`,
+      nextEl: `#${i.id}-next`,
+    },
+  });
+}
 
 function setSelectionRange(input, selectionStart, selectionEnd) {
   if (input.setSelectionRange) {
@@ -67,8 +87,8 @@ function inputPhone(e) {
     setCaretToPos(element, element.value.search("_"));
   }
 }
-let phoneInput = document.querySelectorAll('input[type="tel"]');
-for (let i of phoneInput) {
+
+for (let i of document.querySelectorAll('input[type="tel"]')) {
   i.addEventListener("click", clickPhone);
   i.addEventListener("focus", clickPhone);
   i.addEventListener("blur", blurPhone);
