@@ -8,11 +8,11 @@ export const Offers = function(props) {
       <div className="offers__sub-caption _col-12">1-комнатные</div>
       <div className="_col-12 _col-md-6 _col-lg-4 _col-xl-3">
         <div className="offers__item _row">
-          <div className="offers__top-img" style="background-image: url(/img/offers1.jpg)"></div>
+          <div className="offers__top-img" styled="background-image: url(/img/offers1.jpg)"></div>
           <div className="offers__line-img-box">
-            <div className="offers__line-img" style="background-image: url(/img/offers2.jpg)"></div>
-            <div className="offers__line-img" style="background-image: url(/img/offers3.jpg)"></div>
-            <div className="offers__line-img" style="background-image: url(/img/offers4.jpg)"></div>
+            <div className="offers__line-img" styled="background-image: url(/img/offers2.jpg)"></div>
+            <div className="offers__line-img" styled="background-image: url(/img/offers3.jpg)"></div>
+            <div className="offers__line-img" styled="background-image: url(/img/offers4.jpg)"></div>
             <div className="offers__line-other">3</div>
           </div>
           <div className="offers__bottom _row">
@@ -34,11 +34,11 @@ export const Offers = function(props) {
       </div>
       <div className="_col-12 _col-md-6 _col-lg-4 _col-xl-3">
         <div className="offers__item _row">
-          <div className="offers__top-img" style="background-image: url(/img/offers1.jpg)"></div>
+          <div className="offers__top-img" styled="background-image: url(/img/offers1.jpg)"></div>
           <div className="offers__line-img-box">
-            <div className="offers__line-img" style="background-image: url(/img/offers2.jpg)"></div>
-            <div className="offers__line-img" style="background-image: url(/img/offers3.jpg)"></div>
-            <div className="offers__line-img" style="background-image: url(/img/offers4.jpg)"></div>
+            <div className="offers__line-img" styled="background-image: url(/img/offers2.jpg)"></div>
+            <div className="offers__line-img" styled="background-image: url(/img/offers3.jpg)"></div>
+            <div className="offers__line-img" styled="background-image: url(/img/offers4.jpg)"></div>
             <div className="offers__line-other">3</div>
           </div>
           <div className="offers__bottom _row">
@@ -60,11 +60,11 @@ export const Offers = function(props) {
       </div>
       <div className="_col-12 _col-md-6 _col-lg-4 _col-xl-3">
         <div className="offers__item _row">
-          <div className="offers__top-img" style="background-image: url(/img/offers1.jpg)"></div>
+          <div className="offers__top-img" styled="background-image: url(/img/offers1.jpg)"></div>
           <div className="offers__line-img-box">
-            <div className="offers__line-img" style="background-image: url(/img/offers2.jpg)"></div>
-            <div className="offers__line-img" style="background-image: url(/img/offers3.jpg)"></div>
-            <div className="offers__line-img" style="background-image: url(/img/offers4.jpg)"></div>
+            <div className="offers__line-img" styled="background-image: url(/img/offers2.jpg)"></div>
+            <div className="offers__line-img" styled="background-image: url(/img/offers3.jpg)"></div>
+            <div className="offers__line-img" styled="background-image: url(/img/offers4.jpg)"></div>
             <div className="offers__line-other">3</div>
           </div>
           <div className="offers__bottom _row">
@@ -86,11 +86,11 @@ export const Offers = function(props) {
       </div>
       <div className="_col-12 _col-md-6 _col-lg-4 _col-xl-3">
         <div className="offers__item _row">
-          <div className="offers__top-img" style="background-image: url(/img/offers1.jpg)"></div>
+          <div className="offers__top-img" styled="background-image: url(/img/offers1.jpg)"></div>
           <div className="offers__line-img-box">
-            <div className="offers__line-img" style="background-image: url(/img/offers2.jpg)"></div>
-            <div className="offers__line-img" style="background-image: url(/img/offers3.jpg)"></div>
-            <div className="offers__line-img" style="background-image: url(/img/offers4.jpg)"></div>
+            <div className="offers__line-img" styled="background-image: url(/img/offers2.jpg)"></div>
+            <div className="offers__line-img" styled="background-image: url(/img/offers3.jpg)"></div>
+            <div className="offers__line-img" styled="background-image: url(/img/offers4.jpg)"></div>
             <div className="offers__line-other">3</div>
           </div>
           <div className="offers__bottom _row">
@@ -113,11 +113,11 @@ export const Offers = function(props) {
       <div className="offers__sub-caption _col-12">2-комнатные</div>
       <div className="_col-12 _col-md-6 _col-lg-4 _col-xl-3">
         <div className="offers__item _row">
-          <div className="offers__top-img" style="background-image: url(/img/offers1.jpg)"></div>
+          <div className="offers__top-img" styled="background-image: url(/img/offers1.jpg)"></div>
           <div className="offers__line-img-box">
-            <div className="offers__line-img" style="background-image: url(/img/offers2.jpg)"></div>
-            <div className="offers__line-img" style="background-image: url(/img/offers3.jpg)"></div>
-            <div className="offers__line-img" style="background-image: url(/img/offers4.jpg)"></div>
+            <div className="offers__line-img" styled="background-image: url(/img/offers2.jpg)"></div>
+            <div className="offers__line-img" styled="background-image: url(/img/offers3.jpg)"></div>
+            <div className="offers__line-img" styled="background-image: url(/img/offers4.jpg)"></div>
             <div className="offers__line-other">3</div>
           </div>
           <div className="offers__bottom _row">
@@ -139,11 +139,11 @@ export const Offers = function(props) {
       </div>
       <div className="_col-12 _col-md-6 _col-lg-4 _col-xl-3">
         <div className="offers__item _row">
-          <div className="offers__top-img" style="background-image: url(/img/offers1.jpg)"></div>
+          <div className="offers__top-img" styled="background-image: url(/img/offers1.jpg)"></div>
           <div className="offers__line-img-box">
-            <div className="offers__line-img" style="background-image: url(/img/offers2.jpg)"></div>
-            <div className="offers__line-img" style="background-image: url(/img/offers3.jpg)"></div>
-            <div className="offers__line-img" style="background-image: url(/img/offers4.jpg)"></div>
+            <div className="offers__line-img" styled="background-image: url(/img/offers2.jpg)"></div>
+            <div className="offers__line-img" styled="background-image: url(/img/offers3.jpg)"></div>
+            <div className="offers__line-img" styled="background-image: url(/img/offers4.jpg)"></div>
             <div className="offers__line-other">3</div>
           </div>
           <div className="offers__bottom _row">
@@ -165,11 +165,11 @@ export const Offers = function(props) {
       </div>
       <div className="_col-12 _col-md-6 _col-lg-4 _col-xl-3">
         <div className="offers__item _row">
-          <div className="offers__top-img" style="background-image: url(/img/offers1.jpg)"></div>
+          <div className="offers__top-img" styled="background-image: url(/img/offers1.jpg)"></div>
           <div className="offers__line-img-box">
-            <div className="offers__line-img" style="background-image: url(/img/offers2.jpg)"></div>
-            <div className="offers__line-img" style="background-image: url(/img/offers3.jpg)"></div>
-            <div className="offers__line-img" style="background-image: url(/img/offers4.jpg)"></div>
+            <div className="offers__line-img" styled="background-image: url(/img/offers2.jpg)"></div>
+            <div className="offers__line-img" styled="background-image: url(/img/offers3.jpg)"></div>
+            <div className="offers__line-img" styled="background-image: url(/img/offers4.jpg)"></div>
             <div className="offers__line-other">3</div>
           </div>
           <div className="offers__bottom _row">
@@ -191,11 +191,11 @@ export const Offers = function(props) {
       </div>
       <div className="_col-12 _col-md-6 _col-lg-4 _col-xl-3">
         <div className="offers__item _row">
-          <div className="offers__top-img" style="background-image: url(/img/offers1.jpg)"></div>
+          <div className="offers__top-img" styled="background-image: url(/img/offers1.jpg)"></div>
           <div className="offers__line-img-box">
-            <div className="offers__line-img" style="background-image: url(/img/offers2.jpg)"></div>
-            <div className="offers__line-img" style="background-image: url(/img/offers3.jpg)"></div>
-            <div className="offers__line-img" style="background-image: url(/img/offers4.jpg)"></div>
+            <div className="offers__line-img" styled="background-image: url(/img/offers2.jpg)"></div>
+            <div className="offers__line-img" styled="background-image: url(/img/offers3.jpg)"></div>
+            <div className="offers__line-img" styled="background-image: url(/img/offers4.jpg)"></div>
             <div className="offers__line-other">3</div>
           </div>
           <div className="offers__bottom _row">
