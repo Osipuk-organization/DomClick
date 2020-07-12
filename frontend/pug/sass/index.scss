@@ -227,6 +227,10 @@ strong {
   }
 }
 
+._p-t {
+  padding-top: 64px - 30;
+}
+
 ._p {
   color: $p-text-color;
 }
@@ -290,11 +294,12 @@ strong {
     align-items: center;
   }
 }
+
+.swiper-container.swiper4 {
+  padding: 15px 15px 48px;
+  box-sizing: border-box;
+}
 .swiper {
-  &-container {
-    padding: 15px 15px 48px;
-    box-sizing: border-box;
-  }
   &-slide {
     background-color: $background-color;
     overflow: hidden;

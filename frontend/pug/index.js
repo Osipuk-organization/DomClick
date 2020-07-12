@@ -3,7 +3,7 @@ import './swiper.min.css';
 import './sass/index.scss';
 
 const Swiper = require('./swiper.min');
-for (let i of document.querySelectorAll('.swiper-container')) {
+for (let i of document.querySelectorAll('.swiper4')) {
   let s = new Swiper(`#${i.id}`, {
     slidesPerView: 4,
     spaceBetween: 30,
@@ -24,6 +24,30 @@ for (let i of document.querySelectorAll('.swiper-container')) {
     },
   });
 }
+
+let card2 = new Swiper(`#v-card`, {
+  direction: 'vertical',
+  spaceBetween: 6,
+  slidesPerView: 3,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+  breakpoints: {
+    1199: {
+      slidesPerView: 2,
+    },
+  },
+  navigation: {
+    prevEl: `#v-card-prev`,
+    nextEl: `#v-card-next`,
+  },
+});
+
+let card1 = new Swiper(`#card`, {
+  spaceBetween: 30,
+  thumbs: {
+    swiper: card2,
+  },
+});
 
 function setSelectionRange(input, selectionStart, selectionEnd) {
   if (input.setSelectionRange) {
