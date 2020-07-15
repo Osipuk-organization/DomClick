@@ -6,7 +6,7 @@ const path = require('path'),
 
 module.exports = {
   entry: {
-    main: path.resolve(__dirname, 'src', 'index.jsx'),
+    main: path.resolve(__dirname, 'src', 'index.js'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -28,7 +28,7 @@ module.exports = {
     rules: [
       {
         test:/\.jsx?$/,
-        exclude: /node_modules/,
+        exclude: /node_modules\/?!(swiper|dom7)/,
         use: {
           loader: 'babel-loader'
         }
@@ -50,7 +50,7 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: 'img',
+              outputPath: '/img',
             }
           }
         ]
@@ -106,6 +106,8 @@ module.exports = {
             reducers: path.resolve(__dirname, 'src', 'reducers'),
             efi: path.resolve(__dirname, 'src', 'efi'),
             layouts: path.resolve(__dirname, 'src', 'layouts'),
+            pug: path.resolve(__dirname, 'pug'),
+            src: path.resolve(__dirname, 'src'),
         }
     },
   plugins: [

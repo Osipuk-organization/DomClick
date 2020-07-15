@@ -1,46 +1,112 @@
 {
-  "users": [
+  "flats": [
     {
-      "id": 1,
-      "login": "serserch",
-      "role": 1
+      "id": "1",
+      "images": [
+        "/img/offers1.jpg",
+        "/img/offers2.jpg",
+        "/img/offers3.jpg",
+        "/img/offers4.jpg"
+      ],
+      "cost": 321456,
+      "cost_m2": 1242,
+      "currency": "₽",
+      "owner": "Собственник",
+      "rooms": 1,
+      "floor": 3,
+      "city": "Москва",
+      "address": "ул. Лучезарных",
+      "area": "Северный"
     },
     {
-      "id": 2,
-      "login": "user",
-      "role": 0
-    }
-  ],
-  "products": [
-    {
-      "autor": 1,
-      "name": "Product name",
-      "image": "product.jpg",
-      "description": "Small good",
-      "price": "700.00",
-      "currency": "$",
-      "date": "2019-02-26T00:25:11.026Z",
-      "id": 1
+      "id": "2",
+      "images": [
+        "/img/offers1.jpg",
+        "/img/offers2.jpg",
+        "/img/offers3.jpg",
+        "/img/offers4.jpg"
+      ],
+      "cost": 321456,
+      "cost_m2": 1242,
+      "currency": "₽",
+      "owner": "Собственник",
+      "rooms": 1,
+      "floor": 3,
+      "city": "Москва",
+      "address": "ул. Лучезарных",
+      "area": "Северный"
     },
     {
-      "autor": 1,
-      "name": "Product name",
-      "image": "product.jpg",
-      "description": "Small good",
-      "price": "700.00",
-      "currency": "$",
-      "date": "2019-02-26T00:25:12.424Z",
-      "id": 2
+      "id": "3",
+      "images": [
+        "/img/offers1.jpg",
+        "/img/offers2.jpg",
+        "/img/offers3.jpg",
+        "/img/offers4.jpg"
+      ],
+      "cost": 321456,
+      "cost_m2": 1242,
+      "currency": "₽",
+      "owner": "Собственник",
+      "rooms": 1,
+      "floor": 3,
+      "city": "Москва",
+      "address": "ул. Лучезарных",
+      "area": "Северный"
     },
     {
-      "autor": 1,
-      "name": "Product name",
-      "image": "product.jpg",
-      "description": "Small good",
-      "price": "700.00",
-      "currency": "$",
-      "date": "2019-02-26T00:25:13.888Z",
-      "id": 3
+      "id": "4",
+      "images": [
+        "/img/offers1.jpg",
+        "/img/offers2.jpg",
+        "/img/offers3.jpg",
+        "/img/offers4.jpg"
+      ],
+      "cost": 321456,
+      "cost_m2": 1242,
+      "currency": "₽",
+      "owner": "Собственник",
+      "rooms": 1,
+      "floor": 3,
+      "city": "Москва",
+      "address": "ул. Лучезарных",
+      "area": "Северный"
+    },
+    {
+      "id": "5",
+      "images": [
+        "/img/offers1.jpg",
+        "/img/offers2.jpg",
+        "/img/offers3.jpg",
+        "/img/offers4.jpg"
+      ],
+      "cost": 321456,
+      "cost_m2": 1242,
+      "currency": "₽",
+      "owner": "Собственник",
+      "rooms": 1,
+      "floor": 3,
+      "city": "Москва",
+      "address": "ул. Лучезарных",
+      "area": "Северный"
+    },
+    {
+      "id": "6",
+      "images": [
+        "/img/offers1.jpg",
+        "/img/offers2.jpg",
+        "/img/offers3.jpg",
+        "/img/offers4.jpg"
+      ],
+      "cost": 321456,
+      "cost_m2": 1242,
+      "currency": "₽",
+      "owner": "Собственник",
+      "rooms": 1,
+      "floor": 3,
+      "city": "Москва",
+      "address": "ул. Лучезарных",
+      "area": "Северный"
     }
   ]
 }
