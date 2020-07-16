@@ -2,21 +2,18 @@ import React, {Fragment} from 'react';
 import routes from './routes';
 import { Switch, Route } from 'react-router-dom';
 import menu from './menu';
+import 'swiper/swiper.scss';
 import '../pug/sass/index.scss';
 
 import { Footer } from 'components/Footer';
 import { TopMenu } from 'components/TopMenu';
 
-import WebFont from 'webfontloader';
-
-WebFont.load({
-  google: {
-    families: [
-      'Roboto:300,400,500,600,700,800,900',
-      'sans-serif'
-    ]
-  }
-});
+import 'pug/img/offers1.jpg';
+import 'pug/img/offers2.jpg';
+import 'pug/img/offers3.jpg';
+import 'pug/img/offers4.jpg';
+import 'pug/svg/logo.svg';
+import 'pug/svg/app.svg';
 
 function App() {
   return(

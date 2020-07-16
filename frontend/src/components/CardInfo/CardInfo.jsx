@@ -7,10 +7,10 @@ export const CardInfo = function(props) {
       <div className="_col-12 _col-lg-6 card-info__left">
         <div className="swiper-container card-info__swiper" id="card">
           <div className="swiper-wrapper">
-            <div className="swiper-slide card-info__slide" style={{backgroundImage: 'url(img/card.jpg)'}}></div>
-            <div className="swiper-slide card-info__slide" style={{backgroundImage: 'url(img/card.jpg)'}}></div>
-            <div className="swiper-slide card-info__slide" style={{backgroundImage: 'url(img/card.jpg)'}}></div>
-            <div className="swiper-slide card-info__slide" style={{backgroundImage: 'url(img/card.jpg)'}}></div>
+            <div className="swiper-slide card-info__slide" style={{backgroundImage: 'url(/img/card.jpg)'}}></div>
+            <div className="swiper-slide card-info__slide" style={{backgroundImage: 'url(/img/card.jpg)'}}></div>
+            <div className="swiper-slide card-info__slide" style={{backgroundImage: 'url(/img/card.jpg)'}}></div>
+            <div className="swiper-slide card-info__slide" style={{backgroundImage: 'url(/img/card.jpg)'}}></div>
           </div>
         </div>
         <div className="card-info__spec">
@@ -39,13 +39,13 @@ export const CardInfo = function(props) {
         <div className="swiper-container card-info__v-swiper" id="v-card">
           <div className="swiper-wrapper">
             <div className="swiper-slide card-info__v-slide"
-                 style={{backgroundImage: 'url(img/offers1.jpg)'}}></div>
+                 style={{backgroundImage: 'url(/img/offers1.jpg)'}}></div>
             <div className="swiper-slide card-info__v-slide"
-                 style={{backgroundImage: 'url(img/offers2.jpg)'}}></div>
+                 style={{backgroundImage: 'url(/img/offers2.jpg)'}}></div>
             <div className="swiper-slide card-info__v-slide"
-                 style={{backgroundImage: 'url(img/offers3.jpg)'}}></div>
+                 style={{backgroundImage: 'url(/img/offers3.jpg)'}}></div>
             <div className="swiper-slide card-info__v-slide"
-                 style={{backgroundImage: 'url(img/offers4.jpg)'}}></div>
+                 style={{backgroundImage: 'url(/img/offers4.jpg)'}}></div>
           </div>
           <div className="card-info__prev" id="v-card-prev"></div>
           <div className="card-info__next" id="v-card-next"></div>

@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const minimist = require('minimist');
 const args = minimist(process.argv, {
-    alias: { name: 'n', }
+  alias: { name: 'n', }
 });
 const componentName = args.name;
 const nameLowerCase = componentName.toLowerCase();
@@ -12,24 +12,24 @@ fs.mkdirSync(path.resolve(__dirname, '..', 'src', 'components', componentName));
 const componentCode = `import React, {Fragment, useState, useEffect} from 'react';
 
 export const ${componentName} = function(props) {
-    //props
-    const {myProps} = props
-    //state
-    const [name, setName] = useState(null);
-    //mount and update effect
-    useEffect(function() {
-        /* DidMount */
-        
-        return function() {
-            /* Unmount */
-        }
-    }, []);
-    
-    return (
-        <Fragment>
-            /* context */
-        </Fragment>
-    );
+  //props
+  const {myProps} = props;
+  //state
+  const [name, setName] = useState(null);
+  //mount and update effect
+  useEffect(function() {
+    /* DidMount */
+
+    return function() {
+      /* Unmount */
+    }
+  }, []);
+
+  return (
+    <Fragment>
+      /* content */
+    </Fragment>
+  );
 }`;
 
 const containerCode = `import React from 'react';
@@ -39,32 +39,32 @@ import ${componentName} from 'components/${componentName}';
 
 
 function mapStateToProps(state, ownProps) {
-    return {
-        ...ownProps,
-        ${nameLowerCase}: state.${nameLowerCase},
-    }
+  return {
+    ...ownProps,
+    ${nameLowerCase}: state.${nameLowerCase},
+  }
 }
 
 function mapDispatchToProps(dispatch, props) {
-    return {
-        ...props,
-        testSigningIn: (data) => dispatch(testSigningIn(data)),
-    }
+  return {
+    ...props,
+    testSigningIn: (data) => dispatch(testSigningIn(data)),
+  }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(${componentName});`;
 
 fs.writeFileSync(
-    path.resolve(__dirname, '..', 'src', 'components', componentName, `${componentName}.jsx`),
-    componentCode
+  path.resolve(__dirname, '..', 'src', 'components', componentName, `${componentName}.jsx`),
+  componentCode
 );
 
 fs.writeFileSync(
-    path.resolve(__dirname, '..', 'src', 'components', componentName, 'index.js'),
-    `export {${componentName}} from './${componentName}';`
+  path.resolve(__dirname, '..', 'src', 'components', componentName, 'index.js'),
+  `export {${componentName}} from './${componentName}';`
 );
 
 fs.writeFileSync(
-    path.resolve(__dirname, '..', 'src', 'containers', componentName + 'Container.jsx'),
-    containerCode
+  path.resolve(__dirname, '..', 'src', 'containers', componentName + 'Container.jsx'),
+  containerCode
 );

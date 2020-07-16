@@ -12,7 +12,7 @@ export const Header = function(props) {
         <div className="header__button-box _left _col-6">
           <div className="switch">
             <label className="switch__label">
-              <input className="switch__radio" type="radio" name="who" checked />
+              <input className="switch__radio" type="radio" name="who" defaultChecked />
               <span className="switch__button">Купить</span>
             </label>
             <label className="switch__label">

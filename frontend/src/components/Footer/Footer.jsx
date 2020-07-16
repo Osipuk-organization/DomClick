@@ -7,7 +7,7 @@ export const Footer = function(props) {
       <div className="_container _row footer__row">
         <div className="footer__item">
           <a className="link" href="/">
-            <img className="footer__logo" rc="/svg/logo.svg" alt="logo" />
+            <img className="footer__logo" src="/svg/logo.svg" alt="logo" />
           </a>
         </div>
         <div className="footer__item _row">

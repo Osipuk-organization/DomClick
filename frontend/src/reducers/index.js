@@ -2,7 +2,7 @@ import {
   combineReducers
 } from 'redux';
 
-import flatsReducer from './flatsReduser';
+import flatsReducer from './flatsRedusers';
 
 export default combineReducers({
   flats: flatsReducer,
