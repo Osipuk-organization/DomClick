@@ -71,7 +71,7 @@
         "name": "Дополнительно",
         "comment": "Комментарий",
         "security": {
-            "refuse_ljchute": true,
+            "refuse_chute": true,
             "doorphone": true,
             "concierge": false,
             "code_door": false,

@@ -1,13 +1,12 @@
-const consolidate = require('consolidate');
 const express = require('express');
 const path = require('path');
-const connect = require('./mongoCfg.js');
 const cors = require("cors");
-const jwt = require("jsonwebtoken");
-const bodyParser = require('body-parser');
+// const jwt = require("jsonwebtoken");
+// const bodyParser = require('body-parser');
 const cowsay = require("cowsay");
-const mongoose = require("mongoose");
 // const passport = require('./passport');
+
+require('./mongoCfg.js'); //connect to db
 
 const PORT = 4000;
 const app = express();
@@ -24,7 +23,6 @@ const users = require('./routes/users');
 const flats = require('./routes/flats');
 app.use('/admin', admin);
 app.use('/users', users);
-
 app.use('/flats', flats);
 
 //default route

@@ -1,36 +1,44 @@
 const express = require('express');
 const router = express.Router();
 
-const Users = require("../models/users");
+const Flats = require("../models/flat");
 
-router.get('/flats', async (req, res) => {
+router.get('/', async (req, res) => {
     flats = await Flats.find();
     res.status(200).json(flats);
 });
 
-router.get('/flats/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
     if (mongoose.Types.ObjectId.isValid(req.params.id)) {
         const flat = await Flats.findById(req.params.id);
         res.status(200).json(flat);
     }
 });
 
-router.post('/flats/add', async (req, res) => {
+router.post('/add', async (req, res) => {
     //new flat
     const flat = new Flats(req.body);
     const savedFlat = await flat.save(
         (err, item) => {
             if (err) {
-                res.status(204).send({ 'error': 'An error has occurred' });
+                let data = {}
+                for (let i in req.body) {
+                    data[i] = typeof i
+                }
+                res.status(400).send({
+                    'error': 'Ошибка записи в бд',
+                    'data': data,
+                    'description': err,
+                });
             } else {
-                res.redirect('/admin/main');
+                res.status(200).send(item);
             }
-        }
-    )
+        })
+    // res.redirect('/admin/main');
     // res.status(200).res.json(savedFlat);
 });
 
-router.post('/flats/delete', async (req, res) => {
+router.post('/delete', async (req, res) => {
     //delete one or many flats
     await Flats.deleteMany({ _id: { $in: req.body.checkBoxFlat } },
         (err, item) => {
@@ -43,7 +51,7 @@ router.post('/flats/delete', async (req, res) => {
     );
 })
 
-router.post('/flats/:id', async (req, res) => {
+router.post('/:id', async (req, res) => {
     //update flat
     let body = {}
     for (let i in req.body) {
