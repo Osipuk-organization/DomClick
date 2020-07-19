@@ -1,6 +1,6 @@
 swagger: "2.0"
 info:
-  description: "DomClick dev"
+  description: "DomClick dev api"
   version: "1.0.1"
   title: "DomClick dev"
   termsOfService: "http://osipuk.ru/"
