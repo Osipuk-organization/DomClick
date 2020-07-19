@@ -1,7 +1,7 @@
 swagger: "2.0"
 info:
   description: "DomClick dev"
-  version: "1.0.0"
+  version: "1.0.1"
   title: "DomClick dev"
   termsOfService: "http://osipuk.ru/"
   contact:
@@ -123,46 +123,409 @@ paths:
 definitions:
   Flats:
     type: "object"
+    required:
+    - owner
+    - documents
+    - cadastral_value
+    - address
+    - deal
+    - terms_of_sale
+    - additionally
+    - house
+    - flat
     properties:
       id:
         type: "string"
         format: "ObjectID"
-      images:
-        type: "array"
-        format: "String"
-        items:
-          $ref: "#/definitions/Flats"
-      cost:
-        type: "integer"
-        format: "int32"
-      cost_m2:
-        type: "integer"
-        format: "int32"
-      currency:
-        type: "string"
-        description: "Currency"
-        enum:
-        - "P"
-        - "$"
-        - "Gr"
       owner:
         type: "string"
-        format: "string"
-      rooms:
-        type: "integer"
-        format: "int32"
-      floor:
-        type: "integer"
-        format: "int32"
-      city:
-        type: "string"
-        format: "string"
+      documents:
+        type: "array"
+        items:
+          type: "string"
+      cadastral_value:
+        type: "object"
+        required:
+        - value
+        properties:
+          value:
+            type: "string"
+          comment:
+            type: "string"
       address:
-        type: "string"
-        format: "string"
-      area:
-        type: "string"
-        format: "string"
+        type: "object"
+        required:
+        - value
+        properties:
+          value:
+            type: "string"
+          comment:
+            type: "string"
+      deal:
+        type: "object"
+        required:
+        - type_deal
+        - property_type
+        - type_of_property
+        - years_in_ownership
+        - number_of_owners
+        - years_in_ownership
+        - registered
+        properties:
+          comment:
+            type: "string"  
+          type_deal:
+            type: "string" 
+            enum:
+            - "Продажа"
+            - "Аренда"
+          property_type:
+            type: "string"
+            enum:
+            - "Жилая"
+            - "Коммерческая"  
+            - "Гараж"  
+          type_of_property:
+            type: "string"
+            enum:
+            - "Квартира"
+            - "Комната"  
+            - "Дом"  
+            - "Таунхаус"  
+            - "Часть дома"  
+            - "Участок"  
+          years_in_ownership:
+            type: "string"
+            enum:
+            - "Меньше 3-х"
+            - "От 3-х до 5-ти"  
+            - "Больше 5-ти"  
+          number_of_owners:
+            type: "object"
+            required:
+            - value
+            properties:  
+              value:
+                type: "string"
+                enum:
+                - "1"
+                - "2"  
+                - "3+"
+              minor_child:
+                type: "boolean"
+                default: false
+          registered:
+            type: "object"
+            required:
+            - value
+            properties:  
+              value:
+                type: "string"
+                enum:
+                - "1"
+                - "2"  
+                - "3+"
+              minor_child:
+                type: "boolean"
+                default: false
+      terms_of_sale:
+        type: "object"
+        required:
+        - cost
+        - gas
+        - refuse_chute
+        properties:
+          comment:
+            type: "string"
+          cost: 
+            type: "object"
+            required:
+            - value
+            properties:
+              value:
+                type: "number"
+              trade:
+                
+                type: "boolean"
+                default: false
+          gas:
+            type: "boolean"
+          refuse_chute:
+            type: "boolean"
+      additionally:
+        type: "object"
+        required:
+        - security
+        - parking
+        - the_landscaping_of_the_yard
+        - infrastructure
+        - bathroom
+        - balcony
+        - repair
+        - view_from_windows
+        properties:
+          security: 
+            type: "object"
+            required:
+            - doorphone
+            - concierge
+            - code_door
+            - closed_territory
+            properties:
+              comment:
+                type: "string"
+              doorphone:
+                type: "boolean"
+                default: false
+              concierge:
+                type: "boolean"
+                default: false
+              code_door:
+                type: "boolean"
+                default: false
+              closed_territory:
+                type: "boolean"
+                default: false
+          parking:
+            type: "object"
+            required:
+            - in_the_courtyard
+            - underground
+            - barrier
+            - garage
+            - security
+            properties:
+              comment:
+                type: "string"
+              in_the_courtyard:
+                type: "boolean"
+                default: false
+              underground:
+                type: "boolean"
+                default: false
+              barrier:
+                type: "boolean"
+                default: false
+              garage:
+                type: "boolean"
+                default: false
+              security:
+                type: "boolean"
+                default: false
+          the_landscaping_of_the_yard:
+            type: "object"
+            required:
+            - childrens_playground
+            - sports_ground
+            properties:
+              comment:
+                type: "string"
+              childrens_playground:
+                type: "boolean"
+                default: false
+              sports_ground:
+                type: "boolean"
+                default: false
+          infrastructure:
+            type: "object"
+            required:
+            - school
+            - fitness
+            - park
+            - kindergarten
+            - mall
+            properties:
+              comment:
+                type: "string"
+              school:
+                type: "boolean"
+                default: false
+              fitness:
+                type: "boolean"
+                default: false
+              park:
+                type: "boolean"
+                default: false
+              kindergarten:
+                type: "boolean"
+                default: false
+              mall:
+                type: "boolean"
+                default: false
+          bathroom:
+            type: "object"
+            required:
+            - value
+            properties:
+              comment:
+                type: "string"
+              value:
+                type: "string"
+                enum:
+                - "Совмещенный"
+                - "Раздельный"  
+                - "Более одного" 
+          balcony:
+            type: "object"
+            required:
+            - value
+            properties:
+              comment:
+                type: "string"
+              value:
+                type: "string"
+                enum:
+                - "1"
+                - "2"  
+                - "3+" 
+                - "Нет" 
+          repair:
+            type: "object"
+            required:
+            - value
+            properties:
+              comment:
+                type: "string"
+              value:
+                type: "string"
+                enum:
+                - "Косметический"
+                - "Евро"  
+                - "Дизайнерский" 
+                - "Без ремонта" 
+          view_from_windows:
+            type: "object"
+            required:
+            - yard
+            - street
+            - park
+            - reservoir
+            - forest
+            properties:
+              comment:
+                type: "string"
+              yard:
+                type: "boolean"
+                default: false
+              street:
+                type: "boolean"
+                default: false
+              park:
+                type: "boolean"
+                default: false
+              reservoir:
+                type: "boolean"
+                default: false
+              forest:
+                type: "boolean"
+                default: false
+      house:
+        type: "object"
+        required:
+        - type
+        - elevator
+        - apartment_number
+        - foto
+        - video
+        properties:
+          comment:
+            type: "string"
+          security:
+            type: "string"
+          type:
+            type: "string"
+            enum: 
+            - Кирпичный
+            - Панельный
+            - Монолитный
+            - Деревянный
+            - Блочный
+          elevator:
+            type: object
+            required: 
+            - value
+            - freight_elevator
+            properties:
+              value:
+                type: string
+                enum: 
+                - "1"
+                - "2"
+                - "3+"
+              freight_elevator:
+                type: boolean
+                default: false
+          apartment_number:
+            type: number
+          cadastral_number:
+            type: number
+          foto:
+            type: object
+            required: 
+            - value
+            properties:
+              comment:
+                type: string
+              value:
+                type: array
+                items:
+                  type: string
+          video:
+            type: object
+            required: 
+            - value
+            properties:
+              comment:
+                type: string
+              value:
+                type: array
+                items:
+                  type: string
+      flat:
+        type: object
+        required: 
+        - rooms
+        - freight_elevator
+        - square
+        - square_kitchen
+        - square_residential
+        - floor
+        - floors_in_the_house
+        - ceiling_height
+        properties:
+          comment:
+            type: string
+          rooms:
+            type: string
+            enum: 
+            - "1"
+            - "2"
+            - "3"
+            - "4"
+            - "5+"
+            - "Студия"
+          freight_elevator:
+            type: boolean
+            default: false
+          square:
+            type: boolean
+            default: false
+          square_kitchen:
+            type: boolean
+            default: false
+          square_residential:
+            type: boolean
+            default: false
+          floor:
+            type: boolean
+            default: false
+          floors_in_the_house:
+            type: boolean
+            default: false
+          ceiling_height:
+            type: boolean
+            default: false
+          
   Users:
     type: "object"
     required:
