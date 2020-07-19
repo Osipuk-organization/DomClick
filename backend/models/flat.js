@@ -160,7 +160,7 @@ const flatSchema = new Schema({
   rooms: {
     type: String,
     required: true,
-    enum: ['1', '2', '3', '4', '5', 'Студия'],
+    enum: ['1', '2', '3', '4', '5+', 'Студия'],
   },
   freight_elevator: { type: Boolean, required: true, default: false, },
   square: { type: Number, required: true, },
