@@ -1,4 +1,5 @@
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
+import mongoose from 'mongoose'
 
 const MONGO_HOST = '185.87.48.247';
 const MONGO_PORT = '27017';

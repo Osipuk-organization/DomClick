@@ -1,4 +1,5 @@
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
+import mongoose from 'mongoose'
 const Schema = mongoose.Schema;
 
 const dealSchema = new Schema({
@@ -190,4 +191,5 @@ const dataSchema = new Schema({
   updated: { type: Date, default: Date.now, required: true },
 });
 
-module.exports = mongoose.model('Flat', dataSchema, 'flats');
+// module.exports = mongoose.model('Flat', dataSchema, 'flats');
+export default mongoose.model('Flat', dataSchema, 'flats');
