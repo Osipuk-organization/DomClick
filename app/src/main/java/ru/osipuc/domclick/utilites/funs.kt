@@ -1,5 +1,6 @@
 package ru.osipuc.domclick.utilites
 
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import ru.osipuc.domclick.R
 
@@ -18,4 +19,8 @@ fun replaceFragment(fragment: Fragment, addStack: Boolean = true) {
                 fragment
             ).commit()
     }
+}
+
+fun showToast(message: String) {
+    Toast.makeText(APP_ACTIVITY, message, Toast.LENGTH_SHORT).show()
 }

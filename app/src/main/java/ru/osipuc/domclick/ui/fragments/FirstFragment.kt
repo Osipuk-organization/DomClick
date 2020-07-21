@@ -11,7 +11,7 @@ class FirstFragment : Fragment(R.layout.fragment_first) {
     override fun onResume() {
         super.onResume()
         first_fragment_reg_btn.setOnClickListener {
-            replaceFragment(RegistrationFragment())
+            replaceFragment(EnterPhoneNumberFragment())
         }
     }
 
