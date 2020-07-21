@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">DomClick</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="we_help_select">Мы помогаем подбирать недвижимость</string>
+    <string name="registration">ЗАРЕГИСТРИРОВАТЬСЯ</string>
+    <string name="skip">ПРОПУСТИТЬ</string>
+    <string name="forget_password">Забыли пароль?</string>
+    <string name="logo_description">logo</string>
 </resources>

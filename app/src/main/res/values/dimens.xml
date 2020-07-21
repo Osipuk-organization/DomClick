@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="normal_margin">16dp</dimen>
+    <dimen name="big_margin">36dp</dimen>
+    <dimen name="button_corners_radius">28dp</dimen>
+</resources>
