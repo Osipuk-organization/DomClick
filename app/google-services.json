@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "856998200081",
+    "firebase_url": "https://domclick-64d61.firebaseio.com",
+    "project_id": "domclick-64d61",
+    "storage_bucket": "domclick-64d61.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:856998200081:android:7b5cc36ff47c4ea8fa02b0",
+        "android_client_info": {
+          "package_name": "ru.osipuc.domclick"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "856998200081-p1pj38hct083tpla99o3k4il5t5v0if7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKI45iN0J61aiI-_vHpD_fHfnAwZVRXYM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "856998200081-p1pj38hct083tpla99o3k4il5t5v0if7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
