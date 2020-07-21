@@ -6,4 +6,10 @@
     <string name="skip">ПРОПУСТИТЬ</string>
     <string name="forget_password">Забыли пароль?</string>
     <string name="logo_description">logo</string>
+    <string name="registration_conditions">Регистрруясь вы соглагшаетесь с\nУсловиями исчпользования приложения</string>
+    <string name="or_enter_number">Или введите номер телефона</string>
+    <string name="to_register">Зарегистрироваться</string>
+    <string name="you_phone_number">Ваш номер телефона</string>
+    <string name="registration_through_google">Зарегистрироваться с Google</string>
+    <string name="registrations">Регистрация</string>
 </resources>

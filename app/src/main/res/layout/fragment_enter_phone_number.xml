@@ -8,23 +8,23 @@
 
     <EditText
         android:id="@+id/enter_phone_fragment_edit_text"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
+        style="@style/white_edit"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="@dimen/normal_margin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:hint="ВВЕДИТЕ НОМЕР ТЕЛЕФОНА"
-        android:textColorHint="@color/colorTextGray"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/enter_phone_fragment_ok_btn"
-        android:text="ПОДТВЕРДИТЬ"
+        style="@style/red_button"
         android:layout_marginStart="@dimen/normal_margin"
         android:layout_marginEnd="@dimen/normal_margin"
         android:layout_marginBottom="@dimen/big_margin"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="ПОДТВЕРДИТЬ"
         app:layout_constraintBottom_toBottomOf="parent"
-        style="@style/red_button"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
