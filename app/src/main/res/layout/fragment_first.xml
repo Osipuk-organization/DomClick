@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/colorBackground"
+    android:background="@color/colorBlueVeryLight"
     tools:context=".ui.fragments.FirstFragment">
 
     <ImageView
@@ -40,7 +40,7 @@
         app:layout_constraintTop_toBottomOf="@id/first_fragment_name"
         style="@style/text_normal" />
     
-    <TextView
+    <Button
         android:id="@+id/first_fragment_reg_btn"
         android:text="@string/registration"
         android:layout_marginStart="@dimen/normal_margin"
@@ -51,7 +51,7 @@
         app:layout_constraintBottom_toTopOf="@id/first_fragment_skip_btn"
         style="@style/red_button"/>
 
-    <TextView
+    <Button
         android:id="@+id/first_fragment_skip_btn"
         android:text="@string/skip"
         android:layout_marginStart="@dimen/normal_margin"
