@@ -7,17 +7,17 @@
     android:viewportHeight="19.92"
     >
 
-  <group>
+    <group>
 
-    <clip-path
-        android:pathData="M0 0H18V19.92H0V0Z"
-        />
+        <clip-path
+            android:pathData="M0 0H18V19.92H0V0Z"
+            />
 
-    <path
-        android:pathData="M0 0V19.92H18V0"
-        android:fillColor="#000000"
-        />
+        <path
+            android:pathData="M0 0V19.92H18V0"
+            android:fillColor="#000000"
+            />
 
-  </group>
+    </group>
 
 </vector>

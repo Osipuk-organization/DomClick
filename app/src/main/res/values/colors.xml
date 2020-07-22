@@ -21,4 +21,5 @@
     <color name="colorLineBlue">#8CC3E2</color>
     <color name="colorBlueVeryLight">#F6FCFF</color>
     <color name="colorError">#C90101</color>
+    <color name="colorTextItem">#CCFFFFFF</color>
 </resources>
