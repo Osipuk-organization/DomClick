@@ -22,4 +22,6 @@
     <color name="colorBlueVeryLight">#F6FCFF</color>
     <color name="colorError">#C90101</color>
     <color name="colorTextItem">#CCFFFFFF</color>
+
+    <color name="colorNavSelect">#6C99B3</color>
 </resources>

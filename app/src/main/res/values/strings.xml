@@ -13,4 +13,7 @@
     <string name="registration_through_google">Зарегистрироваться с Google</string>
     <string name="registrations">Регистрация</string>
     <string name="confirm">ПОДТВЕРДИТЬ</string>
+    <string name="search">Поиск</string>
+    <string name="saved">Сохраненное</string>
+    <string name="cabinet">Кабинет</string>
 </resources>
