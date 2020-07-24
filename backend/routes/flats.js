@@ -2,6 +2,8 @@
 const router = require("express").Router();
 const mongoose = require("mongoose");
 
+const authenticateMiddleware = require("../middlewares/authentication");
+
 const Flats = require('../models/flat');
 
 router.route('/')
@@ -10,7 +12,7 @@ router.route('/')
         const flats = await Flats.find();
         res.status(200).json(flats);
     })
-    .all(async (req, res, next) => {
+    .all(authenticateMiddleware, async (req, res, next) => {
         // Проверка на права
         next();
     })
@@ -51,7 +53,7 @@ router.route('/:id')
             res.status(404).json({ "error": "ошибочный id" });
         }
     })
-    .all(async (req, res, next) => {
+    .all(authenticateMiddleware, async (req, res, next) => {
         // Проверка на права
         next();
     })

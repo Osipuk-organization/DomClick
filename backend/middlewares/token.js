@@ -14,6 +14,7 @@ const save = async (req, res) => {
     const plainUser = JSON.parse(JSON.stringify(user));
     delete plainUser.password;
     let tokenValue = jwt.sign(plainUser, process.env.TOKEN_SECRET_KEY);
+    console.log('tokenValue',tokenValue)
     res.cookie("token", tokenValue, {
       maxAge: 1 * 24 * 3600 * 1000, // 1 сутки
     });
