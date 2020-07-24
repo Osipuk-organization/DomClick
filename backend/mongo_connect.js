@@ -3,7 +3,7 @@ const ansi = require('ansi');
 const cursor = ansi(process.stdout); 
 let tunnel = require('tunnel-ssh');
 
-const ssh = false
+const ssh = true
 
 const tunnel_config = {
     username: process.env.SSH_USERNAME,
@@ -23,14 +23,16 @@ if (ssh) {
         }
 
         cursor.green().write('SSH ok\n').reset()
-
-        const db = mongoose.createConnection(`mongodb://127.0.0.1:27000/DomClickDev`, {
+        const user = process.env.DB_USER
+        const pass = process.env.DB_PASSWORD
+        const authdb = process.env.DB
+        mongoose.connect(`mongodb://${user}:${pass}@127.0.0.1:27000/${authdb}`, {
             useNewUrlParser: true,
             useUnifiedTopology: true
         })
 
         cursor.green().write('Connect ok\n').reset()
-
+        const db = mongoose.connection;
         db.on('error', (error) => {
             cursor.red().write(`DB connection error:\n`).reset().write(`${error}\n`)
         }

@@ -12,7 +12,7 @@ const cowsay = require("cowsay");
 
 require('dotenv').config({ path: path.resolve(__dirname, '.env') });
 
-const PORT = process.env.SERVERPORT || 4000;
+const PORT = process.env.SERVER_PORT || 4000;
 const router = require(path.resolve(__dirname, 'routes'));
 const passport = require("./middlewares/passport");
 
