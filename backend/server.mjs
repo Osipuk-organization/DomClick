@@ -6,16 +6,36 @@ import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 import cors from 'cors';
+import mongoose from 'mongoose'
 // const jwt = require("jsonwebtoken");
 // const bodyParser = require('body-parser');
 // const cowsay = require("cowsay");
 import cowsay from 'cowsay';
+import dotenv from 'dotenv';
 // const passport = require('./passport');
 
 // require('./mongoCfg.js'); //connect to db
-import './mongoCfg.mjs';
-const PORT = 4000;
+// import './mongoCfg.mjs';
+const PORT = process.env.PORT || 4000;
 const app = express();
+if (!process.env.PRODUCTION) {
+  dotenv.config();
+}
+mongoose.connect(process.env.DB_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false,
+  useCreateIndex: true,
+});
+
+mongoose.connection
+  .on("error", () => {
+    console.log("connection error");
+  })
+  .once("open", () => {
+    console.log("Database connected");
+  });
+
 
 app.set('view engine', 'pug');
 app.set('views', path.resolve(__dirname, 'views'));

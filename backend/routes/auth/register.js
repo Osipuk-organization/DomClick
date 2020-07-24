@@ -18,3 +18,4 @@ router.post(
     res.json(plainUser);
   })
 );
+module.exports = router;

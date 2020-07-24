@@ -13,3 +13,4 @@ router.post(
     res.json(req.user);
   }
 );
+module.exports = router;

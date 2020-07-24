@@ -1,68 +1,123 @@
-const express = require("express");
-const router = express.Router();
 
-const Users = require("../../models/user");
+const router = require("express").Router();
+const mongoose = require("mongoose");
 
-router.get("/flats", async (req, res) => {
-  flats = await Flats.find();
-  res.status(200).json(flats);
-});
+const Flats = require('../../models/flat');
 
-router.get("/flats/:id", async (req, res) => {
-  if (mongoose.Types.ObjectId.isValid(req.params.id)) {
-    const flat = await Flats.findById(req.params.id);
-    res.status(200).json(flat);
-  }
-});
+router.route('/')
+    .get(async (req, res) => {
+        //сделать пагинацию
+        console.log('here get')
+        const flats = await Flats.find();
+        res.status(200).json(flats);
+    })
+    .all(async (req, res, next) => {
+        // Проверка на права
+        next();
+    })
+    .post(async (req, res) => {
+        //new flat
+        console.log('here post')
+        const flat = new Flats(req.body);
+        const savedFlat = await flat.save(
+            (err, item) => {
+                if (err) {
+                    let data = {}
+                    for (let i in req.body) {
+                        data[i] = typeof i
+                    }
+                    res.status(400).send({
+                        'error': 'Ошибка записи в бд',
+                        'data': data,
+                        'description': err,
+                    });
+                } else {
+                    res.status(200).send(item);
+                }
+            })
+        // res.redirect('/admin/main');
+        // res.status(200).res.json(savedFlat);
+    })
 
-router.post("/flats/add", async (req, res) => {
-  //new flat
-  const flat = new Flats(req.body);
-  const savedFlat = await flat.save((err, item) => {
-    if (err) {
-      res.status(204).send({ error: "An error has occurred" });
-    } else {
-      res.redirect("/admin/main");
-    }
-  });
-  // res.status(200).res.json(savedFlat);
-});
+router.route('/:id')
+    .get(async (req, res) => {
+        //get one flat
+        if (mongoose.Types.ObjectId.isValid(req.params.id)) {
+            const flat = await Flats.findById(req.params.id);
+            if (flat) {
+                res.status(200).json(flat);
+            } else {
+                res.status(404).json({ "error": 404 });
+            }
+        } else {
+            res.status(404).json({ "error": "ошибочный id" });
+        }
+    })
+    .all(async (req, res, next) => {
+        // Проверка на права
+        next();
+    })
+    .put(async (req, res) => {
+        //update flat
+        let body = {}
+        for (let i in req.body) {
+            body[i] = req.body[i]
+        }
+        const flat = await Flats.updateMany(
+            { _id: req.params.id },
+            {
+                $set: {
+                    ...body
+                }
+            },
+            (err, item) => {
+                if (err) {
+                    res.status(204).send({ 'error': 'An error has occurred' });
+                } else {
+                    res.redirect('/admin/main');
+                }
+            }
+        )
+    })
+    .patch(async (req, res) => {
+        console.error('В разработке')
+        res.status(204).send({ 'error': 'В разработке' });
+    })
+    .delete(async (req, res) => {
+        //delete one
+        if (mongoose.Types.ObjectId.isValid(req.params.id)) {
+            await Flats.deleteOne({ _id: req.params.id },
+                (err, item) => {
+                    if (err) {
+                        res.status(204).send({ 'error': 'An error has occurred' });
+                    }
+                    if (item.deletedCount === 0) {
+                        res.status(404).send({ 'error': 'нет конента' });
+                    } else {
+                        res.status(200).send({ 'delete': item });
+                    }
+                    // res.redirect('/admin/main');
+                }
 
-router.post("/flats/delete", async (req, res) => {
-  //delete one or many flats
-  await Flats.deleteMany(
-    { _id: { $in: req.body.checkBoxFlat } },
-    (err, item) => {
-      if (err) {
-        res.status(204).send({ error: "An error has occurred" });
-      } else {
-        res.redirect("/admin/main");
-      }
-    }
-  );
-});
+            );
+        } else {
+            res.status(404).json({ "error": "ошибочный id" });
+        }
+    })
 
-router.post("/flats/:id", async (req, res) => {
-  //update flat
-  let body = {};
-  for (let i in req.body) {
-    body[i] = req.body[i];
-  }
-  const flat = await Flats.updateMany(
-    { _id: req.params.id },
-    {
-      $set: {
-        ...body,
-      },
-    },
-    (err, item) => {
-      if (err) {
-        res.status(204).send({ error: "An error has occurred" });
-      } else {
-        res.redirect("/admin/main");
-      }
-    }
-  );
-});
+
+router.route('/delete')
+    .post(async (req, res) => {
+        //delete one or many flats
+        await Flats.deleteMany({ _id: { $in: req.body.checkBoxFlat } },
+            (err, item) => {
+                if (err) {
+                    res.status(204).send({ 'error': 'An error has occurred' });
+                }
+                console.log('deleted', item)
+                // res.redirect('/admin/main');
+            }
+        );
+    })
 
 module.exports = router;
