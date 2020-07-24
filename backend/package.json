@@ -4,8 +4,8 @@
   "main": "server.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --experimental-modules server.mjs",
-    "server": "node server.js"
+    "start": "node server.js",
+    "server6": "node --experimental-modules server.mjs"
   },
   "keywords": [],
   "author": "",

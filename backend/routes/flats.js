@@ -2,12 +2,11 @@
 const router = require("express").Router();
 const mongoose = require("mongoose");
 
-const Flats = require('../../models/flat');
+const Flats = require('../models/flat');
 
 router.route('/')
     .get(async (req, res) => {
         //сделать пагинацию
-        console.log('here get')
         const flats = await Flats.find();
         res.status(200).json(flats);
     })
@@ -17,7 +16,6 @@ router.route('/')
     })
     .post(async (req, res) => {
         //new flat
-        console.log('here post')
         const flat = new Flats(req.body);
         const savedFlat = await flat.save(
             (err, item) => {

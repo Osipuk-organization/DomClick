@@ -1,24 +1,21 @@
 const express = require("express");
 const router = express.Router();
 const asyncHandler = require("express-async-handler");
-const UserModel = require("../../models/user");
-const Errors = require("../../models/types/errors");
+const UserModel = require("../models/user");
+const Errors = require("../models/types/errors");
 
 router.route('/')
-  .get(
-    // asyncHandler(
+  .get(asyncHandler(
     async (req, res) => {
-      console.log('this')
-    const users = await UserModel.find();
-    res.json(users);
-  })
-  // )
+      const users = await UserModel.find();
+      res.json(users);
+    }))
   .post(asyncHandler(async (req, res) => {
-    // const { login } = req.body.params;
-    // const user = await UserModel.findOne({ login });
-    // if (user) {
-    //   throw Errors.authError.duplicateUser;
-    // }
+    const { login } = req.body.params;
+    const user = await UserModel.findOne({ login });
+    if (user) {
+      throw Errors.authError.duplicateUser;
+    }
     user = await UserModel.create(req.body);
     const plainUser = JSON.parse(JSON.stringify(user));
     delete plainUser.password;
