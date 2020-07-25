@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
-        let contentView = ContentView()
+        let contentView = TabNavigation()
         
         if let windowScene = scene as? UIWindowScene {
             window = UIWindow(windowScene: windowScene)

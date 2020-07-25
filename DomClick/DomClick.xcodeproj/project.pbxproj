@@ -7,14 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC130CD424CC409700611116 /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC130CD324CC409700611116 /* ColorExt.swift */; };
+		EC6428F124CC39EA00342A46 /* StubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6428F024CC39EA00342A46 /* StubView.swift */; };
+		EC95E0B924C9ADD3002DD189 /* CustomBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC95E0B824C9ADD3002DD189 /* CustomBtn.swift */; };
+		EC99E90224CA99B700F7929C /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC99E90124CA99B700F7929C /* Login.swift */; };
+		EC99E90924CAD33E00F7929C /* SwitchingStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC99E90824CAD33E00F7929C /* SwitchingStart.swift */; };
+		EC99E90B24CB049A00F7929C /* FlatListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC99E90A24CB049A00F7929C /* FlatListCell.swift */; };
+		EC99E91024CB369800F7929C /* ListSeparatorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC99E90F24CB369800F7929C /* ListSeparatorStyle.swift */; };
+		ECC6388924C9C2D3007CD903 /* DomClickNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = ECC6388824C9C2D3007CD903 /* DomClickNetwork */; };
+		ECC6388B24C9CA5A007CD903 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC6388A24C9CA5A007CD903 /* LazyView.swift */; };
+		ECC6388E24C9D3D6007CD903 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC6388D24C9D3D6007CD903 /* Registration.swift */; };
+		ECC6389124C9FC45007CD903 /* FiltersProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC6389024C9FC45007CD903 /* FiltersProperty.swift */; };
+		ECC6389324C9FD7D007CD903 /* TabNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC6389224C9FD7D007CD903 /* TabNavigation.swift */; };
+		ECC6389524C9FF92007CD903 /* ListFlats.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC6389424C9FF92007CD903 /* ListFlats.swift */; };
+		ECC6389824CA03B0007CD903 /* Cabinet.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC6389724CA03B0007CD903 /* Cabinet.swift */; };
+		ECC6389A24CA03BF007CD903 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC6389924CA03BF007CD903 /* Profile.swift */; };
+		ECC6389C24CA049B007CD903 /* DetailFlat.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC6389B24CA049B007CD903 /* DetailFlat.swift */; };
 		ECEFDF5424C1D3B900C13FB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEFDF5324C1D3B900C13FB5 /* AppDelegate.swift */; };
 		ECEFDF5624C1D3B900C13FB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEFDF5524C1D3B900C13FB5 /* SceneDelegate.swift */; };
-		ECEFDF5824C1D3B900C13FB5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEFDF5724C1D3B900C13FB5 /* ContentView.swift */; };
+		ECEFDF5824C1D3B900C13FB5 /* LoginReg.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEFDF5724C1D3B900C13FB5 /* LoginReg.swift */; };
 		ECEFDF5A24C1D3BC00C13FB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECEFDF5924C1D3BC00C13FB5 /* Assets.xcassets */; };
 		ECEFDF5D24C1D3BC00C13FB5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECEFDF5C24C1D3BC00C13FB5 /* Preview Assets.xcassets */; };
 		ECEFDF6024C1D3BC00C13FB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECEFDF5E24C1D3BC00C13FB5 /* LaunchScreen.storyboard */; };
 		ECEFDF6B24C1D3BC00C13FB5 /* DomClickTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEFDF6A24C1D3BC00C13FB5 /* DomClickTests.swift */; };
-		ECEFDF8224C1DE0F00C13FB5 /* DomClickNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = ECEFDF8124C1DE0F00C13FB5 /* DomClickNetwork */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,10 +43,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC130CD324CC409700611116 /* ColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExt.swift; sourceTree = "<group>"; };
+		EC6428F024CC39EA00342A46 /* StubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubView.swift; sourceTree = "<group>"; };
+		EC95E0B824C9ADD3002DD189 /* CustomBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBtn.swift; sourceTree = "<group>"; };
+		EC99E90124CA99B700F7929C /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		EC99E90824CAD33E00F7929C /* SwitchingStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchingStart.swift; sourceTree = "<group>"; };
+		EC99E90A24CB049A00F7929C /* FlatListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatListCell.swift; sourceTree = "<group>"; };
+		EC99E90F24CB369800F7929C /* ListSeparatorStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSeparatorStyle.swift; sourceTree = "<group>"; };
+		ECC6388724C9B753007CD903 /* DomClick.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DomClick.entitlements; sourceTree = "<group>"; };
+		ECC6388A24C9CA5A007CD903 /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
+		ECC6388D24C9D3D6007CD903 /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
+		ECC6389024C9FC45007CD903 /* FiltersProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersProperty.swift; sourceTree = "<group>"; };
+		ECC6389224C9FD7D007CD903 /* TabNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigation.swift; sourceTree = "<group>"; };
+		ECC6389424C9FF92007CD903 /* ListFlats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFlats.swift; sourceTree = "<group>"; };
+		ECC6389724CA03B0007CD903 /* Cabinet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cabinet.swift; sourceTree = "<group>"; };
+		ECC6389924CA03BF007CD903 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		ECC6389B24CA049B007CD903 /* DetailFlat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFlat.swift; sourceTree = "<group>"; };
 		ECEFDF5024C1D3B900C13FB5 /* DomClick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DomClick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECEFDF5324C1D3B900C13FB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECEFDF5524C1D3B900C13FB5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ECEFDF5724C1D3B900C13FB5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ECEFDF5724C1D3B900C13FB5 /* LoginReg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReg.swift; sourceTree = "<group>"; };
 		ECEFDF5924C1D3BC00C13FB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECEFDF5C24C1D3BC00C13FB5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ECEFDF5F24C1D3BC00C13FB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECEFDF8224C1DE0F00C13FB5 /* DomClickNetwork in Frameworks */,
+				ECC6388924C9C2D3007CD903 /* DomClickNetwork in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +92,76 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC130CD524CC434E00611116 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				EC130CD324CC409700611116 /* ColorExt.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		EC130CD624CC435C00611116 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		EC95E0B724C9AD9E002DD189 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EC95E0B824C9ADD3002DD189 /* CustomBtn.swift */,
+				EC99E90A24CB049A00F7929C /* FlatListCell.swift */,
+				ECC6388A24C9CA5A007CD903 /* LazyView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		EC99E90524CA9E8700F7929C /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		EC99E90E24CB366400F7929C /* Modifires */ = {
+			isa = PBXGroup;
+			children = (
+				EC99E90F24CB369800F7929C /* ListSeparatorStyle.swift */,
+			);
+			path = Modifires;
+			sourceTree = "<group>";
+		};
+		ECC6388C24C9D36F007CD903 /* Extensoins */ = {
+			isa = PBXGroup;
+			children = (
+				EC130CD524CC434E00611116 /* Data */,
+				EC130CD624CC435C00611116 /* UI */,
+			);
+			path = Extensoins;
+			sourceTree = "<group>";
+		};
+		ECC6388F24C9FBCF007CD903 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				ECC6389224C9FD7D007CD903 /* TabNavigation.swift */,
+				ECC6389024C9FC45007CD903 /* FiltersProperty.swift */,
+				ECC6389424C9FF92007CD903 /* ListFlats.swift */,
+				ECC6389B24CA049B007CD903 /* DetailFlat.swift */,
+				EC6428F024CC39EA00342A46 /* StubView.swift */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		ECC6389624CA0396007CD903 /* Cabinets */ = {
+			isa = PBXGroup;
+			children = (
+				ECC6389724CA03B0007CD903 /* Cabinet.swift */,
+				ECC6389924CA03BF007CD903 /* Profile.swift */,
+			);
+			path = Cabinets;
+			sourceTree = "<group>";
+		};
 		ECEFDF4724C1D3B900C13FB5 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +223,7 @@
 		ECEFDF7624C1D42400C13FB5 /* Environments */ = {
 			isa = PBXGroup;
 			children = (
+				ECC6388724C9B753007CD903 /* DomClick.entitlements */,
 				ECEFDF6124C1D3BC00C13FB5 /* Info.plist */,
 			);
 			path = Environments;
@@ -130,6 +232,10 @@
 		ECEFDF7724C1D43200C13FB5 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				EC99E90524CA9E8700F7929C /* DesignSystem */,
+				EC95E0B724C9AD9E002DD189 /* Components */,
+				EC99E90E24CB366400F7929C /* Modifires */,
+				ECC6388C24C9D36F007CD903 /* Extensoins */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -147,7 +253,9 @@
 		ECEFDF7924C1D44500C13FB5 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
-				ECEFDF7D24C1D5C100C13FB5 /* Base */,
+				ECC6389624CA0396007CD903 /* Cabinets */,
+				ECEFDF7D24C1D5C100C13FB5 /* InviteDialogs */,
+				ECC6388F24C9FBCF007CD903 /* Tabs */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -176,12 +284,15 @@
 			path = AppScene;
 			sourceTree = "<group>";
 		};
-		ECEFDF7D24C1D5C100C13FB5 /* Base */ = {
+		ECEFDF7D24C1D5C100C13FB5 /* InviteDialogs */ = {
 			isa = PBXGroup;
 			children = (
-				ECEFDF5724C1D3B900C13FB5 /* ContentView.swift */,
+				EC99E90824CAD33E00F7929C /* SwitchingStart.swift */,
+				ECEFDF5724C1D3B900C13FB5 /* LoginReg.swift */,
+				EC99E90124CA99B700F7929C /* Login.swift */,
+				ECC6388D24C9D3D6007CD903 /* Registration.swift */,
 			);
-			path = Base;
+			path = InviteDialogs;
 			sourceTree = "<group>";
 		};
 		ECEFDF7F24C1D72500C13FB5 /* Packages */ = {
@@ -216,7 +327,7 @@
 			);
 			name = DomClick;
 			packageProductDependencies = (
-				ECEFDF8124C1DE0F00C13FB5 /* DomClickNetwork */,
+				ECC6388824C9C2D3007CD903 /* DomClickNetwork */,
 			);
 			productName = DomClick;
 			productReference = ECEFDF5024C1D3B900C13FB5 /* DomClick.app */;
@@ -268,6 +379,8 @@
 				Base,
 			);
 			mainGroup = ECEFDF4724C1D3B900C13FB5;
+			packageReferences = (
+			);
 			productRefGroup = ECEFDF5124C1D3B900C13FB5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -303,9 +416,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECC6389124C9FC45007CD903 /* FiltersProperty.swift in Sources */,
+				EC130CD424CC409700611116 /* ColorExt.swift in Sources */,
+				EC99E91024CB369800F7929C /* ListSeparatorStyle.swift in Sources */,
+				ECC6389C24CA049B007CD903 /* DetailFlat.swift in Sources */,
+				EC99E90224CA99B700F7929C /* Login.swift in Sources */,
+				ECC6389524C9FF92007CD903 /* ListFlats.swift in Sources */,
 				ECEFDF5424C1D3B900C13FB5 /* AppDelegate.swift in Sources */,
+				EC6428F124CC39EA00342A46 /* StubView.swift in Sources */,
+				EC95E0B924C9ADD3002DD189 /* CustomBtn.swift in Sources */,
+				ECC6389824CA03B0007CD903 /* Cabinet.swift in Sources */,
 				ECEFDF5624C1D3B900C13FB5 /* SceneDelegate.swift in Sources */,
-				ECEFDF5824C1D3B900C13FB5 /* ContentView.swift in Sources */,
+				ECC6388B24C9CA5A007CD903 /* LazyView.swift in Sources */,
+				EC99E90B24CB049A00F7929C /* FlatListCell.swift in Sources */,
+				EC99E90924CAD33E00F7929C /* SwitchingStart.swift in Sources */,
+				ECC6389324C9FD7D007CD903 /* TabNavigation.swift in Sources */,
+				ECC6389A24CA03BF007CD903 /* Profile.swift in Sources */,
+				ECC6388E24C9D3D6007CD903 /* Registration.swift in Sources */,
+				ECEFDF5824C1D3B900C13FB5 /* LoginReg.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,17 +585,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/DomClick/Environments/DomClick.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"DomClick/Preview Content\"";
 				DEVELOPMENT_TEAM = B2H4W42259;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/DomClick/Environments/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = PersonalTeam.DomClick;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -477,17 +608,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/DomClick/Environments/DomClick.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"DomClick/Preview Content\"";
 				DEVELOPMENT_TEAM = B2H4W42259;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/DomClick/Environments/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = PersonalTeam.DomClick;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -501,7 +635,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B2H4W42259;
 				INFOPLIST_FILE = DomClickTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -523,7 +657,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B2H4W42259;
 				INFOPLIST_FILE = DomClickTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -570,7 +704,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		ECEFDF8124C1DE0F00C13FB5 /* DomClickNetwork */ = {
+		ECC6388824C9C2D3007CD903 /* DomClickNetwork */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DomClickNetwork;
 		};
