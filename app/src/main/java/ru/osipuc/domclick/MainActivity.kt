@@ -7,9 +7,9 @@ import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 import ru.osipuc.domclick.databinding.ActivityMainBinding
 import ru.osipuc.domclick.ui.fragments.FirstFragment
-import ru.osipuc.domclick.ui.fragments.ListFragment
 import ru.osipuc.domclick.ui.fragments.ProfileFragment
 import ru.osipuc.domclick.ui.fragments.SearchFragment
+import ru.osipuc.domclick.ui.fragments.listFragment.ListFragment
 import ru.osipuc.domclick.utilites.APP_ACTIVITY
 import ru.osipuc.domclick.utilites.AUTH
 import ru.osipuc.domclick.utilites.replaceFragment
@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
                 } else -> {false}
             }
         }
-        initFireBase()
+//        initFireBase()
         replaceFragment(FirstFragment(), false)
 //        if (AUTH.currentUser != null) {
 //            replaceFragment(MainFragment())
