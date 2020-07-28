@@ -5,7 +5,7 @@ const ErrorHandler = require("./handlers/errorHandler");
 const bcrypt = require("bcryptjs");
 
 const userSchema = new Schema({
-  login: { type: String, required: true },
+  login: { type: String, required: true, index: true, unique: true },
   password: { type: String, required: true },
   role: { type: String, required: true },
 });

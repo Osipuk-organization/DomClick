@@ -3,13 +3,14 @@ const express = require("express");
 const path = require("path");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
+const mongoose = require("mongoose");
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 const dotenv = require("dotenv");
 const cowsay = require("cowsay");
 
+//variables
 require('dotenv').config({ path: path.resolve(__dirname, '.env') });
 
 const PORT = process.env.SERVER_PORT || 4000;
@@ -21,8 +22,8 @@ require(path.resolve(__dirname, 'mongo_connect.js'));
 
 const app = express();
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 app.use(
   session({
@@ -46,11 +47,11 @@ app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 
 
-  //server listen
-  app.listen(PORT, () => {
-    console.log(cowsay.say({
-      text: `\x1b[33mServer has been started \x1b[34mhttp://localhost:${PORT}\x1b[37m`,
-      e: "oO",
-      T: "U "
-    }))
-  });
+//server listen
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(cowsay.say({
+    text: `\x1b[33mServer has been started \x1b[34mhttp://localhost:${PORT}\x1b[37m`,
+    e: "oO",
+    T: "U "
+  }))
+});

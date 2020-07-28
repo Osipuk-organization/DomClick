@@ -6,7 +6,7 @@ const dealSchema = new Schema({
   comment: { type: String, },
   type_deal: { // Тип сделки
     type: String,
-    enum: ['Продажа', 'Аренда',],
+    enum: ['Продажа', 'Аренда'],
     required: true,
   },
   property_type: { //Вид недвижимости
