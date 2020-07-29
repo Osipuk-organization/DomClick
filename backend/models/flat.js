@@ -179,8 +179,13 @@ const dataSchema = new Schema({
     comment: { type: String, },
   },
   address: { //Адрес объект
-    value: { type: String, required: true, },
     comment: { type: String, },
+    city: { type: String, required: true, },
+    streetName: { type: String, required: true, },
+    county: { type: String, required: true, },
+    state: { type: String, required: true, },
+    latitude: { type: String, required: true, },
+    longitude: { type: String, required: true, },
   },
   deal: dealSchema, //Сделка
   terms_of_sale: terms_of_saleSchema, //Условия продажи

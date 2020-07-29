@@ -8,7 +8,7 @@ const request = require('request');
 const tunnel = require('tunnel-ssh');
 const ansi = require('ansi');
 const cursor = ansi(process.stdout);
-// faker.locale = "ru";
+faker.locale = "en";
 
 const Flat = require('../models/flat');
 
@@ -70,8 +70,13 @@ async function importSeeds() {
         // comment: faker.lorem.paragraph(),
       },
       address: {
-        value: `${faker.address.state()} ${faker.address.city()} ${faker.address.streetAddress()}`,
         // comment: faker.lorem.paragraph(),
+        city: faker.address.city(),
+        streetName: faker.address.streetName(),
+        county: faker.address.county(),
+        state: faker.address.state(),
+        latitude: faker.address.latitude(),
+        longitude: faker.address.longitude(),
       },
       deal: {
         // comment: faker.lorem.paragraph(),
