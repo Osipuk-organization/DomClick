@@ -29,7 +29,7 @@ app.use(addRequestId);
 morgan.token('id', (req) => req.id.split('-')[0]);
 const loggerFormat1 = '[:date[iso] #:id] Started :method :url for :remote-addr'; 
 const loggerFormat2 = '[:date[iso] #:id] Completed :status :res[content-length] in :response-time ms'; 
-var accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
+const accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
 
 app.use(morgan(loggerFormat1, { stream: accessLogStream }))
 app.use(morgan(loggerFormat2, { stream: accessLogStream }))

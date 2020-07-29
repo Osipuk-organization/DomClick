@@ -66,7 +66,7 @@ async function importSeeds() {
       owner: faker.name.findName(),
       documents: [],
       cadastral_value: {
-        value: faker.random.number(),
+        value: Math.floor(Math.random() * (5000000 + 1 - 500000)),
         // comment: faker.lorem.paragraph(),
       },
       address: {
@@ -96,7 +96,7 @@ async function importSeeds() {
       terms_of_sale: {
         // comment: faker.lorem.paragraph(),
         cost: {
-          value: faker.random.number(),
+          value: Math.floor(Math.random() * (5000000 + 1 - 500000)),
           trade: faker.random.boolean(),
         },
         gas: faker.random.boolean(),
@@ -161,8 +161,8 @@ async function importSeeds() {
           value: faker.random.arrayElement(['1', '2', '3+']),
           freight_elevator: faker.random.boolean(),
         },
-        apartment_number: faker.random.number(),
-        cadastral_number: faker.random.number(),
+        apartment_number: Math.floor(Math.random() * (300 + 1 - 1)),
+        cadastral_number: Math.floor(Math.random() * (10000 + 1 - 1000)),
         foto: {
           // comment: faker.lorem.paragraph(),
           value: [],
@@ -176,12 +176,12 @@ async function importSeeds() {
         // comment: faker.lorem.paragraph(),
         rooms: faker.random.arrayElement(['1', '2', '3', '4', '5+', 'Студия']),
         freight_elevator: faker.random.boolean(),
-        square: faker.random.number(),
-        square_kitchen: faker.random.number(),
-        square_residential: faker.random.number(),
-        floor: faker.random.number(),
-        floors_in_the_house: faker.random.number(),
-        ceiling_height: faker.random.number(),
+        square: Math.floor(Math.random() * (300)),
+        square_kitchen: Math.floor(Math.random() * (50)),
+        square_residential: Math.floor(Math.random() * (300)),
+        floor: Math.floor(Math.random() * (100 + 1 - 1)),
+        floors_in_the_house: Math.floor(Math.random() * (100 + 1 - 1)),
+        ceiling_height: Math.floor(Math.random() * (5 + 1 - 1)),
       },
     });
 
