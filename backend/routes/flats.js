@@ -8,9 +8,16 @@ const Flats = require('../models/flat');
 
 router.route('/')
     .get(async (req, res) => {
-        //сделать пагинацию
-        const flats = await Flats.find();
-        res.status(200).json(flats);
+        let { page = 1, limit = 10 } = req.query;
+        page = +page;
+        limit = +limit;
+        const flats = await Flats.find().skip(limit * (page - 1)).limit(limit);
+        const total = await Flats.countDocuments();
+        res.status(200).json({
+            page,
+            total,
+            flats,
+        });
     })
     .all(authenticateMiddleware, async (req, res, next) => {
         // Проверка на права
@@ -45,7 +52,7 @@ router.route('/:id')
         if (mongoose.Types.ObjectId.isValid(req.params.id)) {
             const flat = await Flats.findById(req.params.id);
             if (flat) {
-                res.status(200).json(flat);
+                res.status(200).json(1);
             } else {
                 res.status(404).json({ "error": 404 });
             }

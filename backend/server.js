@@ -25,17 +25,17 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
-app.use(
-  session({
-    resave: true,
-    saveUninitialized: false,
-    secret: process.env.SESSION_SECRET_PHRASE,
-    store: new MongoStore({
-      mongooseConnection: mongoose.connection,
-    }),
-  })
-);
-app.use(cookieParser(process.env.COOKIE_SECRET_KEY));
+// app.use(
+//   session({
+//     resave: true,
+//     saveUninitialized: false,
+//     secret: process.env.SESSION_SECRET_PHRASE,
+//     store: new MongoStore({
+//       mongooseConnection: mongoose.connection,
+//     }),
+//   })
+// );
+// app.use(cookieParser(process.env.COOKIE_SECRET_KEY));
 app.use(passport.initialize);
 app.use(passport.session);
 app.use(router);
