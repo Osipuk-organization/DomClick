@@ -1,112 +1,5165 @@
 {
   "flats": [
     {
-      "id": "1",
-      "images": [
-        "/img/offers1.jpg",
-        "/img/offers2.jpg",
-        "/img/offers3.jpg",
-        "/img/offers4.jpg"
-      ],
-      "cost": 321456,
-      "cost_m2": 1242,
-      "currency": "₽",
-      "owner": "Собственник",
-      "rooms": 1,
-      "floor": 3,
-      "city": "Москва",
-      "address": "ул. Лучезарных",
-      "area": "Северный"
+      "cadastral_value": {
+        "value": 76299
+      },
+      "address": {
+        "value": "Maryland Strackeshire 07388 Lang Gardens",
+        "city": "",
+        "streetName": "",
+        "country": "",
+        "state": "",
+        "latitude": "6.7478",
+        "longitude": "59.7605"
+      },
+      "documents": [],
+      "_id": "5f2091ce14d7a0274c14616d",
+      "owner": "Ana Kessler",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": false,
+          "value": "3+"
+        },
+        "registered": {
+          "minor_child": true,
+          "value": "2"
+        },
+        "type_deal": "Продажа",
+        "property_type": "Коммерческая",
+        "type_of_property": "Участок",
+        "years_in_ownership": "От 3-х до 5-ти"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": true,
+          "value": 29648
+        },
+        "gas": true,
+        "refuse_chute": false
+      },
+      "additionally": {
+        "security": {
+          "doorphone": false,
+          "concierge": false,
+          "code_door": true,
+          "closed_territory": true
+        },
+        "parking": {
+          "in_the_courtyard": false,
+          "underground": false,
+          "barrier": true,
+          "garage": false,
+          "security": true
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": true,
+          "sports_ground": false
+        },
+        "infrastructure": {
+          "school": true,
+          "fitness": false,
+          "park": false,
+          "kindergarten": false,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Раздельный"
+        },
+        "balcony": {
+          "value": "2"
+        },
+        "repair": {
+          "replanning": true,
+          "value": "Косметический"
+        },
+        "view_from_windows": {
+          "yard": false,
+          "street": true,
+          "park": false,
+          "reservoir": false,
+          "forest": false
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": false,
+          "value": "3+"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Деревянный",
+        "apartment_number": 22463,
+        "cadastral_number": 54979
+      },
+      "flat": {
+        "freight_elevator": true,
+        "rooms": "2",
+        "square": 99710,
+        "square_kitchen": 633,
+        "square_residential": 7363,
+        "floor": 3776,
+        "floors_in_the_house": 25467,
+        "ceiling_height": 48878
+      },
+      "updated": "2020-07-28T20:59:58.256Z",
+      "__v": 0
     },
     {
-      "id": "2",
-      "images": [
-        "/img/offers1.jpg",
-        "/img/offers2.jpg",
-        "/img/offers3.jpg",
-        "/img/offers4.jpg"
-      ],
-      "cost": 321456,
-      "cost_m2": 1242,
-      "currency": "₽",
-      "owner": "Собственник",
-      "rooms": 1,
-      "floor": 3,
-      "city": "Москва",
-      "address": "ул. Лучезарных",
-      "area": "Северный"
+      "cadastral_value": {
+        "value": 71303
+      },
+      "address": {
+        "value": "Louisiana South Alexandria 4696 Florida River"
+      },
+      "documents": [],
+      "_id": "5f2091ce14d7a0274c14616e",
+      "owner": "Mafalda Beer",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": false,
+          "value": "3+"
+        },
+        "registered": {
+          "minor_child": false,
+          "value": "1"
+        },
+        "type_deal": "Аренда",
+        "property_type": "Жилая",
+        "type_of_property": "Часть дома",
+        "years_in_ownership": "От 3-х до 5-ти"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": true,
+          "value": 80285
+        },
+        "gas": false,
+        "refuse_chute": true
+      },
+      "additionally": {
+        "security": {
+          "doorphone": false,
+          "concierge": true,
+          "code_door": false,
+          "closed_territory": false
+        },
+        "parking": {
+          "in_the_courtyard": true,
+          "underground": true,
+          "barrier": true,
+          "garage": true,
+          "security": false
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": false,
+          "sports_ground": false
+        },
+        "infrastructure": {
+          "school": true,
+          "fitness": true,
+          "park": false,
+          "kindergarten": false,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Более одного"
+        },
+        "balcony": {
+          "value": "Нет"
+        },
+        "repair": {
+          "replanning": true,
+          "value": "Евро"
+        },
+        "view_from_windows": {
+          "yard": false,
+          "street": true,
+          "park": false,
+          "reservoir": true,
+          "forest": false
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": true,
+          "value": "1"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Блочный",
+        "apartment_number": 8241,
+        "cadastral_number": 12605
+      },
+      "flat": {
+        "freight_elevator": false,
+        "rooms": "3",
+        "square": 84431,
+        "square_kitchen": 30210,
+        "square_residential": 39755,
+        "floor": 31994,
+        "floors_in_the_house": 17021,
+        "ceiling_height": 15960
+      },
+      "updated": "2020-07-28T20:59:58.305Z",
+      "__v": 0
     },
     {
-      "id": "3",
-      "images": [
-        "/img/offers1.jpg",
-        "/img/offers2.jpg",
-        "/img/offers3.jpg",
-        "/img/offers4.jpg"
-      ],
-      "cost": 321456,
-      "cost_m2": 1242,
-      "currency": "₽",
-      "owner": "Собственник",
-      "rooms": 1,
-      "floor": 3,
-      "city": "Москва",
-      "address": "ул. Лучезарных",
-      "area": "Северный"
+      "cadastral_value": {
+        "value": 56234
+      },
+      "address": {
+        "value": "Maine Melvinaland 3426 Hoppe Overpass"
+      },
+      "documents": [],
+      "_id": "5f2091ce14d7a0274c14616f",
+      "owner": "Dell O'Keefe III",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": false,
+          "value": "1"
+        },
+        "registered": {
+          "minor_child": false,
+          "value": "1"
+        },
+        "type_deal": "Продажа",
+        "property_type": "Коммерческая",
+        "type_of_property": "Участок",
+        "years_in_ownership": "Меньше 3-х"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": false,
+          "value": 80246
+        },
+        "gas": true,
+        "refuse_chute": false
+      },
+      "additionally": {
+        "security": {
+          "doorphone": false,
+          "concierge": false,
+          "code_door": false,
+          "closed_territory": false
+        },
+        "parking": {
+          "in_the_courtyard": true,
+          "underground": false,
+          "barrier": true,
+          "garage": true,
+          "security": true
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": false,
+          "sports_ground": false
+        },
+        "infrastructure": {
+          "school": true,
+          "fitness": false,
+          "park": true,
+          "kindergarten": false,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Более одного"
+        },
+        "balcony": {
+          "value": "Нет"
+        },
+        "repair": {
+          "replanning": true,
+          "value": "Евро"
+        },
+        "view_from_windows": {
+          "yard": true,
+          "street": true,
+          "park": true,
+          "reservoir": true,
+          "forest": true
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": false,
+          "value": "1"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Деревянный",
+        "apartment_number": 29764,
+        "cadastral_number": 71592
+      },
+      "flat": {
+        "freight_elevator": false,
+        "rooms": "2",
+        "square": 49965,
+        "square_kitchen": 22149,
+        "square_residential": 47050,
+        "floor": 97346,
+        "floors_in_the_house": 55898,
+        "ceiling_height": 93981
+      },
+      "updated": "2020-07-28T20:59:58.348Z",
+      "__v": 0
     },
     {
-      "id": "4",
-      "images": [
-        "/img/offers1.jpg",
-        "/img/offers2.jpg",
-        "/img/offers3.jpg",
-        "/img/offers4.jpg"
-      ],
-      "cost": 321456,
-      "cost_m2": 1242,
-      "currency": "₽",
-      "owner": "Собственник",
-      "rooms": 1,
-      "floor": 3,
-      "city": "Москва",
-      "address": "ул. Лучезарных",
-      "area": "Северный"
+      "cadastral_value": {
+        "value": 24416
+      },
+      "address": {
+        "value": "Wyoming Geneborough 946 Rodolfo Course"
+      },
+      "documents": [],
+      "_id": "5f2091ce14d7a0274c146170",
+      "owner": "Jerrell Schoen",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": true,
+          "value": "1"
+        },
+        "registered": {
+          "minor_child": false,
+          "value": "2"
+        },
+        "type_deal": "Продажа",
+        "property_type": "Жилая",
+        "type_of_property": "Часть дома",
+        "years_in_ownership": "Больше 5-ти"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": false,
+          "value": 78379
+        },
+        "gas": false,
+        "refuse_chute": false
+      },
+      "additionally": {
+        "security": {
+          "doorphone": false,
+          "concierge": false,
+          "code_door": true,
+          "closed_territory": false
+        },
+        "parking": {
+          "in_the_courtyard": true,
+          "underground": true,
+          "barrier": false,
+          "garage": false,
+          "security": false
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": false,
+          "sports_ground": false
+        },
+        "infrastructure": {
+          "school": false,
+          "fitness": true,
+          "park": true,
+          "kindergarten": true,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Более одного"
+        },
+        "balcony": {
+          "value": "2"
+        },
+        "repair": {
+          "replanning": true,
+          "value": "Косметический"
+        },
+        "view_from_windows": {
+          "yard": false,
+          "street": false,
+          "park": false,
+          "reservoir": false,
+          "forest": false
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": false,
+          "value": "2"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Кирпичный",
+        "apartment_number": 18612,
+        "cadastral_number": 43416
+      },
+      "flat": {
+        "freight_elevator": false,
+        "rooms": "3",
+        "square": 36908,
+        "square_kitchen": 30619,
+        "square_residential": 48,
+        "floor": 77293,
+        "floors_in_the_house": 75047,
+        "ceiling_height": 19047
+      },
+      "updated": "2020-07-28T20:59:58.391Z",
+      "__v": 0
     },
     {
-      "id": "5",
-      "images": [
-        "/img/offers1.jpg",
-        "/img/offers2.jpg",
-        "/img/offers3.jpg",
-        "/img/offers4.jpg"
-      ],
-      "cost": 321456,
-      "cost_m2": 1242,
-      "currency": "₽",
-      "owner": "Собственник",
-      "rooms": 1,
-      "floor": 3,
-      "city": "Москва",
-      "address": "ул. Лучезарных",
-      "area": "Северный"
+      "cadastral_value": {
+        "value": 19419
+      },
+      "address": {
+        "value": "Vermont Lake Berthaburgh 28176 Feeney Cliffs"
+      },
+      "documents": [],
+      "_id": "5f2091ce14d7a0274c146171",
+      "owner": "Kevon Hessel",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": true,
+          "value": "1"
+        },
+        "registered": {
+          "minor_child": true,
+          "value": "1"
+        },
+        "type_deal": "Продажа",
+        "property_type": "Жилая",
+        "type_of_property": "Дом",
+        "years_in_ownership": "Больше 5-ти"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": false,
+          "value": 61286
+        },
+        "gas": true,
+        "refuse_chute": true
+      },
+      "additionally": {
+        "security": {
+          "doorphone": false,
+          "concierge": false,
+          "code_door": true,
+          "closed_territory": true
+        },
+        "parking": {
+          "in_the_courtyard": true,
+          "underground": false,
+          "barrier": false,
+          "garage": true,
+          "security": true
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": true,
+          "sports_ground": true
+        },
+        "infrastructure": {
+          "school": false,
+          "fitness": true,
+          "park": true,
+          "kindergarten": false,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Совмещенный"
+        },
+        "balcony": {
+          "value": "3+"
+        },
+        "repair": {
+          "replanning": false,
+          "value": "Без ремонта"
+        },
+        "view_from_windows": {
+          "yard": false,
+          "street": true,
+          "park": false,
+          "reservoir": true,
+          "forest": true
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": false,
+          "value": "2"
+        },
+        "foto": {
+          "value": [
+            "/img/offers1.jpg",
+            "/img/offers2.jpg",
+            "/img/offers3.jpg",
+            "/img/offers4.jpg"
+          ]
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Монолитный",
+        "apartment_number": 43090,
+        "cadastral_number": 60251
+      },
+      "flat": {
+        "freight_elevator": true,
+        "rooms": "1",
+        "square": 59524,
+        "square_kitchen": 53062,
+        "square_residential": 60445,
+        "floor": 66214,
+        "floors_in_the_house": 63032,
+        "ceiling_height": 16494
+      },
+      "updated": "2020-07-28T20:59:58.436Z",
+      "__v": 0
     },
     {
-      "id": "6",
-      "images": [
-        "/img/offers1.jpg",
-        "/img/offers2.jpg",
-        "/img/offers3.jpg",
-        "/img/offers4.jpg"
-      ],
-      "cost": 321456,
-      "cost_m2": 1242,
-      "currency": "₽",
-      "owner": "Собственник",
-      "rooms": 1,
-      "floor": 3,
-      "city": "Москва",
-      "address": "ул. Лучезарных",
-      "area": "Северный"
+      "cadastral_value": {
+        "value": 41553
+      },
+      "address": {
+        "value": "Washington South Karastad 111 Urban Drive"
+      },
+      "documents": [],
+      "_id": "5f2091ce14d7a0274c146172",
+      "owner": "Ms. Laurel Funk",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": true,
+          "value": "3+"
+        },
+        "registered": {
+          "minor_child": true,
+          "value": "1"
+        },
+        "type_deal": "Аренда",
+        "property_type": "Жилая",
+        "type_of_property": "Дом",
+        "years_in_ownership": "От 3-х до 5-ти"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": true,
+          "value": 72466
+        },
+        "gas": true,
+        "refuse_chute": true
+      },
+      "additionally": {
+        "security": {
+          "doorphone": true,
+          "concierge": false,
+          "code_door": false,
+          "closed_territory": false
+        },
+        "parking": {
+          "in_the_courtyard": true,
+          "underground": true,
+          "barrier": true,
+          "garage": false,
+          "security": true
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": false,
+          "sports_ground": false
+        },
+        "infrastructure": {
+          "school": true,
+          "fitness": true,
+          "park": false,
+          "kindergarten": false,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Совмещенный"
+        },
+        "balcony": {
+          "value": "Нет"
+        },
+        "repair": {
+          "replanning": false,
+          "value": "Евро"
+        },
+        "view_from_windows": {
+          "yard": true,
+          "street": false,
+          "park": true,
+          "reservoir": true,
+          "forest": true
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": false,
+          "value": "2"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Панельный",
+        "apartment_number": 90884,
+        "cadastral_number": 55833
+      },
+      "flat": {
+        "freight_elevator": true,
+        "rooms": "3",
+        "square": 85483,
+        "square_kitchen": 52711,
+        "square_residential": 89029,
+        "floor": 56985,
+        "floors_in_the_house": 44264,
+        "ceiling_height": 40694
+      },
+      "updated": "2020-07-28T20:59:58.480Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 79890
+      },
+      "address": {
+        "value": "Idaho Port Susanna 2530 Mraz Port"
+      },
+      "documents": [],
+      "_id": "5f2091ce14d7a0274c146173",
+      "owner": "Lois Thompson",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": true,
+          "value": "2"
+        },
+        "registered": {
+          "minor_child": false,
+          "value": "2"
+        },
+        "type_deal": "Аренда",
+        "property_type": "Коммерческая",
+        "type_of_property": "Часть дома",
+        "years_in_ownership": "Меньше 3-х"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": true,
+          "value": 73837
+        },
+        "gas": false,
+        "refuse_chute": true
+      },
+      "additionally": {
+        "security": {
+          "doorphone": false,
+          "concierge": false,
+          "code_door": false,
+          "closed_territory": false
+        },
+        "parking": {
+          "in_the_courtyard": false,
+          "underground": true,
+          "barrier": true,
+          "garage": true,
+          "security": false
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": true,
+          "sports_ground": true
+        },
+        "infrastructure": {
+          "school": true,
+          "fitness": true,
+          "park": false,
+          "kindergarten": true,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Более одного"
+        },
+        "balcony": {
+          "value": "1"
+        },
+        "repair": {
+          "replanning": true,
+          "value": "Евро"
+        },
+        "view_from_windows": {
+          "yard": true,
+          "street": false,
+          "park": false,
+          "reservoir": false,
+          "forest": true
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": true,
+          "value": "3+"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Панельный",
+        "apartment_number": 19436,
+        "cadastral_number": 97727
+      },
+      "flat": {
+        "freight_elevator": true,
+        "rooms": "1",
+        "square": 45339,
+        "square_kitchen": 7362,
+        "square_residential": 173,
+        "floor": 9657,
+        "floors_in_the_house": 25451,
+        "ceiling_height": 60209
+      },
+      "updated": "2020-07-28T20:59:58.525Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 19265
+      },
+      "address": {
+        "value": "Alaska North Lemuelfort 76138 Dock Mountain"
+      },
+      "documents": [],
+      "_id": "5f2091ce14d7a0274c146174",
+      "owner": "Tod Mayer",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": false,
+          "value": "2"
+        },
+        "registered": {
+          "minor_child": true,
+          "value": "1"
+        },
+        "type_deal": "Продажа",
+        "property_type": "Жилая",
+        "type_of_property": "Таунхаус",
+        "years_in_ownership": "От 3-х до 5-ти"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": false,
+          "value": 69374
+        },
+        "gas": true,
+        "refuse_chute": true
+      },
+      "additionally": {
+        "security": {
+          "doorphone": true,
+          "concierge": true,
+          "code_door": true,
+          "closed_territory": false
+        },
+        "parking": {
+          "in_the_courtyard": false,
+          "underground": false,
+          "barrier": false,
+          "garage": true,
+          "security": false
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": true,
+          "sports_ground": true
+        },
+        "infrastructure": {
+          "school": false,
+          "fitness": false,
+          "park": false,
+          "kindergarten": false,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Совмещенный"
+        },
+        "balcony": {
+          "value": "3+"
+        },
+        "repair": {
+          "replanning": false,
+          "value": "Косметический"
+        },
+        "view_from_windows": {
+          "yard": true,
+          "street": true,
+          "park": true,
+          "reservoir": true,
+          "forest": true
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": true,
+          "value": "1"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Монолитный",
+        "apartment_number": 54667,
+        "cadastral_number": 36424
+      },
+      "flat": {
+        "freight_elevator": true,
+        "rooms": "3",
+        "square": 64245,
+        "square_kitchen": 22473,
+        "square_residential": 69758,
+        "floor": 1001,
+        "floors_in_the_house": 91550,
+        "ceiling_height": 49501
+      },
+      "updated": "2020-07-28T20:59:58.567Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 79107
+      },
+      "address": {
+        "value": "South Carolina Delaneyport 49209 Hahn Loop"
+      },
+      "documents": [],
+      "_id": "5f2091ce14d7a0274c146175",
+      "owner": "Quentin Reynolds",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": false,
+          "value": "2"
+        },
+        "registered": {
+          "minor_child": true,
+          "value": "2"
+        },
+        "type_deal": "Продажа",
+        "property_type": "Гараж",
+        "type_of_property": "Часть дома",
+        "years_in_ownership": "Больше 5-ти"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": true,
+          "value": 74972
+        },
+        "gas": false,
+        "refuse_chute": false
+      },
+      "additionally": {
+        "security": {
+          "doorphone": true,
+          "concierge": false,
+          "code_door": true,
+          "closed_territory": true
+        },
+        "parking": {
+          "in_the_courtyard": true,
+          "underground": false,
+          "barrier": true,
+          "garage": true,
+          "security": false
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": true,
+          "sports_ground": true
+        },
+        "infrastructure": {
+          "school": false,
+          "fitness": true,
+          "park": true,
+          "kindergarten": true,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Раздельный"
+        },
+        "balcony": {
+          "value": "2"
+        },
+        "repair": {
+          "replanning": true,
+          "value": "Без ремонта"
+        },
+        "view_from_windows": {
+          "yard": false,
+          "street": false,
+          "park": true,
+          "reservoir": true,
+          "forest": false
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": true,
+          "value": "3+"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Кирпичный",
+        "apartment_number": 8687,
+        "cadastral_number": 59358
+      },
+      "flat": {
+        "freight_elevator": false,
+        "rooms": "4",
+        "square": 70398,
+        "square_kitchen": 98490,
+        "square_residential": 86625,
+        "floor": 24611,
+        "floors_in_the_house": 56869,
+        "ceiling_height": 89952
+      },
+      "updated": "2020-07-28T20:59:58.609Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 4531
+      },
+      "address": {
+        "value": "Maryland Port Assuntamouth 378 Wolff Junctions"
+      },
+      "documents": [],
+      "_id": "5f2091ce14d7a0274c146176",
+      "owner": "Andrew Lebsack",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": false,
+          "value": "3+"
+        },
+        "registered": {
+          "minor_child": true,
+          "value": "3+"
+        },
+        "type_deal": "Аренда",
+        "property_type": "Гараж",
+        "type_of_property": "Комната",
+        "years_in_ownership": "От 3-х до 5-ти"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": true,
+          "value": 97817
+        },
+        "gas": true,
+        "refuse_chute": true
+      },
+      "additionally": {
+        "security": {
+          "doorphone": true,
+          "concierge": true,
+          "code_door": true,
+          "closed_territory": true
+        },
+        "parking": {
+          "in_the_courtyard": true,
+          "underground": true,
+          "barrier": false,
+          "garage": true,
+          "security": false
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": false,
+          "sports_ground": true
+        },
+        "infrastructure": {
+          "school": false,
+          "fitness": true,
+          "park": false,
+          "kindergarten": true,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Совмещенный"
+        },
+        "balcony": {
+          "value": "1"
+        },
+        "repair": {
+          "replanning": false,
+          "value": "Без ремонта"
+        },
+        "view_from_windows": {
+          "yard": true,
+          "street": true,
+          "park": false,
+          "reservoir": true,
+          "forest": true
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": false,
+          "value": "2"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Кирпичный",
+        "apartment_number": 28543,
+        "cadastral_number": 2968
+      },
+      "flat": {
+        "freight_elevator": true,
+        "rooms": "4",
+        "square": 40567,
+        "square_kitchen": 70257,
+        "square_residential": 53350,
+        "floor": 15893,
+        "floors_in_the_house": 53005,
+        "ceiling_height": 51187
+      },
+      "updated": "2020-07-28T20:59:58.652Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 62165
+      },
+      "address": {
+        "value": "Oregon Schuppeton 170 Brekke View"
+      },
+      "documents": [],
+      "_id": "5f2091ce14d7a0274c146177",
+      "owner": "Antwan Pfannerstill",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": true,
+          "value": "2"
+        },
+        "registered": {
+          "minor_child": false,
+          "value": "3+"
+        },
+        "type_deal": "Аренда",
+        "property_type": "Жилая",
+        "type_of_property": "Таунхаус",
+        "years_in_ownership": "Меньше 3-х"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": false,
+          "value": 33960
+        },
+        "gas": false,
+        "refuse_chute": false
+      },
+      "additionally": {
+        "security": {
+          "doorphone": false,
+          "concierge": true,
+          "code_door": false,
+          "closed_territory": true
+        },
+        "parking": {
+          "in_the_courtyard": false,
+          "underground": false,
+          "barrier": false,
+          "garage": false,
+          "security": true
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": true,
+          "sports_ground": true
+        },
+        "infrastructure": {
+          "school": true,
+          "fitness": false,
+          "park": false,
+          "kindergarten": true,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Раздельный"
+        },
+        "balcony": {
+          "value": "Нет"
+        },
+        "repair": {
+          "replanning": false,
+          "value": "Евро"
+        },
+        "view_from_windows": {
+          "yard": false,
+          "street": false,
+          "park": false,
+          "reservoir": false,
+          "forest": true
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": true,
+          "value": "1"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Панельный",
+        "apartment_number": 88682,
+        "cadastral_number": 36469
+      },
+      "flat": {
+        "freight_elevator": true,
+        "rooms": "5+",
+        "square": 11190,
+        "square_kitchen": 83564,
+        "square_residential": 52881,
+        "floor": 70341,
+        "floors_in_the_house": 11053,
+        "ceiling_height": 78948
+      },
+      "updated": "2020-07-28T20:59:58.699Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 48933
+      },
+      "address": {
+        "value": "Alabama West Ginomouth 6918 Fritz Crossroad"
+      },
+      "documents": [],
+      "_id": "5f2091ce14d7a0274c146178",
+      "owner": "Kenton Bode",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": false,
+          "value": "3+"
+        },
+        "registered": {
+          "minor_child": true,
+          "value": "2"
+        },
+        "type_deal": "Продажа",
+        "property_type": "Коммерческая",
+        "type_of_property": "Часть дома",
+        "years_in_ownership": "От 3-х до 5-ти"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": true,
+          "value": 28532
+        },
+        "gas": false,
+        "refuse_chute": true
+      },
+      "additionally": {
+        "security": {
+          "doorphone": true,
+          "concierge": true,
+          "code_door": true,
+          "closed_territory": true
+        },
+        "parking": {
+          "in_the_courtyard": true,
+          "underground": false,
+          "barrier": false,
+          "garage": false,
+          "security": true
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": true,
+          "sports_ground": true
+        },
+        "infrastructure": {
+          "school": false,
+          "fitness": false,
+          "park": true,
+          "kindergarten": true,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Раздельный"
+        },
+        "balcony": {
+          "value": "3+"
+        },
+        "repair": {
+          "replanning": false,
+          "value": "Евро"
+        },
+        "view_from_windows": {
+          "yard": false,
+          "street": true,
+          "park": false,
+          "reservoir": true,
+          "forest": true
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": true,
+          "value": "1"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Монолитный",
+        "apartment_number": 75323,
+        "cadastral_number": 80353
+      },
+      "flat": {
+        "freight_elevator": true,
+        "rooms": "4",
+        "square": 96765,
+        "square_kitchen": 24386,
+        "square_residential": 68696,
+        "floor": 41475,
+        "floors_in_the_house": 44891,
+        "ceiling_height": 72710
+      },
+      "updated": "2020-07-28T20:59:58.741Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 16906
+      },
+      "address": {
+        "value": "Wyoming Jerrodshire 664 O'Conner Turnpike"
+      },
+      "documents": [],
+      "_id": "5f2091ce14d7a0274c146179",
+      "owner": "Josianne Auer",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": true,
+          "value": "2"
+        },
+        "registered": {
+          "minor_child": false,
+          "value": "2"
+        },
+        "type_deal": "Аренда",
+        "property_type": "Гараж",
+        "type_of_property": "Квартира",
+        "years_in_ownership": "Больше 5-ти"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": false,
+          "value": 38515
+        },
+        "gas": false,
+        "refuse_chute": true
+      },
+      "additionally": {
+        "security": {
+          "doorphone": true,
+          "concierge": false,
+          "code_door": false,
+          "closed_territory": true
+        },
+        "parking": {
+          "in_the_courtyard": false,
+          "underground": true,
+          "barrier": false,
+          "garage": true,
+          "security": true
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": false,
+          "sports_ground": false
+        },
+        "infrastructure": {
+          "school": true,
+          "fitness": true,
+          "park": true,
+          "kindergarten": true,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Раздельный"
+        },
+        "balcony": {
+          "value": "1"
+        },
+        "repair": {
+          "replanning": false,
+          "value": "Косметический"
+        },
+        "view_from_windows": {
+          "yard": true,
+          "street": false,
+          "park": true,
+          "reservoir": false,
+          "forest": true
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": false,
+          "value": "3+"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Панельный",
+        "apartment_number": 3690,
+        "cadastral_number": 17292
+      },
+      "flat": {
+        "freight_elevator": true,
+        "rooms": "2",
+        "square": 17155,
+        "square_kitchen": 38427,
+        "square_residential": 16865,
+        "floor": 51543,
+        "floors_in_the_house": 67038,
+        "ceiling_height": 3247
+      },
+      "updated": "2020-07-28T20:59:58.784Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 67421
+      },
+      "address": {
+        "value": "Vermont Inesstad 31747 Cronin Port"
+      },
+      "documents": [],
+      "_id": "5f2091ce14d7a0274c14617a",
+      "owner": "Katlynn Wuckert",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": true,
+          "value": "2"
+        },
+        "registered": {
+          "minor_child": true,
+          "value": "1"
+        },
+        "type_deal": "Аренда",
+        "property_type": "Коммерческая",
+        "type_of_property": "Участок",
+        "years_in_ownership": "Меньше 3-х"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": false,
+          "value": 6886
+        },
+        "gas": true,
+        "refuse_chute": false
+      },
+      "additionally": {
+        "security": {
+          "doorphone": false,
+          "concierge": false,
+          "code_door": false,
+          "closed_territory": true
+        },
+        "parking": {
+          "in_the_courtyard": true,
+          "underground": false,
+          "barrier": false,
+          "garage": false,
+          "security": false
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": true,
+          "sports_ground": true
+        },
+        "infrastructure": {
+          "school": false,
+          "fitness": true,
+          "park": true,
+          "kindergarten": true,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Совмещенный"
+        },
+        "balcony": {
+          "value": "2"
+        },
+        "repair": {
+          "replanning": false,
+          "value": "Косметический"
+        },
+        "view_from_windows": {
+          "yard": true,
+          "street": false,
+          "park": true,
+          "reservoir": true,
+          "forest": true
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": true,
+          "value": "3+"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Панельный",
+        "apartment_number": 23933,
+        "cadastral_number": 12018
+      },
+      "flat": {
+        "freight_elevator": false,
+        "rooms": "4",
+        "square": 51605,
+        "square_kitchen": 89639,
+        "square_residential": 45019,
+        "floor": 54280,
+        "floors_in_the_house": 60745,
+        "ceiling_height": 15289
+      },
+      "updated": "2020-07-28T20:59:58.828Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 11489
+      },
+      "address": {
+        "value": "South Dakota East Gavinmouth 10333 Warren Ridge"
+      },
+      "documents": [],
+      "_id": "5f2091ce14d7a0274c14617b",
+      "owner": "Dwight Hammes",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": false,
+          "value": "1"
+        },
+        "registered": {
+          "minor_child": true,
+          "value": "2"
+        },
+        "type_deal": "Продажа",
+        "property_type": "Жилая",
+        "type_of_property": "Дом",
+        "years_in_ownership": "От 3-х до 5-ти"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": false,
+          "value": 31627
+        },
+        "gas": false,
+        "refuse_chute": false
+      },
+      "additionally": {
+        "security": {
+          "doorphone": true,
+          "concierge": true,
+          "code_door": true,
+          "closed_territory": false
+        },
+        "parking": {
+          "in_the_courtyard": false,
+          "underground": true,
+          "barrier": true,
+          "garage": true,
+          "security": false
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": false,
+          "sports_ground": false
+        },
+        "infrastructure": {
+          "school": false,
+          "fitness": true,
+          "park": false,
+          "kindergarten": true,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Более одного"
+        },
+        "balcony": {
+          "value": "2"
+        },
+        "repair": {
+          "replanning": false,
+          "value": "Без ремонта"
+        },
+        "view_from_windows": {
+          "yard": true,
+          "street": false,
+          "park": true,
+          "reservoir": false,
+          "forest": false
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": false,
+          "value": "3+"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Кирпичный",
+        "apartment_number": 24493,
+        "cadastral_number": 14602
+      },
+      "flat": {
+        "freight_elevator": false,
+        "rooms": "2",
+        "square": 42171,
+        "square_kitchen": 93708,
+        "square_residential": 41757,
+        "floor": 71166,
+        "floors_in_the_house": 98485,
+        "ceiling_height": 44872
+      },
+      "updated": "2020-07-28T20:59:58.869Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 37578
+      },
+      "address": {
+        "value": "Wisconsin Lake Odaborough 926 Aubree Ridges"
+      },
+      "documents": [],
+      "_id": "5f2091ce14d7a0274c14617c",
+      "owner": "Mrs. Doug Hickle",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": false,
+          "value": "2"
+        },
+        "registered": {
+          "minor_child": false,
+          "value": "2"
+        },
+        "type_deal": "Продажа",
+        "property_type": "Жилая",
+        "type_of_property": "Часть дома",
+        "years_in_ownership": "От 3-х до 5-ти"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": false,
+          "value": 23453
+        },
+        "gas": false,
+        "refuse_chute": true
+      },
+      "additionally": {
+        "security": {
+          "doorphone": false,
+          "concierge": false,
+          "code_door": true,
+          "closed_territory": true
+        },
+        "parking": {
+          "in_the_courtyard": true,
+          "underground": false,
+          "barrier": true,
+          "garage": false,
+          "security": true
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": true,
+          "sports_ground": true
+        },
+        "infrastructure": {
+          "school": false,
+          "fitness": false,
+          "park": true,
+          "kindergarten": true,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Совмещенный"
+        },
+        "balcony": {
+          "value": "2"
+        },
+        "repair": {
+          "replanning": false,
+          "value": "Евро"
+        },
+        "view_from_windows": {
+          "yard": false,
+          "street": true,
+          "park": false,
+          "reservoir": true,
+          "forest": true
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": true,
+          "value": "3+"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Кирпичный",
+        "apartment_number": 80935,
+        "cadastral_number": 16489
+      },
+      "flat": {
+        "freight_elevator": true,
+        "rooms": "5+",
+        "square": 87277,
+        "square_kitchen": 26532,
+        "square_residential": 97818,
+        "floor": 7793,
+        "floors_in_the_house": 71807,
+        "ceiling_height": 81385
+      },
+      "updated": "2020-07-28T20:59:58.914Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 79077
+      },
+      "address": {
+        "value": "Iowa East Carolinefurt 58827 Borer Stream"
+      },
+      "documents": [],
+      "_id": "5f2091ce14d7a0274c14617d",
+      "owner": "Jackie Adams MD",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": true,
+          "value": "3+"
+        },
+        "registered": {
+          "minor_child": true,
+          "value": "1"
+        },
+        "type_deal": "Продажа",
+        "property_type": "Коммерческая",
+        "type_of_property": "Таунхаус",
+        "years_in_ownership": "Меньше 3-х"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": true,
+          "value": 36609
+        },
+        "gas": false,
+        "refuse_chute": false
+      },
+      "additionally": {
+        "security": {
+          "doorphone": false,
+          "concierge": true,
+          "code_door": true,
+          "closed_territory": true
+        },
+        "parking": {
+          "in_the_courtyard": false,
+          "underground": true,
+          "barrier": true,
+          "garage": true,
+          "security": true
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": false,
+          "sports_ground": true
+        },
+        "infrastructure": {
+          "school": true,
+          "fitness": false,
+          "park": false,
+          "kindergarten": true,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Раздельный"
+        },
+        "balcony": {
+          "value": "Нет"
+        },
+        "repair": {
+          "replanning": false,
+          "value": "Дизайнерский"
+        },
+        "view_from_windows": {
+          "yard": true,
+          "street": false,
+          "park": false,
+          "reservoir": true,
+          "forest": true
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": false,
+          "value": "1"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Кирпичный",
+        "apartment_number": 5654,
+        "cadastral_number": 11938
+      },
+      "flat": {
+        "freight_elevator": false,
+        "rooms": "4",
+        "square": 78623,
+        "square_kitchen": 75099,
+        "square_residential": 52477,
+        "floor": 49348,
+        "floors_in_the_house": 92487,
+        "ceiling_height": 18464
+      },
+      "updated": "2020-07-28T20:59:58.954Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 29630
+      },
+      "address": {
+        "value": "Louisiana West Kaleighberg 19074 Goodwin Hill"
+      },
+      "documents": [],
+      "_id": "5f2091ce14d7a0274c14617e",
+      "owner": "Ms. Glennie Bauch",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": false,
+          "value": "2"
+        },
+        "registered": {
+          "minor_child": false,
+          "value": "1"
+        },
+        "type_deal": "Продажа",
+        "property_type": "Коммерческая",
+        "type_of_property": "Комната",
+        "years_in_ownership": "Больше 5-ти"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": true,
+          "value": 13718
+        },
+        "gas": true,
+        "refuse_chute": true
+      },
+      "additionally": {
+        "security": {
+          "doorphone": true,
+          "concierge": false,
+          "code_door": true,
+          "closed_territory": true
+        },
+        "parking": {
+          "in_the_courtyard": false,
+          "underground": true,
+          "barrier": true,
+          "garage": false,
+          "security": false
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": true,
+          "sports_ground": false
+        },
+        "infrastructure": {
+          "school": true,
+          "fitness": false,
+          "park": false,
+          "kindergarten": true,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Более одного"
+        },
+        "balcony": {
+          "value": "Нет"
+        },
+        "repair": {
+          "replanning": false,
+          "value": "Без ремонта"
+        },
+        "view_from_windows": {
+          "yard": true,
+          "street": true,
+          "park": true,
+          "reservoir": false,
+          "forest": true
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": true,
+          "value": "1"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Кирпичный",
+        "apartment_number": 78719,
+        "cadastral_number": 12144
+      },
+      "flat": {
+        "freight_elevator": false,
+        "rooms": "1",
+        "square": 36065,
+        "square_kitchen": 57370,
+        "square_residential": 27493,
+        "floor": 71668,
+        "floors_in_the_house": 28779,
+        "ceiling_height": 89816
+      },
+      "updated": "2020-07-28T20:59:58.993Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 40526
+      },
+      "address": {
+        "value": "Arkansas North Judy 27304 Homenick Falls"
+      },
+      "documents": [],
+      "_id": "5f2091cf14d7a0274c14617f",
+      "owner": "Westley Satterfield",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": false,
+          "value": "1"
+        },
+        "registered": {
+          "minor_child": false,
+          "value": "3+"
+        },
+        "type_deal": "Аренда",
+        "property_type": "Коммерческая",
+        "type_of_property": "Комната",
+        "years_in_ownership": "Меньше 3-х"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": true,
+          "value": 64170
+        },
+        "gas": true,
+        "refuse_chute": true
+      },
+      "additionally": {
+        "security": {
+          "doorphone": false,
+          "concierge": true,
+          "code_door": false,
+          "closed_territory": true
+        },
+        "parking": {
+          "in_the_courtyard": false,
+          "underground": true,
+          "barrier": false,
+          "garage": true,
+          "security": false
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": false,
+          "sports_ground": true
+        },
+        "infrastructure": {
+          "school": false,
+          "fitness": false,
+          "park": false,
+          "kindergarten": false,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Более одного"
+        },
+        "balcony": {
+          "value": "Нет"
+        },
+        "repair": {
+          "replanning": true,
+          "value": "Косметический"
+        },
+        "view_from_windows": {
+          "yard": true,
+          "street": true,
+          "park": true,
+          "reservoir": false,
+          "forest": false
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": false,
+          "value": "2"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Панельный",
+        "apartment_number": 23592,
+        "cadastral_number": 51782
+      },
+      "flat": {
+        "freight_elevator": false,
+        "rooms": "1",
+        "square": 52125,
+        "square_kitchen": 69825,
+        "square_residential": 82924,
+        "floor": 15536,
+        "floors_in_the_house": 40939,
+        "ceiling_height": 18009
+      },
+      "updated": "2020-07-28T20:59:59.034Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 5097
+      },
+      "address": {
+        "value": "West Virginia North Sylvia 5510 Mohammad View"
+      },
+      "documents": [],
+      "_id": "5f2091cf14d7a0274c146180",
+      "owner": "Dayton Will",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": true,
+          "value": "3+"
+        },
+        "registered": {
+          "minor_child": true,
+          "value": "1"
+        },
+        "type_deal": "Продажа",
+        "property_type": "Гараж",
+        "type_of_property": "Часть дома",
+        "years_in_ownership": "Меньше 3-х"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": false,
+          "value": 18525
+        },
+        "gas": true,
+        "refuse_chute": true
+      },
+      "additionally": {
+        "security": {
+          "doorphone": true,
+          "concierge": false,
+          "code_door": false,
+          "closed_territory": true
+        },
+        "parking": {
+          "in_the_courtyard": false,
+          "underground": false,
+          "barrier": false,
+          "garage": false,
+          "security": false
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": false,
+          "sports_ground": true
+        },
+        "infrastructure": {
+          "school": false,
+          "fitness": true,
+          "park": false,
+          "kindergarten": false,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Раздельный"
+        },
+        "balcony": {
+          "value": "Нет"
+        },
+        "repair": {
+          "replanning": false,
+          "value": "Без ремонта"
+        },
+        "view_from_windows": {
+          "yard": true,
+          "street": true,
+          "park": false,
+          "reservoir": false,
+          "forest": false
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": true,
+          "value": "2"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Монолитный",
+        "apartment_number": 85705,
+        "cadastral_number": 78223
+      },
+      "flat": {
+        "freight_elevator": false,
+        "rooms": "1",
+        "square": 62472,
+        "square_kitchen": 81645,
+        "square_residential": 33531,
+        "floor": 43250,
+        "floors_in_the_house": 26543,
+        "ceiling_height": 76983
+      },
+      "updated": "2020-07-28T20:59:59.075Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 85979
+      },
+      "address": {
+        "value": "Arkansas New Alia 7083 Champlin Prairie"
+      },
+      "documents": [],
+      "_id": "5f2091cf14d7a0274c146181",
+      "owner": "Luella Hickle",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": false,
+          "value": "2"
+        },
+        "registered": {
+          "minor_child": false,
+          "value": "1"
+        },
+        "type_deal": "Продажа",
+        "property_type": "Гараж",
+        "type_of_property": "Квартира",
+        "years_in_ownership": "Меньше 3-х"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": false,
+          "value": 23002
+        },
+        "gas": false,
+        "refuse_chute": true
+      },
+      "additionally": {
+        "security": {
+          "doorphone": true,
+          "concierge": true,
+          "code_door": true,
+          "closed_territory": false
+        },
+        "parking": {
+          "in_the_courtyard": true,
+          "underground": true,
+          "barrier": true,
+          "garage": false,
+          "security": false
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": false,
+          "sports_ground": false
+        },
+        "infrastructure": {
+          "school": true,
+          "fitness": true,
+          "park": true,
+          "kindergarten": true,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Раздельный"
+        },
+        "balcony": {
+          "value": "2"
+        },
+        "repair": {
+          "replanning": false,
+          "value": "Без ремонта"
+        },
+        "view_from_windows": {
+          "yard": true,
+          "street": true,
+          "park": true,
+          "reservoir": false,
+          "forest": true
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": false,
+          "value": "1"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Кирпичный",
+        "apartment_number": 40063,
+        "cadastral_number": 48148
+      },
+      "flat": {
+        "freight_elevator": true,
+        "rooms": "3",
+        "square": 41814,
+        "square_kitchen": 52774,
+        "square_residential": 87859,
+        "floor": 20346,
+        "floors_in_the_house": 24405,
+        "ceiling_height": 65688
+      },
+      "updated": "2020-07-28T20:59:59.116Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 94683
+      },
+      "address": {
+        "value": "North Carolina North Margarita 2691 Vincenzo Throughway"
+      },
+      "documents": [],
+      "_id": "5f2091cf14d7a0274c146182",
+      "owner": "Gladyce Emard II",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": true,
+          "value": "1"
+        },
+        "registered": {
+          "minor_child": true,
+          "value": "3+"
+        },
+        "type_deal": "Аренда",
+        "property_type": "Гараж",
+        "type_of_property": "Часть дома",
+        "years_in_ownership": "Больше 5-ти"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": false,
+          "value": 95320
+        },
+        "gas": false,
+        "refuse_chute": false
+      },
+      "additionally": {
+        "security": {
+          "doorphone": true,
+          "concierge": false,
+          "code_door": true,
+          "closed_territory": false
+        },
+        "parking": {
+          "in_the_courtyard": false,
+          "underground": false,
+          "barrier": true,
+          "garage": true,
+          "security": false
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": true,
+          "sports_ground": false
+        },
+        "infrastructure": {
+          "school": true,
+          "fitness": false,
+          "park": true,
+          "kindergarten": false,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Более одного"
+        },
+        "balcony": {
+          "value": "1"
+        },
+        "repair": {
+          "replanning": false,
+          "value": "Косметический"
+        },
+        "view_from_windows": {
+          "yard": true,
+          "street": true,
+          "park": false,
+          "reservoir": true,
+          "forest": false
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": false,
+          "value": "1"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Блочный",
+        "apartment_number": 45305,
+        "cadastral_number": 45564
+      },
+      "flat": {
+        "freight_elevator": false,
+        "rooms": "4",
+        "square": 4254,
+        "square_kitchen": 57692,
+        "square_residential": 20260,
+        "floor": 90815,
+        "floors_in_the_house": 76598,
+        "ceiling_height": 7611
+      },
+      "updated": "2020-07-28T20:59:59.157Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 50402
+      },
+      "address": {
+        "value": "South Dakota Lianaport 39971 Sonia Ways"
+      },
+      "documents": [],
+      "_id": "5f2091cf14d7a0274c146183",
+      "owner": "Joey Wilderman",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": true,
+          "value": "3+"
+        },
+        "registered": {
+          "minor_child": false,
+          "value": "1"
+        },
+        "type_deal": "Продажа",
+        "property_type": "Гараж",
+        "type_of_property": "Квартира",
+        "years_in_ownership": "От 3-х до 5-ти"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": true,
+          "value": 24824
+        },
+        "gas": false,
+        "refuse_chute": false
+      },
+      "additionally": {
+        "security": {
+          "doorphone": true,
+          "concierge": true,
+          "code_door": true,
+          "closed_territory": false
+        },
+        "parking": {
+          "in_the_courtyard": false,
+          "underground": false,
+          "barrier": false,
+          "garage": true,
+          "security": true
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": false,
+          "sports_ground": true
+        },
+        "infrastructure": {
+          "school": false,
+          "fitness": true,
+          "park": true,
+          "kindergarten": true,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Более одного"
+        },
+        "balcony": {
+          "value": "Нет"
+        },
+        "repair": {
+          "replanning": false,
+          "value": "Евро"
+        },
+        "view_from_windows": {
+          "yard": true,
+          "street": false,
+          "park": true,
+          "reservoir": true,
+          "forest": true
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": false,
+          "value": "3+"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Панельный",
+        "apartment_number": 49572,
+        "cadastral_number": 39461
+      },
+      "flat": {
+        "freight_elevator": true,
+        "rooms": "Студия",
+        "square": 89315,
+        "square_kitchen": 24288,
+        "square_residential": 83968,
+        "floor": 80436,
+        "floors_in_the_house": 52009,
+        "ceiling_height": 1570
+      },
+      "updated": "2020-07-28T20:59:59.199Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 98365
+      },
+      "address": {
+        "value": "North Dakota Kosstown 2478 Nienow Via"
+      },
+      "documents": [],
+      "_id": "5f2091cf14d7a0274c146184",
+      "owner": "Mr. Jany Gleichner",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": false,
+          "value": "3+"
+        },
+        "registered": {
+          "minor_child": false,
+          "value": "1"
+        },
+        "type_deal": "Аренда",
+        "property_type": "Жилая",
+        "type_of_property": "Участок",
+        "years_in_ownership": "Больше 5-ти"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": false,
+          "value": 86411
+        },
+        "gas": true,
+        "refuse_chute": true
+      },
+      "additionally": {
+        "security": {
+          "doorphone": false,
+          "concierge": false,
+          "code_door": true,
+          "closed_territory": true
+        },
+        "parking": {
+          "in_the_courtyard": false,
+          "underground": false,
+          "barrier": true,
+          "garage": true,
+          "security": false
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": true,
+          "sports_ground": false
+        },
+        "infrastructure": {
+          "school": true,
+          "fitness": true,
+          "park": true,
+          "kindergarten": false,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Раздельный"
+        },
+        "balcony": {
+          "value": "3+"
+        },
+        "repair": {
+          "replanning": false,
+          "value": "Косметический"
+        },
+        "view_from_windows": {
+          "yard": false,
+          "street": true,
+          "park": false,
+          "reservoir": false,
+          "forest": true
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": false,
+          "value": "3+"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Деревянный",
+        "apartment_number": 44714,
+        "cadastral_number": 61697
+      },
+      "flat": {
+        "freight_elevator": false,
+        "rooms": "2",
+        "square": 13971,
+        "square_kitchen": 76232,
+        "square_residential": 86408,
+        "floor": 5320,
+        "floors_in_the_house": 58894,
+        "ceiling_height": 73497
+      },
+      "updated": "2020-07-28T20:59:59.244Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 92807
+      },
+      "address": {
+        "value": "Florida Runolfssonchester 17544 Kshlerin Way"
+      },
+      "documents": [],
+      "_id": "5f2091cf14d7a0274c146185",
+      "owner": "Mallory Boyer",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": false,
+          "value": "1"
+        },
+        "registered": {
+          "minor_child": false,
+          "value": "3+"
+        },
+        "type_deal": "Продажа",
+        "property_type": "Жилая",
+        "type_of_property": "Квартира",
+        "years_in_ownership": "Больше 5-ти"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": false,
+          "value": 65391
+        },
+        "gas": true,
+        "refuse_chute": false
+      },
+      "additionally": {
+        "security": {
+          "doorphone": false,
+          "concierge": true,
+          "code_door": false,
+          "closed_territory": false
+        },
+        "parking": {
+          "in_the_courtyard": true,
+          "underground": true,
+          "barrier": true,
+          "garage": true,
+          "security": false
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": true,
+          "sports_ground": true
+        },
+        "infrastructure": {
+          "school": false,
+          "fitness": false,
+          "park": false,
+          "kindergarten": true,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Раздельный"
+        },
+        "balcony": {
+          "value": "2"
+        },
+        "repair": {
+          "replanning": true,
+          "value": "Без ремонта"
+        },
+        "view_from_windows": {
+          "yard": true,
+          "street": true,
+          "park": false,
+          "reservoir": false,
+          "forest": true
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": false,
+          "value": "2"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Деревянный",
+        "apartment_number": 52518,
+        "cadastral_number": 17303
+      },
+      "flat": {
+        "freight_elevator": false,
+        "rooms": "4",
+        "square": 2364,
+        "square_kitchen": 20643,
+        "square_residential": 9181,
+        "floor": 1339,
+        "floors_in_the_house": 96330,
+        "ceiling_height": 22659
+      },
+      "updated": "2020-07-28T20:59:59.284Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 75030
+      },
+      "address": {
+        "value": "Montana Jennyferberg 9300 Kaya Via"
+      },
+      "documents": [],
+      "_id": "5f2091cf14d7a0274c146186",
+      "owner": "Rowland Bartell",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": true,
+          "value": "1"
+        },
+        "registered": {
+          "minor_child": true,
+          "value": "1"
+        },
+        "type_deal": "Продажа",
+        "property_type": "Гараж",
+        "type_of_property": "Комната",
+        "years_in_ownership": "От 3-х до 5-ти"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": true,
+          "value": 81784
+        },
+        "gas": true,
+        "refuse_chute": true
+      },
+      "additionally": {
+        "security": {
+          "doorphone": true,
+          "concierge": false,
+          "code_door": false,
+          "closed_territory": true
+        },
+        "parking": {
+          "in_the_courtyard": false,
+          "underground": false,
+          "barrier": false,
+          "garage": false,
+          "security": true
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": true,
+          "sports_ground": false
+        },
+        "infrastructure": {
+          "school": false,
+          "fitness": true,
+          "park": false,
+          "kindergarten": false,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Более одного"
+        },
+        "balcony": {
+          "value": "2"
+        },
+        "repair": {
+          "replanning": true,
+          "value": "Без ремонта"
+        },
+        "view_from_windows": {
+          "yard": true,
+          "street": true,
+          "park": true,
+          "reservoir": false,
+          "forest": false
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": false,
+          "value": "3+"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Монолитный",
+        "apartment_number": 72264,
+        "cadastral_number": 49553
+      },
+      "flat": {
+        "freight_elevator": true,
+        "rooms": "1",
+        "square": 4119,
+        "square_kitchen": 56582,
+        "square_residential": 69343,
+        "floor": 36828,
+        "floors_in_the_house": 24649,
+        "ceiling_height": 35047
+      },
+      "updated": "2020-07-28T20:59:59.325Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 59354
+      },
+      "address": {
+        "value": "North Carolina Larkinport 98723 Howell Court"
+      },
+      "documents": [],
+      "_id": "5f2091cf14d7a0274c146187",
+      "owner": "Crawford Wilkinson",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": false,
+          "value": "3+"
+        },
+        "registered": {
+          "minor_child": true,
+          "value": "1"
+        },
+        "type_deal": "Аренда",
+        "property_type": "Жилая",
+        "type_of_property": "Участок",
+        "years_in_ownership": "От 3-х до 5-ти"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": false,
+          "value": 31841
+        },
+        "gas": false,
+        "refuse_chute": false
+      },
+      "additionally": {
+        "security": {
+          "doorphone": true,
+          "concierge": false,
+          "code_door": true,
+          "closed_territory": true
+        },
+        "parking": {
+          "in_the_courtyard": true,
+          "underground": false,
+          "barrier": false,
+          "garage": true,
+          "security": true
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": true,
+          "sports_ground": true
+        },
+        "infrastructure": {
+          "school": true,
+          "fitness": false,
+          "park": false,
+          "kindergarten": true,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Совмещенный"
+        },
+        "balcony": {
+          "value": "Нет"
+        },
+        "repair": {
+          "replanning": true,
+          "value": "Косметический"
+        },
+        "view_from_windows": {
+          "yard": false,
+          "street": true,
+          "park": true,
+          "reservoir": false,
+          "forest": true
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": false,
+          "value": "1"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Деревянный",
+        "apartment_number": 12248,
+        "cadastral_number": 75510
+      },
+      "flat": {
+        "freight_elevator": true,
+        "rooms": "5+",
+        "square": 74671,
+        "square_kitchen": 4551,
+        "square_residential": 49659,
+        "floor": 97426,
+        "floors_in_the_house": 1862,
+        "ceiling_height": 70929
+      },
+      "updated": "2020-07-28T20:59:59.366Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 9709
+      },
+      "address": {
+        "value": "Colorado Lake Kadenview 724 Eleonore Turnpike"
+      },
+      "documents": [],
+      "_id": "5f2091cf14d7a0274c146188",
+      "owner": "Ms. Yessenia Aufderhar",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": true,
+          "value": "2"
+        },
+        "registered": {
+          "minor_child": true,
+          "value": "1"
+        },
+        "type_deal": "Продажа",
+        "property_type": "Гараж",
+        "type_of_property": "Таунхаус",
+        "years_in_ownership": "От 3-х до 5-ти"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": true,
+          "value": 36721
+        },
+        "gas": false,
+        "refuse_chute": false
+      },
+      "additionally": {
+        "security": {
+          "doorphone": false,
+          "concierge": true,
+          "code_door": true,
+          "closed_territory": true
+        },
+        "parking": {
+          "in_the_courtyard": false,
+          "underground": false,
+          "barrier": true,
+          "garage": true,
+          "security": true
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": false,
+          "sports_ground": true
+        },
+        "infrastructure": {
+          "school": false,
+          "fitness": false,
+          "park": true,
+          "kindergarten": false,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Более одного"
+        },
+        "balcony": {
+          "value": "2"
+        },
+        "repair": {
+          "replanning": false,
+          "value": "Без ремонта"
+        },
+        "view_from_windows": {
+          "yard": true,
+          "street": false,
+          "park": false,
+          "reservoir": false,
+          "forest": false
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": false,
+          "value": "2"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Деревянный",
+        "apartment_number": 12960,
+        "cadastral_number": 17680
+      },
+      "flat": {
+        "freight_elevator": true,
+        "rooms": "5+",
+        "square": 63440,
+        "square_kitchen": 52179,
+        "square_residential": 86579,
+        "floor": 85235,
+        "floors_in_the_house": 7134,
+        "ceiling_height": 8976
+      },
+      "updated": "2020-07-28T20:59:59.409Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 22300
+      },
+      "address": {
+        "value": "Pennsylvania South Westonbury 23705 Taurean Ford"
+      },
+      "documents": [],
+      "_id": "5f2091cf14d7a0274c146189",
+      "owner": "Freda Rice",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": false,
+          "value": "3+"
+        },
+        "registered": {
+          "minor_child": false,
+          "value": "3+"
+        },
+        "type_deal": "Продажа",
+        "property_type": "Коммерческая",
+        "type_of_property": "Участок",
+        "years_in_ownership": "Меньше 3-х"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": false,
+          "value": 75909
+        },
+        "gas": true,
+        "refuse_chute": false
+      },
+      "additionally": {
+        "security": {
+          "doorphone": false,
+          "concierge": false,
+          "code_door": true,
+          "closed_territory": false
+        },
+        "parking": {
+          "in_the_courtyard": false,
+          "underground": true,
+          "barrier": false,
+          "garage": false,
+          "security": true
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": true,
+          "sports_ground": false
+        },
+        "infrastructure": {
+          "school": true,
+          "fitness": true,
+          "park": false,
+          "kindergarten": true,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Раздельный"
+        },
+        "balcony": {
+          "value": "2"
+        },
+        "repair": {
+          "replanning": false,
+          "value": "Евро"
+        },
+        "view_from_windows": {
+          "yard": true,
+          "street": false,
+          "park": false,
+          "reservoir": false,
+          "forest": false
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": true,
+          "value": "3+"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Деревянный",
+        "apartment_number": 32817,
+        "cadastral_number": 47385
+      },
+      "flat": {
+        "freight_elevator": false,
+        "rooms": "3",
+        "square": 92342,
+        "square_kitchen": 31896,
+        "square_residential": 46248,
+        "floor": 30089,
+        "floors_in_the_house": 25026,
+        "ceiling_height": 63788
+      },
+      "updated": "2020-07-28T20:59:59.451Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 50812
+      },
+      "address": {
+        "value": "Ohio Augustinebury 6999 Farrell Bypass"
+      },
+      "documents": [],
+      "_id": "5f2091cf14d7a0274c14618a",
+      "owner": "Lyla Goodwin PhD",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": true,
+          "value": "3+"
+        },
+        "registered": {
+          "minor_child": true,
+          "value": "1"
+        },
+        "type_deal": "Продажа",
+        "property_type": "Гараж",
+        "type_of_property": "Комната",
+        "years_in_ownership": "От 3-х до 5-ти"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": false,
+          "value": 20819
+        },
+        "gas": false,
+        "refuse_chute": false
+      },
+      "additionally": {
+        "security": {
+          "doorphone": false,
+          "concierge": false,
+          "code_door": false,
+          "closed_territory": false
+        },
+        "parking": {
+          "in_the_courtyard": false,
+          "underground": false,
+          "barrier": false,
+          "garage": true,
+          "security": true
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": true,
+          "sports_ground": true
+        },
+        "infrastructure": {
+          "school": false,
+          "fitness": false,
+          "park": false,
+          "kindergarten": false,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Совмещенный"
+        },
+        "balcony": {
+          "value": "1"
+        },
+        "repair": {
+          "replanning": false,
+          "value": "Евро"
+        },
+        "view_from_windows": {
+          "yard": true,
+          "street": false,
+          "park": false,
+          "reservoir": false,
+          "forest": false
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": true,
+          "value": "2"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Панельный",
+        "apartment_number": 76112,
+        "cadastral_number": 40525
+      },
+      "flat": {
+        "freight_elevator": true,
+        "rooms": "1",
+        "square": 48540,
+        "square_kitchen": 3446,
+        "square_residential": 84339,
+        "floor": 92779,
+        "floors_in_the_house": 93327,
+        "ceiling_height": 52790
+      },
+      "updated": "2020-07-28T20:59:59.493Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 81809
+      },
+      "address": {
+        "value": "Pennsylvania East Stephan 2697 Bergnaum Drive"
+      },
+      "documents": [],
+      "_id": "5f2091cf14d7a0274c14618b",
+      "owner": "Katlyn Gislason IV",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": true,
+          "value": "1"
+        },
+        "registered": {
+          "minor_child": false,
+          "value": "2"
+        },
+        "type_deal": "Аренда",
+        "property_type": "Жилая",
+        "type_of_property": "Участок",
+        "years_in_ownership": "Меньше 3-х"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": false,
+          "value": 70540
+        },
+        "gas": true,
+        "refuse_chute": false
+      },
+      "additionally": {
+        "security": {
+          "doorphone": false,
+          "concierge": false,
+          "code_door": true,
+          "closed_territory": true
+        },
+        "parking": {
+          "in_the_courtyard": false,
+          "underground": false,
+          "barrier": false,
+          "garage": true,
+          "security": false
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": false,
+          "sports_ground": false
+        },
+        "infrastructure": {
+          "school": false,
+          "fitness": true,
+          "park": false,
+          "kindergarten": true,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Более одного"
+        },
+        "balcony": {
+          "value": "1"
+        },
+        "repair": {
+          "replanning": true,
+          "value": "Косметический"
+        },
+        "view_from_windows": {
+          "yard": false,
+          "street": false,
+          "park": true,
+          "reservoir": false,
+          "forest": false
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": true,
+          "value": "1"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Монолитный",
+        "apartment_number": 93928,
+        "cadastral_number": 36004
+      },
+      "flat": {
+        "freight_elevator": false,
+        "rooms": "3",
+        "square": 77072,
+        "square_kitchen": 38000,
+        "square_residential": 87240,
+        "floor": 27160,
+        "floors_in_the_house": 13301,
+        "ceiling_height": 46061
+      },
+      "updated": "2020-07-28T20:59:59.539Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 72080
+      },
+      "address": {
+        "value": "Maine Cotyview 9659 Buddy Ramp"
+      },
+      "documents": [],
+      "_id": "5f2091cf14d7a0274c14618c",
+      "owner": "Otis Botsford V",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": false,
+          "value": "2"
+        },
+        "registered": {
+          "minor_child": true,
+          "value": "1"
+        },
+        "type_deal": "Продажа",
+        "property_type": "Гараж",
+        "type_of_property": "Квартира",
+        "years_in_ownership": "Больше 5-ти"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": true,
+          "value": 83923
+        },
+        "gas": false,
+        "refuse_chute": true
+      },
+      "additionally": {
+        "security": {
+          "doorphone": true,
+          "concierge": true,
+          "code_door": false,
+          "closed_territory": false
+        },
+        "parking": {
+          "in_the_courtyard": false,
+          "underground": true,
+          "barrier": false,
+          "garage": true,
+          "security": false
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": true,
+          "sports_ground": true
+        },
+        "infrastructure": {
+          "school": true,
+          "fitness": true,
+          "park": false,
+          "kindergarten": false,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Совмещенный"
+        },
+        "balcony": {
+          "value": "Нет"
+        },
+        "repair": {
+          "replanning": true,
+          "value": "Косметический"
+        },
+        "view_from_windows": {
+          "yard": false,
+          "street": false,
+          "park": true,
+          "reservoir": false,
+          "forest": false
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": true,
+          "value": "2"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Кирпичный",
+        "apartment_number": 31038,
+        "cadastral_number": 3112
+      },
+      "flat": {
+        "freight_elevator": true,
+        "rooms": "Студия",
+        "square": 58366,
+        "square_kitchen": 9259,
+        "square_residential": 80698,
+        "floor": 72966,
+        "floors_in_the_house": 97963,
+        "ceiling_height": 77443
+      },
+      "updated": "2020-07-28T20:59:59.580Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 34745
+      },
+      "address": {
+        "value": "New Hampshire Port Koby 18553 Reinger Shoal"
+      },
+      "documents": [],
+      "_id": "5f2091cf14d7a0274c14618d",
+      "owner": "Dr. Dale Gutmann",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": false,
+          "value": "3+"
+        },
+        "registered": {
+          "minor_child": false,
+          "value": "3+"
+        },
+        "type_deal": "Продажа",
+        "property_type": "Гараж",
+        "type_of_property": "Квартира",
+        "years_in_ownership": "От 3-х до 5-ти"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": false,
+          "value": 78701
+        },
+        "gas": false,
+        "refuse_chute": true
+      },
+      "additionally": {
+        "security": {
+          "doorphone": true,
+          "concierge": false,
+          "code_door": false,
+          "closed_territory": true
+        },
+        "parking": {
+          "in_the_courtyard": true,
+          "underground": false,
+          "barrier": true,
+          "garage": true,
+          "security": true
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": true,
+          "sports_ground": false
+        },
+        "infrastructure": {
+          "school": false,
+          "fitness": false,
+          "park": true,
+          "kindergarten": false,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Совмещенный"
+        },
+        "balcony": {
+          "value": "1"
+        },
+        "repair": {
+          "replanning": true,
+          "value": "Без ремонта"
+        },
+        "view_from_windows": {
+          "yard": false,
+          "street": true,
+          "park": false,
+          "reservoir": false,
+          "forest": true
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": false,
+          "value": "3+"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Кирпичный",
+        "apartment_number": 83548,
+        "cadastral_number": 56377
+      },
+      "flat": {
+        "freight_elevator": false,
+        "rooms": "Студия",
+        "square": 7377,
+        "square_kitchen": 34319,
+        "square_residential": 58157,
+        "floor": 86384,
+        "floors_in_the_house": 9881,
+        "ceiling_height": 33425
+      },
+      "updated": "2020-07-28T20:59:59.619Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 51634
+      },
+      "address": {
+        "value": "Delaware Port Hymanberg 15080 Marcus Vista"
+      },
+      "documents": [],
+      "_id": "5f2091cf14d7a0274c14618e",
+      "owner": "Susie Wiegand",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": false,
+          "value": "1"
+        },
+        "registered": {
+          "minor_child": true,
+          "value": "2"
+        },
+        "type_deal": "Продажа",
+        "property_type": "Гараж",
+        "type_of_property": "Дом",
+        "years_in_ownership": "От 3-х до 5-ти"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": false,
+          "value": 81998
+        },
+        "gas": false,
+        "refuse_chute": true
+      },
+      "additionally": {
+        "security": {
+          "doorphone": true,
+          "concierge": false,
+          "code_door": false,
+          "closed_territory": true
+        },
+        "parking": {
+          "in_the_courtyard": false,
+          "underground": true,
+          "barrier": true,
+          "garage": true,
+          "security": false
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": false,
+          "sports_ground": false
+        },
+        "infrastructure": {
+          "school": true,
+          "fitness": false,
+          "park": true,
+          "kindergarten": false,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Раздельный"
+        },
+        "balcony": {
+          "value": "3+"
+        },
+        "repair": {
+          "replanning": true,
+          "value": "Дизайнерский"
+        },
+        "view_from_windows": {
+          "yard": true,
+          "street": true,
+          "park": true,
+          "reservoir": false,
+          "forest": false
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": false,
+          "value": "3+"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Монолитный",
+        "apartment_number": 76648,
+        "cadastral_number": 14337
+      },
+      "flat": {
+        "freight_elevator": false,
+        "rooms": "2",
+        "square": 18828,
+        "square_kitchen": 46696,
+        "square_residential": 43870,
+        "floor": 43316,
+        "floors_in_the_house": 71403,
+        "ceiling_height": 38541
+      },
+      "updated": "2020-07-28T20:59:59.662Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 84948
+      },
+      "address": {
+        "value": "North Carolina North Myaborough 5020 Buck Canyon"
+      },
+      "documents": [],
+      "_id": "5f2091cf14d7a0274c14618f",
+      "owner": "Cynthia Yundt",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": true,
+          "value": "1"
+        },
+        "registered": {
+          "minor_child": false,
+          "value": "2"
+        },
+        "type_deal": "Аренда",
+        "property_type": "Жилая",
+        "type_of_property": "Дом",
+        "years_in_ownership": "Больше 5-ти"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": true,
+          "value": 85263
+        },
+        "gas": false,
+        "refuse_chute": false
+      },
+      "additionally": {
+        "security": {
+          "doorphone": false,
+          "concierge": false,
+          "code_door": true,
+          "closed_territory": true
+        },
+        "parking": {
+          "in_the_courtyard": true,
+          "underground": false,
+          "barrier": true,
+          "garage": true,
+          "security": true
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": true,
+          "sports_ground": true
+        },
+        "infrastructure": {
+          "school": true,
+          "fitness": false,
+          "park": true,
+          "kindergarten": false,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Раздельный"
+        },
+        "balcony": {
+          "value": "3+"
+        },
+        "repair": {
+          "replanning": false,
+          "value": "Косметический"
+        },
+        "view_from_windows": {
+          "yard": true,
+          "street": false,
+          "park": false,
+          "reservoir": false,
+          "forest": false
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": true,
+          "value": "1"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Кирпичный",
+        "apartment_number": 95064,
+        "cadastral_number": 88129
+      },
+      "flat": {
+        "freight_elevator": true,
+        "rooms": "5+",
+        "square": 74049,
+        "square_kitchen": 44659,
+        "square_residential": 77647,
+        "floor": 96562,
+        "floors_in_the_house": 20797,
+        "ceiling_height": 40356
+      },
+      "updated": "2020-07-28T20:59:59.704Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 71905
+      },
+      "address": {
+        "value": "Rhode Island New Florianview 790 Hayes Road"
+      },
+      "documents": [],
+      "_id": "5f2091cf14d7a0274c146190",
+      "owner": "Axel Wintheiser",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": true,
+          "value": "2"
+        },
+        "registered": {
+          "minor_child": false,
+          "value": "1"
+        },
+        "type_deal": "Продажа",
+        "property_type": "Жилая",
+        "type_of_property": "Таунхаус",
+        "years_in_ownership": "Меньше 3-х"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": false,
+          "value": 41065
+        },
+        "gas": true,
+        "refuse_chute": false
+      },
+      "additionally": {
+        "security": {
+          "doorphone": false,
+          "concierge": false,
+          "code_door": false,
+          "closed_territory": true
+        },
+        "parking": {
+          "in_the_courtyard": true,
+          "underground": true,
+          "barrier": false,
+          "garage": true,
+          "security": true
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": false,
+          "sports_ground": false
+        },
+        "infrastructure": {
+          "school": true,
+          "fitness": true,
+          "park": false,
+          "kindergarten": true,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Более одного"
+        },
+        "balcony": {
+          "value": "2"
+        },
+        "repair": {
+          "replanning": false,
+          "value": "Евро"
+        },
+        "view_from_windows": {
+          "yard": false,
+          "street": false,
+          "park": true,
+          "reservoir": false,
+          "forest": true
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": true,
+          "value": "1"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Монолитный",
+        "apartment_number": 92646,
+        "cadastral_number": 64702
+      },
+      "flat": {
+        "freight_elevator": false,
+        "rooms": "3",
+        "square": 44774,
+        "square_kitchen": 28867,
+        "square_residential": 3958,
+        "floor": 49175,
+        "floors_in_the_house": 58084,
+        "ceiling_height": 94771
+      },
+      "updated": "2020-07-28T20:59:59.745Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 47401
+      },
+      "address": {
+        "value": "Hawaii West Alice 53670 Joanne Corner"
+      },
+      "documents": [],
+      "_id": "5f2091cf14d7a0274c146191",
+      "owner": "Oda Treutel",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": false,
+          "value": "1"
+        },
+        "registered": {
+          "minor_child": true,
+          "value": "3+"
+        },
+        "type_deal": "Продажа",
+        "property_type": "Коммерческая",
+        "type_of_property": "Участок",
+        "years_in_ownership": "От 3-х до 5-ти"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": false,
+          "value": 87210
+        },
+        "gas": false,
+        "refuse_chute": false
+      },
+      "additionally": {
+        "security": {
+          "doorphone": false,
+          "concierge": false,
+          "code_door": false,
+          "closed_territory": true
+        },
+        "parking": {
+          "in_the_courtyard": false,
+          "underground": false,
+          "barrier": true,
+          "garage": true,
+          "security": false
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": false,
+          "sports_ground": true
+        },
+        "infrastructure": {
+          "school": false,
+          "fitness": false,
+          "park": true,
+          "kindergarten": false,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Более одного"
+        },
+        "balcony": {
+          "value": "2"
+        },
+        "repair": {
+          "replanning": true,
+          "value": "Косметический"
+        },
+        "view_from_windows": {
+          "yard": true,
+          "street": true,
+          "park": false,
+          "reservoir": false,
+          "forest": true
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": true,
+          "value": "2"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Кирпичный",
+        "apartment_number": 32983,
+        "cadastral_number": 58496
+      },
+      "flat": {
+        "freight_elevator": false,
+        "rooms": "2",
+        "square": 74248,
+        "square_kitchen": 99050,
+        "square_residential": 15625,
+        "floor": 33114,
+        "floors_in_the_house": 33441,
+        "ceiling_height": 61890
+      },
+      "updated": "2020-07-28T20:59:59.786Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 38859
+      },
+      "address": {
+        "value": "Illinois Port Heather 01896 Emard Center"
+      },
+      "documents": [],
+      "_id": "5f2091cf14d7a0274c146192",
+      "owner": "Phoebe Emard",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": false,
+          "value": "1"
+        },
+        "registered": {
+          "minor_child": false,
+          "value": "2"
+        },
+        "type_deal": "Аренда",
+        "property_type": "Гараж",
+        "type_of_property": "Комната",
+        "years_in_ownership": "Больше 5-ти"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": false,
+          "value": 5372
+        },
+        "gas": false,
+        "refuse_chute": false
+      },
+      "additionally": {
+        "security": {
+          "doorphone": false,
+          "concierge": true,
+          "code_door": false,
+          "closed_territory": true
+        },
+        "parking": {
+          "in_the_courtyard": false,
+          "underground": true,
+          "barrier": true,
+          "garage": false,
+          "security": false
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": true,
+          "sports_ground": true
+        },
+        "infrastructure": {
+          "school": false,
+          "fitness": false,
+          "park": true,
+          "kindergarten": false,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Совмещенный"
+        },
+        "balcony": {
+          "value": "1"
+        },
+        "repair": {
+          "replanning": true,
+          "value": "Без ремонта"
+        },
+        "view_from_windows": {
+          "yard": true,
+          "street": false,
+          "park": false,
+          "reservoir": true,
+          "forest": false
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": true,
+          "value": "3+"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Панельный",
+        "apartment_number": 20765,
+        "cadastral_number": 57926
+      },
+      "flat": {
+        "freight_elevator": false,
+        "rooms": "5+",
+        "square": 61023,
+        "square_kitchen": 9666,
+        "square_residential": 45562,
+        "floor": 52671,
+        "floors_in_the_house": 8215,
+        "ceiling_height": 62641
+      },
+      "updated": "2020-07-28T20:59:59.827Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 93964
+      },
+      "address": {
+        "value": "Montana Katlynshire 5942 Rhett Junctions"
+      },
+      "documents": [],
+      "_id": "5f2091cf14d7a0274c146193",
+      "owner": "Ms. Malcolm Ebert",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": false,
+          "value": "3+"
+        },
+        "registered": {
+          "minor_child": false,
+          "value": "1"
+        },
+        "type_deal": "Аренда",
+        "property_type": "Коммерческая",
+        "type_of_property": "Таунхаус",
+        "years_in_ownership": "Меньше 3-х"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": false,
+          "value": 64378
+        },
+        "gas": true,
+        "refuse_chute": false
+      },
+      "additionally": {
+        "security": {
+          "doorphone": true,
+          "concierge": false,
+          "code_door": true,
+          "closed_territory": true
+        },
+        "parking": {
+          "in_the_courtyard": false,
+          "underground": false,
+          "barrier": true,
+          "garage": false,
+          "security": false
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": true,
+          "sports_ground": false
+        },
+        "infrastructure": {
+          "school": false,
+          "fitness": true,
+          "park": false,
+          "kindergarten": true,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Совмещенный"
+        },
+        "balcony": {
+          "value": "1"
+        },
+        "repair": {
+          "replanning": true,
+          "value": "Без ремонта"
+        },
+        "view_from_windows": {
+          "yard": false,
+          "street": false,
+          "park": true,
+          "reservoir": true,
+          "forest": true
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": false,
+          "value": "3+"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Блочный",
+        "apartment_number": 71317,
+        "cadastral_number": 95376
+      },
+      "flat": {
+        "freight_elevator": false,
+        "rooms": "Студия",
+        "square": 60061,
+        "square_kitchen": 9247,
+        "square_residential": 66225,
+        "floor": 8628,
+        "floors_in_the_house": 51395,
+        "ceiling_height": 10899
+      },
+      "updated": "2020-07-28T20:59:59.866Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 87952
+      },
+      "address": {
+        "value": "Oklahoma Mohammadbury 9014 Cronin Lodge"
+      },
+      "documents": [],
+      "_id": "5f2091cf14d7a0274c146194",
+      "owner": "Mr. Forrest Greenfelder",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": false,
+          "value": "2"
+        },
+        "registered": {
+          "minor_child": true,
+          "value": "2"
+        },
+        "type_deal": "Аренда",
+        "property_type": "Жилая",
+        "type_of_property": "Квартира",
+        "years_in_ownership": "Больше 5-ти"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": true,
+          "value": 52518
+        },
+        "gas": false,
+        "refuse_chute": true
+      },
+      "additionally": {
+        "security": {
+          "doorphone": false,
+          "concierge": false,
+          "code_door": false,
+          "closed_territory": false
+        },
+        "parking": {
+          "in_the_courtyard": true,
+          "underground": false,
+          "barrier": false,
+          "garage": false,
+          "security": true
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": false,
+          "sports_ground": true
+        },
+        "infrastructure": {
+          "school": true,
+          "fitness": true,
+          "park": true,
+          "kindergarten": true,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Раздельный"
+        },
+        "balcony": {
+          "value": "1"
+        },
+        "repair": {
+          "replanning": false,
+          "value": "Косметический"
+        },
+        "view_from_windows": {
+          "yard": false,
+          "street": true,
+          "park": true,
+          "reservoir": true,
+          "forest": true
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": false,
+          "value": "2"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Панельный",
+        "apartment_number": 87212,
+        "cadastral_number": 44539
+      },
+      "flat": {
+        "freight_elevator": false,
+        "rooms": "2",
+        "square": 14499,
+        "square_kitchen": 89711,
+        "square_residential": 58396,
+        "floor": 360,
+        "floors_in_the_house": 50106,
+        "ceiling_height": 22850
+      },
+      "updated": "2020-07-28T20:59:59.905Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 63483
+      },
+      "address": {
+        "value": "Vermont New Unique 2076 Sandra Tunnel"
+      },
+      "documents": [],
+      "_id": "5f2091cf14d7a0274c146195",
+      "owner": "Mylene Cummings",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": false,
+          "value": "3+"
+        },
+        "registered": {
+          "minor_child": true,
+          "value": "3+"
+        },
+        "type_deal": "Продажа",
+        "property_type": "Коммерческая",
+        "type_of_property": "Таунхаус",
+        "years_in_ownership": "От 3-х до 5-ти"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": true,
+          "value": 27639
+        },
+        "gas": true,
+        "refuse_chute": true
+      },
+      "additionally": {
+        "security": {
+          "doorphone": false,
+          "concierge": true,
+          "code_door": false,
+          "closed_territory": true
+        },
+        "parking": {
+          "in_the_courtyard": true,
+          "underground": false,
+          "barrier": false,
+          "garage": true,
+          "security": true
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": true,
+          "sports_ground": false
+        },
+        "infrastructure": {
+          "school": false,
+          "fitness": true,
+          "park": false,
+          "kindergarten": true,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Более одного"
+        },
+        "balcony": {
+          "value": "2"
+        },
+        "repair": {
+          "replanning": false,
+          "value": "Косметический"
+        },
+        "view_from_windows": {
+          "yard": true,
+          "street": false,
+          "park": true,
+          "reservoir": false,
+          "forest": true
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": true,
+          "value": "3+"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Панельный",
+        "apartment_number": 99443,
+        "cadastral_number": 26801
+      },
+      "flat": {
+        "freight_elevator": true,
+        "rooms": "Студия",
+        "square": 35496,
+        "square_kitchen": 22912,
+        "square_residential": 59278,
+        "floor": 57257,
+        "floors_in_the_house": 36607,
+        "ceiling_height": 29310
+      },
+      "updated": "2020-07-28T20:59:59.946Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 40181
+      },
+      "address": {
+        "value": "South Dakota Port Cloyd 96694 Rosenbaum Flats"
+      },
+      "documents": [],
+      "_id": "5f2091cf14d7a0274c146196",
+      "owner": "Tyshawn Turcotte V",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": false,
+          "value": "1"
+        },
+        "registered": {
+          "minor_child": false,
+          "value": "2"
+        },
+        "type_deal": "Аренда",
+        "property_type": "Жилая",
+        "type_of_property": "Часть дома",
+        "years_in_ownership": "Меньше 3-х"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": false,
+          "value": 83417
+        },
+        "gas": true,
+        "refuse_chute": true
+      },
+      "additionally": {
+        "security": {
+          "doorphone": true,
+          "concierge": true,
+          "code_door": false,
+          "closed_territory": true
+        },
+        "parking": {
+          "in_the_courtyard": false,
+          "underground": false,
+          "barrier": true,
+          "garage": true,
+          "security": false
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": true,
+          "sports_ground": false
+        },
+        "infrastructure": {
+          "school": false,
+          "fitness": true,
+          "park": true,
+          "kindergarten": false,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Совмещенный"
+        },
+        "balcony": {
+          "value": "3+"
+        },
+        "repair": {
+          "replanning": true,
+          "value": "Без ремонта"
+        },
+        "view_from_windows": {
+          "yard": true,
+          "street": true,
+          "park": true,
+          "reservoir": true,
+          "forest": true
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": false,
+          "value": "1"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Монолитный",
+        "apartment_number": 14914,
+        "cadastral_number": 53177
+      },
+      "flat": {
+        "freight_elevator": false,
+        "rooms": "4",
+        "square": 260,
+        "square_kitchen": 71999,
+        "square_residential": 34401,
+        "floor": 40117,
+        "floors_in_the_house": 82233,
+        "ceiling_height": 19935
+      },
+      "updated": "2020-07-28T20:59:59.987Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 3708
+      },
+      "address": {
+        "value": "North Dakota Bradenberg 3301 Ilene Hill"
+      },
+      "documents": [],
+      "_id": "5f2091d014d7a0274c146197",
+      "owner": "Tiana Witting",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": true,
+          "value": "3+"
+        },
+        "registered": {
+          "minor_child": true,
+          "value": "2"
+        },
+        "type_deal": "Продажа",
+        "property_type": "Гараж",
+        "type_of_property": "Комната",
+        "years_in_ownership": "Меньше 3-х"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": false,
+          "value": 44859
+        },
+        "gas": true,
+        "refuse_chute": false
+      },
+      "additionally": {
+        "security": {
+          "doorphone": true,
+          "concierge": true,
+          "code_door": false,
+          "closed_territory": true
+        },
+        "parking": {
+          "in_the_courtyard": true,
+          "underground": true,
+          "barrier": false,
+          "garage": true,
+          "security": false
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": false,
+          "sports_ground": false
+        },
+        "infrastructure": {
+          "school": false,
+          "fitness": true,
+          "park": true,
+          "kindergarten": true,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Раздельный"
+        },
+        "balcony": {
+          "value": "3+"
+        },
+        "repair": {
+          "replanning": false,
+          "value": "Без ремонта"
+        },
+        "view_from_windows": {
+          "yard": false,
+          "street": true,
+          "park": true,
+          "reservoir": false,
+          "forest": false
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": true,
+          "value": "2"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Панельный",
+        "apartment_number": 91840,
+        "cadastral_number": 11581
+      },
+      "flat": {
+        "freight_elevator": true,
+        "rooms": "5+",
+        "square": 42500,
+        "square_kitchen": 36519,
+        "square_residential": 59436,
+        "floor": 39460,
+        "floors_in_the_house": 94778,
+        "ceiling_height": 91743
+      },
+      "updated": "2020-07-28T21:00:00.027Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 94782
+      },
+      "address": {
+        "value": "Maine Lake Keith 80543 Jaylen Wall"
+      },
+      "documents": [],
+      "_id": "5f2091d014d7a0274c146198",
+      "owner": "Torey Batz",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": true,
+          "value": "1"
+        },
+        "registered": {
+          "minor_child": false,
+          "value": "2"
+        },
+        "type_deal": "Продажа",
+        "property_type": "Гараж",
+        "type_of_property": "Часть дома",
+        "years_in_ownership": "Меньше 3-х"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": true,
+          "value": 75542
+        },
+        "gas": false,
+        "refuse_chute": false
+      },
+      "additionally": {
+        "security": {
+          "doorphone": false,
+          "concierge": true,
+          "code_door": true,
+          "closed_territory": false
+        },
+        "parking": {
+          "in_the_courtyard": true,
+          "underground": false,
+          "barrier": true,
+          "garage": false,
+          "security": false
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": true,
+          "sports_ground": true
+        },
+        "infrastructure": {
+          "school": false,
+          "fitness": true,
+          "park": true,
+          "kindergarten": true,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Раздельный"
+        },
+        "balcony": {
+          "value": "Нет"
+        },
+        "repair": {
+          "replanning": true,
+          "value": "Косметический"
+        },
+        "view_from_windows": {
+          "yard": true,
+          "street": false,
+          "park": false,
+          "reservoir": false,
+          "forest": true
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": false,
+          "value": "1"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Панельный",
+        "apartment_number": 17082,
+        "cadastral_number": 46983
+      },
+      "flat": {
+        "freight_elevator": true,
+        "rooms": "3",
+        "square": 41663,
+        "square_kitchen": 41567,
+        "square_residential": 11737,
+        "floor": 44014,
+        "floors_in_the_house": 2264,
+        "ceiling_height": 99425
+      },
+      "updated": "2020-07-28T21:00:00.067Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 37273
+      },
+      "address": {
+        "value": "Tennessee South Briceview 4186 Floy Oval"
+      },
+      "documents": [],
+      "_id": "5f2091d014d7a0274c146199",
+      "owner": "Xavier Schamberger",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": false,
+          "value": "2"
+        },
+        "registered": {
+          "minor_child": true,
+          "value": "1"
+        },
+        "type_deal": "Продажа",
+        "property_type": "Гараж",
+        "type_of_property": "Участок",
+        "years_in_ownership": "Больше 5-ти"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": false,
+          "value": 99072
+        },
+        "gas": false,
+        "refuse_chute": true
+      },
+      "additionally": {
+        "security": {
+          "doorphone": true,
+          "concierge": true,
+          "code_door": false,
+          "closed_territory": false
+        },
+        "parking": {
+          "in_the_courtyard": true,
+          "underground": true,
+          "barrier": false,
+          "garage": false,
+          "security": false
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": false,
+          "sports_ground": false
+        },
+        "infrastructure": {
+          "school": false,
+          "fitness": false,
+          "park": false,
+          "kindergarten": false,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Более одного"
+        },
+        "balcony": {
+          "value": "3+"
+        },
+        "repair": {
+          "replanning": true,
+          "value": "Без ремонта"
+        },
+        "view_from_windows": {
+          "yard": false,
+          "street": true,
+          "park": false,
+          "reservoir": true,
+          "forest": false
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": true,
+          "value": "3+"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Монолитный",
+        "apartment_number": 57942,
+        "cadastral_number": 13454
+      },
+      "flat": {
+        "freight_elevator": true,
+        "rooms": "4",
+        "square": 98060,
+        "square_kitchen": 16238,
+        "square_residential": 33775,
+        "floor": 15340,
+        "floors_in_the_house": 76840,
+        "ceiling_height": 97955
+      },
+      "updated": "2020-07-28T21:00:00.107Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 6684
+      },
+      "address": {
+        "value": "New Jersey Bufordchester 44187 Stark Pass"
+      },
+      "documents": [],
+      "_id": "5f2091d014d7a0274c14619a",
+      "owner": "Ms. Rodger Terry",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": true,
+          "value": "3+"
+        },
+        "registered": {
+          "minor_child": false,
+          "value": "2"
+        },
+        "type_deal": "Аренда",
+        "property_type": "Жилая",
+        "type_of_property": "Комната",
+        "years_in_ownership": "От 3-х до 5-ти"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": true,
+          "value": 26417
+        },
+        "gas": false,
+        "refuse_chute": false
+      },
+      "additionally": {
+        "security": {
+          "doorphone": false,
+          "concierge": false,
+          "code_door": false,
+          "closed_territory": false
+        },
+        "parking": {
+          "in_the_courtyard": true,
+          "underground": false,
+          "barrier": true,
+          "garage": true,
+          "security": true
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": false,
+          "sports_ground": false
+        },
+        "infrastructure": {
+          "school": false,
+          "fitness": true,
+          "park": true,
+          "kindergarten": false,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Раздельный"
+        },
+        "balcony": {
+          "value": "2"
+        },
+        "repair": {
+          "replanning": true,
+          "value": "Дизайнерский"
+        },
+        "view_from_windows": {
+          "yard": false,
+          "street": false,
+          "park": false,
+          "reservoir": true,
+          "forest": false
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": false,
+          "value": "3+"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Блочный",
+        "apartment_number": 76228,
+        "cadastral_number": 89570
+      },
+      "flat": {
+        "freight_elevator": true,
+        "rooms": "3",
+        "square": 73928,
+        "square_kitchen": 96675,
+        "square_residential": 45507,
+        "floor": 1839,
+        "floors_in_the_house": 66575,
+        "ceiling_height": 57624
+      },
+      "updated": "2020-07-28T21:00:00.146Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 61702
+      },
+      "address": {
+        "value": "Maryland Jimmyfurt 0839 Becker Dale"
+      },
+      "documents": [],
+      "_id": "5f2091d014d7a0274c14619b",
+      "owner": "Grady Mueller",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": false,
+          "value": "2"
+        },
+        "registered": {
+          "minor_child": false,
+          "value": "3+"
+        },
+        "type_deal": "Продажа",
+        "property_type": "Гараж",
+        "type_of_property": "Дом",
+        "years_in_ownership": "Больше 5-ти"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": false,
+          "value": 76024
+        },
+        "gas": false,
+        "refuse_chute": true
+      },
+      "additionally": {
+        "security": {
+          "doorphone": false,
+          "concierge": true,
+          "code_door": false,
+          "closed_territory": false
+        },
+        "parking": {
+          "in_the_courtyard": false,
+          "underground": true,
+          "barrier": true,
+          "garage": false,
+          "security": true
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": true,
+          "sports_ground": false
+        },
+        "infrastructure": {
+          "school": true,
+          "fitness": false,
+          "park": true,
+          "kindergarten": true,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Раздельный"
+        },
+        "balcony": {
+          "value": "1"
+        },
+        "repair": {
+          "replanning": true,
+          "value": "Косметический"
+        },
+        "view_from_windows": {
+          "yard": true,
+          "street": false,
+          "park": false,
+          "reservoir": false,
+          "forest": false
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": false,
+          "value": "1"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Кирпичный",
+        "apartment_number": 42329,
+        "cadastral_number": 98960
+      },
+      "flat": {
+        "freight_elevator": true,
+        "rooms": "1",
+        "square": 21155,
+        "square_kitchen": 79800,
+        "square_residential": 79472,
+        "floor": 38670,
+        "floors_in_the_house": 8872,
+        "ceiling_height": 98298
+      },
+      "updated": "2020-07-28T21:00:00.185Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 99135
+      },
+      "address": {
+        "value": "Illinois New Marjory 60489 Kaela Cove"
+      },
+      "documents": [],
+      "_id": "5f2091d014d7a0274c14619c",
+      "owner": "Tobin Zulauf",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": true,
+          "value": "3+"
+        },
+        "registered": {
+          "minor_child": false,
+          "value": "1"
+        },
+        "type_deal": "Аренда",
+        "property_type": "Коммерческая",
+        "type_of_property": "Квартира",
+        "years_in_ownership": "Меньше 3-х"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": true,
+          "value": 3918
+        },
+        "gas": false,
+        "refuse_chute": true
+      },
+      "additionally": {
+        "security": {
+          "doorphone": false,
+          "concierge": false,
+          "code_door": false,
+          "closed_territory": true
+        },
+        "parking": {
+          "in_the_courtyard": true,
+          "underground": true,
+          "barrier": false,
+          "garage": true,
+          "security": true
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": false,
+          "sports_ground": true
+        },
+        "infrastructure": {
+          "school": true,
+          "fitness": false,
+          "park": true,
+          "kindergarten": false,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Совмещенный"
+        },
+        "balcony": {
+          "value": "2"
+        },
+        "repair": {
+          "replanning": false,
+          "value": "Косметический"
+        },
+        "view_from_windows": {
+          "yard": false,
+          "street": false,
+          "park": false,
+          "reservoir": false,
+          "forest": true
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": true,
+          "value": "2"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Панельный",
+        "apartment_number": 69173,
+        "cadastral_number": 39934
+      },
+      "flat": {
+        "freight_elevator": true,
+        "rooms": "Студия",
+        "square": 60717,
+        "square_kitchen": 79425,
+        "square_residential": 89012,
+        "floor": 52749,
+        "floors_in_the_house": 56914,
+        "ceiling_height": 74999
+      },
+      "updated": "2020-07-28T21:00:00.225Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 68150
+      },
+      "address": {
+        "value": "Hawaii South Nash 340 Kali Underpass"
+      },
+      "documents": [],
+      "_id": "5f2091d014d7a0274c14619d",
+      "owner": "Prudence Schuster",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": true,
+          "value": "3+"
+        },
+        "registered": {
+          "minor_child": true,
+          "value": "1"
+        },
+        "type_deal": "Аренда",
+        "property_type": "Гараж",
+        "type_of_property": "Дом",
+        "years_in_ownership": "От 3-х до 5-ти"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": false,
+          "value": 87
+        },
+        "gas": false,
+        "refuse_chute": false
+      },
+      "additionally": {
+        "security": {
+          "doorphone": true,
+          "concierge": false,
+          "code_door": true,
+          "closed_territory": false
+        },
+        "parking": {
+          "in_the_courtyard": true,
+          "underground": false,
+          "barrier": false,
+          "garage": false,
+          "security": true
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": false,
+          "sports_ground": true
+        },
+        "infrastructure": {
+          "school": false,
+          "fitness": true,
+          "park": true,
+          "kindergarten": false,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Совмещенный"
+        },
+        "balcony": {
+          "value": "2"
+        },
+        "repair": {
+          "replanning": true,
+          "value": "Без ремонта"
+        },
+        "view_from_windows": {
+          "yard": false,
+          "street": false,
+          "park": true,
+          "reservoir": true,
+          "forest": true
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": true,
+          "value": "2"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Блочный",
+        "apartment_number": 89763,
+        "cadastral_number": 49881
+      },
+      "flat": {
+        "freight_elevator": false,
+        "rooms": "4",
+        "square": 14262,
+        "square_kitchen": 50781,
+        "square_residential": 43825,
+        "floor": 87456,
+        "floors_in_the_house": 28641,
+        "ceiling_height": 38887
+      },
+      "updated": "2020-07-28T21:00:00.264Z",
+      "__v": 0
+    },
+    {
+      "cadastral_value": {
+        "value": 62359
+      },
+      "address": {
+        "value": "Mississippi Sawaynchester 3851 Rasheed Hills"
+      },
+      "documents": [],
+      "_id": "5f2091d014d7a0274c14619e",
+      "owner": "Isaias Cole",
+      "deal": {
+        "number_of_owners": {
+          "minor_child": true,
+          "value": "1"
+        },
+        "registered": {
+          "minor_child": true,
+          "value": "2"
+        },
+        "type_deal": "Продажа",
+        "property_type": "Жилая",
+        "type_of_property": "Часть дома",
+        "years_in_ownership": "Меньше 3-х"
+      },
+      "terms_of_sale": {
+        "cost": {
+          "trade": true,
+          "value": 14086
+        },
+        "gas": false,
+        "refuse_chute": false
+      },
+      "additionally": {
+        "security": {
+          "doorphone": false,
+          "concierge": false,
+          "code_door": true,
+          "closed_territory": false
+        },
+        "parking": {
+          "in_the_courtyard": true,
+          "underground": false,
+          "barrier": true,
+          "garage": true,
+          "security": false
+        },
+        "the_landscaping_of_the_yard": {
+          "childrens_playground": false,
+          "sports_ground": true
+        },
+        "infrastructure": {
+          "school": true,
+          "fitness": true,
+          "park": true,
+          "kindergarten": false,
+          "mall": false
+        },
+        "bathroom": {
+          "value": "Раздельный"
+        },
+        "balcony": {
+          "value": "3+"
+        },
+        "repair": {
+          "replanning": false,
+          "value": "Без ремонта"
+        },
+        "view_from_windows": {
+          "yard": false,
+          "street": true,
+          "park": false,
+          "reservoir": true,
+          "forest": false
+        }
+      },
+      "house": {
+        "elevator": {
+          "freight_elevator": false,
+          "value": "3+"
+        },
+        "foto": {
+          "value": []
+        },
+        "video": {
+          "value": []
+        },
+        "type": "Блочный",
+        "apartment_number": 6168,
+        "cadastral_number": 96128
+      },
+      "flat": {
+        "freight_elevator": false,
+        "rooms": "Студия",
+        "square": 59061,
+        "square_kitchen": 17505,
+        "square_residential": 41650,
+        "floor": 66667,
+        "floors_in_the_house": 78228,
+        "ceiling_height": 48234
+      },
+      "updated": "2020-07-28T21:00:00.303Z",
+      "__v": 0
     }
   ]
 }

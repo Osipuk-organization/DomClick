@@ -10,7 +10,9 @@
     "build": "rimraf ./dist && webpack --config=webpack-react.config.js --mode production",
     "json": "json-server --watch db.json --port 3000",
     "cc": "node cli/createComponent.js --name",
-    "ccc": "node cli/createContainer.js --name"
+    "ccc": "node cli/createContainer.js --name",
+    "admin": "webpack-dev-server --config=webpack-admin.config.js --mode development --open",
+    "adm-build": "rimraf ./admin && webpack --config=webpack-admin.config.js --mode production"
   },
   "dependencies": {
     "classnames": "^2.2.6",

@@ -1,12 +1,12 @@
 import React, {Fragment} from 'react';
 
-import {CardInfo} from 'components/CardInfo';
+import {CardInfoContainer} from 'containers/CardInfoContainer';
 
 export const Card = function(props) {
 
   return (
     <Fragment>
-      <CardInfo />
+      <CardInfoContainer />
     </Fragment>
   );
 }

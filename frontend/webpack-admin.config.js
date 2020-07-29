@@ -6,29 +6,21 @@ const path = require('path'),
 
 module.exports = {
   entry: {
-    main: path.resolve(__dirname, 'src', 'index.js'),
+    main: path.resolve(__dirname, 'pug', 'admin.js'),
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'admin'),
+    filename: 'admin.js',
   },
   devServer: {
     historyApiFallback: true,
-    contentBase: path.resolve(__dirname, 'dist'),
-    proxy: {
-      '/api': {
-        target: 'http://osipuk.ru:4000/',
-        pathRewrite: {'^/api' : ''},
-        changeOrigin: true,
-        secure: false,
-      }
-    }
+    contentBase: path.resolve(__dirname, 'admin'),
   },
   module: {
     rules: [
       {
-        test:/\.jsx?$/,
-        exclude: /node_modules\/?!(swiper|dom7)/,
+        test: /\.js$/,
+        exclude: /node_modules/,
         use: {
           loader: 'babel-loader'
         }
@@ -50,7 +42,7 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: '/img',
+              outputPath: 'img',
             }
           }
         ]
@@ -97,23 +89,11 @@ module.exports = {
       new OptimizeCSSAssetsPlugin({}),
     ],
   },
-  resolve: {
-        extensions: ['.js', '.jsx'],
-        alias:{
-            components: path.resolve(__dirname, 'src', 'components'),
-            containers: path.resolve(__dirname, 'src', 'containers'),
-            actions: path.resolve(__dirname, 'src', 'actions'),
-            reducers: path.resolve(__dirname, 'src', 'reducers'),
-            efi: path.resolve(__dirname, 'src', 'efi'),
-            layouts: path.resolve(__dirname, 'src', 'layouts'),
-            pug: path.resolve(__dirname, 'pug'),
-            src: path.resolve(__dirname, 'src'),
-        }
-    },
   plugins: [
     new HTMLplugin({
-      template: path.resolve(__dirname, 'src', 'index.html'),
-      filename: 'index.html',
+      template: path.resolve(__dirname, 'pug', 'pages', 'admin.pug'),
+      filename: 'admin.html',
+      minify: false,
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css',

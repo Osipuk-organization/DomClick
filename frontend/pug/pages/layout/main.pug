@@ -6,8 +6,8 @@ html(lang="ru-RU")
     .wrapper
       include _counters
       .wrap-container
-        include _top-menu
+        block top-menu
         main.main
           block content
-      include _footer
-    include _end
+      block footer
+    block end

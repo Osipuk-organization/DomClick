@@ -2,8 +2,8 @@ import React, {Fragment} from 'react';
 import routes from './routes';
 import { Switch, Route } from 'react-router-dom';
 import menu from './menu';
-import 'swiper/swiper.scss';
-import '../pug/sass/index.scss';
+import 'pug/sass/swiper.scss';
+import '../pug/sass/front.scss';
 
 import { Footer } from 'components/Footer';
 import { TopMenu } from 'components/TopMenu';
