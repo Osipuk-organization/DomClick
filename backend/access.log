@@ -1,0 +1,6 @@
+[2020-07-29T18:51:54.751Z #b3d4cbe1] Started GET /flats for 127.0.0.1
+[2020-07-29T18:51:54.752Z #b3d4cbe1] Completed 200 16014 in 151.970 ms
+[2020-07-29T18:53:03.459Z #9824be19] Started GET /users for 127.0.0.1
+[2020-07-29T18:53:03.459Z #9824be19] Completed 500 62 in 2.736 ms
+[2020-07-29T18:53:14.614Z #ba34b1a3] Started POST /users for 127.0.0.1
+[2020-07-29T18:53:14.614Z #ba34b1a3] Completed 500 62 in 0.465 ms

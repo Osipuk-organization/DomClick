@@ -9,6 +9,9 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 const dotenv = require("dotenv");
 const cowsay = require("cowsay");
+const addRequestId = require('express-request-id')(setHeader = false);
+const morgan = require('morgan');
+const fs = require('fs');
 
 //variables
 require('dotenv').config({ path: path.resolve(__dirname, '.env') });
@@ -21,6 +24,15 @@ const passport = require("./middlewares/passport");
 require(path.resolve(__dirname, 'mongo_connect.js'));
 
 const app = express();
+
+app.use(addRequestId);
+morgan.token('id', (req) => req.id.split('-')[0]);
+const loggerFormat1 = '[:date[iso] #:id] Started :method :url for :remote-addr'; 
+const loggerFormat2 = '[:date[iso] #:id] Completed :status :res[content-length] in :response-time ms'; 
+var accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
+
+app.use(morgan(loggerFormat1, { stream: accessLogStream }))
+app.use(morgan(loggerFormat2, { stream: accessLogStream }))
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
