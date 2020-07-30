@@ -16,4 +16,13 @@
     <string name="search">Поиск</string>
     <string name="saved">Сохраненное</string>
     <string name="cabinet">Кабинет</string>
+    <string name="i_want_buy">
+        <![CDATA[
+        Я хочу <font color=\'#FF8170\'>купить </font>
+        ]]>
+        </string>
+    <string name="apply">ПРИМЕНИТЬ</string>
+    <string name="buy">Купить</string>
+    <string name="rent">Арендовать</string>
+    <string name="sell">Продать</string>
 </resources>

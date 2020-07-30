@@ -41,15 +41,15 @@
         style="@style/text_normal" />
     
     <Button
-        android:id="@+id/first_fragment_reg_btn"
-        android:text="@string/registration"
-        android:layout_marginStart="@dimen/normal_margin"
-        android:layout_marginEnd="@dimen/normal_margin"
-        android:layout_marginBottom="@dimen/big_margin"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/first_fragment_skip_btn"
-        style="@style/red_button"/>
+    android:id="@+id/first_fragment_reg_btn"
+    android:text="@string/registration"
+    android:layout_marginStart="@dimen/normal_margin"
+    android:layout_marginEnd="@dimen/normal_margin"
+    android:layout_marginBottom="@dimen/big_margin"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/first_fragment_skip_btn"
+    style="@style/red_button"/>
 
     <Button
         android:id="@+id/first_fragment_skip_btn"
