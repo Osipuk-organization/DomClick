@@ -41,6 +41,8 @@
     "base-64": "^0.1.0",
     "bootstrap": "^4.5.0",
     "consolidate": "^0.15.1",
+    "eslint": "^7.5.0",
+    "eslint-plugin-react": "^7.20.5",
     "handlebars": "^4.7.6",
     "jquery": "^3.5.1",
     "path": "^0.12.7"
