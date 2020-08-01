@@ -51,9 +51,11 @@
     <EditText
         android:id="@+id/registration_fragment_edit_text"
         style="@style/white_edit"
+        android:inputType="phone"
         android:layout_marginStart="@dimen/normal_margin"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="@dimen/normal_margin"
+        android:hint="@string/you_phone_number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registration_fragment_or_phone_text" />

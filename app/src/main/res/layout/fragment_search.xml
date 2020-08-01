@@ -27,8 +27,8 @@
         android:id="@+id/search_fragment_i_want_buy_sell_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="42sp"
-        android:text="Я хочу купить"
+        android:textSize="38sp"
+        android:text="Я хочу арендовать"
         android:textColor="@color/colorTextBlack"
         android:drawableRight="@drawable/ic_arrow_down"
         android:layout_margin="@dimen/normal_margin"
@@ -36,15 +36,45 @@
         app:layout_constraintTop_toBottomOf="@id/search_fragment_add_btn"/>
 
     <TextView
-        android:id="@+id/search_fragment_arrartment_tv"
+        android:id="@+id/search_fragment_apartment_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="42sp"
+        android:textSize="38sp"
         android:text="квартиру"
         android:textColor="@color/colorRedBtn"
         android:drawableRight="@drawable/ic_arrow_down"
         android:layout_margin="@dimen/normal_margin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/search_fragment_i_want_buy_sell_tv"/>
+
+    <EditText
+        android:id="@+id/search_fragment_address_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/normal_margin"
+        android:hint="@string/Where"
+        android:drawableStart="@drawable/ic_geo"
+        android:backgroundTint="@color/colorTextBlack"
+        android:clickable="false"
+        android:focusable="false"
+        android:maxLines="1"
+        app:layout_constraintTop_toBottomOf="@id/search_fragment_apartment_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/search_fragment_price_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/normal_margin"
+        android:hint="@string/cost_to"
+        android:drawableStart="@drawable/ic_wallet"
+        android:backgroundTint="@color/colorTextBlack"
+        android:clickable="false"
+        android:focusable="false"
+        android:maxLines="1"
+        app:layout_constraintTop_toBottomOf="@id/search_fragment_address_et"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
