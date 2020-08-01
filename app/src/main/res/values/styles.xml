@@ -5,6 +5,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/colorTextBlack</item>
     </style>
     
     <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
@@ -27,6 +28,11 @@
 
     <style name="text_h3">
         <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/colorTextBlack</item>
+    </style>
+
+    <style name="text_normal_bold">
+        <item name="android:fontFamily">"@font/roboto_medium"</item>
         <item name="android:textColor">@color/colorTextBlack</item>
     </style>
 

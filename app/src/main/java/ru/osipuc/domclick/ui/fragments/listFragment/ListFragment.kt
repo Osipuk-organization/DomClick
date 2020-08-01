@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.fragment_list.*
 import ru.osipuc.domclick.R
+import ru.osipuc.domclick.ui.fragments.CardOfApartmentFragment
 import ru.osipuc.domclick.utilites.APP_ACTIVITY
+import ru.osipuc.domclick.utilites.replaceFragment
 
 class ListFragment : Fragment(R.layout.fragment_list) {
 
