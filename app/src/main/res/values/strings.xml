@@ -21,8 +21,23 @@
         Я хочу <font color=\'#FF8170\'>купить </font>
         ]]>
         </string>
+    <string name="i_want_rent">
+        <![CDATA[
+        Я хочу <font color=\'#FF8170\'>арендовать </font>
+        ]]>
+        </string>
+    <string name="i_want_sell">
+        <![CDATA[
+        Я хочу <font color=\'#FF8170\'>продать </font>
+        ]]>
+        </string>
     <string name="apply">ПРИМЕНИТЬ</string>
     <string name="buy">Купить</string>
     <string name="rent">Арендовать</string>
     <string name="sell">Продать</string>
+    <string name="Where">Где?</string>
+    <string name="cost_to">Стоимость до</string>
+    <string name="address_hint">Адрес, Метро, Район</string>
+    <string name="price_from">Цена от</string>
+    <string name="price_to">Цена до</string>
 </resources>

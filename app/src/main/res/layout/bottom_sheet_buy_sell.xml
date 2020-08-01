@@ -19,22 +19,13 @@
     <TextView
         android:id="@+id/bottom_sheet_buy_txt"
         style="@style/text_h3"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/normal_margin"
         android:text="@string/buy"
         android:layout_marginTop="@dimen/normal_margin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/bottom_sheet_pipka" />
-
-    <CheckBox
-        android:id="@+id/bottom_sheet_buy_chk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/normal_margin"
-        app:layout_constraintBottom_toBottomOf="@id/bottom_sheet_buy_txt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/bottom_sheet_buy_txt" />
 
     <View
         android:id="@+id/divider_buy"
@@ -47,22 +38,13 @@
     <TextView
         android:id="@+id/bottom_sheet_rent_txt"
         style="@style/text_h3"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/normal_margin"
         android:text="@string/rent"
         android:layout_marginTop="@dimen/normal_margin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/divider_buy" />
-
-    <CheckBox
-        android:id="@+id/bottom_sheet_rent_chk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/normal_margin"
-        app:layout_constraintBottom_toBottomOf="@id/bottom_sheet_rent_txt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/bottom_sheet_rent_txt" />
 
     <View
         android:id="@+id/divider_rent"
@@ -75,22 +57,13 @@
     <TextView
         android:id="@+id/bottom_sheet_sell_txt"
         style="@style/text_h3"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/normal_margin"
         android:text="@string/sell"
         android:layout_marginTop="@dimen/normal_margin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/divider_rent" />
-
-    <CheckBox
-        android:id="@+id/bottom_sheet_sell_chk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/normal_margin"
-        app:layout_constraintBottom_toBottomOf="@id/bottom_sheet_sell_txt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/bottom_sheet_sell_txt" />
 
     <View
         android:id="@+id/divider_sell"
@@ -100,23 +73,9 @@
         android:layout_marginTop="@dimen/normal_margin"
         app:layout_constraintTop_toBottomOf="@id/bottom_sheet_sell_txt"/>
 
-    <Button
-        android:id="@+id/bottom_sheet_buy_ok_btn"
-        android:layout_width="150dp"
-        android:text="@string/apply"
-        android:padding="12dp"
-        android:layout_margin="@dimen/normal_margin"
-        android:layout_marginStart="@dimen/normal_margin"
-        android:layout_marginEnd="@dimen/normal_margin"
-        android:layout_marginBottom="@dimen/big_margin"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/divider_sell"
-        style="@style/red_button"/>
-
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/normal_margin"
-        app:layout_constraintTop_toBottomOf="@id/bottom_sheet_buy_ok_btn"/>
+        app:layout_constraintTop_toBottomOf="@id/divider_sell"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
