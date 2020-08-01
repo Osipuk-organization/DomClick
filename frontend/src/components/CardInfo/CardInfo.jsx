@@ -1,6 +1,7 @@
 import React, {Fragment, useState, useEffect} from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Thumbs } from 'swiper';
+import Ymap from '../Ymaps/Ymaps';
 
 
 
@@ -11,6 +12,7 @@ export const CardInfo = function(props) {
     flat,
     getFlats
   } = props;
+  const {latitude, longitude, city, state, streetName} = flat.address;
   const costM = Math.floor(flat.cadastral_value.value / flat.flat.square);
 
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -160,6 +162,7 @@ export const CardInfo = function(props) {
           </div>
         </div>
       </div>
+      <Ymap latitude={latitude} longitude={longitude} address={flat.address}/>
       </Fragment>
       }
     </section>
