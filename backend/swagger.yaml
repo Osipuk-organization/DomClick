@@ -293,28 +293,46 @@ paths:
     
 components:
   schemas:
-    Users:
+    user:
       type: "object"
       required:
-      - "name"
+      - "login"
       - "password"
       - "role"
       properties:
         id:
           type: "string"
           format: "ObjectID"
-        name:
+        login:
           type: "string"
           format: "string"
+          description: "Логин пользователя"
         password:
           type: "string"
           format: "string"
+          description: "Пароль пользователя"
         role:
+          $ref: '#/components/schemas/userRoles'
+        surname:
           type: "string"
-          description: "Role"
-          enum:
-          - "admin"
-          - "user"
+          format: "string"
+          description: "Фамилия пользователя"
+        name:
+          type: "string"
+          format: "string"
+          description: "Имя пользователя"
+        middleName:
+          type: "string"
+          format: "string"
+          description: "Отчество пользователя"
+        phone:
+          type: "string"
+          format: "string"
+          description: "Телефон пользователя"
+        email:
+          type: "string"
+          format: "string"
+          description: "Электронная почта пользователя"
     Flats:
       type: "object"
       required:
@@ -718,6 +736,64 @@ components:
             ceiling_height:
               type: boolean
               default: false
+    userRoles:
+      type: "string"
+      enum:
+        - "Сотрудник"
+        - "Директор"
+        - "Администратор"
+      description: "Полномочия пользователя"
+    group:
+      type: "object"
+      required:
+      - "name"
+      - "department"
+      - "chief"
+      properties:
+        id:
+          type: "string"
+          format: "ObjectID"
+        name:
+          type: "string"
+          format: "string"
+          description: "Название группы"
+        description:
+          type: "string"
+          format: "string"
+          description: "Описание группы"
+        department:
+          $ref: '#/components/schemas/department'
+          description: 'Департамент группы'
+        chief:
+          $ref: '#/components/schemas/user'
+        employees:
+          type: array
+          items:
+            $ref: '#/components/schemas/user'
+            description: 'Менеджеры группы'
+    department:
+      type: "object"
+      required:
+      - "name"
+      - "chief"
+        id:
+          type: "string"
+          format: "ObjectID"
+        name:
+          type: "string"
+          format: "string"
+          description: "Название департамента"
+        description:
+          type: "string"
+          format: "string"
+          description: "Описание департамента"
+        chief:
+          $ref: '#/components/schemas/user'
+        groups:
+          type: array
+          items:
+            $ref: '#/components/schemas/group'
+            description: 'Группы, входящие в департамент'    
 # Added by API Auto Mocking Plugin
 servers:
 # Added by API Auto Mocking Plugin
