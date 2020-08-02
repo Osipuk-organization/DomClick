@@ -1,0 +1,26 @@
+.DCCheckbox {
+	display: flex;
+	align-items: center;
+}
+
+.DCCheckbox__size_default {
+	label {
+		font-size: 18px;
+		line-height: 21px;
+		padding-left: 16px;
+	}
+}
+
+.DCCheckbox__size_small {
+	label {
+		font-size: 10px;
+		line-height: 12px;
+		padding-left: 8px;
+	}
+}
+
+.DCCheckbox_bold {
+	label {
+		font-weight: bold;
+	}
+}
