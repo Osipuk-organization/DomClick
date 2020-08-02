@@ -6,10 +6,11 @@ const DCCheckboxGroup = (props) => {
 		group
 	} = props;
 	return (
-		<div>
+		<div className="DCCheckboxGroup">
 			{group && group.map((item, id) =>
 				<DCCheckbox
 					key={id}
+					col={4}
 					{...item}
 				/>
 			)}

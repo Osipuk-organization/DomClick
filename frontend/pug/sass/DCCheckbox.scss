@@ -1,3 +1,8 @@
+.DCCheckboxGroup {
+	display: flex;
+	flex-wrap: wrap-reverse;
+}
+
 .DCCheckbox {
 	display: flex;
 	align-items: center;
@@ -7,7 +12,7 @@
 	label {
 		font-size: 18px;
 		line-height: 21px;
-		padding-left: 16px;
+		padding-left: 15px;
 	}
 }
 

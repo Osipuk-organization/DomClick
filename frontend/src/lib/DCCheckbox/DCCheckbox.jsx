@@ -6,13 +6,15 @@ const DCCheckbox = (props) => {
 		label,
 		value,
 		size,
-		bold
+		bold,
+		col
 	} = props;
 	
 	const classes = {
 		'DCCheckbox' : true,
 		[`DCCheckbox__size_${size ? size : 'default'}`]: true,
-		[`DCCheckbox_bold`]: !!bold
+		[`DCCheckbox_bold`]: !!bold,
+		[`_col-${col}`]: !!col
 	};
 	
 	return(

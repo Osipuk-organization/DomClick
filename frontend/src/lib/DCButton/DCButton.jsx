@@ -22,7 +22,7 @@ const DCButton = (props) => {
 	return (
 		<div
 			className={Object.keys(classes).filter(key => classes[key]).join(' ')}
-			onClick={onClickHandler}
+			onClick={onClickHandler ? onClickHandler : console.log('click')}
 		>
 			{label}
 		</div>
