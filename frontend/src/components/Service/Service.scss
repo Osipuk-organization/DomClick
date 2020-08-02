@@ -1,0 +1,33 @@
+.service {
+  padding-top: 70px - 15;
+  padding-bottom: 92px - 15;
+  &__item {
+    position: relative;
+    padding-top: 154px - 70 + 15 !important;
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    &:before {
+      display: block;
+      position: absolute;
+      content: '';
+      height: 70px;
+      top: 15px;
+      left: 0;
+      right: 0;
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: 60px auto;
+    }
+    &._i1:before {
+      background-image: url(~assets/svg/icon_cta.svg);
+    }
+    &._i2:before {
+      background-image: url(~assets/svg/icon_house.svg);
+    }
+    &._i3:before {
+      background-image: url(~assets/svg/icon_achievment.svg);
+    }
+  }
+}

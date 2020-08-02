@@ -1,0 +1,106 @@
+@import "~assets/vars";
+
+.offers {
+  &__sub-caption {
+    font-size: 1.5rem;
+    padding-bottom: 0;
+  }
+  &__item {
+    height: 100%;
+    flex-direction: column;
+    background-color: #ebf5fb;
+    border-radius: 10px;
+    overflow: hidden;
+    &:hover {
+      color: $p-text-color;
+    }
+  }
+  &__top-img {
+    width: 100%;
+    height: 131px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  &__line-img-box {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 80px;
+    padding: 8px 0 0;
+    box-sizing: border-box;
+  }
+  &__line-img {
+    height: 72px;
+    flex-grow: 1;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    &:nth-child(2) {
+      margin: 0 8px;
+    }
+    &:nth-child(3) {
+      flex-grow: 0;
+      min-width: 88px;
+      width: 88px;
+    }
+  }
+  &__line-other {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 88px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+  &__bottom {
+    padding: 16px;
+    align-items: flex-end;
+    flex-grow: 1;
+  }
+  &__cost {
+    font-size: 1.75rem;
+    font-weight: 700;
+    padding: 8px 0 4px;
+  }
+  &__owner {
+    padding: 0 0 4px 32px;
+    font-size: 0.75rem;
+    background-image: url(~assets/svg/user.svg);
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+    background-position: left 17px top;
+  }
+  &__cost-m {
+    width: 100%;
+    font-size: 0.875rem;
+  }
+  &__info-box {
+    padding: 20px 0;
+    font-size: 0.875rem;
+  }
+  &__info-item {
+    padding: 4px 0 4px 25px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 17px auto;
+    &._type {
+      font-weight: 700;
+      background-image: url(~assets/svg/mdi_home.svg);
+    }
+    &._address {
+      background-image: url(~assets/svg/mdi_location.svg);
+    }
+  }
+  &__button-box {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+}

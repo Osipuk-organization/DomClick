@@ -1,0 +1,133 @@
+.user-profile {
+    padding: 64px 48px 48px 48px;
+    & p {
+        margin: 0px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        color: #828282;
+    }
+    & h3 {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 28px;
+        color: #333333;
+    }
+}
+
+.user-profile-header h2 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 37px;
+    color: #ff7373;
+}
+
+.user-edit {
+    padding: 0 0 0 15px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: #ff7373;
+}
+
+.user-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & img {
+        border-radius: 100%;
+    }
+    & .user-avatar {
+        position: relative;
+        width: 211px;
+        height: 211px;
+        & .plus-btn {
+            position: absolute;
+            top: 169px;
+            right: 0px;
+            bottom: 0px;
+            left: 137px;
+            width: 48px;
+            height: 48px;
+            background-color: #8cc3e2;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            & p {
+                color: white;
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+.user-info {
+    border-bottom: 1px solid #e0e0e0;
+    & ul {
+        padding-left: 0px;
+        & li {
+            list-style-type: none;
+            padding-bottom: 24px;
+            &:last-child {
+                padding-bottom: 9px;
+            }
+        }
+    }
+}
+
+.user-balance h1 {
+    text-align: left;
+}
+
+.rate-info {
+    padding-top: 52px;
+    & h4 {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 28px;
+        color: #8cc3e2;
+    }
+}
+
+.line-info {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 30px;
+    & span {
+        padding-left: 4px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 21px;
+        color: #3f3f3f;
+    }
+}
+
+.info-line {
+    width: 324px;
+    height: 12px;
+    background-color: #e7e7e7;
+    border-radius: 6px;
+    & .progress {
+        width: 60%;
+        background-color: #ff7373;
+        border-radius: 6px;
+    }
+}
+
+.btn-buy-vip {
+    width: 200px;
+    height: 40px;
+}
