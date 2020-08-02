@@ -8,14 +8,15 @@ const Flats = require('../models/flat');
 
 router.route('/')
     .get(async (req, res) => {
-        let { page = 1, limit = 10 } = req.query;
+        let { page = 1, limit = 10, ...filter } = req.query;
         page = +page;
         limit = +limit;
-        const flats = await Flats.find().skip(limit * (page - 1)).limit(limit);
-        const total = await Flats.countDocuments();
+        const flats = await Flats.find(filter).skip(limit * (page - 1)).limit(limit);
+        const total = await Flats.find(filter).countDocuments();
         res.status(200).json({
             page,
             total,
+            count,
             flats,
         });
     })

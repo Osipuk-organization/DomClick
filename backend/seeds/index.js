@@ -2,13 +2,12 @@ const path = require('path');
 require('dotenv').config({ path: path.resolve(__dirname, '..', '.env') });
 
 const mongoose = require('mongoose');
-const faker = require('faker');
+const faker = require('faker/locale/ru');
 const request = require('request');
 
 const tunnel = require('tunnel-ssh');
 const ansi = require('ansi');
 const cursor = ansi(process.stdout);
-faker.locale = "en";
 
 const Flat = require('../models/flat');
 

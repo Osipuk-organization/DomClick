@@ -14,7 +14,7 @@ const morgan = require('morgan')
 const fs = require('fs')
 
 //variables
-require('dotenv').config({ path: path.resolve(__dirname, '.env') })
+dotenv.config({ path: path.resolve(__dirname, '.env') })
 
 const PORT = process.env.SERVER_PORT || 4000
 const router = require(path.resolve(__dirname, 'routes'))
