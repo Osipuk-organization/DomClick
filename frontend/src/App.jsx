@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import routes from './routes';
 import { Switch, Route } from 'react-router-dom';
 import menu from './menu';
@@ -19,7 +19,7 @@ import 'assets/svg/app.svg';
 
 function App() {
   return(
-    <Fragment>
+    <>
       <div className="wrap-container">
         <TopMenu menu={menu} />
         <main className="main">
@@ -29,7 +29,7 @@ function App() {
         </main>
       </div>
       <Footer />
-    </Fragment>
+    </>
   );
 }
 
