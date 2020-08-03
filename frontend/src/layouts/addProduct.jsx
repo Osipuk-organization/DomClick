@@ -281,7 +281,7 @@ export class AddProduct extends PureComponent {
                         />
                     </DCInputField>
     
-                    <div className='add-card_flex add-card-fieldsBlock _col-12'>
+                  <div className='add-card_flex add-card-fieldsBlock _col-12'>
                         <DCInputField
                           label="Тип сделки"
                           labelSize="subheader"
@@ -316,6 +316,47 @@ export class AddProduct extends PureComponent {
                             />
                         </DCInputField>
                     </div>
+  
+                  <div className='add-card_flex add-card-fieldsBlock _col-12'>
+                    <DCInputField
+                      label="Собственники"
+                      labelSize="subheader"
+                    >
+                      <DCButtonGroup
+                        buttons={[
+                          {
+                            label: '1'
+                          },
+                          {
+                            label: '2'
+                          },
+                          {
+                            label: '3+'
+                          }
+                        ]}
+                      />
+                    </DCInputField>
+                    <DCInputField
+                      label="Прописано"
+                      labelSize="subheader"
+                    >
+                      <DCButtonGroup
+                        buttons={[
+                          {
+                            label: '1'
+                          },
+                          {
+                            label: '2'
+                          },
+                          {
+                            label: '3+'
+                          }
+                        ]}
+                      />
+                    </DCInputField>
+                  </div>
+                  
+                  
                     
                     
                     {/*<div className="_col-12">*/}
