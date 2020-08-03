@@ -1,5 +1,6 @@
 import React from 'react';
 import DCLabel from '../DCLabel/DCLabel';
+import './style.scss';
 import DCInput from '../DCInput/DCInput';
 
 const DCInputField = (props) => {

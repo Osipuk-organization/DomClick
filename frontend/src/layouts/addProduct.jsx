@@ -2,6 +2,9 @@ import React, { PureComponent } from 'react';
 
 import './add-card.scss';
 import './map-info.scss';
+import '../'
+import DCInputField from '../components/DCInputField/DCInputField';
+import DCInput from '../components/DCInput/DCInput';
 
 export class AddProduct extends PureComponent {
 
@@ -78,17 +81,33 @@ export class AddProduct extends PureComponent {
         };
         return (
             <>
-                <from className="_container _row" action="/new-card/" method="POST">
+                <from className="_container _row _col-10" action="/new-card/" method="POST">
                     <h1 className="_col-12">Новый объект</h1>
-                    <h3 className="add-card__caption _col-12">ФИО</h3>
-                    <div className="_col-12">
-                        <input className="input" type="text" name="name" placeholder="ФИО" />
-                    </div>
-                    <h3 className="add-card__caption _col-12">Документы</h3>
-                    <div className="_col-12">
-                        <input type="file" name="files" multiple
-                            accept=".jpg, .jpeg, .png, .pdf, .doc, .docx, .xls, .xlsx, .xlsm" />
-                    </div>
+                    {/*<h3 className="add-card__caption _col-12">ФИО</h3>*/}
+                    {/*<div className="_col-12">*/}
+                    {/*    <input className="input" type="text" name="name" placeholder="ФИО" />*/}
+                    {/*</div>*/}
+                    
+                    <DCInputField
+                      size={6}
+                      label="ФИО"
+                    >
+                        <DCInput/>
+                    </DCInputField>
+                    
+                    {/*<h3 className="add-card__caption _col-12">Документы</h3>*/}
+                    {/*<div className="_col-12">*/}
+                    {/*    <input type="file" name="files" multiple*/}
+                    {/*        accept=".jpg, .jpeg, .png, .pdf, .doc, .docx, .xls, .xlsx, .xlsm" />*/}
+                    {/*</div>*/}
+    
+                    <DCInputField
+                      size={6}
+                      label="ФИО"
+                    >
+                        <DC/>
+                    </DCInputField>
+                    
                     <h3 className="add-card__caption _col-12">Оценочная стоимость объекта</h3>
                     <div className="_col-12">
                         <input className="input" type="number" />
