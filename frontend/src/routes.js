@@ -1,6 +1,7 @@
 import { Index } from "./layouts/index";
 import { Card } from "./layouts/card";
 import { AddProduct } from "./layouts/AddProduct";
+import { Registration } from "./layouts/registration";
 
 export default [
   {
@@ -17,6 +18,11 @@ export default [
     path: "/card/:id",
     component: Card,
     exact: true,
+  },
+  {
+    path: '/registration',
+    component: Registration,
+    exact: true
   },
 
   // {

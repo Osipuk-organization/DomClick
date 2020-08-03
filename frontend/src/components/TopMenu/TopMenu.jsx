@@ -1,4 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
+
 import "./TopMenu.scss";
 
 export const TopMenu = function (props) {
@@ -39,9 +41,9 @@ export const TopMenu = function (props) {
           <label className="link top-menu__link" htmlFor="modal-close">
             Связаться с экспертом
           </label>
-          <a className="link top-menu__link" href="/#">
+          <Link className="link top-menu__link" to="/registration">
             Личный кабинет
-          </a>
+          </Link>
           <a className="link top-menu__icon _heart" href="/#"></a>
           <a className="link top-menu__icon _bell" href="/#"></a>
         </div>
