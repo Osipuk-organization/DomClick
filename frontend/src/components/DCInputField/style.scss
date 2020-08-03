@@ -34,11 +34,25 @@
 			color: #8CC3E2;
 			padding-left: 30px;
 		}
+
+		.DC-label-background-noBackground {
+			background: none;
+			padding-left: 0;
+		}
 	}
 
 	.DC-label.DC-label-size-subheader {
 		font-size: 24px;
 		line-height: 28px;
+	}
+
+	.DC-label.DC-label-size-small {
+		font-size: 18px;
+		line-height: 21px;
+	}
+
+	.DC-label.DC__label_color-blue {
+		color: #8CC3E2;
 	}
 }
 

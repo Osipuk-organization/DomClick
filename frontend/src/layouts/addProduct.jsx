@@ -9,6 +9,9 @@ import DCAttachement from '../components/DCAttachements/DCAttachement';
 import Ymap from '../components/Ymaps/Ymaps';
 import DCLabel from '../components/DCLabel/DCLabel';
 import DCButtonGroup from '../components/DCButtonGroup/DCButtonGroup';
+import DCCheckbox from '../components/DCCheckbox/DCCheckbox';
+import DCCheckboxGroup from '../components/DCCheckboxGroup/DCCheckboxGroup';
+import DCButton from '../components/DCButton/DCButton';
 
 export class AddProduct extends PureComponent {
     
@@ -110,7 +113,7 @@ export class AddProduct extends PureComponent {
                     {/*</div>*/}
     
                     <DCInputField
-                      size={12}
+                      // size={12}
                       label="Документы"
                       fullWith
                     >
@@ -222,20 +225,16 @@ export class AddProduct extends PureComponent {
                               },
                               {
                                   label: 'Комната'
-                              }
-                              ,
+                              },
                               {
                                   label: 'Дом'
-                              }
-                              ,
+                              },
                               {
                                   label: 'Таунхаус'
-                              }
-                              ,
+                              },
                               {
                                   label: 'Часть дома'
-                              }
-                              ,
+                              },
                               {
                                   label: 'Участок'
                               }
@@ -280,43 +279,7 @@ export class AddProduct extends PureComponent {
                           ]}
                         />
                     </DCInputField>
-    
-                  <div className='add-card_flex add-card-fieldsBlock _col-12'>
-                        <DCInputField
-                          label="Тип сделки"
-                          labelSize="subheader"
-                        >
-                            <DCButtonGroup
-                              buttons={[
-                                  {
-                                      label: 'Продажа'
-                                  },
-                                  {
-                                      label: 'Аренда'
-                                  }
-                              ]}
-                            />
-                        </DCInputField>
-                        <DCInputField
-                          label="Вид недвижимости"
-                          labelSize="subheader"
-                        >
-                            <DCButtonGroup
-                              buttons={[
-                                  {
-                                      label: 'Жилая'
-                                  },
-                                  {
-                                      label: 'Коммерческая'
-                                  },
-                                  {
-                                      label: 'Гараж'
-                                  }
-                              ]}
-                            />
-                        </DCInputField>
-                    </div>
-  
+                  
                   <div className='add-card_flex add-card-fieldsBlock _col-12'>
                     <DCInputField
                       label="Собственники"
@@ -334,6 +297,13 @@ export class AddProduct extends PureComponent {
                             label: '3+'
                           }
                         ]}
+                      />
+                      <DCCheckbox
+                        name="sobst18"
+                        label="Есть несовершеннолетние"
+                        value={true}
+                        size="small"
+                        bold
                       />
                     </DCInputField>
                     <DCInputField
@@ -353,11 +323,507 @@ export class AddProduct extends PureComponent {
                           }
                         ]}
                       />
+                      <DCCheckbox
+                        name="proj18"
+                        label="Есть несовершеннолетние"
+                        value={true}
+                        size="small"
+                        bold
+                      />
                     </DCInputField>
                   </div>
-                  
-                  
+  
+                  <DCInputField
+                    label="Условия продажи"
+                    withComment
+                    fullWith
+                  >
+                    <div className='add-card_flex add-card-fieldsBlock'>
+                      <DCInputField
+                        label="Цена"
+                        labelSize="subheader"
+                      >
+                        <DCInput/>
+                        <DCCheckbox
+                          name="price"
+                          label="Торг уместен"
+                          value={true}
+                          size="small"
+                          bold
+                        />
+                      </DCInputField>
+                      
+                      <DCInputField
+                        label="Газ"
+                        labelSize="subheader"
+                      >
+                        <DCButtonGroup
+                          buttons={[
+                            {
+                              label: 'Да'
+                            },
+                            {
+                              label: 'Нет'
+                            }
+                          ]}
+                        />
+                      </DCInputField>
+                      
+                      <DCInputField
+                        label="Мусоропровод"
+                        labelSize="subheader"
+                      >
+                        <DCButtonGroup
+                          buttons={[
+                            {
+                              label: 'Да'
+                            },
+                            {
+                              label: 'Нет'
+                            }
+                          ]}
+                        />
+                      </DCInputField>
+                    </div>
+                  </DCInputField>
+  
+                  <DCInputField
+                    label="Дополнительно"
+                    fullWith
+                  >
+                    <DCInputField
+                      withComment
+                      labelSize="subheader"
+                      label="Безопасность"
+                    >
+                      <DCCheckboxGroup
+                        group={[
+                          {
+                            name: "domofon",
+                            label: "Домофон",
+                            value: "domofon"
+                          },
+                          {
+                            name: "secret",
+                            label: "Кодовая дверь",
+                            value: "secret"
+                          },
+                          {
+                            name: "vahta",
+                            label: "Консьерж",
+                            value: "vahta"
+                          },
+                          {
+                            name: "closest_territory",
+                            label: "Закрытая территория",
+                            value: "territory"
+                          },
+                        ]}
+                      />
+                    </DCInputField>
+  
+                    <DCInputField
+                      withComment
+                      labelSize="subheader"
+                      label="Парковка"
+                    >
+                      <DCCheckboxGroup
+                        group={[
+                          {
+                            name: "inArea",
+                            label: "Во дворе",
+                            value: "inArea"
+                          },
+                          {
+                            name: "underground",
+                            label: "Подземная",
+                            value: "underground"
+                          },
+                          {
+                            name: "withBranch",
+                            label: "Со шлагбаумом",
+                            value: "withBranch"
+                          },
+                          {
+                            name: "garage",
+                            label: "Есть гараж",
+                            value: "garage"
+                          },
+                          {
+                            name: "security",
+                            label: "Охраняемая",
+                            value: "security"
+                          }
+                        ]}
+                      />
+                    </DCInputField>
+  
+                    <DCInputField
+                      withComment
+                      labelSize="subheader"
+                      label="Благоустройство двора"
+                    >
+                      <DCCheckboxGroup
+                        group={[
+                          {
+                            name: "childrenArea",
+                            label: "Детская площадка",
+                            value: "childrenArea"
+                          },
+                          {
+                            name: "sportArea",
+                            label: "Спортивная площадка",
+                            value: "sportArea"
+                          }
+                        ]}
+                      />
+                    </DCInputField>
+  
+                    <DCInputField
+                      withComment
+                      labelSize="subheader"
+                      label="Инфраструктура"
+                    >
+                      <DCCheckboxGroup
+                        group={[
+                          {
+                            name: "school",
+                            label: "Школа",
+                            value: "school"
+                          },
+                          {
+                            name: "fitness",
+                            label: "Фитнес",
+                            value: "fitness"
+                          },
+                          {
+                            name: "Park",
+                            label: "Парк",
+                            value: "Park"
+                          },
+                          {
+                            name: "detSad",
+                            label: "Детский сад",
+                            value: "detSad"
+                          },
+                          {
+                            name: "shop",
+                            label: "Торговый центр",
+                            value: "shop"
+                          }
+                        ]}
+                      />
+                    </DCInputField>
+  
+                    <DCInputField
+                      withComment
+                      label="Санузел"
+                      labelSize="subheader"
+                    >
+                      <DCButtonGroup
+                        buttons={[
+                          {
+                            label: 'Совмещенный'
+                          },
+                          {
+                            label: 'Раздельный'
+                          },
+                          {
+                            label: 'Более одного'
+                          }
+                        ]}
+                      />
+                    </DCInputField>
+  
+                    <DCInputField
+                      withComment
+                      label="Балкон/лоджия"
+                      labelSize="subheader"
+                    >
+                      <DCButtonGroup
+                        buttons={[
+                          {
+                            label: '1'
+                          },
+                          {
+                            label: '2'
+                          },
+                          {
+                            label: '3+'
+                          },
+                          {
+                            label: 'Нет'
+                          }
+                        ]}
+                      />
+                    </DCInputField>
+  
+                    <DCInputField
+                      withComment
+                      label="Ремонт"
+                      labelSize="subheader"
+                    >
+                      <DCButtonGroup
+                        buttons={[
+                          {
+                            label: 'Косметический'
+                          },
+                          {
+                            label: 'Евро'
+                          },
+                          {
+                            label: 'Дизайнерский'
+                          },
+                          {
+                            label: 'Без ремонта'
+                          }
+                        ]}
+                      />
+                      <DCCheckbox
+                        bold
+                        size="small"
+                        name="pereplan"
+                        label="Перепланировка"
+                        value="pereplan"
+                      />
+                    </DCInputField>
+  
+                    <DCInputField
+                      withComment
+                      labelSize="subheader"
+                      label="Вид из окон"
+                    >
+                      <DCCheckboxGroup
+                        group={[
+                          {
+                            name: "dvor",
+                            label: "Двор",
+                            value: "dvor"
+                          },
+                          {
+                            name: "windowPark",
+                            label: "Парк",
+                            value: "windowPark"
+                          },
+                          {
+                            name: "water",
+                            label: "Водоем",
+                            value: "water"
+                          },
+                          {
+                            name: "forest",
+                            label: "Лес",
+                            value: "forest"
+                          },
+                          {
+                            name: "street",
+                            label: "Улица",
+                            value: "street"
+                          }
+                        ]}
+                      />
+                    </DCInputField>
+                  </DCInputField>
+  
+  
+                  <DCInputField
+                    withComment
+                    label="Дом"
+                    fullWith
+                  >
+                    <DCInputField
+                      label="Безопасность"
+                    >
+                      <DCInput size={3}/>
+                    </DCInputField>
+  
+                    <DCInputField
+                      withComment
+                      label="Тип дома"
+                      labelSize="subheader"
+                    >
+                      <DCButtonGroup
+                        buttons={[
+                          {
+                            label: 'Кирпичный'
+                          },
+                          {
+                            label: 'Панельный'
+                          },
+                          {
+                            label: 'Монолитный'
+                          },
+                          {
+                            label: 'Деревянный'
+                          },
+                          {
+                            label: 'Блочный'
+                          }
+                        ]}
+                      />
+                    </DCInputField>
+  
+                    <DCInputField
+                      withComment
+                      label="Лифт"
+                      labelSize="subheader"
+                    >
+                      <DCButtonGroup
+                        buttons={[
+                          {
+                            label: '1'
+                          },
+                          {
+                            label: '2'
+                          },
+                          {
+                            label: '3+'
+                          }
+                        ]}
+                      />
+                      <DCCheckbox
+                        bold
+                        size="small"
+                        name="gruz"
+                        label="Грузовой лифт"
+                        value={true}
+                      />
+                    </DCInputField>
+  
+                    <div className='add-card_flex add-card_wrapReverse add-card-fieldsBlock'>
+                      <DCInputField
+                        label="Номер квартиры"
+                        labelSize="subheader"
+                      >
+                        <DCInput/>
+                      </DCInputField>
+  
+                      <DCInputField
+                        label="или"
+                        labelSize="small"
+                        labelColor="blue"
+                      />
+                      
+                      <DCInputField
+                        label="Кадастровый номер"
+                        labelSize="subheader"
+                      >
+                        <DCInput/>
+                      </DCInputField>
+                    </div>
                     
+                  </DCInputField>
+  
+                  <DCInputField
+                    // size={12}
+                    label="Фотографии"
+                    withComment
+                    fullWith
+                  >
+                    <DCAttachement/>
+                  </DCInputField>
+  
+                  <DCInputField
+                    // size={12}
+                    label="Видеопросмотр"
+                    withComment
+                    fullWith
+                  >
+                    <DCAttachement/>
+                  </DCInputField>
+  
+                  <DCInputField
+                    // size={12}
+                    label="Квартира"
+                    withComment
+                    fullWith
+                  >
+                    <DCInputField
+                      label="Количество комнат"
+                      labelSize="subheader"
+                    >
+                      <DCButtonGroup
+                        buttons={[
+                          {
+                            label: '1'
+                          },
+                          {
+                            label: '2'
+                          },
+                          {
+                            label: '3'
+                          },
+                          {
+                            label: '4'
+                          },
+                          {
+                            label: '5+'
+                          },
+                          {
+                            label: 'Студия'
+                          }
+                        ]}
+                      />
+                      <DCCheckbox
+                        bold
+                        size="small"
+                        name="gruz"
+                        label="Грузовой лифт"
+                        value={true}
+                      />
+                    </DCInputField>
+  
+                    <div className='add-card_flex add-card-fieldsBlock'>
+                      <DCInputField
+                        label="Площадь"
+                        labelSize="subheader"
+                      >
+                        <DCInput/>
+                      </DCInputField>
+        
+                      <DCInputField
+                        label="Площадь кухни"
+                        labelSize="subheader"
+                      >
+                        <DCInput/>
+                      </DCInputField>
+  
+                      <DCInputField
+                        label="Жилая площадь"
+                        labelSize="subheader"
+                      >
+                        <DCInput/>
+                      </DCInputField>
+  
+                      <DCInputField
+                        label="Этаж"
+                        labelSize="subheader"
+                      >
+                        <DCInput/>
+                      </DCInputField>
+  
+                      <DCInputField
+                        label="Этажей в доме"
+                        labelSize="subheader"
+                      >
+                        <DCInput/>
+                      </DCInputField>
+  
+                      <DCInputField
+                        label="Высота потолков"
+                        labelSize="subheader"
+                      >
+                        <DCInput/>
+                      </DCInputField>
+                    </div>
+                    
+                  </DCInputField>
+                  
+                  <DCButton
+                    rounded
+                    active
+                    label="Сохранить"
+                  />
                     
                     {/*<div className="_col-12">*/}
                     {/*    <div className="add-card__title">Лет в собственности</div>*/}

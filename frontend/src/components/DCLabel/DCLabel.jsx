@@ -6,11 +6,14 @@ const DCLabel = (props) => {
 		label,
 		withComment,
 		fontSize,
-		size
+		color,
+		noBackground
 	} = props;
 	const classes = {
 		'DC-label': true,
 		[`DC-label-size-${fontSize}`]: !!fontSize,
+		['DC-label-background-noBackground']: !!noBackground,
+		[`DC__label_color-${color}`]: !!color
 	};
 	
 	return (
