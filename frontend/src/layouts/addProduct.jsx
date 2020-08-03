@@ -5,6 +5,7 @@ import './map-info.scss';
 import '../'
 import DCInputField from '../components/DCInputField/DCInputField';
 import DCInput from '../components/DCInput/DCInput';
+import DCAttachement from '../components/DCAttachements/DCAttachement';
 
 export class AddProduct extends PureComponent {
 
@@ -102,16 +103,25 @@ export class AddProduct extends PureComponent {
                     {/*</div>*/}
     
                     <DCInputField
-                      size={6}
-                      label="ФИО"
+                      size={12}
+                      label="Документы"
                     >
-                        <DC/>
+                        <DCAttachement/>
                     </DCInputField>
                     
-                    <h3 className="add-card__caption _col-12">Оценочная стоимость объекта</h3>
-                    <div className="_col-12">
-                        <input className="input" type="number" />
-                    </div>
+                    {/*<h3 className="add-card__caption _col-12">Оценочная стоимость объекта</h3>*/}
+                    {/*<div className="_col-12">*/}
+                    {/*    <input className="input" type="number" />*/}
+                    {/*</div>*/}
+    
+                    <DCInputField
+                      size={6}
+                      label="Оценочная стоимость объекта"
+                      withComment
+                    >
+                        <DCInput/>
+                    </DCInputField>
+                    
                     <h3 className="add-card__caption _col-12">Адрес</h3>
                     <div className="_col-12">
                         <input className="input" type="text" name="name" placeholder="Адрес" />
