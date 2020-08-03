@@ -6,8 +6,14 @@ import '../'
 import DCInputField from '../components/DCInputField/DCInputField';
 import DCInput from '../components/DCInput/DCInput';
 import DCAttachement from '../components/DCAttachements/DCAttachement';
+import Ymap from '../components/Ymaps/Ymaps';
 
 export class AddProduct extends PureComponent {
+    
+    address = {
+        latitude: 55,
+        longitude: 55
+    };
 
     setSelectionRange = (input, selectionStart, selectionEnd) => {
         if (input.setSelectionRange) {
@@ -90,10 +96,9 @@ export class AddProduct extends PureComponent {
                     {/*</div>*/}
                     
                     <DCInputField
-                      size={6}
                       label="ФИО"
                     >
-                        <DCInput/>
+                        <DCInput size={6}/>
                     </DCInputField>
                     
                     {/*<h3 className="add-card__caption _col-12">Документы</h3>*/}
@@ -115,23 +120,26 @@ export class AddProduct extends PureComponent {
                     {/*</div>*/}
     
                     <DCInputField
-                      size={6}
                       label="Оценочная стоимость объекта"
                       withComment
                     >
-                        <DCInput/>
+                        <DCInput size={6}/>
                     </DCInputField>
                     
-                    <h3 className="add-card__caption _col-12">Адрес</h3>
-                    <div className="_col-12">
-                        <input className="input" type="text" name="name" placeholder="Адрес" />
-                    </div>
-                    <div className="_col-12">
-                        <iframe className="map-info__frame"
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2243.0407002126926!2d49.14050991977406!3d55.792531171705015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1594554153460!5m2!1sru!2sua"
-                            allowfullscreen="" aria-hidden="false" tabindex="0">
-                        </iframe>
-                    </div>
+                    {/*<h3 className="add-card__caption _col-12">Адрес</h3>*/}
+                    {/*<div className="_col-12">*/}
+                    {/*    <input className="input" type="text" name="name" placeholder="Адрес" />*/}
+                    {/*</div>*/}
+    
+                    <DCInputField
+                      label="Адрес"
+                      withComment
+                    >
+                        <DCInput size={6}/>
+                    </DCInputField>
+                    
+                    <Ymap address={this.address}/>
+                    
                     <h3 className="add-card__caption _col-12">Сделка</h3>
                     <div className="_col-12 _col-md-6">
                         <div className="add-card__title">Тип сделки</div>

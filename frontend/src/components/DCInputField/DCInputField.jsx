@@ -14,12 +14,12 @@ const DCInputField = (props) => {
 	
 	const inputFieldClasses = {
 		'DC-inputField': true,
-		[`_col-${size}`]: !!size
+		'_col-12': true
 	};
 	
 	return (
 		<div className={Object.keys(inputFieldClasses).filter(key => inputFieldClasses[key]).join(' ')}>
-			<DCLabel label={label} withComment={withComment} size={labelSize}>
+			<DCLabel label={label} withComment={withComment} fontSize={labelSize} size={size}>
 				{children}
 			</DCLabel>
 		</div>

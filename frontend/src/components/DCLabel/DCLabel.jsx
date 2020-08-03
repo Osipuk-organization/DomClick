@@ -5,11 +5,12 @@ const DCLabel = (props) => {
 		children,
 		label,
 		withComment,
+		fontSize,
 		size
 	} = props;
 	const classes = {
 		'DC-label': true,
-		[`DC-label-size-${size}`]: !!size
+		[`DC-label-size-${fontSize}`]: !!fontSize,
 	};
 	
 	return (

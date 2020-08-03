@@ -9,7 +9,8 @@ const DCInput = (props) => {
 	
 	const inputClasses = {
 		'DC-input': true,
-		[`DC-input-border-color-${borderBottomColor}`]: !!borderBottomColor
+		[`DC-input-border-color-${borderBottomColor}`]: !!borderBottomColor,
+		[`_col-${size}`]: !!size
 	};
 	
 	return (
