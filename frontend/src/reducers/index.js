@@ -1,7 +1,7 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from "redux";
 
 // import flatsReducer from './flatsRedusers';
-import { reducer as flatsReducer } from './flatsRedusers';
+import { reducer as flatsReducer } from "./flatsRedusers";
 
 export const rootReducer = combineReducers({
   flats: flatsReducer,

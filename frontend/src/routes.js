@@ -1,22 +1,22 @@
-import { Index } from './layouts/index';
-import { Card } from './layouts/card';
-import { AddProduct } from './layouts/AddProduct';
+import { Index } from "./layouts/index";
+import { Card } from "./layouts/card";
+import { AddProduct } from "./layouts/AddProduct";
 
 export default [
   {
-    path: '/',
+    path: "/",
     component: Index,
-    exact: true
+    exact: true,
   },
   {
-    path: '/card/add',
+    path: "/card/add",
     component: AddProduct,
-    exact: true
+    exact: true,
   },
   {
-    path: '/card/:id',
+    path: "/card/:id",
     component: Card,
-    exact: true
+    exact: true,
   },
 
   // {
@@ -24,4 +24,4 @@ export default [
   //   component: Hello,
   //   exact: true
   // },
-]
+];

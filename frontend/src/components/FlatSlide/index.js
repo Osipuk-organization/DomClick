@@ -1,1 +1,1 @@
-export {FlatSlide} from './FlatSlide';
+export { FlatSlide } from "./FlatSlide";

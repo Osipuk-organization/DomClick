@@ -1,1 +1,1 @@
-export {SliderRow} from './SliderRow';
+export { SliderRow } from "./SliderRow";
