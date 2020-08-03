@@ -10,7 +10,9 @@ const DCInputField = (props) => {
 		size,
 		withComment,
 		labelSize,
-		fullWith
+		fullWith,
+		labelColor,
+		noBackground
 	} = props;
 	
 	const inputFieldClasses = {
@@ -20,7 +22,14 @@ const DCInputField = (props) => {
 	
 	return (
 		<div className={Object.keys(inputFieldClasses).filter(key => inputFieldClasses[key]).join(' ')}>
-			<DCLabel label={label} withComment={withComment} fontSize={labelSize} size={size}>
+			<DCLabel
+				label={label}
+				withComment={withComment}
+				fontSize={labelSize}
+				size={size}
+				noBackground={noBackground}
+				color={labelColor}
+			>
 				{children}
 			</DCLabel>
 		</div>
