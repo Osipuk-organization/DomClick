@@ -6,12 +6,12 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
-    "calc": "npm ts-node src/lesson2",
     "lint": "npm eslint --ext .js,.jsx,.ts,.tsx --fix ./",
     "loki:update": "npm run build-storybook && npx loki update --requireReference --reactUri file:./storybook-static",
     "loki:approve": "npx loki approve",
     "test": "npm jest",
     "test:loki": "npm run build-storybook && npx loki --requireReference --reactUri file:./storybook-static",
+    "ts:check": "npx tsc -p tsconfig.json --noEmit",
     "check": "npm run lint && npm test && npm run test:loki",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
@@ -26,7 +26,7 @@
     "type": "git",
     "url": "git+https://github.com/nickovchinnikov/react-js-tutorial.git"
   },
-  "author": "Nick Ovchinnikov",
+  "author": "DomClick",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nickovchinnikov/react-js-tutorial/issues"
