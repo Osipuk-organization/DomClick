@@ -1,10 +1,28 @@
 import React from 'react'
+import {useInput} from "../../hooks/hooks";
 import { Link } from 'react-router-dom';
 
 import './RegistrationForm.scss'
 
 export const RegistrationForm = (props) => {
+    const [ name, setName ] = useInput('');
+    const [ surName, setSurName ] = useInput('');
+    const [ phone, setPhone ] = useInput('');
+    const [ email, setEmail ] = useInput('');
+    const [ address, setAddress ] = useInput('');
+    const [ password, setPassword ] = useInput('');
+    const [ checkPassword, setCheckPassword ] = useInput('');
 
+
+    // this.state = {
+    //     name: '',
+    //     surName: '',
+    //     phone: '',
+    //     email: '',
+    //     address: '',
+    //     password: '',
+    //     checkPassword: ''
+    // }
 
 
     return (
@@ -41,10 +59,14 @@ export const RegistrationForm = (props) => {
                 <div className="name-field">
                     <input
                         type="text"
+                        value={name}
+                        onChange={setName}
                         placeholder="Ваше имя"
                     />
                     <input
                         type="text"
+                        value={surName}
+                        onChange={setSurName}
                         placeholder="Ваша фамилия"
                     />
                 </div>
@@ -52,10 +74,14 @@ export const RegistrationForm = (props) => {
                     <p>Введите почту и номер телефона</p>
                     <input
                         type="text"
+                        value={phone}
+                        onChange={setPhone}
                         placeholder="Номер телефона"
                     />
                     <input
                         type="email"
+                        value={email}
+                        onChange={setEmail}
                         placeholder="Ваша Почта"
                     />
                 </div>
@@ -63,6 +89,8 @@ export const RegistrationForm = (props) => {
                     <p>Введите ваш адрес</p>
                     <input
                         type="text"
+                        value={address}
+                        onChange={setAddress}
                         placeholder="Ваш адрес"
                     />
                 </div>
@@ -70,10 +98,14 @@ export const RegistrationForm = (props) => {
                     <p>Введите пароль</p>
                     <input
                         type="text"
+                        value={password}
+                        onChange={setPassword}
                         placeholder="Пароль"
                     />
                     <input
                         type="text"
+                        value={checkPassword}
+                        onChange={setCheckPassword}
                         placeholder="Повторите пароль"
                     />
                 </div>
