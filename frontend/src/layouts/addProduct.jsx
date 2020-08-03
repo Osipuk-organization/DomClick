@@ -1,21 +1,34 @@
 import React, { PureComponent } from "react";
 
-import "./add-card.scss";
-import "./map-info.scss";
+import './add-card.scss';
+import './map-info.scss';
+import '../'
+import DCInputField from '../components/DCInputField/DCInputField';
+import DCInput from '../components/DCInput/DCInput';
+import DCAttachement from '../components/DCAttachements/DCAttachement';
+import Ymap from '../components/Ymaps/Ymaps';
+import DCLabel from '../components/DCLabel/DCLabel';
+import DCButtonGroup from '../components/DCButtonGroup/DCButtonGroup';
 
 export class AddProduct extends PureComponent {
-  setSelectionRange = (input, selectionStart, selectionEnd) => {
-    if (input.setSelectionRange) {
-      input.focus();
-      input.setSelectionRange(selectionStart, selectionEnd);
-    } else if (input.createTextRange) {
-      const range = input.createTextRange();
-      range.collapse(true);
-      range.moveEnd("character", selectionEnd);
-      range.moveStart("character", selectionStart);
-      range.select();
+    
+    address = {
+        latitude: 55,
+        longitude: 55
+    };
+
+    setSelectionRange = (input, selectionStart, selectionEnd) => {
+        if (input.setSelectionRange) {
+            input.focus();
+            input.setSelectionRange(selectionStart, selectionEnd);
+        } else if (input.createTextRange) {
+            var range = input.createTextRange();
+            range.collapse(true);
+            range.moveEnd('character', selectionEnd);
+            range.moveStart('character', selectionStart);
+            range.select();
+        }
     }
-  };
 
   setCaretToPos = (input, pos) => {
     setSelectionRange(input, pos, pos);
@@ -67,276 +80,287 @@ export class AddProduct extends PureComponent {
     }
   };
 
-  render() {
-    for (const i of document.querySelectorAll('input[type="tel"]')) {
-      i.addEventListener("click", clickPhone);
-      i.addEventListener("focus", clickPhone);
-      i.addEventListener("blur", blurPhone);
-      i.addEventListener("input", inputPhone);
+    render() {
+        for (let i of document.querySelectorAll('input[type="tel"]')) {
+            i.addEventListener("click", clickPhone);
+            i.addEventListener("focus", clickPhone);
+            i.addEventListener("blur", blurPhone);
+            i.addEventListener('input', inputPhone);
+        };
+        return (
+            <>
+                <from className="_container _row _col-10" action="/new-card/" method="POST">
+                    <h1 className="_col-12">Новый объект</h1>
+                    {/*<h3 className="add-card__caption _col-12">ФИО</h3>*/}
+                    {/*<div className="_col-12">*/}
+                    {/*    <input className="input" type="text" name="name" placeholder="ФИО" />*/}
+                    {/*</div>*/}
+                    
+                    <DCInputField
+                      label="ФИО"
+                      fullWith
+                    >
+                        <DCInput size={6}/>
+                    </DCInputField>
+                    
+                    {/*<h3 className="add-card__caption _col-12">Документы</h3>*/}
+                    {/*<div className="_col-12">*/}
+                    {/*    <input type="file" name="files" multiple*/}
+                    {/*        accept=".jpg, .jpeg, .png, .pdf, .doc, .docx, .xls, .xlsx, .xlsm" />*/}
+                    {/*</div>*/}
+    
+                    <DCInputField
+                      size={12}
+                      label="Документы"
+                      fullWith
+                    >
+                        <DCAttachement/>
+                    </DCInputField>
+                    
+                    {/*<h3 className="add-card__caption _col-12">Оценочная стоимость объекта</h3>*/}
+                    {/*<div className="_col-12">*/}
+                    {/*    <input className="input" type="number" />*/}
+                    {/*</div>*/}
+    
+                    <DCInputField
+                      label="Оценочная стоимость объекта"
+                      withComment
+                      fullWith
+                    >
+                        <DCInput size={6}/>
+                    </DCInputField>
+                    
+                    {/*<h3 className="add-card__caption _col-12">Адрес</h3>*/}
+                    {/*<div className="_col-12">*/}
+                    {/*    <input className="input" type="text" name="name" placeholder="Адрес" />*/}
+                    {/*</div>*/}
+    
+                    <DCInputField
+                      label="Адрес"
+                      withComment
+                      fullWith
+                    >
+                        <DCInput size={6}/>
+                    </DCInputField>
+                    
+                    <Ymap address={this.address}/>
+                    
+                    {/*<h3 className="add-card__caption _col-12">Сделка</h3>*/}
+                    {/*<div className="_col-12 _col-md-6">*/}
+                    {/*    <div className="add-card__title">Тип сделки</div>*/}
+                    {/*    <div className="add-card__button-box _row">*/}
+                    {/*        <input className="_hidden" id="tt1" type="radio" name="type-transaction" checked />*/}
+                    {/*        <label className="button _s" for="tt1">Продажа</label>*/}
+                    {/*        <input className="_hidden" id="tt2" type="radio" name="type-transaction" />*/}
+                    {/*        <label className="button _s" for="tt2">Аренда</label>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
+    
+                    <DCInputField
+                      label="Сделка"
+                      withComment
+                      fullWith
+                    >
+                        <div className='add-card_flex add-card-fieldsBlock'>
+                            <DCInputField
+                              label="Тип сделки"
+                              labelSize="subheader"
+                            >
+                                <DCButtonGroup
+                                  buttons={[
+                                      {
+                                          label: 'Продажа'
+                                      },
+                                      {
+                                          label: 'Аренда'
+                                      }
+                                  ]}
+                                />
+                            </DCInputField>
+                            <DCInputField
+                              label="Вид недвижимости"
+                              labelSize="subheader"
+                            >
+                                <DCButtonGroup
+                                  buttons={[
+                                      {
+                                          label: 'Жилая'
+                                      },
+                                      {
+                                          label: 'Коммерческая'
+                                      },
+                                      {
+                                          label: 'Гараж'
+                                      }
+                                  ]}
+                                />
+                            </DCInputField>
+                        </div>
+                    </DCInputField>
+                    
+                    
+                    {/*<div className="_col-12 _col-md-6">*/}
+                    {/*    <div className="add-card__title">Вид недвижимости</div>*/}
+                    {/*    <div className="add-card__button-box _row">*/}
+                    {/*        <input className="_hidden" id="pt1" type="radio" name="property-type" checked />*/}
+                    {/*        <label className="button _s" for="pt1">Жилая</label>*/}
+                    {/*        <input className="_hidden" id="pt2" type="radio" name="property-type" />*/}
+                    {/*        <label className="button _s" for="pt2">Коммерческая</label>*/}
+                    {/*        <input className="_hidden" id="pt3" type="radio" name="property-type" /><label className="button _s" for="pt3">Гараж</label>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
+    
+                    <DCInputField
+                      label="Тип недвижимсоти"
+                      labelSize="subheader"
+                      fullWith
+                    >
+                        <DCButtonGroup
+                          buttons={[
+                              {
+                                  label: 'Квартира'
+                              },
+                              {
+                                  label: 'Комната'
+                              }
+                              ,
+                              {
+                                  label: 'Дом'
+                              }
+                              ,
+                              {
+                                  label: 'Таунхаус'
+                              }
+                              ,
+                              {
+                                  label: 'Часть дома'
+                              }
+                              ,
+                              {
+                                  label: 'Участок'
+                              }
+                          ]}
+                        />
+                    </DCInputField>
+                    
+                    {/*<div className="_col-12">*/}
+                    {/*    <div className="add-card__title">Тип недвижимости</div>*/}
+                    {/*    <div className="add-card__button-box _row">*/}
+                    {/*        <input className="_hidden" id="tp1" type="radio" name="type-of-property" checked />*/}
+                    {/*        <label className="button _s" for="tp1">Квартира</label>*/}
+                    {/*        <input className="_hidden" id="tp2" type="radio" name="type-of-property" />*/}
+                    {/*        <label className="button _s" for="tp2">Комната</label>*/}
+                    {/*        <input className="_hidden" id="tp3" type="radio" name="type-of-property" />*/}
+                    {/*        <label className="button _s" for="tp3">Дом</label>*/}
+                    {/*        <input className="_hidden" id="tp4" type="radio" name="type-of-property" />*/}
+                    {/*        <label className="button _s" for="tp4">Таунхаус</label>*/}
+                    {/*        <input className="_hidden" id="tp5" type="radio" name="type-of-property" />*/}
+                    {/*        <label className="button _s" for="tp5">Часть дома</label>*/}
+                    {/*        <input className="_hidden" id="tp6" type="radio" name="type-of-property" />*/}
+                    {/*        <label className="button _s" for="tp6">Участок</label>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
+    
+                    <DCInputField
+                      label="Лет в собственности"
+                      labelSize="subheader"
+                      fullWith
+                    >
+                        <DCButtonGroup
+                          buttons={[
+                              {
+                                  label: 'Меньше 3-х'
+                              },
+                              {
+                                  label: 'От 3-х до 5-ти'
+                              },
+                              {
+                                  label: 'Больше 5-ти'
+                              }
+                          ]}
+                        />
+                    </DCInputField>
+    
+                    <div className='add-card_flex add-card-fieldsBlock _col-12'>
+                        <DCInputField
+                          label="Тип сделки"
+                          labelSize="subheader"
+                        >
+                            <DCButtonGroup
+                              buttons={[
+                                  {
+                                      label: 'Продажа'
+                                  },
+                                  {
+                                      label: 'Аренда'
+                                  }
+                              ]}
+                            />
+                        </DCInputField>
+                        <DCInputField
+                          label="Вид недвижимости"
+                          labelSize="subheader"
+                        >
+                            <DCButtonGroup
+                              buttons={[
+                                  {
+                                      label: 'Жилая'
+                                  },
+                                  {
+                                      label: 'Коммерческая'
+                                  },
+                                  {
+                                      label: 'Гараж'
+                                  }
+                              ]}
+                            />
+                        </DCInputField>
+                    </div>
+                    
+                    
+                    {/*<div className="_col-12">*/}
+                    {/*    <div className="add-card__title">Лет в собственности</div>*/}
+                    {/*    <div className="add-card__button-box _row">*/}
+                    {/*        <input className="_hidden" id="yo1" type="radio" name="years-owned" checked />*/}
+                    {/*        <label className="button _s" for="yo1">Меньше 3-х</label>*/}
+                    {/*        <input className="_hidden" id="yo2" type="radio" name="years-owned" />*/}
+                    {/*        <label className="button _s" for="yo2">От 3-х до 5-ти</label>*/}
+                    {/*        <input className="_hidden" id="yo3" type="radio" name="years-owned" />*/}
+                    {/*        <label className="button _s" for="yo3">Больше 5-ти</label>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
+                    
+                    
+                    {/*<div className="_col-12 _col-md-6">*/}
+                    {/*    <div className="add-card__title">Собственники</div>*/}
+                    {/*    <div className="add-card__button-box _row">*/}
+                    {/*        <input className="_hidden" id="ow1" type="radio" name="owners" checked />*/}
+                    {/*        <label className="button _s" for="ow1">1</label>*/}
+                    {/*        <input className="_hidden" id="ow2" type="radio" name="owners" />*/}
+                    {/*        <label className="button _s" for="ow2">2</label>*/}
+                    {/*        <input className="_hidden" id="ow3" type="radio" name="owners" />*/}
+                    {/*        <label className="button _s" for="ow3">3+</label>*/}
+                    {/*    </div>*/}
+                    {/*    <label>*/}
+                    {/*        <input type="checkbox" />Есть несовершеннолетние*/}
+                    {/*    </label>*/}
+                    {/*</div>*/}
+                    {/*<div className="_col-12 _col-md-6">*/}
+                    {/*    <div className="add-card__title">Прописано</div>*/}
+                    {/*    <div className="add-card__button-box _row">*/}
+                    {/*        <input className="_hidden" id="pr1" type="radio" name="prescribed" checked />*/}
+                    {/*        <label className="button _s" for="pr1">1</label>*/}
+                    {/*        <input className="_hidden" id="pr2" type="radio" name="prescribed" />*/}
+                    {/*        <label className="button _s" for="pr2">2</label>*/}
+                    {/*        <input className="_hidden" id="pr3" type="radio" name="prescribed" />*/}
+                    {/*        <label className="button _s" for="pr3">3+</label>*/}
+                    {/*    </div>*/}
+                    {/*    <label>*/}
+                    {/*        <input type="checkbox" />Есть несовершеннолетние*/}
+                    {/*    </label>*/}
+                    {/*</div>*/}
+                </from>
+            </>
+        );
     }
-    return (
-      <>
-        <from className="_container _row" action="/new-card/" method="POST">
-          <h1 className="_col-12">Новый объект</h1>
-          <h3 className="add-card__caption _col-12">ФИО</h3>
-          <div className="_col-12">
-            <input
-              className="input"
-              type="text"
-              name="name"
-              placeholder="ФИО"
-            />
-          </div>
-          <h3 className="add-card__caption _col-12">Документы</h3>
-          <div className="_col-12">
-            <input
-              type="file"
-              name="files"
-              multiple
-              accept=".jpg, .jpeg, .png, .pdf, .doc, .docx, .xls, .xlsx, .xlsm"
-            />
-          </div>
-          <h3 className="add-card__caption _col-12">
-            Оценочная стоимость объекта
-          </h3>
-          <div className="_col-12">
-            <input className="input" type="number" />
-          </div>
-          <h3 className="add-card__caption _col-12">Адрес</h3>
-          <div className="_col-12">
-            <input
-              className="input"
-              type="text"
-              name="name"
-              placeholder="Адрес"
-            />
-          </div>
-          <div className="_col-12">
-            <iframe
-              className="map-info__frame"
-              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2243.0407002126926!2d49.14050991977406!3d55.792531171705015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1594554153460!5m2!1sru!2sua"
-              allowFullScreen=""
-              aria-hidden="false"
-              tabIndex="0"
-            ></iframe>
-          </div>
-          <h3 className="add-card__caption _col-12">Сделка</h3>
-          <div className="_col-12 _col-md-6">
-            <div className="add-card__title">Тип сделки</div>
-            <div className="add-card__button-box _row">
-              <input
-                className="_hidden"
-                id="tt1"
-                type="radio"
-                name="type-transaction"
-                checked
-              />
-              <label className="button _s" htmlFor="tt1">
-                Продажа
-              </label>
-              <input
-                className="_hidden"
-                id="tt2"
-                type="radio"
-                name="type-transaction"
-              />
-              <label className="button _s" htmlFor="tt2">
-                Аренда
-              </label>
-            </div>
-          </div>
-          <div className="_col-12 _col-md-6">
-            <div className="add-card__title">Вид недвижимости</div>
-            <div className="add-card__button-box _row">
-              <input
-                className="_hidden"
-                id="pt1"
-                type="radio"
-                name="property-type"
-                checked
-              />
-              <label className="button _s" htmlFor="pt1">
-                Жилая
-              </label>
-              <input
-                className="_hidden"
-                id="pt2"
-                type="radio"
-                name="property-type"
-              />
-              <label className="button _s" htmlFor="pt2">
-                Коммерческая
-              </label>
-              <input
-                className="_hidden"
-                id="pt3"
-                type="radio"
-                name="property-type"
-              />
-              <label className="button _s" htmlFor="pt3">
-                Гараж
-              </label>
-            </div>
-          </div>
-          <div className="_col-12">
-            <div className="add-card__title">Тип недвижимости</div>
-            <div className="add-card__button-box _row">
-              <input
-                className="_hidden"
-                id="tp1"
-                type="radio"
-                name="type-of-property"
-                checked
-              />
-              <label className="button _s" htmlFor="tp1">
-                Квартира
-              </label>
-              <input
-                className="_hidden"
-                id="tp2"
-                type="radio"
-                name="type-of-property"
-              />
-              <label className="button _s" htmlFor="tp2">
-                Комната
-              </label>
-              <input
-                className="_hidden"
-                id="tp3"
-                type="radio"
-                name="type-of-property"
-              />
-              <label className="button _s" htmlFor="tp3">
-                Дом
-              </label>
-              <input
-                className="_hidden"
-                id="tp4"
-                type="radio"
-                name="type-of-property"
-              />
-              <label className="button _s" htmlFor="tp4">
-                Таунхаус
-              </label>
-              <input
-                className="_hidden"
-                id="tp5"
-                type="radio"
-                name="type-of-property"
-              />
-              <label className="button _s" htmlFor="tp5">
-                Часть дома
-              </label>
-              <input
-                className="_hidden"
-                id="tp6"
-                type="radio"
-                name="type-of-property"
-              />
-              <label className="button _s" htmlFor="tp6">
-                Участок
-              </label>
-            </div>
-          </div>
-          <div className="_col-12">
-            <div className="add-card__title">Лет в собственности</div>
-            <div className="add-card__button-box _row">
-              <input
-                className="_hidden"
-                id="yo1"
-                type="radio"
-                name="years-owned"
-                checked
-              />
-              <label className="button _s" htmlFor="yo1">
-                Меньше 3-х
-              </label>
-              <input
-                className="_hidden"
-                id="yo2"
-                type="radio"
-                name="years-owned"
-              />
-              <label className="button _s" htmlFor="yo2">
-                От 3-х до 5-ти
-              </label>
-              <input
-                className="_hidden"
-                id="yo3"
-                type="radio"
-                name="years-owned"
-              />
-              <label className="button _s" htmlFor="yo3">
-                Больше 5-ти
-              </label>
-            </div>
-          </div>
-          <div className="_col-12 _col-md-6">
-            <div className="add-card__title">Собственники</div>
-            <div className="add-card__button-box _row">
-              <input
-                className="_hidden"
-                id="ow1"
-                type="radio"
-                name="owners"
-                checked
-              />
-              <label className="button _s" htmlFor="ow1">
-                1
-              </label>
-              <input className="_hidden" id="ow2" type="radio" name="owners" />
-              <label className="button _s" htmlFor="ow2">
-                2
-              </label>
-              <input className="_hidden" id="ow3" type="radio" name="owners" />
-              <label className="button _s" htmlFor="ow3">
-                3+
-              </label>
-            </div>
-            <label>
-              <input type="checkbox" />
-              Есть несовершеннолетние
-            </label>
-          </div>
-          <div className="_col-12 _col-md-6">
-            <div className="add-card__title">Прописано</div>
-            <div className="add-card__button-box _row">
-              <input
-                className="_hidden"
-                id="pr1"
-                type="radio"
-                name="prescribed"
-                checked
-              />
-              <label className="button _s" htmlFor="pr1">
-                1
-              </label>
-              <input
-                className="_hidden"
-                id="pr2"
-                type="radio"
-                name="prescribed"
-              />
-              <label className="button _s" htmlFor="pr2">
-                2
-              </label>
-              <input
-                className="_hidden"
-                id="pr3"
-                type="radio"
-                name="prescribed"
-              />
-              <label className="button _s" htmlFor="pr3">
-                3+
-              </label>
-            </div>
-            <label>
-              <input type="checkbox" />
-              Есть несовершеннолетние
-            </label>
-          </div>
-        </from>
-      </>
-    );
-  }
 }

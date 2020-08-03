@@ -1,6 +1,8 @@
 import React, { Fragment, useEffect, useState } from "react";
 import DCButton from "../DCButton/DCButton";
 
+import './style.scss';
+
 const DCButtonGroup = (props) => {
   const { buttons } = props;
   const [activeButtonId, setActiveButtonId] = useState(0);
