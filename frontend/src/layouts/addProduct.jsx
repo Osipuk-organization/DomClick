@@ -7,6 +7,8 @@ import DCInputField from '../components/DCInputField/DCInputField';
 import DCInput from '../components/DCInput/DCInput';
 import DCAttachement from '../components/DCAttachements/DCAttachement';
 import Ymap from '../components/Ymaps/Ymaps';
+import DCLabel from '../components/DCLabel/DCLabel';
+import DCButtonGroup from '../components/DCButtonGroup/DCButtonGroup';
 
 export class AddProduct extends PureComponent {
     
@@ -140,26 +142,106 @@ export class AddProduct extends PureComponent {
                     
                     <Ymap address={this.address}/>
                     
-                    <h3 className="add-card__caption _col-12">Сделка</h3>
-                    <div className="_col-12 _col-md-6">
-                        <div className="add-card__title">Тип сделки</div>
-                        <div className="add-card__button-box _row">
-                            <input className="_hidden" id="tt1" type="radio" name="type-transaction" checked />
-                            <label className="button _s" for="tt1">Продажа</label>
-                            <input className="_hidden" id="tt2" type="radio" name="type-transaction" />
-                            <label className="button _s" for="tt2">Аренда</label>
+                    {/*<h3 className="add-card__caption _col-12">Сделка</h3>*/}
+                    {/*<div className="_col-12 _col-md-6">*/}
+                    {/*    <div className="add-card__title">Тип сделки</div>*/}
+                    {/*    <div className="add-card__button-box _row">*/}
+                    {/*        <input className="_hidden" id="tt1" type="radio" name="type-transaction" checked />*/}
+                    {/*        <label className="button _s" for="tt1">Продажа</label>*/}
+                    {/*        <input className="_hidden" id="tt2" type="radio" name="type-transaction" />*/}
+                    {/*        <label className="button _s" for="tt2">Аренда</label>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
+    
+                    <DCInputField
+                      label="Сделка"
+                      withComment
+                    >
+                        <div className='_col-8 add-card_flex'>
+                            <div className="_col-6">
+                                <DCInputField
+                                  label="Тип сделки"
+                                  labelSize="subheader"
+                                >
+                                    <DCButtonGroup
+                                      buttons={[
+                                          {
+                                              label: 'Продажа'
+                                          },
+                                          {
+                                              label: 'Аренда'
+                                          }
+                                      ]}
+                                    />
+                                </DCInputField>
+                            </div>
+                            <div className="_col-6">
+                                <DCInputField
+                                  label="Вид недвижимости"
+                                  labelSize="subheader"
+                                >
+                                    <DCButtonGroup
+                                      buttons={[
+                                          {
+                                              label: 'Жилая'
+                                          },
+                                          {
+                                              label: 'Коммерческая'
+                                          },
+                                          {
+                                              label: 'Гараж'
+                                          }
+                                      ]}
+                                    />
+                                </DCInputField>
+                            </div>
                         </div>
-                    </div>
-                    <div className="_col-12 _col-md-6">
-                        <div className="add-card__title">Вид недвижимости</div>
-                        <div className="add-card__button-box _row">
-                            <input className="_hidden" id="pt1" type="radio" name="property-type" checked />
-                            <label className="button _s" for="pt1">Жилая</label>
-                            <input className="_hidden" id="pt2" type="radio" name="property-type" />
-                            <label className="button _s" for="pt2">Коммерческая</label>
-                            <input className="_hidden" id="pt3" type="radio" name="property-type" /><label className="button _s" for="pt3">Гараж</label>
-                        </div>
-                    </div>
+                    </DCInputField>
+                    
+                    
+                    {/*<div className="_col-12 _col-md-6">*/}
+                    {/*    <div className="add-card__title">Вид недвижимости</div>*/}
+                    {/*    <div className="add-card__button-box _row">*/}
+                    {/*        <input className="_hidden" id="pt1" type="radio" name="property-type" checked />*/}
+                    {/*        <label className="button _s" for="pt1">Жилая</label>*/}
+                    {/*        <input className="_hidden" id="pt2" type="radio" name="property-type" />*/}
+                    {/*        <label className="button _s" for="pt2">Коммерческая</label>*/}
+                    {/*        <input className="_hidden" id="pt3" type="radio" name="property-type" /><label className="button _s" for="pt3">Гараж</label>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
+    
+                    <DCInputField
+                      label="Тип недвижимсоти"
+                      labelSize="subheader"
+                    >
+                        <DCButtonGroup
+                          buttons={[
+                              {
+                                  label: 'Квартира'
+                              },
+                              {
+                                  label: 'Комната'
+                              }
+                              ,
+                              {
+                                  label: 'Дом'
+                              }
+                              ,
+                              {
+                                  label: 'Таунхаус'
+                              }
+                              ,
+                              {
+                                  label: 'Часть дома'
+                              }
+                              ,
+                              {
+                                  label: 'Участок'
+                              }
+                          ]}
+                        />
+                    </DCInputField>
+                    
                     <div className="_col-12">
                         <div className="add-card__title">Тип недвижимости</div>
                         <div className="add-card__button-box _row">
