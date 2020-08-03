@@ -9,12 +9,13 @@ const DCInputField = (props) => {
 		label,
 		size,
 		withComment,
-		labelSize
+		labelSize,
+		fullWith
 	} = props;
 	
 	const inputFieldClasses = {
 		'DC-inputField': true,
-		'_col-12': true
+		'_col-12': !!fullWith
 	};
 	
 	return (

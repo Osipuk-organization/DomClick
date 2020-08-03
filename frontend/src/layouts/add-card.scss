@@ -21,6 +21,12 @@
   }
 
   &_flex {
-    display: flex
+    display: flex;
+  }
+
+  &-fieldsBlock {
+    .DC-inputField:first-child {
+      margin-right: 100px;
+    }
   }
 }
