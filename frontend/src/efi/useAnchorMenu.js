@@ -1,6 +1,4 @@
-import {
-  useState
-} from "react";
+import { useState } from "react";
 
 const useAnchorMenu = function (initialOpen) {
   const [open, setOpen] = useState(initialOpen);
@@ -16,8 +14,8 @@ const useAnchorMenu = function (initialOpen) {
   return {
     isOpen: open,
     onOpen: toggleOpenMenu,
-    onClose: toggleCloseMenu
-  }
+    onClose: toggleCloseMenu,
+  };
 };
 
 export default useAnchorMenu;

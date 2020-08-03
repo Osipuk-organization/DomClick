@@ -1,12 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import {CardInfoContainer} from 'containers/CardInfoContainer';
+import { CardInfoContainer } from "containers/CardInfoContainer";
 
-export const Card = function(props) {
-
+export const Card = function (props) {
   return (
     <>
       <CardInfoContainer />
     </>
   );
-}
+};

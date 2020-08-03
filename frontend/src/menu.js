@@ -1,7 +1,7 @@
 export default [
   {
     link: "/",
-    title: "Услуги"
+    title: "Услуги",
   },
   {
     link: "/",
