@@ -1,0 +1,30 @@
+.add-card {
+  &__caption {
+    padding: 30px 15px 0;
+    font-size: 1.5rem;
+  }
+  &__title {
+    font-size: 1.5rem;
+  }
+  &__button-box {
+    padding-top: 15px;
+    & label {
+      width: auto;
+      padding: 5px 15px;
+      margin: 0 5px 5px 0;
+      flex-grow: 0;
+    }
+    & input:checked + label {
+      color: #ffffff;
+      background-color: #ff7373;
+    }
+  }
+}
+
+.map-info {
+  &__frame {
+    width: 100%;
+    height: 370px;
+    border: 0;
+  }
+}

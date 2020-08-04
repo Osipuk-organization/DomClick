@@ -1,17 +1,17 @@
-const path = require('path');
-const webpack = require('webpack');
-const custom = require('../webpack.config.js');
+const path = require("path");
+const webpack = require("webpack");
+const custom = require("../webpack.config.js");
 
 module.exports = {
-  stories: ['../src/**/*.stories.tsx'],
+  stories: ["../src/**/*.stories.tsx"],
   addons: [
-    '@storybook/addon-actions',
-    '@storybook/addon-links',
-    '@storybook/addon-knobs/register',
-    '@storybook/addon-storysource',
-    'storybook-addon-react-docgen/register',
+    "@storybook/addon-actions",
+    "@storybook/addon-links",
+    "@storybook/addon-knobs/register",
+    "@storybook/addon-storysource",
+    "storybook-addon-react-docgen/register",
     {
-      name: '@storybook/addon-docs',
+      name: "@storybook/addon-docs",
       options: {
         configureJSX: true,
         babelOptions: {},
@@ -26,11 +26,11 @@ module.exports = {
       test: /\.stories\.tsx$/,
       loaders: [
         {
-          loader: require.resolve('@storybook/source-loader'),
-          options: { parser: 'typescript' },
+          loader: require.resolve("@storybook/source-loader"),
+          options: { parser: "typescript" },
         },
       ],
-      enforce: 'pre',
+      enforce: "pre",
     });
     config.module.rules.push({
       test: /\.tsx?$/,
@@ -52,15 +52,15 @@ module.exports = {
     // automatically in `DocsPage` or the `Source` doc block.
     config.module.rules.push({
       test: /\.(stories|story)\.[tj]sx?$/,
-      loader: require.resolve('@storybook/source-loader'),
+      loader: require.resolve("@storybook/source-loader"),
       exclude: [/node_modules/],
-      enforce: 'pre',
+      enforce: "pre",
     });
 
     return {
       ...config,
       resolve: {
-        extensions: custom.resolve.extensions
+        extensions: custom.resolve.extensions,
       },
       module: {
         ...config.module,

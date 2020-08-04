@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 400px;
+  padding: 15px 0;
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(~assets/img/header-bg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  box-sizing: border-box;
+  &__caption {
+    padding: 0 15px;
+  }
+  &__top-text {
+    padding: 8px 15px;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  &__bot-text {
+    font-size: 1.125rem;
+    font-weight: 500;
+    padding: 8px 15px;
+    &._left {
+      text-align: right;
+    }
+  }
+  &__button-box {
+    padding: 80px 15px 0 15px;
+    &._left {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

@@ -1,0 +1,335 @@
+import React, { PureComponent } from "react";
+
+import "./styles.scss";
+
+export default class AddProduct extends PureComponent {
+  setSelectionRange = (input, selectionStart, selectionEnd) => {
+    if (input.setSelectionRange) {
+      input.focus();
+      input.setSelectionRange(selectionStart, selectionEnd);
+    } else if (input.createTextRange) {
+      const range = input.createTextRange();
+      range.collapse(true);
+      range.moveEnd("character", selectionEnd);
+      range.moveStart("character", selectionStart);
+      range.select();
+    }
+  };
+
+  setCaretToPos = (input, pos) => {
+    setSelectionRange(input, pos, pos);
+  };
+
+  clickPhone = (e) => {
+    const element = e.currentTarget;
+    const mask = "+7(___)___-____";
+    if (!element.value) {
+      element.value = mask;
+    }
+    setCaretToPos(element, element.value.search("_"));
+  };
+
+  blurPhone = (e) => {
+    const element = e.currentTarget;
+    const numberPhone = element.value.match(/(\d)/g);
+    if (numberPhone && numberPhone.length <= 1) {
+      element.value = "";
+    }
+  };
+
+  inputPhone = (e) => {
+    const element = e.currentTarget;
+    const mask = "+7(___)___-____",
+      numberPhone = element.value.match(/(\d)/g);
+    if (numberPhone && element.value.length != mask.length) {
+      const reg1 = /\)/g,
+        reg2 = /\-/g;
+      numberPhone.splice(0, 1);
+      if (numberPhone[0] === "8") {
+        numberPhone.splice(0, 1);
+      }
+      if (!reg1.test(element.value)) {
+        numberPhone.splice(2, 1);
+      }
+      if (!reg2.test(element.value)) {
+        numberPhone.splice(5, 1);
+      }
+      while (numberPhone.length < 10) {
+        numberPhone.push("_");
+      }
+      numberPhone.splice(12, numberPhone.length);
+      numberPhone.splice(6, 0, "-");
+      numberPhone.splice(3, 0, ")");
+      numberPhone.splice(0, 0, "+7(");
+      element.value = numberPhone.join("");
+      setCaretToPos(element, element.value.search("_"));
+    }
+  };
+
+  render() {
+    return (
+      <>
+        <from className="_container _row" action="/new-card/" method="POST">
+          <h1 className="_col-12">Новый объект</h1>
+          <h3 className="add-card__caption _col-12">ФИО</h3>
+          <div className="_col-12">
+            <input
+              className="input"
+              type="text"
+              name="name"
+              placeholder="ФИО"
+            />
+          </div>
+          <h3 className="add-card__caption _col-12">Документы</h3>
+          <div className="_col-12">
+            <input
+              type="file"
+              name="files"
+              multiple
+              accept=".jpg, .jpeg, .png, .pdf, .doc, .docx, .xls, .xlsx, .xlsm"
+            />
+          </div>
+          <h3 className="add-card__caption _col-12">
+            Оценочная стоимость объекта
+          </h3>
+          <div className="_col-12">
+            <input className="input" type="number" />
+          </div>
+          <h3 className="add-card__caption _col-12">Адрес</h3>
+          <div className="_col-12">
+            <input
+              className="input"
+              type="text"
+              name="name"
+              placeholder="Адрес"
+            />
+          </div>
+          <div className="_col-12">
+            <iframe
+              className="map-info__frame"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2243.0407002126926!2d49.14050991977406!3d55.792531171705015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1594554153460!5m2!1sru!2sua"
+              allowFullScreen=""
+              aria-hidden="false"
+              tabIndex="0"
+            ></iframe>
+          </div>
+          <h3 className="add-card__caption _col-12">Сделка</h3>
+          <div className="_col-12 _col-md-6">
+            <div className="add-card__title">Тип сделки</div>
+            <div className="add-card__button-box _row">
+              <input
+                className="_hidden"
+                id="tt1"
+                type="radio"
+                name="type-transaction"
+                checked
+              />
+              <label className="button _s" htmlFor="tt1">
+                Продажа
+              </label>
+              <input
+                className="_hidden"
+                id="tt2"
+                type="radio"
+                name="type-transaction"
+              />
+              <label className="button _s" htmlFor="tt2">
+                Аренда
+              </label>
+            </div>
+          </div>
+          <div className="_col-12 _col-md-6">
+            <div className="add-card__title">Вид недвижимости</div>
+            <div className="add-card__button-box _row">
+              <input
+                className="_hidden"
+                id="pt1"
+                type="radio"
+                name="property-type"
+                checked
+              />
+              <label className="button _s" htmlFor="pt1">
+                Жилая
+              </label>
+              <input
+                className="_hidden"
+                id="pt2"
+                type="radio"
+                name="property-type"
+              />
+              <label className="button _s" htmlFor="pt2">
+                Коммерческая
+              </label>
+              <input
+                className="_hidden"
+                id="pt3"
+                type="radio"
+                name="property-type"
+              />
+              <label className="button _s" htmlFor="pt3">
+                Гараж
+              </label>
+            </div>
+          </div>
+          <div className="_col-12">
+            <div className="add-card__title">Тип недвижимости</div>
+            <div className="add-card__button-box _row">
+              <input
+                className="_hidden"
+                id="tp1"
+                type="radio"
+                name="type-of-property"
+                checked
+              />
+              <label className="button _s" htmlFor="tp1">
+                Квартира
+              </label>
+              <input
+                className="_hidden"
+                id="tp2"
+                type="radio"
+                name="type-of-property"
+              />
+              <label className="button _s" htmlFor="tp2">
+                Комната
+              </label>
+              <input
+                className="_hidden"
+                id="tp3"
+                type="radio"
+                name="type-of-property"
+              />
+              <label className="button _s" htmlFor="tp3">
+                Дом
+              </label>
+              <input
+                className="_hidden"
+                id="tp4"
+                type="radio"
+                name="type-of-property"
+              />
+              <label className="button _s" htmlFor="tp4">
+                Таунхаус
+              </label>
+              <input
+                className="_hidden"
+                id="tp5"
+                type="radio"
+                name="type-of-property"
+              />
+              <label className="button _s" htmlFor="tp5">
+                Часть дома
+              </label>
+              <input
+                className="_hidden"
+                id="tp6"
+                type="radio"
+                name="type-of-property"
+              />
+              <label className="button _s" htmlFor="tp6">
+                Участок
+              </label>
+            </div>
+          </div>
+          <div className="_col-12">
+            <div className="add-card__title">Лет в собственности</div>
+            <div className="add-card__button-box _row">
+              <input
+                className="_hidden"
+                id="yo1"
+                type="radio"
+                name="years-owned"
+                checked
+              />
+              <label className="button _s" htmlFor="yo1">
+                Меньше 3-х
+              </label>
+              <input
+                className="_hidden"
+                id="yo2"
+                type="radio"
+                name="years-owned"
+              />
+              <label className="button _s" htmlFor="yo2">
+                От 3-х до 5-ти
+              </label>
+              <input
+                className="_hidden"
+                id="yo3"
+                type="radio"
+                name="years-owned"
+              />
+              <label className="button _s" htmlFor="yo3">
+                Больше 5-ти
+              </label>
+            </div>
+          </div>
+          <div className="_col-12 _col-md-6">
+            <div className="add-card__title">Собственники</div>
+            <div className="add-card__button-box _row">
+              <input
+                className="_hidden"
+                id="ow1"
+                type="radio"
+                name="owners"
+                checked
+              />
+              <label className="button _s" htmlFor="ow1">
+                1
+              </label>
+              <input className="_hidden" id="ow2" type="radio" name="owners" />
+              <label className="button _s" htmlFor="ow2">
+                2
+              </label>
+              <input className="_hidden" id="ow3" type="radio" name="owners" />
+              <label className="button _s" htmlFor="ow3">
+                3+
+              </label>
+            </div>
+            <label>
+              <input type="checkbox" />
+              Есть несовершеннолетние
+            </label>
+          </div>
+          <div className="_col-12 _col-md-6">
+            <div className="add-card__title">Прописано</div>
+            <div className="add-card__button-box _row">
+              <input
+                className="_hidden"
+                id="pr1"
+                type="radio"
+                name="prescribed"
+                checked
+              />
+              <label className="button _s" htmlFor="pr1">
+                1
+              </label>
+              <input
+                className="_hidden"
+                id="pr2"
+                type="radio"
+                name="prescribed"
+              />
+              <label className="button _s" htmlFor="pr2">
+                2
+              </label>
+              <input
+                className="_hidden"
+                id="pr3"
+                type="radio"
+                name="prescribed"
+              />
+              <label className="button _s" htmlFor="pr3">
+                3+
+              </label>
+            </div>
+            <label>
+              <input type="checkbox" />
+              Есть несовершеннолетние
+            </label>
+          </div>
+        </from>
+      </>
+    );
+  }
+}

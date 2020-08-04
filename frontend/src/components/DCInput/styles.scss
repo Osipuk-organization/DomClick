@@ -1,0 +1,38 @@
+.DC-inputField {
+  .DC-label {
+    display: flex;
+    flex-direction: column;
+    font-size: 32px;
+    line-height: 37px;
+
+    .DC-input {
+      margin-top: 24px;
+      font-size: 16px;
+      line-height: 19px;
+      border: none;
+      border-bottom: 1px solid #828282;
+    }
+    .DC-input::placeholder {
+      color: #828282;
+    }
+    .DC-input:focus {
+      outline: none;
+    }
+
+    .commentSpan {
+      display: inline-block;
+      margin-left: 25px;
+      background-image: url("../svg/icon_comment.svg");
+      background-repeat: no-repeat;
+      background-position: left center;
+      font-size: 18px;
+      color: #8cc3e2;
+      padding-left: 30px;
+    }
+  }
+
+  .DC-label.DC-label-size-subheader {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
