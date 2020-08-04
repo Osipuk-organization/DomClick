@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import DCButton from "../DCButton";
 
-import './style.scss';
+import "./style.scss";
 
 const DCButtonGroup = (props) => {
   const { buttons } = props;
