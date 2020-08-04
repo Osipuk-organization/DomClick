@@ -90,7 +90,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npx prettier --write ./ && npm run lint && git add"
+      "pre-commit": "npx prettier --write ./ && npm run lint"
     }
   },
   "loki": {
