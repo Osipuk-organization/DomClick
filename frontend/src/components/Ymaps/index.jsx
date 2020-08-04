@@ -139,7 +139,7 @@ const Ymap = ({ address }) => {
     <div
       id="YMapsID"
       style={{
-        width: "90%",
+        width: "95%",
         height: "300px",
         marginLeft: "auto",
         marginRight: "auto",

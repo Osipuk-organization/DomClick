@@ -1,5 +1,7 @@
 import React from "react";
 
+import './styles.scss';
+
 const DCButton = (props) => {
   const { id, rounded, active, label, changeActiveButtonHandler } = props;
 

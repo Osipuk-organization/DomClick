@@ -19,6 +19,21 @@
       background-color: #ff7373;
     }
   }
+
+  &_flex {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  &_wrapReverse {
+    flex-wrap: wrap-reverse;
+  }
+
+  &-fieldsBlock {
+    .DC-inputField:not(:last-child) {
+      margin-right: 100px;
+    }
+  }
 }
 
 .map-info {

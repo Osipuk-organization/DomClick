@@ -1,5 +1,5 @@
 import React from "react";
-import "./Additional.scss";
+import "./styles.scss";
 
 export const Additional = function () {
   return (
