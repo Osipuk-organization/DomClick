@@ -10,13 +10,13 @@
     background-position: center left 15px;
     background-size: 60px auto;
     &._studio {
-      background-image: url(../../svg/icon_cost_studio.svg);
+      background-image: url(../../assets/svg/icon_cost_studio.svg);
     }
     &._bedroom {
-      background-image: url(../../svg/icon_cost_bedroom.svg);
+      background-image: url(../../assets/svg/icon_cost_bedroom.svg);
     }
     &._house {
-      background-image: url(../../svg/icon_cost_house.svg);
+      background-image: url(../../assets/svg/icon_cost_house.svg);
     }
     &:before,
     &:after {

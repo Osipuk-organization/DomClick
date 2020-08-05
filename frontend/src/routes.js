@@ -1,9 +1,9 @@
 import { lazy } from 'react';
 
-const Index = lazy(() =>  import('layouts/index'));
-const Card = lazy(() =>  import('layouts/card'));
-const AddProduct = lazy(() =>  import('layouts/addProduct'));
-const Registration = lazy(() =>  import('layouts/registration'));
+const Index = lazy(() => import('layouts/index'));
+const Card = lazy(() => import('layouts/card'));
+const AddProduct = lazy(() => import('layouts/addProduct'));
+const Registration = lazy(() => import('layouts/registration'));
 
 export default [
   {
@@ -12,7 +12,7 @@ export default [
     exact: true
   },
   {
-    path: "/card/add",
+    path: '/card/add',
     component: AddProduct,
     exact: true,
   },

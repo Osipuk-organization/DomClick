@@ -5,7 +5,6 @@ import { withRouter } from "react-router";
 import { getFlats } from 'actions/flatsActions';
 import { CardInfo } from 'components/CardInfo';
 
-
 function mapStateToProps(state, ownProps) {
   const { id } = ownProps.match.params;
   return {

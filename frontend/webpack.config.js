@@ -12,7 +12,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].bundle.js',
     chunkFilename: '[name].bundle.js',
-    publicPath: "/",
+    publicPath: '/',
   },
   devServer: {
     historyApiFallback: true,
@@ -106,20 +106,19 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: [".js", ".jsx", ".ts", ".tsx", ".json"],
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
     alias: {
-      assets: path.resolve(__dirname, "src", "assets"),
+      assets: path.resolve(__dirname, 'src', 'assets'),
       components: path.resolve(__dirname, 'src', 'components'),
       containers: path.resolve(__dirname, 'src', 'containers'),
-      actions: path.resolve(__dirname, 'src', 'actions'),
-      reducers: path.resolve(__dirname, 'src', 'reducers'),
-      efi: path.resolve(__dirname, 'src', 'efi'),
+      actions: path.resolve(__dirname, 'src', 'store', 'actions'),
+      reducers: path.resolve(__dirname, 'src', 'store', 'reducers'),
+      utils: path.resolve(__dirname, 'src', 'utils'),
       layouts: path.resolve(__dirname, 'src', 'layouts'),
-      img: path.resolve(__dirname, 'src', 'img'),
-      svg: path.resolve(__dirname, 'src', 'svg'),
-      sass: path.resolve(__dirname, 'src', 'sass'),
-      types: path.resolve(__dirname, "src/types"),
-      "@": path.resolve(__dirname, 'src'),
+      img: path.resolve(__dirname, 'src', 'assets', 'img'),
+      svg: path.resolve(__dirname, 'src', 'assets', 'svg'),
+      types: path.resolve(__dirname, 'src', 'types'),
+      '@': path.resolve(__dirname, 'src'),
     }
   },
   plugins: [

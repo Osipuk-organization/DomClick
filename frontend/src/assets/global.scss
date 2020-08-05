@@ -95,7 +95,7 @@ strong {
 .check {
   display: none;
   &:checked+.check-label:before {
-    background-image: url(svg/check.svg);
+    background-image: url(./svg/check.svg);
   }
 }
 .check-label {
@@ -120,14 +120,14 @@ strong {
 .input {
   width: 100%;
   max-width: 230px;
-  min-height: 44px;
+  min-height: 36px;
   display: flex;
   justify-content: center;
   border: 1px solid transparent;
   padding: 5px 8px;
   border-radius: 4px;
   text-align: center;
-  font-size: 1.125rem;
+  font-size: 0.875rem;
   outline: none;
   box-sizing: border-box;
   transition: all .7s ease;
@@ -189,25 +189,23 @@ strong {
   width: 290px;
   justify-content: space-between;
   border-radius: 5px;
-  border: 2px solid $background-color;
   background-color: #fff;
   box-sizing: border-box;
   &__label {
     display: block;
     width: 100%;
     max-width: 142px;
-    min-height: 40px;
   }
   &__button {
     width: 100%;
     max-width: 142px;
-    min-height: 40px;
+    min-height: 100%;
     display: flex;
     justify-content: center;
     padding: 5px 8px;
     border-radius: 5px;
     text-align: center;
-    font-size: 1.125rem;
+    font-size:0.875rem;
     outline: none;
     box-sizing: border-box;
     transition: all .7s ease;
@@ -282,7 +280,7 @@ strong {
     height:50px;
     border-radius:50%;
     background-color: $s-background-color;
-    background-image: url(img/close.png);
+    background-image: url(./img/close.png);
     background-repeat:no-repeat;
     background-position:50%
   }
@@ -318,7 +316,7 @@ strong {
     bottom: 0;
     width: 32px;
     height: 32px;
-    background-image: url(svg/icon_arrow.svg);
+    background-image: url(./svg/icon_arrow.svg);
     background-repeat: no-repeat;
     background-position: 0 0;
     outline: none;

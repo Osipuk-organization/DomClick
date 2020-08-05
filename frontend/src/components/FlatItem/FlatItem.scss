@@ -1,4 +1,4 @@
-@import "src/sass/vars";
+@import "src/assets/vars";
 
 .flat {
   &__item {
@@ -68,7 +68,7 @@
   &__owner {
     padding: 0 0 4px 32px;
     font-size: 0.75rem;
-    background-image: url(../../svg/user.svg);
+    background-image: url(../../assets/svg/user.svg);
     background-repeat: no-repeat;
     background-size: 10px 10px;
     background-position: left 17px top;
@@ -88,10 +88,10 @@
     background-size: 17px auto;
     &._type {
       font-weight: 700;
-      background-image: url(../../svg/mdi_home.svg);
+      background-image: url(../../assets/svg/mdi_home.svg);
     }
     &._address {
-      background-image: url(../../svg/mdi_location.svg);
+      background-image: url(../../assets/svg/mdi_location.svg);
     }
   }
   &__button-box {

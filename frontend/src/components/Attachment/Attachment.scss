@@ -13,7 +13,7 @@
       right: 30px;
       bottom: 0;
       transform: translateX(15px);
-      background-image: url(../../img/attachment.png);
+      background-image: url(../../assets/img/attachment.png);
       background-repeat: no-repeat;
       background-position: bottom right;
       background-size: contain;
@@ -49,13 +49,13 @@
       max-width: 162px + 30;
       &:before {
         right: 0;
-        background-image: url(../../img/gpl.png);
+        background-image: url(../../assets/img/gpl.png);
       }
     }
     &._app {
       max-width: 146px + 30;
       &:before {
-        background-image: url(../../img/app.png);
+        background-image: url(../../assets/img/app.png);
       }
     }
   }
