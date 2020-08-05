@@ -1,4 +1,16 @@
 {
+  "users": [
+    {
+      "id": 1,
+      "login": "serserch",
+      "role": 1
+    },
+    {
+      "id": 2,
+      "login": "user",
+      "role": 0
+    }
+  ],
   "flats": [
     {
       "cadastral_value": {
