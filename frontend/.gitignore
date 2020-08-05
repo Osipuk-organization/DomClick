@@ -12,7 +12,7 @@ yarn-error.log*
 
 # Dependency directories
 node_modules/
-.idea/
+# .idea/
 html/
 dist/
 
