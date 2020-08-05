@@ -1,9 +1,13 @@
+
+import { SignIn } from "@/layouts/sign-in";
+
 import { lazy } from 'react';
 
 const Index = lazy(() => import('layouts/index'));
 const Card = lazy(() => import('layouts/card'));
 const AddProduct = lazy(() => import('layouts/addProduct'));
 const Registration = lazy(() => import('layouts/registration'));
+
 
 export default [
   {
@@ -22,9 +26,14 @@ export default [
     exact: true
   },
   {
-    path: '/registration',
+    path: "/registration",
     component: Registration,
-    exact: true
+    exact: true,
+  },
+  {
+    path: "/sign-in",
+    component: SignIn,
+    exact: true,
   },
   {
     path: '*',
