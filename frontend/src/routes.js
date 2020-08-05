@@ -1,6 +1,6 @@
-import Index from "./containers/Home";
-import Card from "./containers/CardInfo";
-import AddProduct from "./containers/AddProduct";
+import Index from "containers/Home";
+import Card from "containers/CardInfo";
+import AddProduct from "containers/AddProduct";
 import Registration from "./containers/RegistrationForm";
 
 export default [
@@ -27,7 +27,9 @@ export default [
 
   // {
   //   path: '*',
-  //   component: Hello,
-  //   exact: true
+  //   // redirect: '/',
+  //   component: Index,
+  //   // exact: true
+  //   // render: () => <Redirect to="/" />
   // },
 ];
