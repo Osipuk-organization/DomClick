@@ -18,6 +18,7 @@ dist/
 
 #dotenv environment variables file
 .env
+/package-lock.json
 /webpack-pug.config.js
 *.psd
 *.zip
