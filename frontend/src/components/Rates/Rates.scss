@@ -32,13 +32,13 @@
       background-size: contain;
     }
     &._01:before {
-      background-image: url(../../svg/rates1.svg);
+      background-image: url(../../assets/svg/rates1.svg);
     }
     &._02:before {
-      background-image: url(../../svg/rates2.svg);
+      background-image: url(../../assets/svg/rates2.svg);
     }
     &._03:before {
-      background-image: url(../../svg/rates3.svg);
+      background-image: url(../../assets/svg/rates3.svg);
     }
   }
   &__price {
@@ -71,7 +71,7 @@
       width: 33px;
       height: 24px;
       content: '';
-      background-image: url(../../svg/infinity.svg);
+      background-image: url(../../assets/svg/infinity.svg);
       background-repeat: no-repeat;
       background-position: left center;
       background-size: contain;

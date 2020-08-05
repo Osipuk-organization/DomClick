@@ -2,8 +2,8 @@ import React, { Fragment, Suspense, useEffect } from 'react';
 import routes from './routes';
 import { Switch, Route, useLocation } from 'react-router-dom';
 import menu from './menu';
-import 'sass/swiper.scss';
-import 'sass/global.scss';
+import 'assets/swiper.scss';
+import 'assets/global.scss';
 
 import { Footer } from 'components/Footer';
 import { TopMenu } from 'components/TopMenu';

@@ -1,4 +1,4 @@
-@import "src/sass/vars";
+@import "src/assets/vars";
 
 .top-menu {
   position: fixed;
@@ -54,10 +54,10 @@
     background-position: center center;
     background-size: auto 25px;
     &._heart {
-      background-image: url(../../svg/heart.svg);
+      background-image: url(../../assets/svg/heart.svg);
     }
     &._bell {
-      background-image: url(../../svg/bell.svg);
+      background-image: url(../../assets/svg/bell.svg);
     }
     &._offers {
       min-width: 44px;
