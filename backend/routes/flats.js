@@ -100,7 +100,7 @@ router.route('/:id')
                         res.status(204).send({ 'error': 'An error has occurred' });
                     }
                     if (item.deletedCount === 0) {
-                        res.status(404).send({ 'error': 'нет конента' });
+                        res.status(404).send({ 'error': 'нет контента' });
                     } else {
                         res.status(200).send({ 'delete': item });
                     }
