@@ -134,7 +134,7 @@ export const CardInfo = function(props) {
               <div className="card-info__next" id="card-next"></div>
             </Swiper>
             <div className="_col-12 card-info__price">{flat.terms_of_sale.cost.value} ₽<span
-              className="card-info__sub-price">{0} ₽/м<sup>2</sup></span></div>
+              className="card-info__sub-price">{Math.round(flat.terms_of_sale.cost.value / flat.flat.square)} ₽/м<sup>2</sup></span></div>
             <div className="_col-12 card-info__text _i1">{flat.address.state}, {flat.address.city}, ул. {flat.address.streetName}</div>
             <div className="_col-12 card-info__text _i3">{flat.owner}</div>
             <div className="_col-12 card-info__phone">Показать телефон</div>
