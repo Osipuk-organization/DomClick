@@ -1,7 +1,7 @@
-import { Index } from "./layouts/index";
-import { Card } from "./layouts/card";
-import { AddProduct } from "./layouts/AddProduct";
-import { Registration } from "./layouts/registration";
+import Index from "./containers/Home";
+import Card from "./containers/CardInfo";
+import AddProduct from "./containers/AddProduct";
+import Registration from "./containers/RegistrationForm";
 
 export default [
   {
@@ -20,9 +20,9 @@ export default [
     exact: true,
   },
   {
-    path: '/registration',
+    path: "/registration",
     component: Registration,
-    exact: true
+    exact: true,
   },
 
   // {

@@ -43,7 +43,7 @@ body {
   outline: none;
   color: $p-text-color;
   font-weight: 400;
-  transition: all .7s ease;
+  transition: all 0.7s ease;
   &._s {
     color: $s-text-color;
   }
@@ -66,7 +66,13 @@ body {
   display: none;
 }
 
-h1, h2, h3, h4, h5, h6, .body0 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.body0 {
   margin: 0;
   font-size: 1.25rem;
   font-weight: 400;
@@ -84,7 +90,7 @@ h1 {
   font-weight: 400;
 }
 
-img	{
+img {
   display: block;
 }
 
@@ -94,7 +100,7 @@ strong {
 
 .check {
   display: none;
-  &:checked+.check-label:before {
+  &:checked + .check-label:before {
     background-image: url(svg/check.svg);
   }
 }
@@ -104,12 +110,12 @@ strong {
   &:before {
     display: block;
     position: absolute;
-    content: '';
+    content: "";
     left: 0;
     top: 0;
     width: 28px;
     height: 28px;
-    background-color: rgba(255, 255 , 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.7);
     background-repeat: no-repeat;
     background-position: center center;
     border-radius: 4px;
@@ -130,7 +136,7 @@ strong {
   font-size: 1.125rem;
   outline: none;
   box-sizing: border-box;
-  transition: all .7s ease;
+  transition: all 0.7s ease;
 }
 
 .button {
@@ -139,19 +145,25 @@ strong {
   color: $s-text-color;
   background-color: $p-active-color;
   border: 1px solid $p-active-color;
-  box-shadow: 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
-  &:focus, &:active, &:hover {
+  &:focus,
+  &:active,
+  &:hover {
     color: $p-active-color;
     background-color: $background-color;
-    box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+      0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
   }
   &._s {
     color: $p-text-color;
     background-color: $background-color;
-    &:focus, &:active, &:hover {
+    &:focus,
+    &:active,
+    &:hover {
       color: $s-text-color;
       background-color: $p-active-color;
     }
@@ -169,7 +181,9 @@ strong {
     border-color: transparent;
     border-bottom-color: $p-active-color;
   }
-  &:focus, &:active, &:hover {
+  &:focus,
+  &:active,
+  &:hover {
     border: 1px solid $b-text-color;
     border-radius: 4px;
   }
@@ -210,7 +224,7 @@ strong {
     font-size: 1.125rem;
     outline: none;
     box-sizing: border-box;
-    transition: all .7s ease;
+    transition: all 0.7s ease;
     align-items: center;
     font-weight: 500;
     color: $p-text-color;
@@ -218,7 +232,9 @@ strong {
     text-transform: uppercase;
     text-decoration: none;
     cursor: pointer;
-    &:focus, &:active, &:hover {
+    &:focus,
+    &:active,
+    &:hover {
       color: $p-active-color;
     }
   }
@@ -247,44 +263,44 @@ strong {
 @import "media";
 
 .modal {
-  position:fixed;
-  z-index:100;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
   &,
   &__checkbox {
-  display:none
+    display: none;
   }
-  &__checkbox:checked+& {
-    display:flex;
-    align-items:center;
+  &__checkbox:checked + & {
+    display: flex;
+    align-items: center;
   }
   &__form-box {
-    max-width:410px;
-    margin:auto;
+    max-width: 410px;
+    margin: auto;
     background-color: $background-color;
     border-radius: 30px;
   }
   &__bg {
-    position:absolute;
-    width:100%;
-    height:100%;
-    background-color:rgba(0,0,0,.6)
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
   }
   &__close {
-    position:absolute;
-    top:15px;
-    right:15px;
-    width:50px;
-    height:50px;
-    border-radius:50%;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     background-color: $s-background-color;
     background-image: url(img/close.png);
-    background-repeat:no-repeat;
-    background-position:50%
+    background-repeat: no-repeat;
+    background-position: 50%;
   }
   &__label-box {
     width: 100%;

@@ -7,9 +7,8 @@ import { Footer } from "components/Footer";
 import { TopMenu } from "components/TopMenu";
 
 import "assets/global.scss";
-
 import "assets/swiper.scss";
-// import '../pug/sass/front.scss';
+
 import "assets/img/offers1.jpg";
 import "assets/img/offers2.jpg";
 import "assets/img/offers3.jpg";

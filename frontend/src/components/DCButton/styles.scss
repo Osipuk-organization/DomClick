@@ -1,0 +1,22 @@
+.DC-button {
+  display: inline-block;
+  padding: 8px 30px;
+  color: #828282;
+  background-color: transparent;
+  border: 1px solid #828282;
+  box-sizing: border-box;
+}
+
+.DC-button:hover {
+  cursor: pointer;
+}
+
+.DC-button.DC-button-active {
+  background-color: #ff7373;
+  color: #ffffff;
+  border-color: #ff7373;
+}
+
+.DC-button.DC-button-rounded {
+  border-radius: 4px;
+}
