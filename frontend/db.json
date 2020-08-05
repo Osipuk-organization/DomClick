@@ -1,14 +1,16 @@
 {
   "users": [
     {
-      "id": 1,
-      "login": "serserch",
-      "role": 1
+      "id": "1",
+      "name": "string",
+      "password": "string",
+      "role": "admin"
     },
     {
-      "id": 2,
-      "login": "user",
-      "role": 0
+      "id": "2",
+      "name": "string",
+      "password": "string",
+      "role": "admin"
     }
   ],
   "flats": [

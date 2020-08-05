@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './TopMenu.scss';
 
 import { Link } from 'react-router-dom';
 
 export const TopMenu = function(props) {
-    const {myProps} = props;
+    const {
+        isAuth,
+        authSignin,
+        authRegister,
+        authLogout,
+    } = props;
+
+    useEffect(function() {
+        if (!isAuth) {
+            authSignin();
+        }
+    }, [null]);
 
     return (
       <div className="top-menu">

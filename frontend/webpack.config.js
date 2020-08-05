@@ -24,6 +24,18 @@ module.exports = {
         changeOrigin: true,
         secure: false,
       },
+      '/users': {
+        target: 'http://osipuk.ru:4000/',
+        pathRewrite: {'^/' : ''},
+        changeOrigin: true,
+        secure: false,
+      },
+      '/auth': {
+        target: 'http://osipuk.ru:4000/',
+        pathRewrite: {'^/' : ''},
+        changeOrigin: true,
+        secure: false,
+      },
       '/api': {
         target: 'http://localhost:3000/',
         pathRewrite: {'^/api' : ''},

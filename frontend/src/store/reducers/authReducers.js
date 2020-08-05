@@ -1,24 +1,24 @@
 import { handleActions } from 'redux-actions';
 
 import {
-  getUserAction,
-  createUserAction,
-  updateUserAction,
-  deleteUserAction,
-} from 'actions/userActions';
+  authSigninAction,
+  authRegisterAction,
+  authLogoutAction,
+} from 'actions/authActions';
 
 const initialState = {
-  users: [],
+  isAuth: false,
 };
 
 export default handleActions({
 
-  [getUserAction]: (state, action) => {
+  [authSigninAction]: (state, action) => {
     let res = {};
 
     if (action.payload.type !== "error") {
       res = {
-        users: state.users.concat(action.payload),
+        ...state,
+        isAuth: true,
       };
     } else {
       res = {
@@ -29,12 +29,13 @@ export default handleActions({
     return res;
   },
 
-  [createUserAction]: (state, action) => {
+  [authRegisterAction]: (state, action) => {
     let res = {};
 
     if (action.payload.type !== "error") {
       res = {
-        users: state.users.concat(action.payload),
+        ...state,
+        isAuth: true,
       };
     } else {
       res = {
@@ -45,36 +46,13 @@ export default handleActions({
     return res;
   },
 
-  [updateUserAction]: (state, action) => {
+  [authLogoutAction]: (state, action) => {
     let res = {};
 
     if (action.payload.type !== "error") {
-      /**
-       * todo
-       * add filter and concat action.payload
-       */
-      res = {
-        users: action.payload,
-      };
-    } else {
       res = {
         ...state,
-        error: action.payload.message,
-      };
-    }
-    return res;
-  },
-
-  [deleteUserAction]: (state, action) => {
-    let res = {};
-
-    if (action.payload.type !== "error") {
-      /**
-       * todo
-       * add filter
-       */
-      res = {
-        users: [],
+        isAuth: false,
       };
     } else {
       res = {

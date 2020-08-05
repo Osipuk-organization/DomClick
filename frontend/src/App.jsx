@@ -6,7 +6,7 @@ import 'assets/swiper.scss';
 import 'assets/global.scss';
 
 import { Footer } from 'components/Footer';
-import { TopMenu } from 'components/TopMenu';
+import { TopMenuContainer } from 'containers/TopMenuContainer';
 
 function App() {
   const { pathname } = useLocation();
@@ -18,7 +18,7 @@ function App() {
   return(
     <Fragment>
       <div className="wrap-container">
-        <TopMenu menu={menu} />
+        <TopMenuContainer menu={menu} />
         <main className="main">
           <Suspense fallback={<div>Loading...</div>}>
             <Switch>
