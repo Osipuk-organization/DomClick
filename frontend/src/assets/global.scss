@@ -66,6 +66,16 @@ body {
   display: none;
 }
 
+._v-hidden {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  padding-top: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  box-sizing: border-box;
+}
+
 h1, h2, h3, h4, h5, h6, .body0 {
   margin: 0;
   font-size: 1.25rem;

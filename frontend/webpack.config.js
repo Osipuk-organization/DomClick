@@ -18,8 +18,26 @@ module.exports = {
     historyApiFallback: true,
     contentBase: path.resolve(__dirname, 'dist'),
     proxy: {
-      '/api': {
+      '/flats': {
         target: 'http://osipuk.ru:4000/',
+        pathRewrite: {'^/' : ''},
+        changeOrigin: true,
+        secure: false,
+      },
+      '/users': {
+        target: 'http://osipuk.ru:4000/',
+        pathRewrite: {'^/' : ''},
+        changeOrigin: true,
+        secure: false,
+      },
+      '/auth': {
+        target: 'http://osipuk.ru:4000/',
+        pathRewrite: {'^/' : ''},
+        changeOrigin: true,
+        secure: false,
+      },
+      '/api': {
+        target: 'http://localhost:3000/',
         pathRewrite: {'^/api' : ''},
         changeOrigin: true,
         secure: false,
@@ -111,6 +129,7 @@ module.exports = {
       assets: path.resolve(__dirname, 'src', 'assets'),
       components: path.resolve(__dirname, 'src', 'components'),
       containers: path.resolve(__dirname, 'src', 'containers'),
+      store: path.resolve(__dirname, 'src', 'store'),
       actions: path.resolve(__dirname, 'src', 'store', 'actions'),
       reducers: path.resolve(__dirname, 'src', 'store', 'reducers'),
       utils: path.resolve(__dirname, 'src', 'utils'),

@@ -1,6 +1,8 @@
 import { handleActions } from 'redux-actions';
 
-import {getFlatsAction} from 'actions/flatsActions';
+import {
+  getFlatsAction
+} from 'actions/flatsActions';
 
 const initialState = {
   flats: [],
@@ -9,15 +11,16 @@ const initialState = {
 export default handleActions({
   [getFlatsAction]: (state, action) => {
     let res = {};
-    if (!action.payload.message) {
+
+    if (action.payload.type !== "error") {
       res = {
         ...state,
-        flats: action.payload,
+        flats: state.flats.concat(action.payload),
       };
     } else {
       res = {
         ...state,
-        errors: action.payload.message,
+        error: action.payload.message,
       };
     }
     return res;

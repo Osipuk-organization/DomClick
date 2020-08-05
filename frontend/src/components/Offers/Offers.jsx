@@ -1,7 +1,7 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import './Offers.scss';
-import {FlatItem} from 'components/FlatItem';
-import {SliderRow} from 'components/SliderRow';
+import { FlatItem } from 'components/FlatItem';
+import { SliderRow } from 'components/SliderRow';
 
 export const Offers = function(props) {
   const {
