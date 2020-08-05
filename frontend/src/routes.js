@@ -1,24 +1,29 @@
-import { Index } from "./layouts/index";
-import { Card } from "./layouts/card";
-import { AddProduct } from "./layouts/AddProduct";
-import { Registration } from "./layouts/registration";
+
 import { SignIn } from "@/layouts/sign-in";
+
+import { lazy } from 'react';
+
+const Index = lazy(() => import('layouts/index'));
+const Card = lazy(() => import('layouts/card'));
+const AddProduct = lazy(() => import('layouts/addProduct'));
+const Registration = lazy(() => import('layouts/registration'));
+
 
 export default [
   {
-    path: "/",
+    path: '/',
     component: Index,
-    exact: true,
+    exact: true
   },
   {
-    path: "/card/add",
+    path: '/card/add',
     component: AddProduct,
     exact: true,
   },
   {
-    path: "/card/:id",
+    path: '/card/:id',
     component: Card,
-    exact: true,
+    exact: true
   },
   {
     path: "/registration",
@@ -30,10 +35,9 @@ export default [
     component: SignIn,
     exact: true,
   },
-
-  // {
-  //   path: '*',
-  //   component: Hello,
-  //   exact: true
-  // },
-];
+  {
+    path: '*',
+    component: Index,
+    exact: true
+  },
+]

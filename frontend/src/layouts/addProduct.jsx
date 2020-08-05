@@ -2,23 +2,26 @@ import React, { PureComponent } from "react";
 
 import './add-card.scss';
 import './map-info.scss';
-import '../'
 import DCInputField from '../components/DCInputField/DCInputField';
 import DCInput from '../components/DCInput/DCInput';
 import DCAttachement from '../components/DCAttachements/DCAttachement';
-import Ymap from '../components/Ymaps/Ymaps';
+import {Ymaps} from 'components/Ymaps';
 import DCLabel from '../components/DCLabel/DCLabel';
 import DCButtonGroup from '../components/DCButtonGroup/DCButtonGroup';
 import DCCheckbox from '../components/DCCheckbox/DCCheckbox';
 import DCCheckboxGroup from '../components/DCCheckboxGroup/DCCheckboxGroup';
 import DCButton from '../components/DCButton/DCButton';
 
-export class AddProduct extends PureComponent {
-    
-    address = {
-        latitude: 55,
-        longitude: 55
-    };
+class AddProduct extends PureComponent {
+
+  mapData = {
+    center: [55.751574, 37.573856],
+    zoom: 12,
+  }
+
+  coordinates = [
+    [55.751574, 37.573856],
+  ]
 
     setSelectionRange = (input, selectionStart, selectionEnd) => {
         if (input.setSelectionRange) {
@@ -92,7 +95,7 @@ export class AddProduct extends PureComponent {
         };
         return (
             <>
-                <from className="_container _row _col-10" action="/new-card/" method="POST">
+                <form className="_container _row _col-10" action="/new-card/" method="POST">
                     <h1 className="_col-12">Новый объект</h1>
                     {/*<h3 className="add-card__caption _col-12">ФИО</h3>*/}
                     {/*<div className="_col-12">*/}
@@ -146,7 +149,7 @@ export class AddProduct extends PureComponent {
                         <DCInput size={6}/>
                     </DCInputField>
                     
-                    <Ymap address={this.address}/>
+                    <Ymaps mapData={this.mapData} coordinates={this.coordinates} />
                     
                     {/*<h3 className="add-card__caption _col-12">Сделка</h3>*/}
                     {/*<div className="_col-12 _col-md-6">*/}
@@ -866,8 +869,10 @@ export class AddProduct extends PureComponent {
                     {/*        <input type="checkbox" />Есть несовершеннолетние*/}
                     {/*    </label>*/}
                     {/*</div>*/}
-                </from>
+                </form>
             </>
         );
     }
 }
+
+export default AddProduct;

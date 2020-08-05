@@ -68,13 +68,13 @@
       }
     }
     &._i1:before {
-      background-image: url(~assets/svg/mdi_location.svg);
+      background-image: url(../../assets/svg/mdi_location.svg);
     }
     &._i2:before {
-      background-image: url(~assets/svg/metro.svg);
+      background-image: url(../../assets/svg/metro.svg);
     }
     &._i3:before {
-      background-image: url(~assets/svg/user.svg);
+      background-image: url(../../assets/svg/user.svg);
     }
   }
   &__botton-box {
@@ -154,7 +154,7 @@
       right: 0;
       height: 48px + 15;
       background-color: #fff;
-      background-image: url(~assets/svg/icon-arrow2.svg);
+      background-image: url(../../assets/svg/icon-arrow2.svg);
       background-repeat: no-repeat;
       background-position: center center;
       background-size: 32px auto;

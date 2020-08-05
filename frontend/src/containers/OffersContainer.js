@@ -1,21 +1,23 @@
-import { connect } from "react-redux";
-import { compose } from "redux";
-import { getFlats } from "actions/flatsActions";
-import { Offers } from "components/Offers";
+import React from 'react';
+import { connect } from 'react-redux';
+import { compose } from 'redux';
+import { getFlats } from 'actions/flatsActions';
+import { Offers } from 'components/Offers';
+
 
 function mapStateToProps(state, ownProps) {
-  console.log("CARD", state.flats.flats);
   return {
     ...ownProps,
-    flats: state.flats.flats,
-  };
+    flats1: state.flats.flats.filter(i => i.flat.rooms == 1 && i.deal.type_deal == "Продажа"),
+    flats2: state.flats.flats.filter(i => i.flat.rooms == 2 && i.deal.type_deal == "Продажа"),
+  }
 }
 
 function mapDispatchToProps(dispatch, props) {
   return {
     ...props,
     getFlats: () => dispatch(getFlats()),
-  };
+  }
 }
 
 export const OffersContainer = compose(

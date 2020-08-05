@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, {useEffect} from 'react';
+import './Offers.scss';
+import {FlatItem} from 'components/FlatItem';
+import {SliderRow} from 'components/SliderRow';
 
-import { FlatSlide } from "components/FlatSlide";
-import { SliderRow } from "components/SliderRow";
+export const Offers = function(props) {
+  const {
+    flats1,
+    flats2,
+    getFlats
+  } = props;
 
-import "./Offers.scss";
-
-export const Offers = function (props) {
-  const { flats, getFlats } = props;
-
-  useEffect(() => {
-    console.log("useEffect THIS");
-    if (!flats.length) {
+  useEffect(function() {
+    if (!flats1.length && !flats2.length) {
       getFlats();
     }
   }, [null]);
@@ -20,18 +21,12 @@ export const Offers = function (props) {
       <h3 className="_col-12 offers__caption">Горячие предложения</h3>
       <div className="offers__sub-caption _col-12">1-комнатные</div>
       <SliderRow id="offers1">
-        {flats &&
-          flats
-            .filter((i) => i.flat.rooms == 1 && i.deal.type_deal == "Продажа")
-            .map((i, idx) => <FlatSlide key={idx} flat={i} />)}
+        {flats1 && flats1.map( (i, idx) => <FlatItem key={idx} flat={i} />)}
       </SliderRow>
       <div className="offers__sub-caption _col-12">2-комнатные</div>
       <SliderRow id="offers2">
-        {flats &&
-          flats
-            .filter((i) => i.flat.rooms == 2 && i.deal.type_deal == "Продажа")
-            .map((i, idx) => <FlatSlide key={idx} flat={i} />)}
+        {flats2 && flats2.map( (i, idx) => <FlatItem key={idx} flat={i} />)}
       </SliderRow>
     </section>
   );
-};
+}

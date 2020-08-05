@@ -1,3 +1,5 @@
+@import "src/assets/vars";
+
 .top-menu {
   position: fixed;
   z-index: 99;
@@ -52,10 +54,10 @@
     background-position: center center;
     background-size: auto 25px;
     &._heart {
-      background-image: url(~assets/svg/heart.svg);
+      background-image: url(../../assets/svg/heart.svg);
     }
     &._bell {
-      background-image: url(~assets/svg/bell.svg);
+      background-image: url(../../assets/svg/bell.svg);
     }
     &._offers {
       min-width: 44px;

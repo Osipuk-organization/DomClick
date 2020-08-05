@@ -3,7 +3,7 @@
   padding-bottom: 92px - 15;
   &__item {
     position: relative;
-    padding-top: 154px - 70 + 15 !important;
+    padding-top: 154px - 70 + 15;
     font-size: 1.125rem;
     font-weight: 500;
     text-transform: uppercase;
@@ -21,13 +21,13 @@
       background-size: 60px auto;
     }
     &._i1:before {
-      background-image: url(~assets/svg/icon_cta.svg);
+      background-image: url(../../assets/svg/icon_cta.svg);
     }
     &._i2:before {
-      background-image: url(~assets/svg/icon_house.svg);
+      background-image: url(../../assets/svg/icon_house.svg);
     }
     &._i3:before {
-      background-image: url(~assets/svg/icon_achievment.svg);
+      background-image: url(../../assets/svg/icon_achievment.svg);
     }
   }
 }

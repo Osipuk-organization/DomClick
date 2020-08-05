@@ -1,37 +1,43 @@
-import React from "react";
-import routes from "./routes";
-import { Switch, Route } from "react-router-dom";
-import menu from "./menu";
+import React, { Fragment, Suspense, useEffect } from 'react';
+import routes from './routes';
+import { Switch, Route, useLocation } from 'react-router-dom';
+import menu from './menu';
+import 'assets/swiper.scss';
+import 'assets/global.scss';
 
-import { Footer } from "components/Footer";
-import { TopMenu } from "components/TopMenu";
-
-import "assets/global.scss";
-
-import "assets/swiper.scss";
-// import '../pug/sass/front.scss';
-import "assets/img/offers1.jpg";
-import "assets/img/offers2.jpg";
-import "assets/img/offers3.jpg";
-import "assets/img/offers4.jpg";
-import "assets/svg/logo.svg";
-import "assets/svg/app.svg";
+import { Footer } from 'components/Footer';
+import { TopMenu } from 'components/TopMenu';
 
 function App() {
-  return (
-    <>
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return(
+    <Fragment>
       <div className="wrap-container">
         <TopMenu menu={menu} />
         <main className="main">
-          <Switch>
-            {routes.map((route, idx) => (
-              <Route key={idx} {...route} />
-            ))}
-          </Switch>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Switch>
+              {routes.map(
+                function(route, idx) {
+                  return (
+                    <Route
+                      key={idx}
+                      {...route}
+                    />
+                  )
+                }
+              )}
+            </Switch>
+          </Suspense>
         </main>
       </div>
       <Footer />
-    </>
+    </Fragment>
   );
 }
 

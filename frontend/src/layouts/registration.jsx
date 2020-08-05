@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 
 import { RegistrationForm } from "components/RegistrationForm/RegistrationForm";
 
-export const Registration = (props) => {
+const Registration = (props) => {
 
     return (
         <Fragment>
@@ -10,3 +10,5 @@ export const Registration = (props) => {
         </Fragment>
     )
 }
+
+export default Registration;
