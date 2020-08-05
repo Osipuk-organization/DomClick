@@ -1,80 +1,80 @@
 .rates {
-  &__item {
-    max-width: 318px;
-    padding: 24px 44px;
-    margin: 0 auto;
-    border-radius: 10px;
-    background-color: #f8f8f8;
-    overflow: hidden;
-    box-sizing: border-box;
-    &._middle {
-      background-color: #eaf7ff;
+    &__item {
+        max-width: 318px;
+        padding: 24px 44px;
+        margin: 0 auto;
+        border-radius: 10px;
+        background-color: #f8f8f8;
+        overflow: hidden;
+        box-sizing: border-box;
+        &._middle {
+            background-color: #eaf7ff;
+        }
     }
-  }
-  &__title {
-    position: relative;
-    padding-top: 47px - 24;
-    color: #3f3f3f;
-    font-size: 1.5rem;
-    font-weight: 300;
-    text-align: right;
-    box-sizing: border-box;
-    &:before {
-      display: block;
-      position: absolute;
-      left: -39px;
-      right: 50%;
-      bottom: 0;
-      height: 105px;
-      content: "";
-      background-repeat: no-repeat;
-      background-position: left bottom;
-      background-size: contain;
+    &__title {
+        position: relative;
+        padding-top: 47px - 24;
+        color: #3f3f3f;
+        font-size: 1.5rem;
+        font-weight: 300;
+        text-align: right;
+        box-sizing: border-box;
+        &:before {
+            display: block;
+            position: absolute;
+            left: -39px;
+            right: 50%;
+            bottom: 0;
+            height: 105px;
+            content: '';
+            background-repeat: no-repeat;
+            background-position: left bottom;
+            background-size: contain;
+        }
+        &._01:before {
+            background-image: url(../svg/rates1.svg);
+        }
+        &._02:before {
+            background-image: url(../svg/rates2.svg);
+        }
+        &._03:before {
+            background-image: url(../svg/rates3.svg);
+        }
     }
-    &._01:before {
-      background-image: url(../svg/rates1.svg);
+    &__price {
+        padding: 42px 0 70px - 32;
+        font-size: 3rem;
+        font-weight: 700;
+        text-align: center;
     }
-    &._02:before {
-      background-image: url(../svg/rates2.svg);
+    &__text-box {
+        padding: 24px 0 24px 90px - 44;
+        box-sizing: border-box;
     }
-    &._03:before {
-      background-image: url(../svg/rates3.svg);
+    &__text {
+        position: relative;
+        padding: 8px 0;
+        font-size: 1.125rem;
+        &:before {
+            display: block;
+            position: absolute;
+            top: 7px + 8;
+            left: -90px + 44;
+        }
+        &._numb:before {
+            content: attr(data-numb);
+            color: #8cc3e2;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        &._inf:before {
+            width: 33px;
+            height: 24px;
+            content: '';
+            background-image: url(../svg/infinity.svg);
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: contain;
+        }
     }
-  }
-  &__price {
-    padding: 42px 0 70px - 32;
-    font-size: 3rem;
-    font-weight: 700;
-    text-align: center;
-  }
-  &__text-box {
-    padding: 24px 0 24px 90px - 44;
-    box-sizing: border-box;
-  }
-  &__text {
-    position: relative;
-    padding: 8px 0;
-    font-size: 1.125rem;
-    &:before {
-      display: block;
-      position: absolute;
-      top: 7px + 8;
-      left: -90px + 44;
-    }
-    &._numb:before {
-      content: attr(data-numb);
-      color: #8cc3e2;
-      font-size: 1.5rem;
-      font-weight: 700;
-    }
-    &._inf:before {
-      width: 33px;
-      height: 24px;
-      content: "";
-      background-image: url(../svg/infinity.svg);
-      background-repeat: no-repeat;
-      background-position: left center;
-      background-size: contain;
-    }
-  }
 }
