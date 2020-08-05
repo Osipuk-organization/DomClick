@@ -1,6 +1,6 @@
-import React, {Fragment} from 'react'
+import React, { Fragment } from 'react'
 
-import { RegistrationForm } from "../components/RegistrationForm/RegistrationForm";
+import { RegistrationForm } from "components/RegistrationForm/RegistrationForm";
 
 export const Registration = (props) => {
 

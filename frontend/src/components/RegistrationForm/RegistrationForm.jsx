@@ -1,5 +1,5 @@
 import React from 'react'
-import {useInput} from "../../hooks/hooks";
+import { useInput } from "../../hooks/hooks";
 import { Link } from 'react-router-dom';
 
 import './RegistrationForm.scss'
@@ -12,18 +12,6 @@ export const RegistrationForm = (props) => {
     const [ address, setAddress ] = useInput('');
     const [ password, setPassword ] = useInput('');
     const [ checkPassword, setCheckPassword ] = useInput('');
-
-
-    // this.state = {
-    //     name: '',
-    //     surName: '',
-    //     phone: '',
-    //     email: '',
-    //     address: '',
-    //     password: '',
-    //     checkPassword: ''
-    // }
-
 
     return (
         <div className="registration-form">
@@ -119,7 +107,7 @@ export const RegistrationForm = (props) => {
                 <button className="registration-btn">Зарегистрироваться</button>
             </form>
             <p className="registration-form__sign-in">
-                Уже зарегистрированы?&ensp; <Link to="/card/add">Войти здесь</Link>
+                Уже зарегистрированы?&ensp; <Link to="/sign-in">Войти здесь</Link>
             </p>
         </div>
     )
