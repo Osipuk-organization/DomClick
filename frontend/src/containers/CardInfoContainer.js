@@ -9,6 +9,7 @@ function mapStateToProps(state, ownProps) {
   const { id } = ownProps.match.params;
   return {
     ...ownProps,
+    id,
     flat: state.flats.flats.filter(i => i.id == id || i._id == id)[0],
     similar: state.flats.flats.filter(i => i.flat.rooms == 1 && i.deal.type_deal == "Продажа"),
   }
@@ -17,7 +18,7 @@ function mapStateToProps(state, ownProps) {
 function mapDispatchToProps(dispatch, props) {
   return {
     ...props,
-    getFlats: () => dispatch(getFlats()),
+    getFlats: (data) => dispatch(getFlats(data)),
   }
 }
 

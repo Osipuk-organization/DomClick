@@ -1,10 +1,10 @@
 import { handleActions } from 'redux-actions';
 
 import {
-  getUserAction,
-  createUserAction,
-  updateUserAction,
-  deleteUserAction,
+  getUsersAction,
+  createUsersAction,
+  updateUsersAction,
+  deleteUsersAction,
 } from 'actions/userActions';
 
 const initialState = {
@@ -13,7 +13,7 @@ const initialState = {
 
 export default handleActions({
 
-  [getUserAction]: (state, action) => {
+  [getUsersAction]: (state, action) => {
     let res = {};
 
     if (action.payload.type !== "error") {
@@ -29,7 +29,7 @@ export default handleActions({
     return res;
   },
 
-  [createUserAction]: (state, action) => {
+  [createUsersAction]: (state, action) => {
     let res = {};
 
     if (action.payload.type !== "error") {
@@ -45,7 +45,7 @@ export default handleActions({
     return res;
   },
 
-  [updateUserAction]: (state, action) => {
+  [updateUsersAction]: (state, action) => {
     let res = {};
 
     if (action.payload.type !== "error") {
@@ -65,7 +65,7 @@ export default handleActions({
     return res;
   },
 
-  [deleteUserAction]: (state, action) => {
+  [deleteUsersAction]: (state, action) => {
     let res = {};
 
     if (action.payload.type !== "error") {

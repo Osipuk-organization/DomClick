@@ -1,34 +1,36 @@
 import { createAction } from 'redux-actions';
+import {statusCode} from "utils/statusCode";
 
-export const getUserAction = createAction('[User] getUserAction');
-export const createUserAction = createAction('[User] createUserAction');
-export const updateUserAction = createAction('[User] updateUserAction');
-export const deleteUserAction = createAction('[User] deleteUserAction');
+export const getUsersAction = createAction('[User] getUsersAction');
+export const createUsersAction = createAction('[User] createUsersAction');
+export const updateUsersAction = createAction('[User] updateUsersAction');
+export const deleteUsersAction = createAction('[User] deleteUsersAction');
 
-export const getUser = (data) => (dispatch) => {
-  let id = typeof data === "number" ? data : '';
-  fetch(`/users/${id}`,{
+export const getUsers = ({id='', ...data}) => (dispatch) => {
+  let req = [];
+
+  for (let i in data) {
+    req.push(`${i}=${data[i]}`)
+  }
+
+  fetch(`/users/${id}?${req.join('&')}`,{
     method: 'get',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
     cache: 'no-cache',
     credentials: 'same-origin',
-    body: JSON.stringify(data)
   })
     .then(function parse(res) {
+      statusCode(res, 200);
       return res.json()
     })
     .then(function result(user) {
-      return dispatch(getUserAction(user));
+      return dispatch(getUsersAction(user));
     })
     .catch(function error(err) {
-      return dispatch(getUserAction( {type: "error", message: err} ))
+      return dispatch(getUsersAction( {type: "error", message: err} ))
     });
 };
 
-export const createUser = (data) => (dispatch) => {
+export const createUsers = (data) => (dispatch) => {
   fetch('/users', {
     method: 'post',
     headers: {
@@ -40,18 +42,19 @@ export const createUser = (data) => (dispatch) => {
     body: JSON.stringify(data)
   })
     .then(function parse(res) {
+      statusCode(res, 200);
       return res.json()
     })
     .then(function result(user) {
-      return dispatch(createUserAction(user));
+      return dispatch(createUsersAction(user));
     })
     .catch(function error(err) {
-      return dispatch(createUserAction( {type: "error", message: err} ))
+      return dispatch(createUsersAction( {type: "error", message: err} ))
     });
 };
 
-export const updateUser = (data) => (dispatch) => {
-  fetch('/users', {
+export const updateUsers = ({id='', ...data}) => (dispatch) => {
+  fetch(`/users/${id}`, {
     method: 'put',
     headers: {
       'Accept': 'application/json',
@@ -62,17 +65,18 @@ export const updateUser = (data) => (dispatch) => {
     body: JSON.stringify(data)
   })
     .then(function parse(res) {
+      statusCode(res, 200);
       return res.json()
     })
     .then(function result(user) {
-      return dispatch(updateUserAction(user));
+      return dispatch(updateUsersAction(user));
     })
     .catch(function error(err) {
-      return dispatch(updateUserAction( {type: "error", message: err} ))
+      return dispatch(updateUsersAction( {type: "error", message: err} ))
     });
 };
 
-export const deleteUser = (data) => (dispatch) => {
+export const deleteUsers = ({id='', ...data}={}) => (dispatch) => {
   fetch(`/users/${id}`, {
     method: 'delete',
     headers: {
@@ -84,12 +88,13 @@ export const deleteUser = (data) => (dispatch) => {
     body: JSON.stringify(data)
   })
     .then(function parse(res) {
+      statusCode(res, 200);
       return res.json()
     })
     .then(function result(user) {
-      return dispatch(deleteUserAction(user));
+      return dispatch(deleteUsersAction(user));
     })
     .catch(function error(err) {
-      return dispatch(deleteUserAction( {type: "error", message: err} ))
+      return dispatch(deleteUsersAction( {type: "error", message: err} ))
     });
 };

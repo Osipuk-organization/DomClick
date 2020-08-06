@@ -1,9 +1,9 @@
 import { handleActions } from 'redux-actions';
 
 import {
-  authSigninAction,
-  authRegisterAction,
-  authLogoutAction,
+  signinAuthAction,
+  registerAuthAction,
+  logoutAuthAction,
 } from 'actions/authActions';
 
 const initialState = {
@@ -12,7 +12,7 @@ const initialState = {
 
 export default handleActions({
 
-  [authSigninAction]: (state, action) => {
+  [signinAuthAction]: (state, action) => {
     let res = {};
 
     if (action.payload.type !== "error") {
@@ -29,7 +29,7 @@ export default handleActions({
     return res;
   },
 
-  [authRegisterAction]: (state, action) => {
+  [registerAuthAction]: (state, action) => {
     let res = {};
 
     if (action.payload.type !== "error") {
@@ -46,7 +46,7 @@ export default handleActions({
     return res;
   },
 
-  [authLogoutAction]: (state, action) => {
+  [logoutAuthAction]: (state, action) => {
     let res = {};
 
     if (action.payload.type !== "error") {

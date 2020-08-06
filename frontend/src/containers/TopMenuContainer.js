@@ -5,9 +5,9 @@ import { withRouter } from "react-router";
 
 import { TopMenu } from 'components/TopMenu';
 import {
-  authSignin,
-  authRegister,
-  authLogout,
+  signinAuth,
+  registerAuth,
+  logoutAuth,
 } from 'actions/authActions';
 
 function mapStateToProps(state, ownProps) {
@@ -20,9 +20,9 @@ function mapStateToProps(state, ownProps) {
 function mapDispatchToProps(dispatch, props) {
   return {
     ...props,
-    authSignin: (data) => dispatch(authSignin(data)),
-    authRegister: (data) => dispatch(authRegister(data)),
-    authLogout: (data) => dispatch(authLogout(data)),
+    signinAuth: (data) => dispatch(signinAuth(data)),
+    registerAuth: (data) => dispatch(registerAuth(data)),
+    logoutAuth: (data) => dispatch(logoutAuth(data)),
   }
 }
 

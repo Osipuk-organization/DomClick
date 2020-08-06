@@ -12,6 +12,7 @@ SwiperCore.use([Navigation, Thumbs]);
 
 export const CardInfo = function(props) {
   const {
+    id,
     flat,
     getFlats,
     similar,
@@ -21,6 +22,9 @@ export const CardInfo = function(props) {
 
   useEffect(function() {
     if (!flat) {
+      getFlats({id});
+    }
+    if (similar.length < 10) {
       getFlats();
     }
   }, [null]);
@@ -139,8 +143,8 @@ export const CardInfo = function(props) {
             <div className="_col-12 card-info__text _i3">{flat.owner}</div>
             <div className="_col-12 card-info__phone">Показать телефон</div>
             <div className="_col-12 card-info__botton-box">
-              <a className="button" href="/card.html">Оценка эксперта</a>
-              <a className="link top-menu__icon _heart _offers" href="/#"></a>
+              <div className="button">Оценка эксперта</div>
+              <div className="link top-menu__icon _heart _offers"></div>
             </div>
           </div>
           <div className="_col-12 _col-lg-6 _p-n _p-t">
@@ -156,15 +160,15 @@ export const CardInfo = function(props) {
               </div>
               <div className="card-info__numbers-item">
                 <div className="card-info__numbers-text">Санузел</div>
-                <div className="card-info__numbers-text"></div>
+                <div className="card-info__numbers-text">{flat.additionally.bathroom.value}</div>
               </div>
               <div className="card-info__numbers-item">
                 <div className="card-info__numbers-text">Балкон</div>
-                <div className="card-info__numbers-text"></div>
+                <div className="card-info__numbers-text">{flat.additionally.balcony.value}</div>
               </div>
               <div className="card-info__numbers-item">
                 <div className="card-info__numbers-text">Ремонт</div>
-                <div className="card-info__numbers-text"></div>
+                <div className="card-info__numbers-text">{flat.additionally.repair.value}</div>
               </div>
               <div className="card-info__numbers-item">
                 <div className="card-info__numbers-text">Вид из окон</div>

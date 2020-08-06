@@ -16,7 +16,7 @@ function mapStateToProps(state, ownProps) {
 function mapDispatchToProps(dispatch, props) {
   return {
     ...props,
-    getFlats: () => dispatch(getFlats()),
+    getFlats: (data) => dispatch(getFlats(data)),
   }
 }
 
