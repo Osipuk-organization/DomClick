@@ -12,6 +12,7 @@ router.route('/')
         page = +page;
         limit = +limit;
         const flats = await Flats.find(filter).skip(limit * (page - 1)).limit(limit);
+        const count = flats.length;
         const total = await Flats.find(filter).countDocuments();
         res.status(200).json({
             page,

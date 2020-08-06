@@ -1,4 +1,3 @@
-const consolidate = require('consolidate')
 const express = require('express')
 const path = require('path')
 const cors = require('cors')
