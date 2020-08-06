@@ -7,6 +7,7 @@ router.get(
   "/",
   asyncHandler(async (req, res) => {
     let currentUser = req.user;
+    if(req.cookies.token){
     await token
       .check(req, res)
       .then((user) => {
@@ -17,6 +18,7 @@ router.get(
       .catch((err) => {
         throw Errors.commonError;
       });
+    }
     req.logout();
     res.clearCookie("connect.sid");
     res.json({ success: true });
