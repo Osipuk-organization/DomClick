@@ -1,5 +1,5 @@
 import React from "react";
-import { useInput } from "@/hooks/hooks";
+import { useInput } from "utils/hooks";
 import { Link } from "react-router-dom";
 
 import "../assets/sign-in.scss";

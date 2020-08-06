@@ -1,16 +1,17 @@
 import { createAction } from 'redux-actions';
 import { getCookie } from 'utils/cookies';
+import { statusCode } from 'utils/statusCode';
 
-export const authSigninAction = createAction('[Auth] authSigninAction');
-export const authRegisterAction = createAction('[Auth] authRegisterAction');
-export const authLogoutAction = createAction('[Auth] authLogoutAction');
+export const signinAuthAction = createAction('[Auth] signinAuthAction');
+export const registerAuthAction = createAction('[Auth] registerAuthAction');
+export const logoutAuthAction = createAction('[Auth] logoutAuthAction');
 
-export const authSignin = (data) => (dispatch) => {
+export const signinAuth = (data) => (dispatch) => {
   if (getCookie("connect")) {
     /**
      * cookies
      */
-    dispatch(authSigninAction({_id:"", login:"", role:"", __v:0}));
+    dispatch(signinAuthAction({_id:"", login:"", role:"", __v:0}));
   } else {
     fetch('/auth/signin', {
       method: 'post',
@@ -24,18 +25,19 @@ export const authSignin = (data) => (dispatch) => {
       body: JSON.stringify(data)
     })
       .then(function parse(res) {
+        statusCode(res, 200);
         return res.json()
       })
       .then(function result(auth) {
-        return dispatch(authSigninAction(auth));
+        return dispatch(signinAuthAction(auth));
       })
       .catch(function error(err) {
-        return dispatch(authSigninAction({type: "error", message: err}))
+        return dispatch(signinAuthAction( {type: "error", message: err} ))
       });
   }
 };
 
-export const authRegister = (data) => (dispatch) => {
+export const registerAuth = (data) => (dispatch) => {
   fetch('/auth/register', {
     method: 'post',
     headers: {
@@ -47,29 +49,31 @@ export const authRegister = (data) => (dispatch) => {
     body: JSON.stringify(data)
   })
     .then(function parse(res) {
+      statusCode(res, 200);
       return res.json()
     })
     .then(function result(auth) {
-      return dispatch(authRegisterAction(auth));
+      return dispatch(registerAuthAction(auth));
     })
     .catch(function error(err) {
-      return dispatch(authRegisterAction( {type: "error", message: err} ))
+      return dispatch(registerAuthAction( {type: "error", message: err} ))
     });
 };
 
-export const authLogout = (data) => (dispatch) => {
+export const logoutAuth = (data) => (dispatch) => {
   fetch('/auth/logout', {
     method: 'post',
     cache: 'no-cache',
     credentials: 'same-origin',
   })
     .then(function parse(res) {
+      statusCode(res, 200);
       return res.json()
     })
     .then(function result(auth) {
-      return dispatch(authLogoutAction(auth));
+      return dispatch(logoutAuthAction(auth));
     })
     .catch(function error(err) {
-      return dispatch(authLogoutAction( {type: "error", message: err} ))
+      return dispatch(logoutAuthAction( {type: "error", message: err} ))
     });
 };

@@ -11,7 +11,7 @@ export const Offers = function(props) {
   } = props;
 
   useEffect(function() {
-    if (!flats1.length && !flats2.length) {
+    if (flats1.length < 10 || flats2.length < 10) {
       getFlats();
     }
   }, [null]);
