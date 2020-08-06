@@ -12,6 +12,7 @@ export const getUsers = ({id='', ...data}) => (dispatch) => {
   for (let i in data) {
     req.push(`${i}=${data[i]}`)
   }
+  req.push(`_r=${Math.random()}`)
 
   fetch(`/users/${id}?${req.join('&')}`,{
     method: 'get',

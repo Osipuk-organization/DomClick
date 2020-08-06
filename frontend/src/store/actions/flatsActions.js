@@ -11,6 +11,7 @@ export const getFlats = ({id='', ...data}={}) => (dispatch) => {
   for (let i in data) {
     req.push(`${i}=${data[i]}`)
   }
+  req.push(`_r=${Math.random()}`)
 
   fetch(`/flats/${id}?${req.join('&')}`)
     .then(function parse(res) {
