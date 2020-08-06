@@ -5,8 +5,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ru.osipuc.domclick.R
-import ru.osipuc.domclick.ui.fragments.CardOfApartmentFragment
-import ru.osipuc.domclick.utilites.replaceFragment
 import ru.osipuc.domclick.utilites.showToast
 
 class AdapterApartments() : RecyclerView.Adapter<AdapterApartments.ViewHolderApartments>(), View.OnClickListener {
@@ -30,6 +28,6 @@ class AdapterApartments() : RecyclerView.Adapter<AdapterApartments.ViewHolderApa
 
     override fun onClick(p0: View?) {
         showToast(p0?.id.toString() + " " + p0?.getTag())
-        replaceFragment(CardOfApartmentFragment())
+//        replaceFragment(CardOfApartmentFragment())
     }
 }
