@@ -3,8 +3,10 @@ package ru.osipuc.domclick.ui.fragments.listFragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import ru.osipuc.domclick.R
+import ru.osipuc.domclick.utilites.APP_ACTIVITY
 import ru.osipuc.domclick.utilites.showToast
 
 class AdapterApartments() : RecyclerView.Adapter<AdapterApartments.ViewHolderApartments>(), View.OnClickListener {
@@ -28,6 +30,7 @@ class AdapterApartments() : RecyclerView.Adapter<AdapterApartments.ViewHolderApa
 
     override fun onClick(p0: View?) {
         showToast(p0?.id.toString() + " " + p0?.getTag())
-//        replaceFragment(CardOfApartmentFragment())
+        Navigation.findNavController(APP_ACTIVITY, R.id.main_host_fragment)
+            .navigate(R.id.action_navBottomFragment_to_cardOfApartmentFragment)
     }
 }

@@ -26,5 +26,14 @@
         android:id="@+id/navBottomFragment"
         android:name="ru.osipuc.domclick.ui.fragments.BottomNavFragment.NavBottomFragment"
         android:label="fragment_nav_bottom"
-        tools:layout="@layout/fragment_nav_bottom" />
+        tools:layout="@layout/fragment_nav_bottom" >
+        <action
+            android:id="@+id/action_navBottomFragment_to_cardOfApartmentFragment"
+            app:destination="@id/cardOfApartmentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardOfApartmentFragment"
+        android:name="ru.osipuc.domclick.ui.fragments.CardOfApartmentFragment"
+        android:label="fragment_card_of_apartment"
+        tools:layout="@layout/fragment_card_of_apartment" />
 </navigation>
