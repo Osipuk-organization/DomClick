@@ -254,57 +254,6 @@ strong {
 @import "grid";
 @import "media";
 
-.modal {
-  position:fixed;
-  z-index:100;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-
-  &,
-  &__checkbox {
-  display:none
-  }
-  &__checkbox:checked+& {
-    display:flex;
-    align-items:center;
-  }
-  &__form-box {
-    max-width:410px;
-    margin:auto;
-    background-color: $background-color;
-    border-radius: 30px;
-  }
-  &__bg {
-    position:absolute;
-    width:100%;
-    height:100%;
-    background-color:rgba(0,0,0,.6)
-  }
-  &__close {
-    position:absolute;
-    top:15px;
-    right:15px;
-    width:50px;
-    height:50px;
-    border-radius:50%;
-    background-color: $s-background-color;
-    background-image: url(./img/close.png);
-    background-repeat:no-repeat;
-    background-position:50%
-  }
-  &__label-box {
-    width: 100%;
-    max-width: 350px;
-    font-size: 12px;
-    padding: 15px 15px 23px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-  }
-}
-
 .swiper-container.swiper4 {
   padding: 15px 15px 48px;
   box-sizing: border-box;

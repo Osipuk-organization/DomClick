@@ -5,8 +5,8 @@ import menu from './menu';
 import 'assets/swiper.scss';
 import 'assets/global.scss';
 
-import { Footer } from 'components/Footer';
 import { TopMenuContainer } from 'containers/TopMenuContainer';
+import { Footer } from 'components/Footer';
 
 function App() {
   const { pathname } = useLocation();
