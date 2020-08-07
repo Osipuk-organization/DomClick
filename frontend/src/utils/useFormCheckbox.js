@@ -6,9 +6,9 @@ export const useFormCheckbox = function (initialValue, name, callback) {
   const [value, setValue] = useState(!!initialValue);
 
   const handleChange = function (e) {
-    setValue(!value);
+    setValue(!e.target.checked);
     try {
-      callback({value, name});
+      callback({value: !e.target.checked, name});
     } catch (err) {
       console.log(err);
     }

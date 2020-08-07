@@ -71,7 +71,7 @@ export const FormCard = function(props) {
             labelSize="subheader"
           >
             <DCButtonGroup
-              buttons={[
+              group={[
                 {
                   label: 'Продажа'
                 },
@@ -79,6 +79,7 @@ export const FormCard = function(props) {
                   label: 'Аренда'
                 }
               ]}
+              {...inputs.deal1}
             />
           </DCInputField>
           <DCInputField
@@ -86,7 +87,7 @@ export const FormCard = function(props) {
             labelSize="subheader"
           >
             <DCButtonGroup
-              buttons={[
+              group={[
                 {
                   label: 'Жилая'
                 },
@@ -97,6 +98,7 @@ export const FormCard = function(props) {
                   label: 'Гараж'
                 }
               ]}
+              {...inputs.deal2}
             />
           </DCInputField>
         </div>
@@ -108,7 +110,7 @@ export const FormCard = function(props) {
         fullWith
       >
         <DCButtonGroup
-          buttons={[
+          group={[
             {
               label: 'Квартира'
             },
@@ -128,6 +130,7 @@ export const FormCard = function(props) {
               label: 'Участок'
             }
           ]}
+          {...inputs.deal3}
         />
       </DCInputField>
 
@@ -137,7 +140,7 @@ export const FormCard = function(props) {
         fullWith
       >
         <DCButtonGroup
-          buttons={[
+          group={[
             {
               label: 'Меньше 3-х'
             },
@@ -148,6 +151,7 @@ export const FormCard = function(props) {
               label: 'Больше 5-ти'
             }
           ]}
+          {...inputs.deal4}
         />
       </DCInputField>
 
@@ -157,7 +161,7 @@ export const FormCard = function(props) {
           labelSize="subheader"
         >
           <DCButtonGroup
-            buttons={[
+            group={[
               {
                 label: '1'
               },
@@ -168,6 +172,7 @@ export const FormCard = function(props) {
                 label: '3+'
               }
             ]}
+            {...inputs.deal5V}
           />
           <DCCheckbox
             label="Есть несовершеннолетние"
@@ -181,7 +186,7 @@ export const FormCard = function(props) {
           labelSize="subheader"
         >
           <DCButtonGroup
-            buttons={[
+            group={[
               {
                 label: '1'
               },
@@ -192,6 +197,7 @@ export const FormCard = function(props) {
                 label: '3+'
               }
             ]}
+            {...inputs.deal6V}
           />
           <DCCheckbox
             label="Есть несовершеннолетние"
@@ -226,7 +232,7 @@ export const FormCard = function(props) {
             labelSize="subheader"
           >
             <DCButtonGroup
-              buttons={[
+              group={[
                 {
                   label: 'Да'
                 },
@@ -234,6 +240,7 @@ export const FormCard = function(props) {
                   label: 'Нет'
                 }
               ]}
+              {...inputs.terms2}
             />
           </DCInputField>
 
@@ -242,7 +249,7 @@ export const FormCard = function(props) {
             labelSize="subheader"
           >
             <DCButtonGroup
-              buttons={[
+              group={[
                 {
                   label: 'Да'
                 },
@@ -250,6 +257,7 @@ export const FormCard = function(props) {
                   label: 'Нет'
                 }
               ]}
+              {...inputs.terms3}
             />
           </DCInputField>
         </div>
@@ -361,7 +369,7 @@ export const FormCard = function(props) {
           labelSize="subheader"
         >
           <DCButtonGroup
-            buttons={[
+            group={[
               {
                 label: 'Совмещенный'
               },
@@ -372,6 +380,7 @@ export const FormCard = function(props) {
                 label: 'Более одного'
               }
             ]}
+            {...inputs.bathroomV}
           />
         </DCInputField>
 
@@ -381,7 +390,7 @@ export const FormCard = function(props) {
           labelSize="subheader"
         >
           <DCButtonGroup
-            buttons={[
+            group={[
               {
                 label: '1'
               },
@@ -395,6 +404,7 @@ export const FormCard = function(props) {
                 label: 'Нет'
               }
             ]}
+            {...inputs.balconyV}
           />
         </DCInputField>
 
@@ -404,7 +414,7 @@ export const FormCard = function(props) {
           labelSize="subheader"
         >
           <DCButtonGroup
-            buttons={[
+            group={[
               {
                 label: 'Косметический'
               },
@@ -418,6 +428,7 @@ export const FormCard = function(props) {
                 label: 'Без ремонта'
               }
             ]}
+            {...inputs.repairV}
           />
           <DCCheckbox
             bold
@@ -467,7 +478,7 @@ export const FormCard = function(props) {
           labelSize="subheader"
         >
           <DCButtonGroup
-            buttons={[
+            group={[
               {
                 label: 'Кирпичный'
               },
@@ -484,6 +495,7 @@ export const FormCard = function(props) {
                 label: 'Блочный'
               }
             ]}
+            {...inputs.houseV}
           />
         </DCInputField>
 
@@ -493,7 +505,7 @@ export const FormCard = function(props) {
           labelSize="subheader"
         >
           <DCButtonGroup
-            buttons={[
+            group={[
               {
                 label: '1'
               },
@@ -504,6 +516,7 @@ export const FormCard = function(props) {
                 label: '3+'
               }
             ]}
+            {...inputs.elevatorV}
           />
           <DCCheckbox
             bold
@@ -566,7 +579,7 @@ export const FormCard = function(props) {
           labelSize="subheader"
         >
           <DCButtonGroup
-            buttons={[
+            group={[
               {
                 label: '1'
               },
@@ -586,6 +599,7 @@ export const FormCard = function(props) {
                 label: 'Студия'
               }
             ]}
+            {...inputs.flatV}
           />
         </DCInputField>
 

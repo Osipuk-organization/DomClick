@@ -1,24 +1,31 @@
-import React, { Fragment, useEffect, useState } from "react";
-import { DCButton } from "components/DCButton";
+import React, { Fragment } from "react";
 
 import './DCButtonGroup.scss';
 
 export const DCButtonGroup = (props) => {
   const {
-    buttons,
+    group,
+    value,
+    name,
+    ...otherProps
   } = props;
   return (
     <div className="DC-button-group">
-      {
-        buttons.map(({ label }, idx) => (
-
+      {group && group.map(({label}, idx) =>
+        <Fragment key={idx}>
           <input
             type="radio"
-            value={label}
-            key={idx}
+            col={5}
+            label={label}
+            name={name}
+            id={name+idx}
+            checked={value == label}
+            data-value={label}
+            {...otherProps}
           />
-
-        ))}
+          <label htmlFor={name+idx}>{label}</label>
+        </Fragment>
+      )}
     </div>
   );
 };

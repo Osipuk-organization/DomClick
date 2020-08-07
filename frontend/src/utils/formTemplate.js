@@ -57,7 +57,6 @@ export const formTemplate = (form) => {
     flat6,
   } = form;
 
-
   return {
     // ФИО
     "owner": owner,
@@ -196,5 +195,5 @@ export const formTemplate = (form) => {
       // потолки
       "ceiling_height": flat6
     }
-  };
+  }
 };

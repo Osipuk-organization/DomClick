@@ -18,7 +18,7 @@ const initialState = {
     addressV: "",
     addressC: "",
     dealC: "",
-    deal1: "",
+    deal1: "Продажа",
     deal2: "",
     deal3: "",
     deal4: "",
