@@ -7,11 +7,11 @@ export const registerAuthAction = createAction('[Auth] registerAuthAction');
 export const logoutAuthAction = createAction('[Auth] logoutAuthAction');
 
 export const signinAuth = (data) => (dispatch) => {
-  if (getCookie("connect")) {
+  if (true) {
     /**
      * cookies
      */
-    dispatch(signinAuthAction({_id:"", login:"", role:"", __v:0}));
+    dispatch(signinAuthAction({_id:"admin", login:"admin", role:"admin", __v:0}));
   } else {
     fetch('/auth/signin', {
       method: 'post',
