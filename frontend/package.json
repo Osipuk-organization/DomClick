@@ -30,6 +30,7 @@
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
     "react-router-hash-link": "^2.0.0",
+    "react-simple-file-input": "^2.1.0",
     "react-yandex-maps": "^4.4.0",
     "redux": "^4.0.5",
     "redux-actions": "^2.6.5",

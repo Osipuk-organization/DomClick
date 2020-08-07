@@ -1,9 +1,8 @@
 import React from 'react';
-import DCLabel from '../DCLabel/DCLabel';
-import './style.scss';
-import DCInput from '../DCInput/DCInput';
+import { DCLabel } from 'components/DCLabel';
+import './DCInputField.scss';
 
-const DCInputField = (props) => {
+export const DCInputField = (props) => {
 	const {
 		children,
 		label,
@@ -35,5 +34,3 @@ const DCInputField = (props) => {
 		</div>
 	)
 };
-
-export default DCInputField;

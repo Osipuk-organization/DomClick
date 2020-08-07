@@ -5,6 +5,7 @@ export const getFlatsAction = createAction('[Flats] getFlatsAction');
 export const createFlatsAction = createAction('[Flats] createFlatsAction');
 export const updateFlatsAction = createAction('[Flats] updateFlatsAction');
 export const deleteFlatsAction = createAction('[Flats] deleteFlatsAction');
+export const updateFormAction = createAction('[Flats] updateFormAction');
 
 export const getFlats = ({id='', ...data}={}) => (dispatch) => {
   let req = [];
@@ -27,6 +28,7 @@ export const getFlats = ({id='', ...data}={}) => (dispatch) => {
 };
 
 export const createFlats = (data) => (dispatch) => {
+  console.log(data);
   fetch('/flats', {
     method: 'post',
     headers: {
@@ -93,4 +95,12 @@ export const deleteFlats = ({id='', ...data}) => (dispatch) => {
     .catch(function error(err) {
       dispatch(deleteFlatsAction( {type: "error", message: err} ))
     });
+};
+export const updateForm = (value, name) => (dispatch) => {
+  try {
+    dispatch(updateFormAction(value, name))
+  } catch (err) {
+    dispatch(updateFormAction({type: "error", message: err}))
+  }
+
 };

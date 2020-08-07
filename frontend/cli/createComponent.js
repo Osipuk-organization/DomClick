@@ -9,7 +9,7 @@ const nameLowerCase = componentName.toLowerCase();
 
 fs.mkdirSync(path.resolve(__dirname, '..', 'src', 'components', componentName));
 
-const componentCode = `import React, {Fragment, useState, useEffect} from 'react';
+const componentCode = `import React, { Fragment, useState, useEffect } from 'react';
 import './${componentName}.scss';
 
 export const ${componentName} = function(props) {
@@ -45,5 +45,5 @@ fs.writeFileSync(
 
 fs.writeFileSync(
     path.resolve(__dirname, '..', 'src', 'components', componentName, 'index.js'),
-    `export {${componentName}} from './${componentName}';`
+    `export { ${componentName} } from './${componentName}';`
 );

@@ -1,9 +1,9 @@
 import React from 'react';
-import DCCheckbox from '../DCCheckbox/DCCheckbox';
+import { DCCheckbox } from 'components/DCCheckbox';
 
-import './style.scss';
+import './DCCheckboxGroup.scss';
 
-const DCCheckboxGroup = (props) => {
+export const DCCheckboxGroup = (props) => {
 	const {
 		group
 	} = props;
@@ -19,5 +19,3 @@ const DCCheckboxGroup = (props) => {
 		</div>
 	)
 };
-
-export default DCCheckboxGroup;
