@@ -1,6 +1,6 @@
 import React from "react";
 
-const DCLabel = (props) => {
+export const DCLabel = (props) => {
 	const {
 		children,
 		label,
@@ -26,5 +26,3 @@ const DCLabel = (props) => {
 		</label>
 	)
 };
-
-export default DCLabel;

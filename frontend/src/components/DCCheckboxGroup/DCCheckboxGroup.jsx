@@ -1,23 +1,29 @@
 import React from 'react';
-import DCCheckbox from '../DCCheckbox/DCCheckbox';
+import { DCCheckbox } from 'components/DCCheckbox';
 
-import './style.scss';
+import './DCCheckboxGroup.scss';
 
-const DCCheckboxGroup = (props) => {
+export const DCCheckboxGroup = (props) => {
 	const {
-		group
+		group,
+		value,
+		name,
+		...otherProps
 	} = props;
+
 	return (
 		<div className="DCCheckboxGroup">
-			{group && group.map((item, id) =>
+			{group && group.map(({label}, idx) =>
 				<DCCheckbox
-					key={id}
+					key={idx}
 					col={5}
-					{...item}
+					label={label}
+					{...otherProps}
+					name={name+idx}
+					checked={value.includes(label)}
+					data-value={label}
 				/>
 			)}
 		</div>
 	)
 };
-
-export default DCCheckboxGroup;

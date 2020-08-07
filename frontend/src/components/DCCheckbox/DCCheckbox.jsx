@@ -1,15 +1,16 @@
 import React from 'react';
 
-import './style.scss';
+import './DCCheckbox.scss';
 
-const DCCheckbox = (props) => {
+export const DCCheckbox = (props) => {
 	const {
 		name,
 		label,
 		value,
 		size,
 		bold,
-		col
+		col,
+		...otherProps
 	} = props;
 	
 	const classes = {
@@ -21,10 +22,8 @@ const DCCheckbox = (props) => {
 	
 	return(
 		<div className={Object.keys(classes).filter(key => classes[key]).join(' ')}>
-			<input type="checkbox" id={name} name={name} value={value} />
+			<input id={name} type="checkbox" {...otherProps} />
 			<label htmlFor={name}>{label}</label>
 		</div>
 	)
 };
-
-export default DCCheckbox;

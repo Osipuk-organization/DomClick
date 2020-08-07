@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import "../assets/sign-in.scss";
 
-export const SignIn = () => {
+const SignIn = () => {
   const [email, setEmail] = useInput("");
   const [password, setPassword] = useInput("");
 
@@ -34,3 +34,5 @@ export const SignIn = () => {
     </div>
   );
 };
+
+export default SignIn;

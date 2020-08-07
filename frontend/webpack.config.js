@@ -129,6 +129,7 @@ module.exports = {
       assets: path.resolve(__dirname, 'src', 'assets'),
       components: path.resolve(__dirname, 'src', 'components'),
       containers: path.resolve(__dirname, 'src', 'containers'),
+      hoc: path.resolve(__dirname, 'src', 'hoc'),
       store: path.resolve(__dirname, 'src', 'store'),
       actions: path.resolve(__dirname, 'src', 'store', 'actions'),
       reducers: path.resolve(__dirname, 'src', 'store', 'reducers'),

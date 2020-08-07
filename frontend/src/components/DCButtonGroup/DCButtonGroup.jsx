@@ -1,41 +1,31 @@
-import React, { Fragment, useEffect, useState } from "react";
-import DCButton from "../DCButton/DCButton";
+import React, { Fragment } from "react";
 
-import './style.scss';
+import './DCButtonGroup.scss';
 
-const DCButtonGroup = (props) => {
-  const { buttons } = props;
-  const [activeButtonId, setActiveButtonId] = useState(0);
-  const [buttonsGroup, setButtonsGroup] = useState(null);
-
-  useEffect(() => {
-    const group = buttons.map((button, key) => ({
-      ...button,
-      id: key,
-    }));
-    setButtonsGroup(group);
-    console.log("rerender");
-  }, [activeButtonId]);
-
-  const onChangeActiveButton = (id) => {
-    console.log("id", id);
-    setActiveButtonId(id);
-  };
-
+export const DCButtonGroup = (props) => {
+  const {
+    group,
+    value,
+    name,
+    ...otherProps
+  } = props;
   return (
     <div className="DC-button-group">
-      {buttonsGroup &&
-        buttonsGroup.map(({ label, id }) => (
-          <DCButton
-            key={id}
-            id={id}
+      {group && group.map(({label}, idx) =>
+        <Fragment key={idx}>
+          <input
+            type="radio"
+            col={5}
             label={label}
-            active={id === activeButtonId}
-            changeActiveButtonHandler={onChangeActiveButton}
+            name={name}
+            id={name+idx}
+            checked={value == label}
+            data-value={label}
+            {...otherProps}
           />
-        ))}
+          <label htmlFor={name+idx}>{label}</label>
+        </Fragment>
+      )}
     </div>
   );
 };
-
-export default DCButtonGroup;

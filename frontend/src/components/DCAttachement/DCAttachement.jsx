@@ -1,9 +1,9 @@
 import React from 'react';
-import DCButton from '../DCButton/DCButton';
+import { DCButton } from 'components/DCButton';
 
 import './DCAttachement.scss';
 
-const DCAttachement = (props) => {
+export const DCAttachement = (props) => {
 
 	const {
 		size
@@ -15,7 +15,7 @@ const DCAttachement = (props) => {
 	
 	return (
 		<div className="DCAttachement">
-			<input id="file-input" type="file" name="file" multiple />
+			<input {...props} id="file-input" type="file" multiple />
 			<DCButton
 				active
 				label="Выберите файл"
@@ -24,5 +24,3 @@ const DCAttachement = (props) => {
 		</div>
 	)
 };
-
-export default DCAttachement;

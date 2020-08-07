@@ -9,7 +9,7 @@ const nameLowerCase = componentName.toLowerCase();
 
 fs.mkdirSync(path.resolve(__dirname, '..', 'src', 'components', componentName));
 
-const componentCode = `import React, {Fragment, useState, useEffect} from 'react';
+const componentCode = `import React, { Fragment, useState, useEffect } from 'react';
 import './${componentName}.scss';
 
 export const ${componentName} = function(props) {
@@ -35,9 +35,9 @@ export const ${componentName} = function(props) {
 
 const containerCode = `import React from 'react';
 import { connect } from 'react-redux';
-import {compose} from "redux";
+import { compose } from "redux";
 import { testSigningIn } from 'actions/${nameLowerCase}Action';
-import ${componentName} from 'components/${componentName}';
+import { ${componentName} } from 'components/${componentName}';
 
 
 function mapStateToProps(state, ownProps) {
@@ -65,7 +65,7 @@ fs.writeFileSync(
 
 fs.writeFileSync(
   path.resolve(__dirname, '..', 'src', 'components', componentName, 'index.js'),
-  `export {${componentName}} from './${componentName}';`
+  `export { ${componentName} } from './${componentName}';`
 );
 
 fs.writeFileSync(

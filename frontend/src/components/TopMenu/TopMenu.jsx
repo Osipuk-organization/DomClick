@@ -38,7 +38,7 @@ export const TopMenu = function(props) {
                       Добавить объект
                   </Link>
                   }
-                  <Link className="link top-menu__link" to="/registration">
+                  <Link className="link top-menu__link" to="/sign-in">
                       Личный кабинет
                   </Link>
                   <Link className="link top-menu__icon _heart" to="/"></Link>

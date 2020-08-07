@@ -1,12 +1,10 @@
-
-import { SignIn } from "@/layouts/sign-in";
-
 import { lazy } from 'react';
 
 const Index = lazy(() => import('layouts/index'));
 const Card = lazy(() => import('layouts/card'));
 const AddProduct = lazy(() => import('layouts/addProduct'));
 const Registration = lazy(() => import('layouts/registration'));
+const SignIn = lazy(() => import('layouts/sign-in'));
 
 
 export default [

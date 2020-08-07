@@ -1,10 +1,11 @@
 import React from "react";
 
-const DCInput = (props) => {
+export const DCInput = (props) => {
 	const {
 		label,
 		borderBottomColor,
-		size
+		size,
+		...otherProps
 	} = props;
 	
 	const inputClasses = {
@@ -17,8 +18,7 @@ const DCInput = (props) => {
 		<input
 			className={Object.keys(inputClasses).filter(key => inputClasses[key]).join(' ')}
 			placeholder="Впишите сюда"
+			{...otherProps}
 		/>
 	)
 };
-
-export default DCInput;
