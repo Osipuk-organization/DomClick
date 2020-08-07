@@ -1,14 +1,14 @@
 import React from 'react'
 
-import './DCCheckbox.scss'
+import './DCRadioButton.scss'
 
-export const DCCheckbox = (props) => {
+export const DCRadioButton = (props) => {
     const { name, label, value, size, bold, col, ...otherProps } = props
 
     const classes = {
-        DCCheckbox: true,
-        [`DCCheckbox__size_${size ? size : 'default'}`]: true,
-        [`DCCheckbox_bold`]: !!bold,
+        DCRadio: true,
+        [`DCRadio__size_${size ? size : 'default'}`]: true,
+        [`DCRadio_bold`]: !!bold,
         [`_col-${col}`]: !!col,
     }
 
@@ -18,8 +18,8 @@ export const DCCheckbox = (props) => {
                 .filter((key) => classes[key])
                 .join(' ')}
         >
-            <input id={name} type="checkbox" {...otherProps} />
+            <input id={name} type="radio" {...otherProps} />
             <label htmlFor={name}>{label}</label>
         </div>
     )
-}
+};
