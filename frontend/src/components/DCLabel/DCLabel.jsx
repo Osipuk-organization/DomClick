@@ -17,12 +17,12 @@ export const DCLabel = (props) => {
 	};
 	
 	return (
-		<label className={Object.keys(classes).filter(key => classes[key]).join(' ')}>
+		<div className={Object.keys(classes).filter(key => classes[key]).join(' ')}>
 			<span>
 				{label}
 				{withComment && <div className='commentSpan'>Комментарии</div>}
 			</span>
 			{children}
-		</label>
+		</div>
 	)
 };

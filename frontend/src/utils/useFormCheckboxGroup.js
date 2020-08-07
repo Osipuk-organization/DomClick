@@ -6,14 +6,18 @@ export const useFormCheckboxGroup = function (initialValue, name, callback) {
   const [value, setValue] = useState(initialValue); // []
 
   const handleChange = function (e) {
+    let res;
+
     if (e.target.checked && !value.includes(e.target.dataset.value)) {
-      setValue(value.concat(e.target.dataset.value));
+      res = value.concat(e.target.dataset.value);
     } else {
-      setValue(value.filter(i => i !== e.target.dataset.value));
+      res = value.filter(i => i !== e.target.dataset.value);
     }
 
+    setValue(res);
+
     try {
-      callback({value: e.target.dataset.value, name});
+      callback({value: res, name});
     } catch (err) {
       console.log(err);
     }

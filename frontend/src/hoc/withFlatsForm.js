@@ -43,22 +43,17 @@ export const withFlatsForm = function (Component) {
 
     const inputs = {};
 
-    try {
-      Object.keys(form)
-        .filter(i => typeof form[i] === "string" && !radioGroup.includes(i))
-        .forEach(i => { inputs[i] = useFormInput(form[i], i, updateForm) });
+    Object.keys(form)
+      .filter(i => typeof form[i] === "string" && !radioGroup.includes(i))
+      .forEach(i => { inputs[i] = useFormInput(form[i], i, updateForm) });
 
-      Object.keys(form)
-        .filter(i => typeof form[i] === "boolean")
-        .forEach(i => { inputs[i] = useFormCheckbox(form[i], i, updateForm) });
+    Object.keys(form)
+      .filter(i => typeof form[i] === "boolean")
+      .forEach(i => { inputs[i] = useFormCheckbox(form[i], i, updateForm) });
 
-      checkboxGroup.forEach(i => inputs[i] = useFormCheckboxGroup(form[i], i, updateForm));
+    checkboxGroup.forEach(i => inputs[i] = useFormCheckboxGroup(form[i], i, updateForm));
 
-      radioGroup.forEach(i => inputs[i] = useFormRadioGroup(form[i], i, updateForm));
-
-    } catch (err) {
-      console.log(err);
-    }
+    radioGroup.forEach(i => inputs[i] = useFormRadioGroup(form[i], i, updateForm));
 
     return (
       <Fragment>
