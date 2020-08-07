@@ -3,13 +3,20 @@ package ru.osipuc.domclick.ui.fragments
 import android.content.res.Resources
 import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
+import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_card_of_apartment.*
 import ru.osipuc.domclick.R
+import ru.osipuc.domclick.utilites.APP_ACTIVITY
 
 class CardOfApartmentFragment : Fragment(R.layout.fragment_card_of_apartment) {
+
+    override fun onStart() {
+        super.onStart()
+        APP_ACTIVITY.navBottom.visibility = View.GONE
+    }
 
     override fun onResume() {
         super.onResume()
