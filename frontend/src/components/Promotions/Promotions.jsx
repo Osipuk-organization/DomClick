@@ -15,7 +15,7 @@ export const Promotions = function(props) {
                   <div className="promotions__text">Йехуу! Шок-контент! В&nbsp;это сложно поверить: при покупке двух
                       квартир мы&nbsp;дарим вам одну в&nbsp;подарок (можете бабуле подарить) Налетай!
                   </div>
-                  <div className="promotions__button-box"><label className="button" htmlFor="">Учавствовать</label>
+                  <div className="promotions__button-box"><label className="button">Учавствовать</label>
                   </div>
               </div>
           </div>
@@ -25,7 +25,7 @@ export const Promotions = function(props) {
                   <div className="promotions__text">Йехуу! Шок-контент! В&nbsp;это сложно поверить: при покупке двух
                       квартир мы&nbsp;дарим вам одну в&nbsp;подарок (можете бабуле подарить) Налетай!
                   </div>
-                  <div className="promotions__button-box"><label className="button" htmlFor="">Учавствовать</label>
+                  <div className="promotions__button-box"><label className="button">Учавствовать</label>
                   </div>
               </div>
           </div>
@@ -35,7 +35,7 @@ export const Promotions = function(props) {
                   <div className="promotions__text">Йехуу! Шок-контент! В&nbsp;это сложно поверить: при покупке двух
                       квартир мы&nbsp;дарим вам одну в&nbsp;подарок (можете бабуле подарить) Налетай!
                   </div>
-                  <div className="promotions__button-box"><label className="button" htmlFor="">Учавствовать</label>
+                  <div className="promotions__button-box"><label className="button">Учавствовать</label>
                   </div>
               </div>
           </div>
@@ -45,7 +45,7 @@ export const Promotions = function(props) {
                   <div className="promotions__text">Йехуу! Шок-контент! В&nbsp;это сложно поверить: при покупке двух
                       квартир мы&nbsp;дарим вам одну в&nbsp;подарок (можете бабуле подарить) Налетай!
                   </div>
-                  <div className="promotions__button-box"><label className="button" htmlFor="">Учавствовать</label>
+                  <div className="promotions__button-box"><label className="button">Учавствовать</label>
                   </div>
               </div>
           </div>

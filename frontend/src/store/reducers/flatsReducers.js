@@ -154,6 +154,7 @@ export default handleActions({
     let res = {};
 
     if (action.payload.type !== "error") {
+      console.log(action.payload.value)
       res = {
         ...state,
         form: {
