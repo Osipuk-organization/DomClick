@@ -25,7 +25,6 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
 
     override fun onStart() {
         super.onStart()
-        APP_ACTIVITY.navBottom.visibility = View.VISIBLE
         initView()
     }
 

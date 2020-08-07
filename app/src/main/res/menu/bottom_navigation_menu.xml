@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/bottom_menu_search"
+        android:id="@+id/searchFragment"
         android:enabled="true"
         android:icon="@drawable/ic_search"
         android:title="@string/search" />
     <item
-        android:id="@+id/bottom_menu_save"
+        android:id="@+id/listFragment"
         android:enabled="true"
         android:icon="@drawable/ic_save"
         android:title="@string/saved" />
     <item
-        android:id="@+id/bottom_menu_cabinet"
+        android:id="@+id/profileFragment"
         android:enabled="true"
         android:icon="@drawable/ic_cabinet"
         android:title="@string/cabinet" />

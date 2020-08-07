@@ -8,7 +8,6 @@ import kotlinx.android.synthetic.main.fragment_enter_phone_number.*
 import ru.osipuc.domclick.R
 import ru.osipuc.domclick.utilites.APP_ACTIVITY
 import ru.osipuc.domclick.utilites.AUTH
-import ru.osipuc.domclick.utilites.replaceFragment
 import ru.osipuc.domclick.utilites.showToast
 import java.util.concurrent.TimeUnit
 
@@ -36,9 +35,9 @@ class EnterPhoneNumberFragment : Fragment(R.layout.fragment_enter_phone_number) 
             }
 
             override fun onCodeSent(id: String, token: PhoneAuthProvider.ForceResendingToken) {
-                replaceFragment(
-                    EnterSmsCodeFragment(id)
-                )
+//                replaceFragment(
+//                    EnterSmsCodeFragment(id)
+//                )
             }
         }
         enter_phone_fragment_ok_btn.setOnClickListener { sendCode() }

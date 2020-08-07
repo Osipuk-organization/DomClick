@@ -4,7 +4,6 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_registration.*
 import ru.osipuc.domclick.R
-import ru.osipuc.domclick.utilites.replaceFragment
 
 class RegistrationFragment : Fragment(R.layout.fragment_registration) {
 
@@ -20,7 +19,7 @@ class RegistrationFragment : Fragment(R.layout.fragment_registration) {
         }
 
         registration_fragment_reg_btn.setOnClickListener {
-            replaceFragment(SearchFragment())
+
         }
     }
 
