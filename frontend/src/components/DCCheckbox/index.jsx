@@ -1,1 +1,1 @@
-export {DCCheckbox} from './DCCheckbox';
+export { DCCheckbox } from './DCCheckbox'

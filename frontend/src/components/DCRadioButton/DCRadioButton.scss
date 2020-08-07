@@ -1,0 +1,36 @@
+.DCRadio {
+	display: flex;
+	align-items: flex-start;
+
+	input:checked {
+		background-color: #FF7373;
+	}
+}
+
+.DCRadio__size_default {
+	label {
+		font-size: 18px;
+		line-height: 21px;
+		padding-left: 15px;
+	}
+}
+
+.DCRadio__size_small {
+	margin-top: 16px;
+
+	label {
+		font-size: 10px;
+		line-height: 12px;
+		padding-left: 8px;
+	}
+}
+
+.DCRadio_bold {
+	label {
+		font-weight: bold;
+	}
+}
+
+.DCRadioButtonGroup .DCRadio {
+	margin-right: 50px;
+}
