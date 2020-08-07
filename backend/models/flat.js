@@ -64,47 +64,38 @@ const additionallySchema = new Schema({
   _id: false,
   security: {
     comment: { type: String, },
-    doorphone: { type: Boolean, required: true, default: false, },
-    concierge: { type: Boolean, required: true, default: false, },
-    code_door: { type: Boolean, required: true, default: false, },
-    closed_territory: { type: Boolean, required: true, default: false, },
+    // doorphone: { type: Boolean, required: true, default: false, },
+    // concierge: { type: Boolean, required: true, default: false, },
+    // code_door: { type: Boolean, required: true, default: false, },
+    // closed_territory: { type: Boolean, required: true, default: false, },
+    value: [String],
   },
   parking: {
     comment: { type: String, },
-    in_the_courtyard: { type: Boolean, required: true, default: false, }, //Во дворе
-    underground: { type: Boolean, required: true, default: false, }, //Подземная
-    barrier: { type: Boolean, required: true, default: false, }, //Шлагбаум
-    garage: { type: Boolean, required: true, default: false, }, //Гараж
-    security: { type: Boolean, required: true, default: false, }, //Охраняемая
+    value: [String],
+    // in_the_courtyard: { type: Boolean, required: true, default: false, }, //Во дворе
+    // underground: { type: Boolean, required: true, default: false, }, //Подземная
+    // barrier: { type: Boolean, required: true, default: false, }, //Шлагбаум
+    // garage: { type: Boolean, required: true, default: false, }, //Гараж
+    // security: { type: Boolean, required: true, default: false, }, //Охраняемая
   },
   the_landscaping_of_the_yard: { //Благоустройство двора
     comment: { type: String, },
-    childrens_playground: { type: Boolean, required: true, default: false, },
-    sports_ground: { type: Boolean, required: true, default: false, },
+    value: [String],
+    // childrens_playground: { type: Boolean, required: true, default: false, },
+    // sports_ground: { type: Boolean, required: true, default: false, },
   },
+  // infrastructure: { //Инфраструктура двора
+  //   comment: { type: String, },
+  //   school: { type: Boolean, required: true, default: false, },
+  //   fitness: { type: Boolean, required: true, default: false, },
+  //   park: { type: Boolean, required: true, default: false, },
+  //   kindergarten: { type: Boolean, required: true, default: false, },
+  //   mall: { type: Boolean, required: true, default: false, },
+  // },
   infrastructure: { //Инфраструктура двора
     comment: { type: String, },
-    school: { type: Boolean, required: true, default: false, },
-    fitness: { type: Boolean, required: true, default: false, },
-    park: { type: Boolean, required: true, default: false, },
-    kindergarten: { type: Boolean, required: true, default: false, },
-    mall: { type: Boolean, required: true, default: false, },
-  },
-  bathroom: { //Санузел
-    comment: { type: String, },
-    value: {
-      type: String,
-      required: true,
-      enum: ['Совмещенный', 'Раздельный', 'Более одного',],
-    },
-  },
-  balcony: { //Количество балконов/лоджий
-    comment: { type: String, },
-    value: {
-      type: String,
-      required: true,
-      enum: ['1', '2', '3+', 'Нет'],
-    },
+    value: [String]
   },
   repair: { //Ремонт
     comment: { type: String, },
@@ -117,11 +108,12 @@ const additionallySchema = new Schema({
   },
   view_from_windows: { //Вид из окон
     comment: { type: String, },
-    yard: { type: Boolean, required: true, default: false, },
-    street: { type: Boolean, required: true, default: false, },
-    park: { type: Boolean, required: true, default: false, },
-    reservoir: { type: Boolean, required: true, default: false, },
-    forest: { type: Boolean, required: true, default: false, },
+    // yard: { type: Boolean, required: true, default: false, },
+    // street: { type: Boolean, required: true, default: false, },
+    // park: { type: Boolean, required: true, default: false, },
+    // reservoir: { type: Boolean, required: true, default: false, },
+    // forest: { type: Boolean, required: true, default: false, },
+    value: [String],
   },
 });
 
@@ -142,8 +134,8 @@ const houseSchema = new Schema({
     },
     freight_elevator: { type: Boolean, required: true, default: false, },
   },
-  apartment_number: { type: Number, },//сделать проверку
-  cadastral_number: { type: Number, },//сделать проверку
+  apartment_number: { type: Number, required: true },//сделать проверку
+  cadastral_number: { type: Number, required: true },//сделать проверку
   foto: { //Фото
     comment: { type: String, },
     value: { type: [String], },
@@ -180,12 +172,12 @@ const dataSchema = new Schema({
   },
   address: { //Адрес объект
     comment: { type: String, },
-    city: { type: String, required: true, },
-    streetName: { type: String, required: true, },
-    county: { type: String, required: true, },
-    state: { type: String, required: true, },
-    latitude: { type: String, required: true, },
-    longitude: { type: String, required: true, },
+    city: { type: String, },
+    streetName: { type: String, },
+    county: { type: String, },
+    state: { type: String, },
+    latitude: { type: String, },
+    longitude: { type: String, },
   },
   deal: dealSchema, //Сделка
   terms_of_sale: terms_of_saleSchema, //Условия продажи

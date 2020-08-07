@@ -2,3 +2,33 @@
 [2020-08-06T21:25:42.925Z #07390367] Completed 200 73 in 694.741 ms
 [2020-08-06T21:25:51.384Z #ff2b40aa] Started GET /auth/logout for 127.0.0.1
 [2020-08-06T21:25:51.384Z #ff2b40aa] Completed 200 16 in 75.334 ms
+[2020-08-07T06:04:41.354Z #e9ad5781] Started POST /upload for 127.0.0.1
+[2020-08-07T06:04:41.354Z #e9ad5781] Completed 200 25 in 23.269 ms
+[2020-08-07T06:04:41.574Z #8dd47582] Started GET /favicon.ico for 127.0.0.1
+[2020-08-07T06:04:41.574Z #8dd47582] Completed 403 70 in 1.756 ms
+[2020-08-07T06:13:48.869Z #68649434] Started POST /upload for 127.0.0.1
+[2020-08-07T06:13:48.869Z #68649434] Completed 500 258 in 11.899 ms
+[2020-08-07T06:14:04.224Z #245b8ccb] Started POST /upload for 127.0.0.1
+[2020-08-07T06:14:04.224Z #245b8ccb] Completed 500 264 in 191.610 ms
+[2020-08-07T06:18:12.686Z #fc862eed] Started POST /upload for 127.0.0.1
+[2020-08-07T06:18:12.686Z #fc862eed] Completed 200 25 in 47.171 ms
+[2020-08-07T06:18:12.912Z #1b45520e] Started GET /favicon.ico for 127.0.0.1
+[2020-08-07T06:18:12.912Z #1b45520e] Completed 403 70 in 1.386 ms
+[2020-08-07T06:19:13.991Z #d47b78d9] Started POST /upload for 127.0.0.1
+[2020-08-07T06:19:13.992Z #d47b78d9] Completed 200 25 in 41.271 ms
+[2020-08-07T06:19:14.207Z #5213a089] Started GET /favicon.ico for 127.0.0.1
+[2020-08-07T06:19:14.207Z #5213a089] Completed 403 70 in 1.436 ms
+[2020-08-07T06:20:06.245Z #e82db50a] Started POST /upload for 127.0.0.1
+[2020-08-07T06:20:06.245Z #e82db50a] Completed 200 25 in 43.939 ms
+[2020-08-07T06:20:06.452Z #f209c000] Started GET /favicon.ico for 127.0.0.1
+[2020-08-07T06:20:06.452Z #f209c000] Completed 403 70 in 1.737 ms
+[2020-08-07T06:24:10.073Z #35e33a47] Started POST /upload for 127.0.0.1
+[2020-08-07T06:24:10.074Z #35e33a47] Completed 200 25 in 76.601 ms
+[2020-08-07T06:24:10.307Z #ff64f35a] Started GET /favicon.ico for 127.0.0.1
+[2020-08-07T06:24:10.307Z #ff64f35a] Completed 403 70 in 1.967 ms
+[2020-08-07T06:24:27.329Z #d7ba0760] Started POST /upload for 127.0.0.1
+[2020-08-07T06:24:27.329Z #d7ba0760] Completed 200 25 in 38.352 ms
+[2020-08-07T06:24:27.577Z #fbaa8b26] Started GET /favicon.ico for 127.0.0.1
+[2020-08-07T06:24:27.577Z #fbaa8b26] Completed 403 70 in 0.631 ms
+[2020-08-07T06:24:55.274Z #18ef485e] Started POST /upload for 127.0.0.1
+[2020-08-07T06:24:55.274Z #18ef485e] Completed 500 256 in 17.033 ms

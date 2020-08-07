@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Node.js</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <h1>Upload file</h1>
+    <form action="http://localhost:4000/upload" method="post" enctype="multipart/form-data">
+        <label>Файл</label><br>
+        <input type="file" name="filedata" /><br><br>
+        <input type="submit" value="Send" />
+    </form>
+    <h1>Upload files</h1>
+    <form action="/rest/upload" method="post" enctype="multipart/form-data">
+        <label>Video file: </label> <input type="file" name="video" />
+        <label>Subtitles file: </label> <input type="file" name="subtitles" />
+        <input type="submit" />
+    </form>
+</body>
+<html>

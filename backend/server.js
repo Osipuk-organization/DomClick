@@ -1,3 +1,4 @@
+'use strict';
 const express = require('express')
 const path = require('path')
 const cors = require('cors')
@@ -8,9 +9,11 @@ const session = require('express-session')
 const MongoStore = require('connect-mongo')(session)
 const dotenv = require('dotenv')
 const cowsay = require('cowsay')
-const addRequestId = require('express-request-id')((setHeader = false))
+const addRequestId = require('express-request-id')({ setHeader: false });
 const morgan = require('morgan')
 const fs = require('fs')
+const helmet = require('helmet')
+
 
 //variables
 dotenv.config({ path: path.resolve(__dirname, '.env') })
@@ -23,7 +26,7 @@ const passport = require('./middlewares/passport')
 require(path.resolve(__dirname, 'mongo_connect.js'))
 
 const app = express()
-
+app.use(helmet());
 app.use(addRequestId)
 morgan.token('id', (req) => req.id.split('-')[0])
 const loggerFormat1 = '[:date[iso] #:id] Started :method :url for :remote-addr'
@@ -48,11 +51,47 @@ app.use(
     store: new MongoStore({
       mongooseConnection: mongoose.connection,
     }),
+    cookie: {
+      // secure: true,
+      // httpOnly: true,
+      // maxAge : 3600000,
+      // domain: 'example.com',
+      // path: 'foo/bar',
+      // expires: expiryDate
+    }
   })
 )
 app.use(cookieParser(process.env.COOKIE_SECRET_KEY))
 app.use(passport.initialize)
 app.use(passport.session)
+
+const multer = require('multer')
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/')
+  },
+  // filename: (req, file, callback) => {
+  //   var filename = file.fieldname + '-' + Date.now() + '-' + file.originalname;
+  //   callback(null, filename);
+  // }
+  filename: function (req, file, cb) {
+    const filename = file.fieldname + '-' + new Date(Date.now()).toLocaleString() + '-' + file.originalname;
+    cb(null, filename) //Appending extension
+  }
+})
+const upload = multer({ storage: storage });
+app.use(upload.single("filedata"));
+app.post("/upload", function (req, res, next) {
+
+  let filedata = req.file;
+  console.log(filedata);
+  if (!filedata)
+    res.send("Ошибка при загрузке файла");
+  else
+    res.send("Файл загружен");
+});
+
+
 app.use(router)
 
 app.set('view engine', 'pug')
