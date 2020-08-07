@@ -267,26 +267,19 @@ export const FormCard = function(props) {
           <DCCheckboxGroup
             group={[
               {
-                name: "domofon",
                 label: "Домофон",
-                value: "domofon"
               },
               {
-                name: "secret",
                 label: "Кодовая дверь",
-                value: "secret"
               },
               {
-                name: "vahta",
                 label: "Консьерж",
-                value: "vahta"
               },
               {
-                name: "closest_territory",
                 label: "Закрытая территория",
-                value: "territory"
               },
             ]}
+            {...inputs.securityV}
           />
         </DCInputField>
 
@@ -298,31 +291,22 @@ export const FormCard = function(props) {
           <DCCheckboxGroup
             group={[
               {
-                name: "inArea",
                 label: "Во дворе",
-                value: "inArea"
               },
               {
-                name: "underground",
                 label: "Подземная",
-                value: "underground"
               },
               {
-                name: "withBranch",
                 label: "Со шлагбаумом",
-                value: "withBranch"
               },
               {
-                name: "garage",
                 label: "Есть гараж",
-                value: "garage"
               },
               {
-                name: "security",
                 label: "Охраняемая",
-                value: "security"
               }
             ]}
+            {...inputs.parkingV}
           />
         </DCInputField>
 
@@ -334,16 +318,13 @@ export const FormCard = function(props) {
           <DCCheckboxGroup
             group={[
               {
-                name: "childrenArea",
                 label: "Детская площадка",
-                value: "childrenArea"
               },
               {
-                name: "sportArea",
                 label: "Спортивная площадка",
-                value: "sportArea"
               }
             ]}
+            {...inputs.yardV}
           />
         </DCInputField>
 
@@ -355,31 +336,22 @@ export const FormCard = function(props) {
           <DCCheckboxGroup
             group={[
               {
-                name: "school",
                 label: "Школа",
-                value: "school"
               },
               {
-                name: "fitness",
                 label: "Фитнес",
-                value: "fitness"
               },
               {
-                name: "Park",
                 label: "Парк",
-                value: "Park"
               },
               {
-                name: "detSad",
                 label: "Детский сад",
-                value: "detSad"
               },
               {
-                name: "shop",
                 label: "Торговый центр",
-                value: "shop"
               }
             ]}
+            {...inputs.infrastructureV}
           />
         </DCInputField>
 
@@ -463,35 +435,25 @@ export const FormCard = function(props) {
           <DCCheckboxGroup
             group={[
               {
-                name: "dvor",
                 label: "Двор",
-                value: "dvor"
               },
               {
-                name: "windowPark",
                 label: "Парк",
-                value: "windowPark"
               },
               {
-                name: "water",
                 label: "Водоем",
-                value: "water"
               },
               {
-                name: "forest",
                 label: "Лес",
-                value: "forest"
               },
               {
-                name: "street",
                 label: "Улица",
-                value: "street"
               }
             ]}
+            {...inputs.windowsV}
           />
         </DCInputField>
       </DCInputField>
-
 
       <DCInputField
         withComment

@@ -11,10 +11,13 @@ export const DCButtonGroup = (props) => {
     <div className="DC-button-group">
       {
         buttons.map(({ label }, idx) => (
-          <DCButton
+
+          <input
+            type="radio"
+            value={label}
             key={idx}
-            label={label}
           />
+
         ))}
     </div>
   );

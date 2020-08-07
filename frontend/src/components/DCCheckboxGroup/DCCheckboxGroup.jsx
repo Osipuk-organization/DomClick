@@ -5,15 +5,23 @@ import './DCCheckboxGroup.scss';
 
 export const DCCheckboxGroup = (props) => {
 	const {
-		group
+		group,
+		value,
+		name,
+		...otherProps
 	} = props;
+
 	return (
 		<div className="DCCheckboxGroup">
-			{group && group.map((item, id) =>
+			{group && group.map(({label}, idx) =>
 				<DCCheckbox
-					key={id}
+					key={idx}
 					col={5}
-					{...item}
+					label={label}
+					{...otherProps}
+					name={name+idx}
+					checked={value.includes(label)}
+					data-value={label}
 				/>
 			)}
 		</div>

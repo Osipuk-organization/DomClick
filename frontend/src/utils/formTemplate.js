@@ -119,7 +119,7 @@ export const formTemplate = (form) => {
       // парковка
       "parking": {
         "comment": parkingC,
-        "value": parkingV
+        "value": parkingV // []
       },
       // двор
       "the_landscaping_of_the_yard": {
