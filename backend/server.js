@@ -9,9 +9,9 @@ const session = require('express-session')
 const MongoStore = require('connect-mongo')(session)
 const dotenv = require('dotenv')
 const cowsay = require('cowsay')
-const addRequestId = require('express-request-id')({ setHeader: false });
-const morgan = require('morgan')
-const fs = require('fs')
+
+
+
 const helmet = require('helmet')
 
 
@@ -27,18 +27,11 @@ require(path.resolve(__dirname, 'mongo_connect.js'))
 
 const app = express()
 app.use(helmet());
-app.use(addRequestId)
-morgan.token('id', (req) => req.id.split('-')[0])
-const loggerFormat1 = '[:date[iso] #:id] Started :method :url for :remote-addr'
-const loggerFormat2 =
-  '[:date[iso] #:id] Completed :status :res[content-length] in :response-time ms'
-const accessLogStream = fs.createWriteStream(
-  path.join(__dirname, 'access.log'),
-  { flags: 'a' }
-)
 
-app.use(morgan(loggerFormat1, { stream: accessLogStream }))
-app.use(morgan(loggerFormat2, { stream: accessLogStream }))
+//Logger
+require(path.resolve(__dirname, 'logger.js'))
+
+
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -70,25 +63,63 @@ const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, 'uploads/')
   },
-  // filename: (req, file, callback) => {
-  //   var filename = file.fieldname + '-' + Date.now() + '-' + file.originalname;
-  //   callback(null, filename);
-  // }
-  filename: function (req, file, cb) {
-    const filename = file.fieldname + '-' + new Date(Date.now()).toLocaleString() + '-' + file.originalname;
-    cb(null, filename) //Appending extension
+  filename: (req, file, cb) => {
+    const filename = `${file.fieldname}--${new Date().toLocaleDateString()}--${new Date().toLocaleTimeString().replace(/:/g, '-')}--${file.originalname}`;
+    cb(null, filename)
   }
 })
-const upload = multer({ storage: storage });
-app.use(upload.single("filedata"));
-app.post("/upload", function (req, res, next) {
+const upload = multer(
+  {
+    storage: storage,
+    limits:
+    {
+      fileSize: 1024*1024*3
+    },
+    // fileFilter: fileFilter 
+  }
+)
+  .fields(
+    [
+      {
+        name: 'filedata',
+        maxCount: 4
+      }
+    ]
+  );
 
-  let filedata = req.file;
-  console.log(filedata);
-  if (!filedata)
-    res.send("Ошибка при загрузке файла");
-  else
-    res.send("Файл загружен");
+app.post("/upload", (req, res, next) => {
+  upload(req, res, (err) => {
+    if (err instanceof multer.MulterError) {
+      // Ошибка multer
+      res.status(500).send(err);
+      return
+    } else if (err) {
+      // При загрузке произошла неизвестная ошибка.
+      res.status(500).send(err);
+      return
+    }
+    const files = req.files;
+    if (files.length === 0) {
+      res.status(400).send({
+        status: false,
+        data: 'No files is selected.'
+      });
+    } else {
+      let data = [];
+
+      files.map(p => data.push({
+        name: p.originalname,
+        mimetype: p.mimetype,
+        size: p.size
+      }));
+
+      res.send({
+        status: true,
+        message: 'Photos are uploaded.',
+        data: data
+      });
+    }
+  })
 });
 
 
