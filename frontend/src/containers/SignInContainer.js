@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { withRouter } from "react-router";
 
-import { TopMenu } from 'components/TopMenu';
+import { SignIn } from 'components/SignIn';
 import {
   signinAuth,
   registerAuth,
@@ -20,11 +20,13 @@ function mapStateToProps(state, ownProps) {
 function mapDispatchToProps(dispatch, props) {
   return {
     ...props,
+    signinAuth: (data) => dispatch(signinAuth(data)),
+    registerAuth: (data) => dispatch(registerAuth(data)),
     logoutAuth: (data) => dispatch(logoutAuth(data)),
   }
 }
 
-export const TopMenuContainer = compose(
+export const SignInContainer = compose(
   withRouter,
   connect(mapStateToProps, mapDispatchToProps),
-)(TopMenu);
+)(SignIn);

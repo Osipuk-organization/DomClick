@@ -6,16 +6,8 @@ import { Link } from 'react-router-dom';
 export const TopMenu = function(props) {
     const {
         isAuth,
-        signinAuth,
-        registerAuth,
         logoutAuth,
     } = props;
-
-    useEffect(function() {
-        if (!isAuth) {
-            signinAuth({login: 'admin', password: 'admin'});
-        }
-    }, [null]);
 
     return (
       <div className="top-menu">
