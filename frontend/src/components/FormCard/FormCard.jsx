@@ -16,12 +16,12 @@ export const FormCard = function(props) {
   } = props;
 
   const mapData = {
-    center: [55.751574, 37.573856],
+    center: [+inputs.addressX.value, +inputs.addressY.value],
     zoom: 12,
   }
 
   const coordinates = [
-    [55.751574, 37.573856],
+    [+inputs.addressX.value, +inputs.addressY.value],
   ]
 
   return (
@@ -55,10 +55,13 @@ export const FormCard = function(props) {
         withComment
         fullWith
       >
+        <DCInput size={6} {...inputs.address2} />
+        <DCInput size={6} {...inputs.address3} />
         <DCInput size={6} {...inputs.addressV} />
+        <DCInput size={6} {...inputs.address1} />
       </DCInputField>
 
-      <Ymaps mapData={mapData} coordinates={coordinates} />
+      <Ymaps className="map-info__frame" mapData={mapData} coordinates={coordinates} />
 
       <DCInputField
         label="Сделка"
@@ -231,15 +234,10 @@ export const FormCard = function(props) {
             label="Газ"
             labelSize="subheader"
           >
-            <DCButtonGroup
-              group={[
-                {
-                  label: 'Да'
-                },
-                {
-                  label: 'Нет'
-                }
-              ]}
+            <DCCheckbox
+              label="Есть"
+              size="small"
+              bold
               {...inputs.terms2}
             />
           </DCInputField>
@@ -248,15 +246,10 @@ export const FormCard = function(props) {
             label="Мусоропровод"
             labelSize="subheader"
           >
-            <DCButtonGroup
-              group={[
-                {
-                  label: 'Да'
-                },
-                {
-                  label: 'Нет'
-                }
-              ]}
+            <DCCheckbox
+              label="Есть"
+              size="small"
+              bold
               {...inputs.terms3}
             />
           </DCInputField>

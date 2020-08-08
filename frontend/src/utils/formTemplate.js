@@ -6,6 +6,11 @@ export const formTemplate = (form) => {
     cadastralC,
     addressV,
     addressC,
+    address1,
+    address2,
+    address3,
+    addressX,
+    addressY,
     dealC,
     deal1,
     deal2,
@@ -39,6 +44,7 @@ export const formTemplate = (form) => {
     windowsV,
     houseC,
     houseV,
+    house1,
     elevatorV,
     elevator1,
     apartment,
@@ -48,6 +54,7 @@ export const formTemplate = (form) => {
     videoC,
     videoV,
     flatC,
+    flat1E,
     flatV,
     flat1,
     flat2,
@@ -59,141 +66,150 @@ export const formTemplate = (form) => {
 
   return {
     // ФИО
-    "owner": owner,
+    "owner": owner, // str
     // документы
-    "documents": documents,
+    "documents": documents, // [str]
     // оценочная стоимость
     "cadastral_value": {
-      "value": cadastralV,
-      "comment": cadastralC
+      "value": +cadastralV, // nbr
+      "comment": cadastralC // str
     },
     // адрес
     "address": {
-      "value": addressV,
-      "comment": addressC
+      "comment": addressC, // str
+      "city": addressV, // str
+      "streetName": address1, // str
+      "county": address2, // str
+      "state": address3, // str
+      "latitude": addressX, // str
+      "longitude": addressY // str
     },
     // сделка
     "deal": {
-      "comment": dealC,
+      "comment": dealC, // str
       // тип сделки
-      "type_deal": deal1,
+      "type_deal": deal1, // str
       // вид недвижимости
-      "property_type": deal2,
+      "property_type": deal2, // str
       // тип недвижимости
-      "type_of_property": deal3,
+      "type_of_property": deal3, // str
       // лет в собственности
-      "years_in_ownership": deal4,
+      "years_in_ownership": deal4, // str
       // собственник
       "number_of_owners": {
-        "value": deal5V,
-        "minor_child": deal51
+        "value": deal5V, // str
+        "minor_child": deal51 // bool
       },
       // прописано
       "registered": {
-        "value": deal6V,
-        "minor_child": deal61
+        "value": deal6V, // str
+        "minor_child": deal61 // bool
       }
     },
     // условия продажи
     "terms_of_sale": {
-      "comment": termsC,
+      "comment": termsC, // str
       "cost": {
         // цена
-        "value": terms1V,
+        "value": +terms1V, // nbr
         // торг
-        "trade": terms11
+        "trade": terms11 // bool
       },
       // газ
-      "gas": terms2,
+      "gas": terms2, // bool
       // мусоропровод
-      "refuse_chute": terms3
+      "refuse_chute": terms3 // bool
     },
     // дополтительно
     "additionally": {
       // безопасность
       "security": {
-        "comment": securityC,
-        "value": securityV // []
+        "comment": securityC, // str
+        "value": securityV // [str]
       },
       // парковка
       "parking": {
-        "comment": parkingC,
-        "value": parkingV // []
+        "comment": parkingC, // str
+        "value": parkingV // [str]
       },
       // двор
       "the_landscaping_of_the_yard": {
-        "comment": yardC,
-        "value": yardV
+        "comment": yardC, // str
+        "value": yardV // [str]
       },
       // инфраструктура
       "infrastructure": {
-        "comment": infrastructureC,
-        "value": infrastructureV // []
+        "comment": infrastructureC, // str
+        "value": infrastructureV // [str]
       },
       // санузел
       "bathroom": {
-        "comment": bathroomC,
-        "value": bathroomV
+        "comment": bathroomC, // str
+        "value": bathroomV // str
       },
       // балкон
       "balcony": {
-        "comment": balconyC,
-        "value": balconyV
+        "comment": balconyC, // str
+        "value": balconyV // str
       },
       // ремонт
       "repair": {
-        "comment": repairC,
-        "value": repairV,
-        "redevelopment": repair1
+        "comment": repairC, // str
+        "value": repairV, // str
+        "redevelopment": repair1 // bool
       },
       // вид из окон
       "view_from_windows": {
-        "comment": windowsC,
-        "value": windowsV // []
+        "comment": windowsC, // str
+        "value": windowsV // [str]
       }
     },
     // дом
     "house": {
-      "comment": houseC,
+      "comment": houseC, // str
       // тип дома
-      "type": houseV,
+      "type": houseV, // str
+      // безопасность
+      "security": house1, // str
       // лифт
       "elevator": {
-        "value": elevatorV,
-        "freight_elevator": elevator1
+        "value": elevatorV, // str
+        "freight_elevator": elevator1 // bool
       },
       // номер квартиры
-      "apartment_number": apartment,
+      "apartment_number": +apartment, // nbr
       // кадастровый номер
-      "cadastral_number": cadastral1,
+      "cadastral_number": +cadastral1, // nbr
       // фотографии
       "foto": {
-        "comment": fotoC,
-        "value": fotoV // []
+        "comment": fotoC, // str
+        "value": fotoV // [str]
       },
       // видео
       "video": {
-        "comment": videoC,
-        "value": videoV // []
+        "comment": videoC, // str
+        "value": videoV // [str]
       }
     },
     // квартира
     "flat": {
-      "comment": flatC,
+      "comment": flatC, // str
       // комнат
-      "rooms": flatV,
+      "rooms": flatV, // str
+      // груз. лифт
+      "freight_elevator": flat1E,
       // площадь
-      "square": flat1,
+      "square": +flat1, // nbr
       // кухня
-      "square_kitchen": flat2,
+      "square_kitchen": +flat2, // nbr
       // жилая
-      "square_residential": flat3,
+      "square_residential": +flat3, // nbr
       // этаж
-      "floor": flat4,
+      "floor": +flat4, // nbr
       // этажей
-      "floors_in_the_house": flat5,
+      "floors_in_the_house": +flat5, // nbr
       // потолки
-      "ceiling_height": flat6
+      "ceiling_height": +flat6 // nbr
     }
   }
 };

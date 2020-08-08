@@ -9,10 +9,10 @@ export const updateFormAction = createAction('[Flats] updateFormAction');
 
 export const getFlats = ({id='', ...data}={}) => (dispatch) => {
   let req = [];
+
   for (let i in data) {
     req.push(`${i}=${data[i]}`)
   }
-  req.push(`_r=${Math.random()}`)
 
   fetch(`/flats/${id}?${req.join('&')}`)
     .then(function parse(res) {

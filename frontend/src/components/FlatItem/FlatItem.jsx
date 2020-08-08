@@ -21,7 +21,7 @@ export const FlatItem = function(props) {
             )
           })
           }
-          {flat.house.foto.value.length > 4 && <div className="flat__line-other">+{flat.house.foto.value - 4}</div>}
+          {flat.house.foto.value.length > 4 && <div className="flat__line-other">+{flat.house.foto.value.length - 4}</div>}
         </div>
         <div className="flat__bottom _row">
           <div className="flat__cost">{flat.terms_of_sale.cost.value} ₽</div>

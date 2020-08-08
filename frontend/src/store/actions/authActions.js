@@ -7,7 +7,7 @@ export const registerAuthAction = createAction('[Auth] registerAuthAction');
 export const logoutAuthAction = createAction('[Auth] logoutAuthAction');
 
 export const signinAuth = (data) => (dispatch) => {
-  if (true) {
+  if (false) {
     /**
      * cookies
      */

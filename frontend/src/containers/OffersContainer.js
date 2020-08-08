@@ -6,10 +6,11 @@ import { Offers } from 'components/Offers';
 
 
 function mapStateToProps(state, ownProps) {
+  // console.log(state.flats.flats.map(i => i._id))
   return {
     ...ownProps,
-    flats1: state.flats.flats.filter(i => i.flat.rooms == 1 && i.deal.type_deal == "Продажа"),
-    flats2: state.flats.flats.filter(i => i.flat.rooms == 2 && i.deal.type_deal == "Продажа"),
+    flats1: state.flats.flats /*.filter(i => i.flat.rooms == 1 && i.deal.type_deal == "Продажа")*/,
+    flats2: state.flats.flats /*.filter(i => i.flat.rooms == 2 && i.deal.type_deal == "Продажа")*/,
   }
 }
 
