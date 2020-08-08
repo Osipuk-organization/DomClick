@@ -85,17 +85,25 @@ const additionallySchema = new Schema({
     // childrens_playground: { type: Boolean, required: true, default: false, },
     // sports_ground: { type: Boolean, required: true, default: false, },
   },
-  // infrastructure: { //Инфраструктура двора
-  //   comment: { type: String, },
-  //   school: { type: Boolean, required: true, default: false, },
-  //   fitness: { type: Boolean, required: true, default: false, },
-  //   park: { type: Boolean, required: true, default: false, },
-  //   kindergarten: { type: Boolean, required: true, default: false, },
-  //   mall: { type: Boolean, required: true, default: false, },
-  // },
   infrastructure: { //Инфраструктура двора
     comment: { type: String, },
     value: [String]
+  },
+  bathroom: {
+    comment: { type: String, },
+    value: {
+      type: String,
+      required: true,
+      enum: ['Совмещенный', 'Раздельный', 'Более одного'],
+    },
+  },
+  balcony: {
+    comment: { type: String, },
+    value: {
+      type: String,
+      required: true,
+      enum: ['1', '2', '3+', 'Нет'],
+    },
   },
   repair: { //Ремонт
     comment: { type: String, },
@@ -138,11 +146,11 @@ const houseSchema = new Schema({
   cadastral_number: { type: Number, required: true },//сделать проверку
   foto: { //Фото
     comment: { type: String, },
-    value: { type: [String], },
+    value: [String],
   },
   video: { //Видеопросмотр
     comment: { type: String, },
-    value: { type: [String], },
+    value: [String],
   },
 });
 

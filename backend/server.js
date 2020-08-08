@@ -9,11 +9,7 @@ const session = require('express-session')
 const MongoStore = require('connect-mongo')(session)
 const dotenv = require('dotenv')
 const cowsay = require('cowsay')
-
-
-
 const helmet = require('helmet')
-
 
 //variables
 dotenv.config({ path: path.resolve(__dirname, '.env') })
@@ -30,8 +26,6 @@ app.use(helmet());
 
 //Logger
 require(path.resolve(__dirname, 'logger.js'))
-
-
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -58,69 +52,69 @@ app.use(cookieParser(process.env.COOKIE_SECRET_KEY))
 app.use(passport.initialize)
 app.use(passport.session)
 
-const multer = require('multer')
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, 'uploads/')
-  },
-  filename: (req, file, cb) => {
-    const filename = `${file.fieldname}--${new Date().toLocaleDateString()}--${new Date().toLocaleTimeString().replace(/:/g, '-')}--${file.originalname}`;
-    cb(null, filename)
-  }
-})
-const upload = multer(
-  {
-    storage: storage,
-    limits:
-    {
-      fileSize: 1024*1024*3
-    },
-    // fileFilter: fileFilter 
-  }
-)
-  .fields(
-    [
-      {
-        name: 'filedata',
-        maxCount: 4
-      }
-    ]
-  );
+// const multer = require('multer')
+// const storage = multer.diskStorage({
+//     destination: function (req, file, cb) {
+//         cb(null, 'uploads/')
+//     },
+//     filename: (req, file, cb) => {
+//         const filename = `${file.fieldname}--${new Date().toLocaleDateString()}--${new Date().toLocaleTimeString().replace(/:/g, '-')}--${file.originalname}`;
+//         cb(null, filename)
+//     }
+// })
+// const upload = multer(
+//     {
+//         storage: storage,
+//         limits: { fileSize: 1024 * 1024 * 3 },
+//         // fileFilter: fileFilter 
+//     }
+// ).fields([{
+//     name: 'filedata',
+//     maxCount: 4
+// }]);
 
-app.post("/upload", (req, res, next) => {
-  upload(req, res, (err) => {
-    if (err instanceof multer.MulterError) {
-      // Ошибка multer
-      res.status(500).send(err);
-      return
-    } else if (err) {
-      // При загрузке произошла неизвестная ошибка.
-      res.status(500).send(err);
-      return
-    }
-    const files = req.files;
-    if (files.length === 0) {
-      res.status(400).send({
-        status: false,
-        data: 'No files is selected.'
-      });
-    } else {
-      let data = [];
+// app.post("/upload", (req, res, next) => {
+//   upload(req, res, (err) => {
+//     if (err instanceof multer.MulterError) {
+//       // Ошибка multer
+//       res.status(500).send(err);
+//       return
+//     } else if (err) {
+//       // При загрузке произошла неизвестная ошибка.
+//       res.status(500).send(err);
+//       return
+//     }
+//     console.log('1',req.files)
+//     console.log('2',req.body)
+//     const files = req.files.filedata;
+//     console.log('FILES',files)
+//     if (!files) {
+//       res.status(400).send({
+//         status: false,
+//         data: 'No files is selected.'
+//       });
+//     } else {
+//       let data = [];
 
-      files.map(p => data.push({
-        name: p.originalname,
-        mimetype: p.mimetype,
-        size: p.size
-      }));
+//       files.map(p => data.push({
+//         name: p.originalname,
+//         mimetype: p.mimetype,
+//         size: p.size
+//       }));
+//       // files.map(p => data.push({
+//       //   name: p.originalFilename,
+//       //   path: p.path,
+//       //   size: p.size
+//       // }));
 
-      res.send({
-        status: true,
-        message: 'Photos are uploaded.',
-        data: data
-      });
-    }
-  })
-});
+//       res.send({
+//         status: true,
+//         message: 'Photos are uploaded.',
+//         data: data
+//       });
+//     }
+//   })
+// });
 
 
 app.use(router)
