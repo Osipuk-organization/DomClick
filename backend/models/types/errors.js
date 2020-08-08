@@ -26,6 +26,9 @@ const authError = {
   tokenNotFoundError: createError(403, "Токен не найден", {
     type: ErrorType.ERROR,
   }),
+  noPermission: createError(403, "Недостаточно прав",
+  {type: ErrorType.ERROR
+  })
 };
 
 const commonError = createError(
