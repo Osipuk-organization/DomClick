@@ -31,8 +31,6 @@ export const withFlatsForm = function (Component) {
       'deal4',
       'deal5V',
       'deal6V',
-      'terms2',
-      'terms3',
       'bathroomV',
       'balconyV',
       'repairV',
