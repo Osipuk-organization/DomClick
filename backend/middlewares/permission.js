@@ -45,8 +45,8 @@ const hasPermission = async (req, res, permission,next) => {
     if (permission.level > access.level) throw Errors.authError.noPermission
     const haveUnit = access.units.find( (unit) => unit === permission.unit)
     const haveEmployee = access.employees.find( (employee) =>  employee === permission.employee)
-    if (!!permission.unit && haveUnit) next(access)
-    else if (!!permission.employee && haveEmployee) next(access)
+    if (permission.unit !== undefined && haveUnit) next(access)
+    else if (permission.employee !== undefined && haveEmployee) next(access)
     else throw Errors.authError.noPermission
 };
 
