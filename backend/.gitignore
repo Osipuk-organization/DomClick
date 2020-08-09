@@ -5,3 +5,6 @@ dist
 storybook-static
 .idea
 .env
+
+uploads
+access.log

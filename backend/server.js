@@ -51,7 +51,12 @@ app.use(
 app.use(cookieParser(process.env.COOKIE_SECRET_KEY))
 app.use(passport.initialize)
 app.use(passport.session)
-
+// disablse cache
+// app.set('etag', false)
+app.use((req, res, next) => {
+  res.set('Cache-Control', 'no-store, no-cache, must-revalidate, private')
+  next()
+})
 // const multer = require('multer')
 // const storage = multer.diskStorage({
 //     destination: function (req, file, cb) {
