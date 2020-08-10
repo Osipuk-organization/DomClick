@@ -28,6 +28,14 @@ const hostdb = process.env.DB_HOST
 const portdb = process.env.DB_PORT
 const authdb = process.env.DB
 
+function getImage() {
+  return new Promise((resolve, reject) => {
+    request({ url: 'https://picsum.photos/800/800', followRedirect: false }, (err, res, body) => {
+      resolve(res.headers.location);
+    });
+  })
+}
+
 async function importSeeds() {
   await tunnel(tunnel_config, (error, server) => {
     if (error) {
@@ -60,16 +68,16 @@ async function importSeeds() {
 
   await Flat.deleteMany({});
 
-  for (let i = 0; i < 50; i++) {
+  for (let i = 1; i <= 50; i++) {
     const flat = new Flat({
       owner: faker.name.findName(),
       documents: [],
       cadastral_value: {
         value: Math.floor(Math.random() * (5000000 + 1 - 500000)),
-        // comment: faker.lorem.paragraph(),
+        comment: faker.lorem.paragraph(),
       },
       address: {
-        // comment: faker.lorem.paragraph(),
+        comment: faker.lorem.paragraph(),
         city: faker.address.city(),
         streetName: faker.address.streetName(),
         county: faker.address.county(),
@@ -78,7 +86,7 @@ async function importSeeds() {
         longitude: faker.address.longitude(),
       },
       deal: {
-        // comment: faker.lorem.paragraph(),
+        comment: faker.lorem.paragraph(),
         type_deal: faker.random.arrayElement(['Продажа', 'Аренда']),
         property_type: faker.random.arrayElement(['Жилая', 'Коммерческая', 'Гараж']),
         type_of_property: faker.random.arrayElement(['Квартира', 'Комната', 'Дом', 'Таунхаус', 'Часть дома', 'Участок',]),
@@ -93,7 +101,7 @@ async function importSeeds() {
         },
       },
       terms_of_sale: {
-        // comment: faker.lorem.paragraph(),
+        comment: faker.lorem.paragraph(),
         cost: {
           value: Math.floor(Math.random() * (5000000 + 1 - 500000)),
           trade: faker.random.boolean(),
@@ -103,58 +111,42 @@ async function importSeeds() {
       },
       additionally: {
         security: {
-          // comment: faker.lorem.paragraph(),
-          doorphone: faker.random.boolean(),
-          concierge: faker.random.boolean(),
-          code_door: faker.random.boolean(),
-          closed_territory: faker.random.boolean(),
+          comment: faker.lorem.paragraph(),
+          value: [],
         },
         parking: {
-          // comment: faker.lorem.paragraph(),
-          in_the_courtyard: faker.random.boolean(),
-          underground: faker.random.boolean(),
-          barrier: faker.random.boolean(),
-          garage: faker.random.boolean(),
-          security: faker.random.boolean(),
+          comment: faker.lorem.paragraph(),
+          value: [],
         },
         the_landscaping_of_the_yard: {
-          // comment: faker.lorem.paragraph(),
-          childrens_playground: faker.random.boolean(),
-          sports_ground: faker.random.boolean(),
+          comment: faker.lorem.paragraph(),
+          value: [],
         },
         infrastructure: {
-          // comment: faker.lorem.paragraph(),
-          school: faker.random.boolean(),
-          fitness: faker.random.boolean(),
-          park: faker.random.boolean(),
-          kindergarten: faker.random.boolean(),
-          childrens_playmallround: faker.random.boolean(),
+          comment: faker.lorem.paragraph(),
+          value: [],
         },
         bathroom: {
-          // comment: faker.lorem.paragraph(),
+          comment: faker.lorem.paragraph(),
           value: faker.random.arrayElement(['Совмещенный', 'Раздельный', 'Более одного']),
         },
         balcony: {
-          // comment: faker.lorem.paragraph(),
+          comment: faker.lorem.paragraph(),
           value: faker.random.arrayElement(['1', '2', '3+', 'Нет']),
         },
         repair: {
-          // comment: faker.lorem.paragraph(),
+          comment: faker.lorem.paragraph(),
           value: faker.random.arrayElement(['Косметический', 'Евро', 'Дизайнерский', 'Без ремонта']),
           replanning: faker.random.boolean(),
         },
         view_from_windows: {
-          // comment: faker.lorem.paragraph(),
-          yard: faker.random.boolean(),
-          street: faker.random.boolean(),
-          park: faker.random.boolean(),
-          reservoir: faker.random.boolean(),
-          forest: faker.random.boolean(),
+          comment: faker.lorem.paragraph(),
+          value: [],
         }
       },
       house: {
-        // comment: faker.lorem.paragraph(),
-        // security: faker.lorem.paragraph(),
+        comment: faker.lorem.paragraph(),
+        security: faker.lorem.paragraph(),
         type: faker.random.arrayElement(['Кирпичный', 'Панельный', 'Монолитный', 'Деревянный', 'Блочный']),
         elevator: {
           value: faker.random.arrayElement(['1', '2', '3+']),
@@ -163,16 +155,16 @@ async function importSeeds() {
         apartment_number: Math.floor(Math.random() * (300 + 1 - 1)),
         cadastral_number: Math.floor(Math.random() * (10000 + 1 - 1000)),
         foto: {
-          // comment: faker.lorem.paragraph(),
+          comment: faker.lorem.paragraph(),
           value: [],
         },
         video: {
-          // comment: faker.lorem.paragraph(),
+          comment: faker.lorem.paragraph(),
           value: [],
         },
       },
       flat: {
-        // comment: faker.lorem.paragraph(),
+        comment: faker.lorem.paragraph(),
         rooms: faker.random.arrayElement(['1', '2', '3', '4', '5+', 'Студия']),
         freight_elevator: faker.random.boolean(),
         square: Math.floor(Math.random() * (300)),
@@ -183,9 +175,20 @@ async function importSeeds() {
         ceiling_height: Math.floor(Math.random() * (5 + 1 - 1)),
       },
     });
+    for (let j = 1; j <= faker.random.number({ min: 2, max: 10 }); j++) {
+      flat.house.foto.value.push(await getImage())
+      console.log(`Get image ${j} for ${flat.owner}`);
+    }
+    for (let h = 0; h < 3; h++) {
+      flat.additionally.security.value.push('value')
+      flat.additionally.parking.value.push('value')
+      flat.additionally.the_landscaping_of_the_yard.value.push('value')
+      flat.additionally.infrastructure.value.push('value')
+      flat.additionally.view_from_windows.value.push('value')
+    }
 
     await flat.save();
-    console.log(`Created flat ${flat.owner}`);
+    cursor.green().write(`Created flat ${i} ${flat.owner}\n`).reset()
   }
 
   process.exit();
