@@ -20,6 +20,7 @@ export const getFlats = ({id='', ...data}={}) => (dispatch) => {
       return res.json()
     })
     .then(function result(flats) {
+      console.log('GET flats', flats.flats.map(i => i._id));
       dispatch(getFlatsAction(flats))
     })
     .catch(function error(err) {
@@ -44,6 +45,7 @@ export const createFlats = (data) => (dispatch) => {
       return res.json()
     })
     .then(function result(flats) {
+      console.log('POST flats', flats);
       dispatch(createFlatsAction(flats))
     })
     .catch(function error(err) {
@@ -67,6 +69,7 @@ export const updateFlats = ({id='', ...data}) => (dispatch) => {
       return res.json()
     })
     .then(function result(flats) {
+      console.log('PUT flats', flats);
       dispatch(updateFlatsAction(flats))
     })
     .catch(function error(err) {
@@ -90,6 +93,7 @@ export const deleteFlats = ({id='', ...data}) => (dispatch) => {
       return res.json()
     })
     .then(function result(flats) {
+      console.log('DELETE flats', flats);
       dispatch(deleteFlatsAction(flats))
     })
     .catch(function error(err) {

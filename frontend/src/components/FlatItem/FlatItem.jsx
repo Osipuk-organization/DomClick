@@ -3,14 +3,16 @@ import './FlatItem.scss';
 import {Link} from "react-router-dom";
 
 export const FlatItem = function(props) {
-  const {flat} = props;
+  const {
+    flat,
+    admin,
+    updateFlats,
+    deleteFlats,
+  } = props;
 
   return (
     <Fragment>
-      { flat && <Link
-        to={{
-          pathname: `/card/${flat.id || flat._id}`,
-        }}
+      { flat && <div
         className="link flat__item _row"
       >
         <div className="flat__top-img" style={{backgroundImage: `url(${flat.house.foto.value[0]})`}}></div>
@@ -34,10 +36,21 @@ export const FlatItem = function(props) {
             <div className="flat__info-item _address">{flat.address.city}, ул. {flat.address.streetName}</div>
           </div>
           <div className="flat__button-box">
-            <div className="button">Посмотреть</div>
+            <Link
+              to={{
+                pathname: `/card/${flat.id || flat._id}`,
+              }}
+              className="button">Посмотреть</Link>
           </div>
+          {admin &&
+          <Fragment>
+            <div className="flat__button-box">
+              <div className="button" onClick={deleteFlats.bind(null, {id: flat.id || flat._id})}>Удалить</div>
+            </div>
+          </Fragment>
+          }
         </div>
-      </Link>
+      </div>
       }
     </Fragment>
   );

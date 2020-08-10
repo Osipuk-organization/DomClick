@@ -25,11 +25,6 @@ export const TopMenu = function(props) {
               </nav>
               <div className="top-menu__space"></div>
               <div className="top-menu__right">
-                  {isAuth &&
-                  <Link className="link top-menu__link" to="/card/add">
-                      Добавить объект
-                  </Link>
-                  }
                   <Link className="link top-menu__link" to="/sign-in">
                       Личный кабинет
                   </Link>
