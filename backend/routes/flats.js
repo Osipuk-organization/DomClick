@@ -1,6 +1,8 @@
 
 const router = require("express").Router();
 const mongoose = require("mongoose");
+const queryString = require('query-string');
+
 const authenticateMiddleware = require("../middlewares/authentication");
 const Flats = require('../models/flat');
 
@@ -28,12 +30,37 @@ const upload = multer(
 
 router.route('/')
     .get(async (req, res) => {
-        let { page = 1, limit = 10, ...filter } = req.query;
-        page = +page;
-        limit = +limit;
-        const flats = await Flats.find(filter).skip(limit * (page - 1)).limit(limit);
+        const query = queryString.parseUrl(req.url, {
+            parseBooleans: true,
+            parseNumbers: true,
+            skipNull: true,
+            skipEmptyString: true
+        }).query
+        const { page = 1, limit = 10, search, filter } = query;
+        // filter get params
+        let searchParse = {}
+        if (Array.isArray(search)) {
+            search.forEach(i => {
+                if (!searchParse[Object.keys(JSON.parse(`{${i}}`))[0]]) {
+                    searchParse[Object.keys(JSON.parse(`{${i}}`))[0]] = [Object.values(JSON.parse(`{${i}}`))[0]]
+                } else {
+                    searchParse[Object.keys(JSON.parse(`{${i}}`))[0]].push(Object.values(JSON.parse(`{${i}}`))[0])
+                }
+            })
+            for (var prop in searchParse) {
+                searchParse[prop].forEach(i => typeof i === 'string' && i[0] === '/' ? searchParse[prop] = new RegExp(i.toString().slice(1, -1)) : searchParse[prop] = i)
+            }
+        } else {
+            searchParse = search ? JSON.parse(`{${search}}`, (k, v) => {
+                return typeof v === 'string' && v[0] === '/' ? new RegExp(v.toString().slice(1, -1)) : v
+            }) : null
+        }
+
+        const requestDB = [searchParse, filter ? JSON.parse(`{${filter}}`) : null]
+
+        const flats = await Flats.find(...requestDB).skip(limit * (page - 1)).limit(limit);
         const count = flats.length;
-        const total = await Flats.find(filter).countDocuments();
+        const total = await Flats.find(...requestDB).countDocuments();
         res.status(200).json({
             page,
             total,
@@ -47,9 +74,6 @@ router.route('/')
     // })
     .post(async (req, res) => {
         //new flat
-
-        // req.files
-
         const foto = [];
         upload(req, res, (err) => {
             if (err instanceof multer.MulterError) {
@@ -61,13 +85,12 @@ router.route('/')
                 res.status(500).send(err);
                 return
             }
-            const files = req.files.filedata;
-            if (!files) {
-                res.status(400).send({ data: 'No files is selected.' });
-            } else {
-                console.log('FLATS')
-                console.log('1', req.files)
-                console.log('2', req.body)
+            const files = req.files ? req.files.filedata : null;
+            if (files) {
+                // res.status(400).send({ data: 'No files is selected.' });
+                // } else {
+                console.log('FILES', req.files)
+                console.log('BODY', req.body)
 
                 files.forEach(p => foto.push({
                     // name: p.originalname,
