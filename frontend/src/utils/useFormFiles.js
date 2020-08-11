@@ -54,7 +54,6 @@ export const useFormFiles = function ({accept=[], size}, name="", callback) {
 
   return {
     data: files,
-    id: name,
     name,
     accept,
     type: 'file',
