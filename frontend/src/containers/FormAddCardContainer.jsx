@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { compose } from "redux";
+import { withRouter } from "react-router";
 import { FormCard } from 'components/FormCard';
 import { withFlatsForm } from 'hoc/withFlatsForm';
 import { createFlats } from "actions/flatsActions";
@@ -20,11 +21,12 @@ function mapDispatchToProps(dispatch, props) {
 
   return {
     ...otherProps,
-    sendForm: () => dispatch(createFlats(formTemplate)),
+    sendForm: (history) => dispatch(createFlats(formTemplate, history)),
   }
 }
 
 export const FormAddCardContainer = compose(
+  withRouter,
   withFlatsForm,
   connect(mapStateToProps, mapDispatchToProps),
 )(FormCard);

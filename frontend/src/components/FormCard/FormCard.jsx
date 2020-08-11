@@ -11,17 +11,18 @@ import { DCButton } from "components/DCButton";
 
 export const FormCard = function(props) {
   const {
+    history,
     inputs,
     sendForm,
   } = props;
 
   const mapData = {
-    center: [55.751574, 37.573856],
+    center: [+inputs.addressX.value, +inputs.addressY.value],
     zoom: 12,
   }
 
   const coordinates = [
-    [55.751574, 37.573856],
+    [+inputs.addressX.value, +inputs.addressY.value],
   ]
 
   return (
@@ -39,7 +40,7 @@ export const FormCard = function(props) {
         label="Документы"
         fullWith
       >
-        <DCAttachement />
+        <DCAttachement {...inputs.documents} multiple />
       </DCInputField>
 
       <DCInputField
@@ -55,10 +56,13 @@ export const FormCard = function(props) {
         withComment
         fullWith
       >
+        <DCInput size={6} {...inputs.address2} />
+        <DCInput size={6} {...inputs.address3} />
         <DCInput size={6} {...inputs.addressV} />
+        <DCInput size={6} {...inputs.address1} />
       </DCInputField>
 
-      <Ymaps mapData={mapData} coordinates={coordinates} />
+      <Ymaps className="map-info__frame" mapData={mapData} coordinates={coordinates} />
 
       <DCInputField
         label="Сделка"
@@ -231,15 +235,10 @@ export const FormCard = function(props) {
             label="Газ"
             labelSize="subheader"
           >
-            <DCButtonGroup
-              group={[
-                {
-                  label: 'Да'
-                },
-                {
-                  label: 'Нет'
-                }
-              ]}
+            <DCCheckbox
+              label="Есть"
+              size="small"
+              bold
               {...inputs.terms2}
             />
           </DCInputField>
@@ -248,15 +247,10 @@ export const FormCard = function(props) {
             label="Мусоропровод"
             labelSize="subheader"
           >
-            <DCButtonGroup
-              group={[
-                {
-                  label: 'Да'
-                },
-                {
-                  label: 'Нет'
-                }
-              ]}
+            <DCCheckbox
+              label="Есть"
+              size="small"
+              bold
               {...inputs.terms3}
             />
           </DCInputField>
@@ -556,7 +550,7 @@ export const FormCard = function(props) {
         withComment
         fullWith
       >
-        <DCAttachement/>
+        <DCAttachement {...inputs.fotoV} multiple />
       </DCInputField>
 
       <DCInputField
@@ -565,7 +559,7 @@ export const FormCard = function(props) {
         withComment
         fullWith
       >
-        <DCAttachement/>
+        <DCAttachement {...inputs.videoV} multiple />
       </DCInputField>
 
       <DCInputField
@@ -653,7 +647,7 @@ export const FormCard = function(props) {
         rounded
         active
         label="Сохранить"
-        onClick={sendForm}
+        onClick={sendForm.bind(null, history)}
       />
     </div>
   );

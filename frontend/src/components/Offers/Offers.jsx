@@ -7,13 +7,23 @@ export const Offers = function(props) {
   const {
     flats1,
     flats2,
-    getFlats
+    getFlats,
   } = props;
 
   useEffect(function() {
-    if (flats1.length < 10 || flats2.length < 10) {
-      getFlats();
+    /**
+     * todo
+     * поменять на фильтр получения 1к. и 2к.
+     */
+
+    if (flats1.length < 10) {
+      getFlats({search:`"flat.rooms":"1"`});
     }
+
+    if (flats2.length < 10) {
+      getFlats({search:`"flat.rooms":"2"`});
+    }
+
   }, [null]);
 
   return (
