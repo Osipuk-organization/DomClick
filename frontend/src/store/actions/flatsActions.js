@@ -28,16 +28,24 @@ export const getFlats = ({id='', ...data}={}) => (dispatch) => {
 };
 
 export const createFlats = (data, history) => (dispatch) => {
-  console.log(JSON.stringify(data))
+  let formData = new FormData();
+  formData.append('json', JSON.stringify(data));
+
+  function append(binary, name) {
+    binary.forEach(i => {
+      formData.append(`${name}[]`, i, i.name);
+    })
+  }
+
+  append(data.documentsBinary, 'documents');
+  append(data.fotoBinary, 'foto');
+  append(data.videoBinary, 'video');
+
   fetch('/flats', {
     method: 'post',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
     cache: 'no-cache',
     credentials: 'same-origin',
-    body: JSON.stringify(data)
+    body: formData,
   })
     .then(function parse(res) {
       statusCode(res, 200);
@@ -92,11 +100,11 @@ export const deleteFlats = ({id='', ...data}) => (dispatch) => {
       dispatch(deleteFlatsAction( {type: "error", message: err} ))
     });
 };
+
 export const updateForm = (value, name) => (dispatch) => {
   try {
     dispatch(updateFormAction(value, name))
   } catch (err) {
     dispatch(updateFormAction({type: "error", message: err}))
   }
-
 };
