@@ -68,7 +68,7 @@ export const formTemplate = (form) => {
     // ФИО
     "owner": owner, // str
     // документы
-    "documents": documents, // [str]
+    "documents": documents, // [obj]
     // оценочная стоимость
     "cadastral_value": {
       "value": +cadastralV, // nbr
@@ -183,12 +183,12 @@ export const formTemplate = (form) => {
       // фотографии
       "foto": {
         "comment": fotoC, // str
-        "value": fotoV // [str]
+        "value": fotoV // [obj]
       },
       // видео
       "video": {
         "comment": videoC, // str
-        "value": videoV // [str]
+        "value": videoV // [obj]
       }
     },
     // квартира

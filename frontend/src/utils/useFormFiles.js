@@ -28,15 +28,18 @@ export const useFormFiles = function ({accept=[], size}, name="", callback) {
       res[i] = new Promise((resolve, reject) => {
         const reader = new FileReader();
         reader.onload = function (e) {
-          resolve({
-            type: file.type,
-            name: file.name,
-            size: file.size,
-            lastModified: file.lastModified,
-            lastModifiedDate: file.lastModifiedDate,
-            webkitRelativePath: file.webkitRelativePath,
-            data: e.target.result,
-          })
+          resolve(
+            file
+          //   {
+          //   type: file.type,
+          //   name: file.name,
+          //   size: file.size,
+          //   lastModified: file.lastModified,
+          //   lastModifiedDate: file.lastModifiedDate,
+          //   webkitRelativePath: file.webkitRelativePath,
+          //   data: e.target.result,
+          // }
+          )
         };
         reader.readAsDataURL(file);
       });

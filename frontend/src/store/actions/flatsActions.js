@@ -28,7 +28,9 @@ export const getFlats = ({id='', ...data}={}) => (dispatch) => {
 };
 
 export const createFlats = (data, history) => (dispatch) => {
-  console.log(JSON.stringify(data))
+  let formData = new FormData();
+  formData.append('json', data);
+  console.log(data)
   fetch('/flats', {
     method: 'post',
     headers: {
@@ -37,7 +39,7 @@ export const createFlats = (data, history) => (dispatch) => {
     },
     cache: 'no-cache',
     credentials: 'same-origin',
-    body: JSON.stringify(data)
+    body: formData,
   })
     .then(function parse(res) {
       statusCode(res, 200);
