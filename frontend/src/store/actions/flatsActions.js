@@ -29,8 +29,9 @@ export const getFlats = ({id='', ...data}={}) => (dispatch) => {
 
 export const createFlats = (data, history) => (dispatch) => {
   let formData = new FormData();
-  formData.append('json', data);
-  console.log(data)
+  formData.append('json', JSON.stringify(data));
+  formData.append('foto', data.house.foto.value);
+  console.log(data.house.foto.value)
   fetch('/flats', {
     method: 'post',
     cache: 'no-cache',
