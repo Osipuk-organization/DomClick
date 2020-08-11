@@ -4,6 +4,7 @@ import { useFormInput } from 'utils/useFormInput';
 import { useFormCheckbox } from 'utils/useFormCheckbox';
 import { useFormCheckboxGroup } from 'utils/useFormCheckboxGroup';
 import { useFormRadioGroup } from 'utils/useFormRadioGroup';
+import { useFormFiles } from 'utils/useFormFiles';
 import { formTemplate } from 'utils/formTemplate';
 import { updateForm } from 'actions/flatsActions';
 
@@ -39,6 +40,12 @@ export const withFlatsForm = function (Component) {
       'flatV',
     ];
 
+    const files = [
+      'documents',
+      'fotoV',
+      'videoV',
+    ];
+
     const inputs = {};
 
     Object.keys(form)
@@ -52,6 +59,8 @@ export const withFlatsForm = function (Component) {
     checkboxGroup.forEach(i => inputs[i] = useFormCheckboxGroup(form[i], i, updateForm));
 
     radioGroup.forEach(i => inputs[i] = useFormRadioGroup(form[i], i, updateForm));
+
+    files.forEach(i => inputs[i] = useFormFiles(form[i], i, updateForm));
 
     return (
       <Fragment>

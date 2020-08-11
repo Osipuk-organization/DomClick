@@ -1,9 +1,11 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import './SignIn.scss';
 import {useFormInput} from "utils/useFormInput";
+import {useFormCheckbox} from "utils/useFormCheckbox";
 import {Link} from "react-router-dom";
 import {SliderRow} from "components/SliderRow";
 import {FlatItem} from "components/FlatItem";
+import {DCCheckbox} from "components/DCCheckbox";
 
 export const SignIn = (props) => {
   const {
@@ -23,9 +25,14 @@ export const SignIn = (props) => {
 
   const email = useFormInput('admin');
   const password = useFormInput('admin');
+  const rememberMe = useFormCheckbox(true);
 
   function submit() {
-    signinAuth({login: email.value, password: password.value});
+    signinAuth({
+      login: email.value,
+      password: password.value,
+      rememberMe: rememberMe.checked,
+    });
   }
 
   return (
@@ -49,6 +56,14 @@ export const SignIn = (props) => {
               />
             </label>
             <button onClick={submit} className="sign-in__form__button">Войти</button>
+            <div>
+              <DCCheckbox
+                label="Запомнить меня"
+                size="small"
+                bold
+                {...rememberMe}
+              />
+            </div>
           </div>
           <p className="sign-in__to-sign-up">
             <Link to="/registration">Зарегистрироваться</Link>

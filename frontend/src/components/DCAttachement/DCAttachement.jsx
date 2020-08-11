@@ -4,18 +4,19 @@ import { DCButton } from 'components/DCButton';
 import './DCAttachement.scss';
 
 export const DCAttachement = (props) => {
-
 	const {
-		size
+		dragNdrop,
+		...otherProps
 	} = props;
-	
+
 	const classes = {
 		'DCAttachement': true
 	};
-	
+
+
 	return (
-		<div className="DCAttachement">
-			<input {...props} id="file-input" type="file" multiple />
+		<div className="DCAttachement" {...dragNdrop} >
+			<input {...otherProps} />
 			<DCButton
 				active
 				label="Выберите файл"

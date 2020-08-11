@@ -17,7 +17,7 @@ export const useFormCheckboxGroup = function (initialValue, name, callback) {
     setValue(res);
 
     try {
-      callback({value: res, name});
+      callback && callback({value: res, name});
     } catch (err) {
       console.log(err);
     }

@@ -8,7 +8,7 @@ export const useFormInput = function (initialValue, name="", callback) {
   const handleChange = function (e) {
     setValue(e.target.value);
     try {
-      callback({value: e.target.value, name});
+      callback && callback({value: e.target.value, name});
     } catch (err) {
       console.log(err);
     }

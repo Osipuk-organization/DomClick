@@ -83,6 +83,9 @@ export default handleActions({
     let res = {};
 
     if (action.payload.type !== "error") {
+      /**
+       * need add filter
+       */
       res = {
         ...state,
         flats: state.flats.concat(action.payload.flats),
@@ -141,12 +144,8 @@ export default handleActions({
     let res = {};
 
     if (action.payload.type !== "error") {
-      /**
-       * todo
-       * add filter
-       */
       res = {
-        flats: [],
+        flats: state.flats.filter(i => i.id != action.payload && i._id != action.payload),
       };
     } else {
       res = {

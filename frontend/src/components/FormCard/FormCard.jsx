@@ -11,6 +11,7 @@ import { DCButton } from "components/DCButton";
 
 export const FormCard = function(props) {
   const {
+    history,
     inputs,
     sendForm,
   } = props;
@@ -39,7 +40,7 @@ export const FormCard = function(props) {
         label="Документы"
         fullWith
       >
-        <DCAttachement />
+        <DCAttachement {...inputs.documents} multiple />
       </DCInputField>
 
       <DCInputField
@@ -549,7 +550,7 @@ export const FormCard = function(props) {
         withComment
         fullWith
       >
-        <DCAttachement/>
+        <DCAttachement {...inputs.fotoV} multiple />
       </DCInputField>
 
       <DCInputField
@@ -558,7 +559,7 @@ export const FormCard = function(props) {
         withComment
         fullWith
       >
-        <DCAttachement/>
+        <DCAttachement {...inputs.videoV} multiple />
       </DCInputField>
 
       <DCInputField
@@ -646,7 +647,7 @@ export const FormCard = function(props) {
         rounded
         active
         label="Сохранить"
-        onClick={sendForm}
+        onClick={sendForm.bind(null, history)}
       />
     </div>
   );

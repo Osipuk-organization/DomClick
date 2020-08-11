@@ -16,9 +16,14 @@ export const Offers = function(props) {
      * поменять на фильтр получения 1к. и 2к.
      */
 
-    if (flats1.length < 10 || flats2.length < 10) {
-      getFlats();
+    if (flats1.length < 10) {
+      getFlats({search:`"flat.rooms":"1"`});
     }
+
+    if (flats2.length < 10) {
+      getFlats({search:`"flat.rooms":"2"`});
+    }
+
   }, [null]);
 
   return (

@@ -10,7 +10,7 @@ export const useFormRadioGroup = function (initialValue, name, callback) {
       setValue(e.target.dataset.value);
     }
     try {
-      callback({value: e.target.dataset.value, name});
+      callback && callback({value: e.target.dataset.value, name});
     } catch (err) {
       console.log(err);
     }
