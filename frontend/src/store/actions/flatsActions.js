@@ -33,10 +33,6 @@ export const createFlats = (data, history) => (dispatch) => {
   console.log(data)
   fetch('/flats', {
     method: 'post',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
     cache: 'no-cache',
     credentials: 'same-origin',
     body: formData,
