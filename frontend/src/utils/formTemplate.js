@@ -67,8 +67,6 @@ export const formTemplate = (form) => {
   return {
     // ФИО
     "owner": owner, // str
-    // документы
-    "documents": documents, // [obj]
     // оценочная стоимость
     "cadastral_value": {
       "value": +cadastralV, // nbr
@@ -183,12 +181,10 @@ export const formTemplate = (form) => {
       // фотографии
       "foto": {
         "comment": fotoC, // str
-        "value": fotoV // [obj]
       },
       // видео
       "video": {
         "comment": videoC, // str
-        "value": videoV // [obj]
       }
     },
     // квартира
@@ -210,6 +206,9 @@ export const formTemplate = (form) => {
       "floors_in_the_house": +flat5, // nbr
       // потолки
       "ceiling_height": +flat6 // nbr
-    }
+    },
+    "documentsBinary": documents, // [obj]
+    "fotoBinary": fotoV, // [obj]
+    "videoBinary": videoV // [obj]
   }
 };

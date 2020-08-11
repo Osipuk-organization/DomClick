@@ -30,8 +30,17 @@ export const getFlats = ({id='', ...data}={}) => (dispatch) => {
 export const createFlats = (data, history) => (dispatch) => {
   let formData = new FormData();
   formData.append('json', JSON.stringify(data));
-  formData.append('foto', data.house.foto.value);
-  console.log(data.house.foto.value)
+
+  function append(binary, name) {
+    binary.forEach(i => {
+      formData.append(name, i);
+    })
+  }
+
+  append(data.documentsBinary, 'documents');
+  append(data.fotoBinary, 'foto');
+  append(data.videoBinary, 'video');
+
   fetch('/flats', {
     method: 'post',
     cache: 'no-cache',
@@ -91,11 +100,11 @@ export const deleteFlats = ({id='', ...data}) => (dispatch) => {
       dispatch(deleteFlatsAction( {type: "error", message: err} ))
     });
 };
+
 export const updateForm = (value, name) => (dispatch) => {
   try {
     dispatch(updateFormAction(value, name))
   } catch (err) {
     dispatch(updateFormAction({type: "error", message: err}))
   }
-
 };

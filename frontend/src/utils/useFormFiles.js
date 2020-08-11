@@ -3,7 +3,7 @@ import React, {
 } from "react";
 
 export const useFormFiles = function ({accept=[], size}, name="", callback) {
-  const [files, setFiles] = useState([]);
+  const [files, setFiles] = useState("");
 
   const stopProp = function(e) {
     e.stopPropagation();
@@ -28,20 +28,9 @@ export const useFormFiles = function ({accept=[], size}, name="", callback) {
       res[i] = new Promise((resolve, reject) => {
         const reader = new FileReader();
         reader.onload = function (e) {
-          resolve(
-            file
-          //   {
-          //   type: file.type,
-          //   name: file.name,
-          //   size: file.size,
-          //   lastModified: file.lastModified,
-          //   lastModifiedDate: file.lastModifiedDate,
-          //   webkitRelativePath: file.webkitRelativePath,
-          //   data: e.target.result,
-          // }
-          )
+          resolve(file)
         };
-        reader.readAsDataURL(file);
+        reader.readAsBinaryString(file);
       });
     }
 
