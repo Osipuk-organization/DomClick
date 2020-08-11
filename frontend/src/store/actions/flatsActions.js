@@ -33,7 +33,7 @@ export const createFlats = (data, history) => (dispatch) => {
 
   function append(binary, name) {
     binary.forEach(i => {
-      formData.append(name, i);
+      formData.append(`${name}[]`, i, i.name);
     })
   }
 
