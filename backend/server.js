@@ -51,76 +51,13 @@ app.use(
 app.use(cookieParser(process.env.COOKIE_SECRET_KEY))
 app.use(passport.initialize)
 app.use(passport.session)
+
 // disablse cache
 // app.set('etag', false)
 app.use((req, res, next) => {
   res.set('Cache-Control', 'no-store, no-cache, must-revalidate, private')
   next()
 })
-// const multer = require('multer')
-// const storage = multer.diskStorage({
-//     destination: function (req, file, cb) {
-//         cb(null, 'uploads/')
-//     },
-//     filename: (req, file, cb) => {
-//         const filename = `${file.fieldname}--${new Date().toLocaleDateString()}--${new Date().toLocaleTimeString().replace(/:/g, '-')}--${file.originalname}`;
-//         cb(null, filename)
-//     }
-// })
-// const upload = multer(
-//     {
-//         storage: storage,
-//         limits: { fileSize: 1024 * 1024 * 3 },
-//         // fileFilter: fileFilter 
-//     }
-// ).fields([{
-//     name: 'filedata',
-//     maxCount: 4
-// }]);
-
-// app.post("/upload", (req, res, next) => {
-//   upload(req, res, (err) => {
-//     if (err instanceof multer.MulterError) {
-//       // Ошибка multer
-//       res.status(500).send(err);
-//       return
-//     } else if (err) {
-//       // При загрузке произошла неизвестная ошибка.
-//       res.status(500).send(err);
-//       return
-//     }
-//     console.log('1',req.files)
-//     console.log('2',req.body)
-//     const files = req.files.filedata;
-//     console.log('FILES',files)
-//     if (!files) {
-//       res.status(400).send({
-//         status: false,
-//         data: 'No files is selected.'
-//       });
-//     } else {
-//       let data = [];
-
-//       files.map(p => data.push({
-//         name: p.originalname,
-//         mimetype: p.mimetype,
-//         size: p.size
-//       }));
-//       // files.map(p => data.push({
-//       //   name: p.originalFilename,
-//       //   path: p.path,
-//       //   size: p.size
-//       // }));
-
-//       res.send({
-//         status: true,
-//         message: 'Photos are uploaded.',
-//         data: data
-//       });
-//     }
-//   })
-// });
-
 
 app.use(router)
 

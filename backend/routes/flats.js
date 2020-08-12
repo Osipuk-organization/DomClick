@@ -2,31 +2,25 @@
 const router = require("express").Router();
 const mongoose = require("mongoose");
 const queryString = require('query-string');
+const multer = require('multer')
+
+const storage = require('../config/multer');
+
 
 const authenticateMiddleware = require("../middlewares/authentication");
 const Flats = require('../models/flat');
 
-
-const multer = require('multer')
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, 'uploads/')
-    },
-    filename: (req, file, cb) => {
-        const filename = `${file.fieldname}--${new Date().toLocaleDateString()}--${new Date().toLocaleTimeString().replace(/:/g, '-')}--${file.originalname}`;
-        cb(null, filename)
-    }
-})
 const upload = multer(
     {
         storage: storage,
         limits: { fileSize: 1024 * 1024 * 3 },
         // fileFilter: fileFilter 
     }
-).fields([{
-    name: 'filedata',
-    maxCount: 4
-}]);
+).fields([
+    { name: 'foto', maxCount: 2 },
+    { name: 'video', maxCount: 2 },
+    { name: 'documents', maxCount: 2 },
+])
 
 router.route('/')
     .get(async (req, res) => {
@@ -36,7 +30,7 @@ router.route('/')
             skipNull: true,
             skipEmptyString: true
         }).query
-        const { page = 1, limit = 10, search, filter } = query;
+        const { page = 1, limit = 10, search, filter } = req.query;
         // filter get params
         let searchParse = {}
         if (Array.isArray(search)) {
@@ -68,48 +62,38 @@ router.route('/')
             flats,
         });
     })
-    // .all(authenticateMiddleware, async (req, res, next) => {
-    //     // Проверка на права
-    //     next();
-    // })
-    .post(async (req, res) => {
-        //new flat
-        const foto = [];
-        upload(req, res, (err) => {
-            if (err instanceof multer.MulterError) {
-                // Ошибка multer
-                res.status(500).send(err);
-                return
-            } else if (err) {
-                // При загрузке произошла неизвестная ошибка.
-                res.status(500).send(err);
-                return
-            }
-            const files = req.files ? req.files.filedata : null;
-            if (files) {
-                // res.status(400).send({ data: 'No files is selected.' });
-                // } else {
-                console.log('FILES', req.files)
-                console.log('BODY', req.body)
+    .all(authenticateMiddleware, async (req, res, next) => {
+        // Проверка на права
+        next();
+    })
+    .post(upload, async (req, res) => {
 
-                files.forEach(p => foto.push({
-                    // name: p.originalname,
-                    // filename: p.filename,
-                    path: p.path,
-                    // size: p.size
-                }));
+        // upload(req, res, err => {
+        //     if (err) return next(err)
+        //     if (err instanceof multer.MulterError) {
+        //         // Ошибка multer
+        //         res.status(500).send(err);
+        //         return
+        //     } else if (err) {
+        //         // При загрузке произошла неизвестная ошибка.
+        //         res.status(500).send(err);
+        //         return
+        //     }
+        // })
 
-                // res.send({
-                //     status: true,
-                //     message: 'Photos are uploaded.',
-                //     data: data
-                // });
-            }
-        })
+        const files = {}
 
+        for (let name in req.files) {
+            files[name] = []
+            req.files[name].forEach(p => {
+                files[name].push(p.path)
+            });
+        }
 
-        const flat = new Flats(req.body);
-        flat.house.foto.value = foto;
+        const flat = new Flats(JSON.parse(req.body.json));
+        flat.house.foto.value = files.foto;
+        flat.house.video.value = files.video;
+        flat.documents = files.documents;
         const savedFlat = await flat.save(
             (err, item) => {
                 if (err) {
@@ -176,7 +160,7 @@ router.route('/:id')
                     if (item.deletedCount === 0) {
                         res.status(404).send({ 'error': 'нет контента' });
                     } else {
-                        res.status(204).send({ 'delete': item });
+                        res.status(200).send({ 'delete': item });
                     }
                     // res.redirect('/admin/main');
                 }

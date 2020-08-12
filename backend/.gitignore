@@ -6,5 +6,7 @@ storybook-static
 .idea
 .env
 
-uploads
+uploads/foto/*
+uploads/video/*
+uploads/documents/*
 access.log
