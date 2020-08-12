@@ -7,7 +7,7 @@ export const registerAuthAction = createAction('[Auth] registerAuthAction');
 export const logoutAuthAction = createAction('[Auth] logoutAuthAction');
 
 export const signinAuth = (data) => (dispatch) => {
-  fetch('/auth/signin', {
+  fetch('http://osipuk.ru:4000/auth/signin', {
     method: 'post',
     headers: {
       'Accept': 'application/json',
@@ -31,7 +31,7 @@ export const signinAuth = (data) => (dispatch) => {
 };
 
 export const registerAuth = (data) => (dispatch) => {
-  fetch('/auth/register', {
+  fetch('http://osipuk.ru:4000/auth/register', {
     method: 'post',
     headers: {
       'Accept': 'application/json',
@@ -54,7 +54,7 @@ export const registerAuth = (data) => (dispatch) => {
 };
 
 export const logoutAuth = (data) => (dispatch) => {
-  fetch('/auth/logout', {
+  fetch('http://osipuk.ru:4000/auth/logout', {
     method: 'post',
     cache: 'no-cache',
     credentials: 'same-origin',
@@ -72,7 +72,7 @@ export const logoutAuth = (data) => (dispatch) => {
 };
 
 export const verify = (data) => (dispatch) => {
-  fetch('/verify', {
+  fetch('http://osipuk.ru:4000/verify', {
     method: 'get',
     cache: 'no-cache',
     credentials: 'same-origin',

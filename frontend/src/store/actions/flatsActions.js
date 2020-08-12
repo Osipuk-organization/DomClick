@@ -14,7 +14,7 @@ export const getFlats = ({id='', ...data}={}) => (dispatch) => {
     req.push(`${i}=${data[i]}`)
   }
 
-  fetch(`/flats/${id}?${req.join('&')}`)
+  fetch(`http://osipuk.ru:4000/flats/${id}?${req.join('&')}`)
     .then(function parse(res) {
       statusCode(res, 200);
       return res.json()
@@ -41,7 +41,7 @@ export const createFlats = (data, history) => (dispatch) => {
   append(data.fotoBinary, 'foto');
   append(data.videoBinary, 'video');
 
-  fetch('/flats', {
+  fetch('http://osipuk.ru:4000/flats', {
     method: 'post',
     cache: 'no-cache',
     credentials: 'same-origin',
@@ -64,7 +64,7 @@ export const createFlats = (data, history) => (dispatch) => {
 };
 
 export const updateFlats = ({id='', ...data}) => (dispatch) => {
-  fetch(`/flats/${id}`, {
+  fetch(`http://osipuk.ru:4000/flats/${id}`, {
     method: 'put',
     headers: {
       'Accept': 'application/json',
@@ -87,7 +87,7 @@ export const updateFlats = ({id='', ...data}) => (dispatch) => {
 };
 
 export const deleteFlats = ({id='', ...data}) => (dispatch) => {
-  fetch(`/flats/${id}`, {
+  fetch(`http://osipuk.ru:4000/flats/${id}`, {
     method: 'delete',
     cache: 'no-cache',
     credentials: 'same-origin',
