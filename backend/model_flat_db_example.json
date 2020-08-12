@@ -1,0 +1,143 @@
+{
+    "owner": "ФИО Владельца квартиры",
+    "documents": [
+      "путь до документа 1",
+      "путь до документа 2"
+    ],
+    "cadastral_value": {
+      "value": 2000000,
+      "comment": "Комментарий"
+    },
+    "address": {
+      "value": "г. Астрахань, ул. Ленина, д.1",
+      "comment": "Комментарий"
+    },
+    "deal": {
+      "comment": "Комментарий",
+      "type_deal": "Продажа",
+      "property_type": "Жилая",
+      "type_of_property": "Квартира",
+      "years_in_ownership": "Меньше 3-х",
+      "number_of_owners": {
+        "name": "Количество собственников",
+        "value": "2",
+        "minor child": false
+      },
+      "registered": {
+        "name": "Прописано людей",
+        "value": "3+",
+        "minor child": false
+      }
+    },
+    "terms_of_sale": {
+      "name": "Условия продажи",
+      "comment": "Комментарий",
+      "cost": {
+        "name": "Цена",
+        "value": 1800000,
+        "trade": true
+      },
+      "gas": true,
+      "refuse_chute": true
+    },
+    "additionally": {
+      "name": "Дополнительно",
+      "comment": "Комментарий",
+      "security": {
+        "refuse_chute": true,
+        "doorphone": true,
+        "concierge": false,
+        "code_door": false,
+        "closed_territory": false
+      },
+      "parking": {
+        "name": "Парковка",
+        "comment": "Комментарий",
+        "in_the_courtyard": true,
+        "underground": true,
+        "barrier": true,
+        "garage": false,
+        "security": false
+      },
+      "the_landscaping_of_the_yard": {
+        "name": "Благоустройство двора",
+        "comment": "Комментарий",
+        "childrens_playground": true,
+        "sports_ground": true
+      },
+      "infrastructure": {
+        "name": "Инфраструктура",
+        "comment": "Комментарий",
+        "school": true,
+        "fitness": true,
+        "park": true,
+        "kindergarten": true,
+        "mall": true
+      },
+      "bathroom": {
+        "name": "Санузел",
+        "comment": "Комментарий",
+        "value": "Совмещенный"
+      },
+      "balcony": {
+        "name": "Количество балконов/лоджий",
+        "comment": "Комментарий",
+        "value": 2
+      },
+      "repair": {
+        "name": "Ремонт",
+        "comment": "Комментарий",
+        "value": "Косметический",
+        "replanning": false
+      },
+      "view_from_windows": {
+        "name": "Вид из окон",
+        "comment": "Комментарий",
+        "yard": false,
+        "street": false,
+        "park": false,
+        "reservoir": false,
+        "forest": false
+      }
+    },
+    "house": {
+      "name": "Дом",
+      "comment": "Комментарий",
+      "security": "Безопасность",
+      "type": "Кирпичный",
+      "elevator": {
+        "name": "Количество лифтов",
+        "value": 1,
+        "freight_elevator": false
+      },
+      "apartment_number": 123,
+      "cadastral_number": 123,
+      "foto": {
+        "name": "Фото",
+        "comment": "Комментарий",
+        "value": [
+          "путь до документа 1",
+          "путь до документа 2"
+        ]
+      },
+      "video": {
+        "name": "Видеопросмотр",
+        "comment": "Комментарий",
+        "value": [
+          "путь до документа 1",
+          "путь до документа 2"
+        ]
+      }
+    },
+    "flat": {
+      "comment": "Комментарий",
+      "rooms": "3",
+      "freight_elevator": false,
+      "square": 100,
+      "square_kitchen": 20,
+      "square_residential": 60,
+      "floor": 5,
+      "floors_in_the_house": 9,
+      "ceiling_height": 2.2
+    }
+  }
