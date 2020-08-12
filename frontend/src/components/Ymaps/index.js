@@ -1,0 +1,1 @@
+export {Ymaps} from './Ymaps';
