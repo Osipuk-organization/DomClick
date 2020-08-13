@@ -16,6 +16,81 @@ tags:
   description: "Access to flats"
 
 paths:
+  /auth/signin:
+    post:
+      tags:
+      - "auth"
+      summary: Авторизация
+      description: Авторизация
+      operationId: Авторизация
+      parameters:
+        - name: login
+          in: query
+          description: login
+          required: true
+          schema:
+            type: string
+            format: string
+        - name: password
+          in: query
+          description: password encode base64
+          required: true
+          schema:
+            type: string
+            format: string
+      responses:
+        204:
+          description: An error has occurred
+  /auth/register:
+    post:
+        tags:
+        - "auth"
+        summary: Регистрация
+        description: Регистрация
+        operationId: Регистрация
+        parameters:
+          - name: login
+            in: query
+            description: login
+            required: true
+            schema:
+              type: string
+              format: string
+          - name: password
+            in: query
+            description: password
+            required: true
+            schema:
+              type: string
+              format: string
+          - name: role
+            in: query
+            description: role
+            required: true
+            schema:
+              type: string
+              format: string
+        responses:
+          204:
+            description: An error has occurred
+  /auth/logout:
+    post:
+        tags:
+        - "auth"
+        summary: Logout
+        description: Logout
+        operationId: Logout
+        parameters:
+          - name: user
+            in: query
+            description: login
+            required: true
+            schema:
+              type: string
+              format: string
+        responses:
+          204:
+            description: An error has occurred
   /users:
     get:
       tags:
@@ -215,81 +290,6 @@ paths:
       responses:
         204:
           description: An error has occurred
-  /auth/signin:
-    post:
-      tags:
-      - "auth"
-      summary: Авторизация
-      description: Авторизация
-      operationId: Авторизация
-      parameters:
-        - name: login
-          in: query
-          description: login
-          required: true
-          schema:
-            type: string
-            format: string
-        - name: password
-          in: query
-          description: password encode base64
-          required: true
-          schema:
-            type: string
-            format: string
-      responses:
-        204:
-          description: An error has occurred
-  /auth/register:
-    post:
-        tags:
-        - "auth"
-        summary: Регистрация
-        description: Регистрация
-        operationId: Регистрация
-        parameters:
-          - name: login
-            in: query
-            description: login
-            required: true
-            schema:
-              type: string
-              format: string
-          - name: password
-            in: query
-            description: password
-            required: true
-            schema:
-              type: string
-              format: string
-          - name: role
-            in: query
-            description: role
-            required: true
-            schema:
-              type: string
-              format: string
-        responses:
-          204:
-            description: An error has occurred
-  /auth/logout:
-    post:
-        tags:
-        - "auth"
-        summary: Logout
-        description: Logout
-        operationId: Logout
-        parameters:
-          - name: user
-            in: query
-            description: login
-            required: true
-            schema:
-              type: string
-              format: string
-        responses:
-          204:
-            description: An error has occurred
     
 components:
   schemas:
