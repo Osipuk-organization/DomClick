@@ -29,17 +29,17 @@ export const getFlats = ({id='', ...data}={}) => (dispatch) => {
 
 export const createFlats = (data, history) => (dispatch) => {
   let formData = new FormData();
-  formData.append('json', JSON.stringify(data));
+  formData.append('json', JSON.stringify(data.json));
 
   function append(binary, name) {
     binary.forEach(i => {
-      formData.append(`${name}[]`, i, i.name);
+      formData.append(`${name}`, i, i.name);
     })
   }
 
-  append(data.documentsBinary, 'documents');
-  append(data.fotoBinary, 'foto');
-  append(data.videoBinary, 'video');
+  append(data.files.documentsBinary, 'documents');
+  append(data.files.fotoBinary, 'foto');
+  append(data.files.videoBinary, 'video');
 
   fetch('/flats', {
     method: 'post',

@@ -17,32 +17,20 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     contentBase: path.resolve(__dirname, 'dist'),
-    proxy: {
-      '/flats': {
+    proxy: [
+      {
+        context: ['/flats', '/users', '/auth'],
         target: 'http://osipuk.ru:4000/',
-        pathRewrite: {'^/' : ''},
         changeOrigin: true,
         secure: false,
       },
-      '/users': {
-        target: 'http://osipuk.ru:4000/',
-        pathRewrite: {'^/' : ''},
-        changeOrigin: true,
-        secure: false,
-      },
-      '/auth': {
-        target: 'http://osipuk.ru:4000/',
-        pathRewrite: {'^/' : ''},
-        changeOrigin: true,
-        secure: false,
-      },
-      '/api': {
+      {
+        context: ['/api'],
         target: 'http://localhost:3000/',
-        pathRewrite: {'^/api' : ''},
         changeOrigin: true,
         secure: false,
       }
-    }
+    ]
   },
   module: {
     rules: [
