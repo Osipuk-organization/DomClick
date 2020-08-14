@@ -21,11 +21,12 @@ export const CardInfo = function(props) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   useEffect(function() {
+    if (similar.length < 10) {
+      console.log(id, flat)
+      getFlats();
+    }
     if (!flat) {
       getFlats({id});
-    }
-    if (similar.length < 10) {
-      getFlats();
     }
   }, [null]);
 

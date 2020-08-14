@@ -15,21 +15,40 @@ export const TopMenu = function(props) {
               <Link className="link top-menu__logo-box" to="/">
                   <img className="top-menu__logo" src="/svg/logo.svg" alt="logo" />
               </Link>
+              <input className="top-menu__checkbox" id="menu" type="checkbox" />
+              <label className="top-menu__button top-menu__icon" htmlFor="menu"><i className="top-menu__button-icon"></i></label>
               <nav className="top-menu__nav">
+                  <label className="top-menu__background" htmlFor="menu"></label>
+                  <label className="top-menu__button _close" htmlFor="menu">
+                      <i className="top-menu__button-icon"></i>
+                  </label>
                   <ul className="top-menu__list">
-                      <li className="top-menu__item"><Link className="link top-menu__link" to="/">Услуги</Link></li>
-                      <li className="top-menu__item"><Link className="link top-menu__link" to="/">Застройщики</Link></li>
-                      <li className="top-menu__item"><Link className="link top-menu__link" to="/">Ипотека</Link></li>
-                      <li className="top-menu__item"><Link className="link top-menu__link" to="/">Контакты</Link></li>
+                      <li className="top-menu__item">
+                          <Link className="link top-menu__link" to="/">Услуги</Link>
+                      </li>
+                      <li className="top-menu__item">
+                          <Link className="link top-menu__link" to="/">Застройщики</Link>
+                      </li>
+                      <li className="top-menu__item">
+                          <Link className="link top-menu__link" to="/">Ипотека</Link>
+                      </li>
+                      <li className="top-menu__item">
+                          <Link className="link top-menu__link" to="/">Контакты</Link>
+                      </li>
                   </ul>
               </nav>
+
               <div className="top-menu__space"></div>
               <div className="top-menu__right">
-                  <Link className="link top-menu__link" to="/profile">
-                      Личный кабинет
+                  <Link className="link top-menu__icon _user" to="/profile" title="Личный кабинет">
+                      <span className="_v-hidden">Личный кабинет</span>
                   </Link>
-                  <Link className="link top-menu__icon _heart" to="/"></Link>
-                  <Link className="link top-menu__icon _bell" to="/"></Link>
+                  <Link className="link top-menu__icon _heart" to="/" title="Избранные">
+                      <span className="_v-hidden">Избранные</span>
+                  </Link>
+                  <Link className="link top-menu__icon _bell" to="/" title="Уведомления">
+                      <span className="_v-hidden">Уведомления</span>
+                  </Link>
               </div>
           </div>
       </div>
