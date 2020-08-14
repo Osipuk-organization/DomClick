@@ -21,15 +21,30 @@
     font-size: 1.125rem;
     font-weight: 500;
     padding: 8px 15px;
-    &._left {
-      text-align: right;
-    }
+    white-space: nowrap;
+    text-align: center;
   }
   &__button-box {
-    padding: 80px 15px 0 15px;
-    &._left {
-      display: flex;
-      justify-content: flex-end;
+    display: flex;
+    padding: 8px 16px;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 576px) {
+  .header {
+    &__bot-text {
+      text-align: left;
+      &._left {
+        text-align: right;
+      }
+    }
+    &__button-box {
+      padding: 80px 16px 8px;
+      justify-content: flex-start;
+      &._left {
+        justify-content: flex-end;
+      }
     }
   }
 }
