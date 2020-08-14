@@ -1,5 +1,6 @@
 import { createAction } from 'redux-actions';
 import {statusCode} from "utils/statusCode";
+import { server } from '@/server';
 
 export const getFlatsAction = createAction('[Flats] getFlatsAction');
 export const createFlatsAction = createAction('[Flats] createFlatsAction');
@@ -14,7 +15,7 @@ export const getFlats = ({id='', ...data}={}) => (dispatch) => {
     req.push(`${i}=${data[i]}`)
   }
 
-  fetch(`/flats/${id}?${req.join('&')}`)
+  fetch(`${server}/flats/${id}?${req.join('&')}`)
     .then(function parse(res) {
       statusCode(res, 200);
       return res.json()
@@ -41,7 +42,7 @@ export const createFlats = (data) => (dispatch) => {
   append(data.files.fotoBinary, 'foto');
   append(data.files.videoBinary, 'video');
 
-  fetch('/flats', {
+  fetch(`${server}/flats`, {
     method: 'post',
     cache: 'no-cache',
     credentials: 'same-origin',
@@ -60,7 +61,7 @@ export const createFlats = (data) => (dispatch) => {
 };
 
 export const updateFlats = ({id='', ...data}) => (dispatch) => {
-  fetch(`/flats/${id}`, {
+  fetch(`${server}/flats/${id}`, {
     method: 'put',
     headers: {
       'Accept': 'application/json',
@@ -83,7 +84,7 @@ export const updateFlats = ({id='', ...data}) => (dispatch) => {
 };
 
 export const deleteFlats = ({id='', ...data}) => (dispatch) => {
-  fetch(`/flats/${id}`, {
+  fetch(`${server}/flats/${id}`, {
     method: 'delete',
     cache: 'no-cache',
     credentials: 'same-origin',
