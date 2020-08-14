@@ -1,0 +1,1 @@
+export const server = 'http://osipuk.ru:4000';

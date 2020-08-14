@@ -1,13 +1,14 @@
 import { createAction } from 'redux-actions';
 import { getCookie } from 'utils/cookies';
 import { statusCode } from 'utils/statusCode';
+import { server } from '@/server';
 
 export const signinAuthAction = createAction('[Auth] signinAuthAction');
 export const registerAuthAction = createAction('[Auth] registerAuthAction');
 export const logoutAuthAction = createAction('[Auth] logoutAuthAction');
 
 export const signinAuth = (data) => (dispatch) => {
-  fetch('/auth/signin', {
+  fetch(`${server}/auth/signin`, {
     method: 'post',
     headers: {
       'Accept': 'application/json',
@@ -30,7 +31,7 @@ export const signinAuth = (data) => (dispatch) => {
 };
 
 export const registerAuth = (data) => (dispatch) => {
-  fetch('/auth/register', {
+  fetch(`${server}/auth/register`, {
     method: 'post',
     headers: {
       'Accept': 'application/json',
@@ -53,7 +54,7 @@ export const registerAuth = (data) => (dispatch) => {
 };
 
 export const logoutAuth = () => (dispatch) => {
-  fetch('/auth/logout', {
+  fetch(`${server}/auth/logout`, {
     method: 'post',
     cache: 'no-cache',
     credentials: 'same-origin',
@@ -71,7 +72,7 @@ export const logoutAuth = () => (dispatch) => {
 };
 
 export const verify = () => (dispatch) => {
-  fetch('/verify', {
+  fetch(`${server}/verify`, {
     method: 'get',
     cache: 'no-cache',
     credentials: 'same-origin',

@@ -1,5 +1,6 @@
 import { createAction } from 'redux-actions';
 import {statusCode} from "utils/statusCode";
+import { server } from '@/server';
 
 export const getUsersAction = createAction('[User] getUsersAction');
 export const createUsersAction = createAction('[User] createUsersAction');
@@ -14,7 +15,7 @@ export const getUsers = ({id='', ...data}) => (dispatch) => {
   }
   req.push(`_r=${Math.random()}`)
 
-  fetch(`/users/${id}?${req.join('&')}`,{
+  fetch(`${server}/users/${id}?${req.join('&')}`,{
     method: 'get',
     cache: 'no-cache',
     credentials: 'same-origin',
@@ -32,7 +33,7 @@ export const getUsers = ({id='', ...data}) => (dispatch) => {
 };
 
 export const createUsers = (data) => (dispatch) => {
-  fetch('/users', {
+  fetch(`${server}/users`, {
     method: 'post',
     headers: {
       'Accept': 'application/json',
@@ -55,7 +56,7 @@ export const createUsers = (data) => (dispatch) => {
 };
 
 export const updateUsers = ({id='', ...data}) => (dispatch) => {
-  fetch(`/users/${id}`, {
+  fetch(`${server}/users/${id}`, {
     method: 'put',
     headers: {
       'Accept': 'application/json',
@@ -78,7 +79,7 @@ export const updateUsers = ({id='', ...data}) => (dispatch) => {
 };
 
 export const deleteUsers = ({id='', ...data}={}) => (dispatch) => {
-  fetch(`/users/${id}`, {
+  fetch(`${server}/users/${id}`, {
     method: 'delete',
     headers: {
       'Accept': 'application/json',
