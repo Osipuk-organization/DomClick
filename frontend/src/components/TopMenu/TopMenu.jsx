@@ -12,7 +12,8 @@ export const TopMenu = function(props) {
     return (
       <div className="top-menu">
           <div className="_container _row top-menu__row">
-              <Link className="link top-menu__logo-box" to="/">
+              <Link className="link top-menu__logo-box" to="/" title="Главная">
+                  <span className="_v-hidden">Главная</span>
                   <img className="top-menu__logo" src="/svg/logo.svg" alt="logo" />
               </Link>
               <input className="top-menu__checkbox" id="menu" type="checkbox" />

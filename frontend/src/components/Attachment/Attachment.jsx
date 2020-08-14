@@ -1,6 +1,8 @@
 import React from 'react';
 import './Attachment.scss';
 
+import { Link } from 'react-router-dom';
+
 export const Attachment = function(props) {
 
   return (
@@ -10,8 +12,12 @@ export const Attachment = function(props) {
           <h2 className="attachment__caption">Скачайте наше приложение</h2>
           <div className="attachment__text">Совершайте сделки безопасно, легко<br/>и&nbsp;комфортно на&nbsp;кончиках пальцев</div>
           <div className="attachment__get-box">
-            <a className="link attachment__get _gpl" href="#"></a>
-            <a className="link attachment__get _app" href="#"></a>
+            <Link className="link attachment__get _gpl" to="/" target="_blank">
+              <span className="_v-hidden">Установить приложение из Google Play</span>
+            </Link>
+            <Link className="link attachment__get _app" to="/" target="_blank">
+              <span className="_v-hidden">Установить приложение из App Store</span>
+            </Link>
           </div>
         </div>
       </div>
