@@ -19,6 +19,7 @@ export const useFormRadioGroup = function (initialValue, name, callback) {
   return {
     value,
     name,
+    type: 'radio',
     onChange: handleChange
   }
 };

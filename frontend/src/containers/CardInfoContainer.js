@@ -7,6 +7,7 @@ import { CardInfo } from 'components/CardInfo';
 
 function mapStateToProps(state, ownProps) {
   const { id } = ownProps.match.params;
+
   return {
     ...ownProps,
     id,

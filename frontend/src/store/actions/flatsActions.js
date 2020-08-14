@@ -27,7 +27,7 @@ export const getFlats = ({id='', ...data}={}) => (dispatch) => {
     });
 };
 
-export const createFlats = (data, history) => (dispatch) => {
+export const createFlats = (data) => (dispatch) => {
   let formData = new FormData();
   formData.append('json', JSON.stringify(data.json));
 
@@ -52,14 +52,10 @@ export const createFlats = (data, history) => (dispatch) => {
       return res.json()
     })
     .then(function result(flats) {
-      dispatch(createFlatsAction(flats))
-      if (history) {
-        history.push('/');
-        history.replace('/');
-      }
+      return dispatch(createFlatsAction(flats))
     })
     .catch(function error(err) {
-      dispatch(createFlatsAction( {type: "error", message: err} ))
+      return dispatch(createFlatsAction( {type: "error", message: err} ))
     });
 };
 
@@ -79,10 +75,10 @@ export const updateFlats = ({id='', ...data}) => (dispatch) => {
       return res.json()
     })
     .then(function result(flats) {
-      dispatch(updateFlatsAction(flats))
+      return dispatch(updateFlatsAction(flats))
     })
     .catch(function error(err) {
-      dispatch(updateFlatsAction( {type: "error", message: err} ))
+      return dispatch(updateFlatsAction( {type: "error", message: err} ))
     });
 };
 
@@ -93,11 +89,11 @@ export const deleteFlats = ({id='', ...data}) => (dispatch) => {
     credentials: 'same-origin',
   })
     .then(function result(res) {
-      statusCode(res, 204);
-      dispatch(deleteFlatsAction(id))
+      statusCode(res, 200);
+      return dispatch(deleteFlatsAction(id))
     })
     .catch(function error(err) {
-      dispatch(deleteFlatsAction( {type: "error", message: err} ))
+      return dispatch(deleteFlatsAction( {type: "error", message: err} ))
     });
 };
 

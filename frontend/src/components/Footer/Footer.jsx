@@ -1,6 +1,8 @@
 import React from 'react';
 import './Footer.scss';
 
+import { Link } from 'react-router-dom';
+
 import 'svg/logo.svg';
 import 'svg/app.svg';
 
@@ -10,20 +12,21 @@ export const Footer = function(props) {
     <footer className="footer">
       <div className="_container _row footer__row">
         <div className="footer__item">
-          <a className="link" href="/">
+          <Link className="link" to="/" title="Главная">
+            <span className="_v-hidden">Главная</span>
             <img className="footer__logo" src="/svg/logo.svg" alt="logo" />
-          </a>
+          </Link>
         </div>
         <div className="footer__item _row">
           <div className="footer__col">
-            <a className="footer__link link" href="#">Контакты</a>
-            <a className="footer__link link" href="#">Партнерам</a>
-            <a className="footer__link link" href="#">Застройщики</a>
+            <Link className="footer__link link" to="/">Контакты</Link>
+            <Link className="footer__link link" to="/">Партнерам</Link>
+            <Link className="footer__link link" to="/">Застройщики</Link>
           </div>
           <div className="footer__col">
-            <a className="footer__link link" href="#">Обратная&nbsp;связь</a>
-            <a className="footer__link link" href="#">Услуги</a>
-            <a className="footer__link link" href="#">Ипотека</a>
+            <Link className="footer__link link" to="/">Обратная&nbsp;связь</Link>
+            <Link className="footer__link link" to="/">Услуги</Link>
+            <Link className="footer__link link" to="/">Ипотека</Link>
           </div>
         </div>
         <div className="footer__item">
@@ -33,9 +36,10 @@ export const Footer = function(props) {
           </div>
         </div>
         <div className="footer__item">
-          <a className="link" href="#" target="_blank">
+          <Link className="link" to="/" target="_blank">
+            <span className="_v-hidden">Установить приложение из App Store</span>
             <img className="footer__app" src="/svg/app.svg" alt="App Store" />
-          </a>
+          </Link>
         </div>
       </div>
     </footer>
