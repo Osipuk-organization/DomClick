@@ -1,4 +1,5 @@
-const path = require('path'),
+const fs = require('fs'),
+  path = require('path'),
   HTMLplugin = require('html-webpack-plugin'),
   MiniCssExtractPlugin = require('mini-css-extract-plugin'),
   UglifyJsPlugin = require('uglifyjs-webpack-plugin'),
@@ -15,6 +16,7 @@ module.exports = {
     publicPath: '/',
   },
   devServer: {
+    https: true,
     historyApiFallback: true,
     contentBase: path.resolve(__dirname, 'dist'),
     proxy: [
@@ -26,7 +28,7 @@ module.exports = {
       },
       {
         context: ['/api'],
-        target: 'http://localhost:3000/',
+        target: 'https://dev.osipuk.ru/',
         changeOrigin: true,
         secure: false,
       }

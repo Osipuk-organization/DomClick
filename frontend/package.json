@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open",
+    "start": "webpack-dev-server --https --mode development --open",
     "build": "rimraf ./dist && webpack --mode production",
     "json": "json-server --watch db.json --port 3000",
     "lint": "npx eslint --ext .js,.jsx,.ts,.tsx --fix ./",
