@@ -15,7 +15,7 @@ const helmet = require('helmet')
 dotenv.config({ path: path.resolve(__dirname, '.env') })
 
 const PORT = process.env.SERVER_PORT || 4000
-const router = require(path.resolve(__dirname, 'routes'))
+const router = require('./routes')
 const passport = require('./middlewares/passport')
 
 //Mongo connect
@@ -59,7 +59,7 @@ app.use((req, res, next) => {
   next()
 })
 
-app.use(router)
+app.use('/api',router)
 
 app.set('view engine', 'pug')
 app.set('views', path.resolve(__dirname, 'views'))
