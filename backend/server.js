@@ -59,7 +59,7 @@ app.use((req, res, next) => {
   next()
 })
 
-app.use('/api',router)
+app.use(router)
 
 app.set('view engine', 'pug')
 app.set('views', path.resolve(__dirname, 'views'))
