@@ -9,6 +9,7 @@ import { createFlats } from "actions/flatsActions";
 function mapStateToProps(state, ownProps) {
   return {
     ...ownProps,
+    isAuth: state.auth.isAuth,
   }
 }
 
@@ -17,7 +18,6 @@ function mapDispatchToProps(dispatch, props) {
     formTemplate,
     ...otherProps
   } = props;
-
 
   return {
     ...otherProps,

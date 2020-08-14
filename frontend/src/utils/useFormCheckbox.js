@@ -17,6 +17,7 @@ export const useFormCheckbox = function (initialValue, name, callback) {
   return {
     checked: value,
     name,
+    type: 'checkbox',
     onChange: handleChange
   }
 };

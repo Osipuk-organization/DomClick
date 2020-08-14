@@ -26,6 +26,7 @@ export const useFormCheckboxGroup = function (initialValue, name, callback) {
   return {
     value,
     name,
+    type: 'checkbox',
     onChange: handleChange
   }
 };

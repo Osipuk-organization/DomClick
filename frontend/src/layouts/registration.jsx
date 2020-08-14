@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react'
 
-import { RegistrationForm } from "components/RegistrationForm/RegistrationForm";
+import { RegistrationFormContainer } from "containers/RegistrationFormContainer";
 
 const Registration = (props) => {
 
     return (
         <Fragment>
-            <RegistrationForm />
+            <RegistrationFormContainer />
         </Fragment>
     )
 }

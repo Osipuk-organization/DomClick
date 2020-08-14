@@ -3,8 +3,11 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { withRouter } from "react-router";
 
-import { SignIn } from 'components/SignIn';
-import { signinAuth } from 'actions/authActions';
+import { RegistrationForm } from "components/RegistrationForm";
+
+import {
+  registerAuth,
+} from 'actions/authActions';
 
 function mapStateToProps(state, ownProps) {
   return {
@@ -16,11 +19,11 @@ function mapStateToProps(state, ownProps) {
 function mapDispatchToProps(dispatch, props) {
   return {
     ...props,
-    signinAuth: (data) => dispatch(signinAuth(data)),
+    registerAuth: (data) => dispatch(registerAuth(data)),
   }
 }
 
-export const SignInContainer = compose(
+export const RegistrationFormContainer = compose(
   withRouter,
   connect(mapStateToProps, mapDispatchToProps),
-)(SignIn);
+)(RegistrationForm);

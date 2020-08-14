@@ -25,7 +25,7 @@ export const TopMenu = function(props) {
               </nav>
               <div className="top-menu__space"></div>
               <div className="top-menu__right">
-                  <Link className="link top-menu__link" to="/sign-in">
+                  <Link className="link top-menu__link" to="/profile">
                       Личный кабинет
                   </Link>
                   <Link className="link top-menu__icon _heart" to="/"></Link>

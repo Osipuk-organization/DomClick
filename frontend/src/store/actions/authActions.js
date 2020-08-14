@@ -15,7 +15,6 @@ export const signinAuth = (data) => (dispatch) => {
     },
     cache: 'no-cache',
     credentials: 'same-origin',
-    // rememberMe: true
     body: JSON.stringify(data)
   })
     .then(function parse(res) {
@@ -53,7 +52,7 @@ export const registerAuth = (data) => (dispatch) => {
     });
 };
 
-export const logoutAuth = (data) => (dispatch) => {
+export const logoutAuth = () => (dispatch) => {
   fetch('/auth/logout', {
     method: 'post',
     cache: 'no-cache',
@@ -71,7 +70,7 @@ export const logoutAuth = (data) => (dispatch) => {
     });
 };
 
-export const verify = (data) => (dispatch) => {
+export const verify = () => (dispatch) => {
   fetch('/verify', {
     method: 'get',
     cache: 'no-cache',
