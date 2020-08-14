@@ -11,6 +11,8 @@ const hostdb = process.env.DB_HOST
 const portdb = process.env.DB_PORT
 const authdb = process.env.DB
 
+mongoose.set('useCreateIndex', true)
+
 if (ssh) {
   const tunnel_config = {
     username: process.env.SSH_USERNAME,
@@ -22,7 +24,7 @@ if (ssh) {
     localHost: '127.0.0.1',
     localPort: '27000',
   }
-
+mongoose.set('useCreateIndex', true)
   tunnel(tunnel_config, (error, server) => {
     if (error) {
       cursor.red().write(`SSH connection error: ${error}\n`).reset()
@@ -30,7 +32,7 @@ if (ssh) {
     }
 
     cursor.green().write('SSH ok\n').reset()
-    mongoose.set('useCreateIndex', true)
+    
     const options = {
       useNewUrlParser: true,
       useUnifiedTopology: true, 
