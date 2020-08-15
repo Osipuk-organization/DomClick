@@ -9,17 +9,16 @@ import ru.osipuc.domclick.R
 import ru.osipuc.domclick.utilites.APP_ACTIVITY
 import ru.osipuc.domclick.utilites.showToast
 
-class AdapterApartments() : RecyclerView.Adapter<AdapterApartments.ViewHolderApartments>(), View.OnClickListener {
-    class ViewHolderApartments(itemView: View) : RecyclerView.ViewHolder(itemView){
-    }
+class AdapterApartments() : RecyclerView.Adapter<AdapterApartments.ViewHolderApartments>(),
+    View.OnClickListener {
+    class ViewHolderApartments(itemView: View) : RecyclerView.ViewHolder(itemView)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderApartments {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_apartment, parent, false)
-        return ViewHolderApartments(
-            view
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderApartments =
+        ViewHolderApartments(
+            LayoutInflater.from(parent.context)
+                .inflate(R.layout.item_apartment, parent, false)
         )
-    }
+
 
     override fun getItemCount() = 20
 

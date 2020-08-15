@@ -33,7 +33,7 @@
     </fragment>
     <fragment
         android:id="@+id/cardOfApartmentFragment"
-        android:name="ru.osipuc.domclick.ui.fragments.CardOfApartmentFragment"
+        android:name="ru.osipuc.domclick.ui.fragments.cardOfApartmentFragment.CardOfApartmentFragment"
         android:label="fragment_card_of_apartment"
         tools:layout="@layout/fragment_card_of_apartment" />
 </navigation>

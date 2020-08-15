@@ -11,7 +11,6 @@ class ListFragment : Fragment(R.layout.fragment_list) {
     private lateinit var mRecyclerView: RecyclerView
     private lateinit var mAdapter: AdapterApartments
 
-
     override fun onResume() {
         super.onResume()
         mAdapter = AdapterApartments()
