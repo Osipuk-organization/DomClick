@@ -13,7 +13,7 @@ class CardOfApartmentFragment : Fragment(R.layout.fragment_card_of_apartment) {
 
     override fun onStart() {
         super.onStart()
-        APP_ACTIVITY.navBottom.visibility = View.GONE
+            //  APP_ACTIVITY.navBottom.visibility = View.GONE
     }
 
     override fun onResume() {
