@@ -13,6 +13,14 @@ import ru.osipuc.domclick.utilites.APP_ACTIVITY
 
 class NavBottomFragment : Fragment(R.layout.fragment_nav_bottom) {
 
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_nav_bottom, container, false)
+    }
+
     override fun onResume() {
         super.onResume()
 

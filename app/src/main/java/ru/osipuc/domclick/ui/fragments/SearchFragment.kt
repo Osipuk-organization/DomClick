@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
-import androidx.core.text.HtmlCompat
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import kotlinx.android.synthetic.main.bottom_sheet_apartment.*
@@ -123,9 +122,9 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
 
     private fun setTextBuySell() {
         when (isCheckedBuySell) {
-            1 -> iWantBuy.text = HtmlCompat.fromHtml(getString(R.string.i_want_buy), HtmlCompat.FROM_HTML_MODE_COMPACT)
-            2 -> iWantBuy.text = HtmlCompat.fromHtml(getString(R.string.i_want_rent), HtmlCompat.FROM_HTML_MODE_COMPACT)
-            3 -> iWantBuy.text = HtmlCompat.fromHtml(getString(R.string.i_want_sell), HtmlCompat.FROM_HTML_MODE_COMPACT)
+            1 -> iWantBuy.setText(Html.fromHtml(getString(R.string.i_want_buy)))
+            2 -> iWantBuy.setText(Html.fromHtml(getString(R.string.i_want_rent)))
+            3 -> iWantBuy.setText(Html.fromHtml(getString(R.string.i_want_sell)))
         }
     }
 

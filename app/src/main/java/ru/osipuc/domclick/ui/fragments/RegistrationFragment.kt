@@ -15,14 +15,12 @@ class RegistrationFragment : Fragment(R.layout.fragment_registration) {
                 registration_fragment_or_phone_text.visibility = View.GONE
                 registration_fragment_conditions.visibility = View.GONE
                 registration_fragment_reg_btn.text = getString(R.string.confirm)
-
-                registration_fragment_reg_btn.setOnClickListener {
-
-                }
             }
         }
 
+        registration_fragment_reg_btn.setOnClickListener {
 
+        }
     }
 
 }
