@@ -1,0 +1,39 @@
+.cost {
+  padding-top: 64px - 15;
+  justify-content: space-between;
+  &__item {
+    position: relative;
+    padding: 15px + 16 15px 15px + 16 84px + 15;
+    font-size: 1.5rem;
+    color: #8cc3e2;
+    background-repeat: no-repeat;
+    background-position: center left 15px;
+    background-size: 60px auto;
+    &._studio {
+      background-image: url(../../assets/svg/icon_cost_studio.svg);
+    }
+    &._bedroom {
+      background-image: url(../../assets/svg/icon_cost_bedroom.svg);
+    }
+    &._house {
+      background-image: url(../../assets/svg/icon_cost_house.svg);
+    }
+    &:before,
+    &:after {
+      display: block;
+      position: absolute;
+      z-index: 2;
+      left: 84px + 15;
+      font-size: 0.75rem;
+      color: #3f3f3f;
+    }
+    &:before {
+      top: 17px;
+      content: 'от';
+    }
+    &:after {
+      bottom: 17px;
+      content: attr(data-type);
+    }
+  }
+}
