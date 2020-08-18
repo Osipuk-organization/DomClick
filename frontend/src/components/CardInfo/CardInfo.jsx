@@ -21,8 +21,7 @@ export const CardInfo = function(props) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   useEffect(function() {
-    if (similar.length < 10) {
-      console.log(id, flat)
+    if (similar.length < 1) {
       getFlats();
     }
     if (!flat) {
@@ -135,8 +134,8 @@ export const CardInfo = function(props) {
                 >
                 </SwiperSlide>
               }
-              <div className="card-info__prev" id="card-prev"></div>
-              <div className="card-info__next" id="card-next"></div>
+              <div className="card-info__prev" id="v-card-prev"></div>
+              <div className="card-info__next" id="v-card-next"></div>
             </Swiper>
             <div className="_col-12 card-info__price">{flat.terms_of_sale.cost.value} ₽<span
               className="card-info__sub-price">{Math.round(flat.terms_of_sale.cost.value / flat.flat.square)} ₽/м<sup>2</sup></span></div>

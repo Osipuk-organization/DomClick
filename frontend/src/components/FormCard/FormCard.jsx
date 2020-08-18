@@ -20,7 +20,7 @@ export const FormCard = function(props) {
   const mapData = {
     center: [+inputs.addressX.value, +inputs.addressY.value],
     zoom: 12,
-  }
+  };
 
   const coordinates = [
     [+inputs.addressX.value, +inputs.addressY.value],
@@ -657,7 +657,7 @@ export const FormCard = function(props) {
           rounded
           active
           label="Сохранить"
-          onClick={sendForm.bind(null, history)}
+          onClick={sendForm}
         />
       </div>
       }

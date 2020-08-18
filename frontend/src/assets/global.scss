@@ -9,6 +9,7 @@ body {
   font-family: $default-font;
   font-weight: 400;
   color: $p-text-color;
+  user-select: none;
 }
 
 .wrapper {
@@ -173,6 +174,7 @@ strong {
   background-color: $background-color;
   border-color: $p-active-color;
   text-align: left;
+  user-select: auto;
   &._s {
     color: $p-text-color;
     border-radius: 0;

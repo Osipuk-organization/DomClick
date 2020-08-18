@@ -33,9 +33,10 @@
     background-position: center center;
     background-size: cover;
     &:nth-child(2) {
-      margin: 0 8px;
+      margin-left: 8px;
     }
     &:nth-child(3) {
+      margin-left: 8px;
       flex-grow: 0;
       min-width: 88px;
       width: 88px;

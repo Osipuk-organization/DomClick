@@ -90,7 +90,7 @@ export const RegistrationForm = (props) => {
         <div className="password-field">
           <p>Введите пароль</p>
           <input {...password} type="password" placeholder="Пароль" required />
-          <input {...checkPassword} placeholder="Повторите пароль" required />
+          <input {...checkPassword} type="password" placeholder="Повторите пароль" required />
         </div>
         <div className="password-field">
           <p>Введите роль</p>

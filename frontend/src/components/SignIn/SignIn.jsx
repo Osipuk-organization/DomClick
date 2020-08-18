@@ -14,9 +14,9 @@ export const SignIn = (props) => {
     signinAuth,
   } = props;
 
-  const email = useFormInput('admin');
-  const password = useFormInput('admin');
-  const rememberMe = useFormCheckbox(true);
+  const email = useFormInput('admin', 'email');
+  const password = useFormInput('admin', 'password');
+  const rememberMe = useFormCheckbox(true, 'rememberMe');
 
 
   useEffect(function() {
@@ -50,7 +50,7 @@ export const SignIn = (props) => {
           <label className="sign-in__form__password">
             Введите пароль
             <input
-              type="text"
+              type="password"
               {...password}
             />
           </label>
