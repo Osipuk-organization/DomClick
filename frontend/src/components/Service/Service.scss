@@ -1,10 +1,8 @@
 .service {
-  padding-top: 70px - 15;
-  padding-bottom: 92px - 15;
+  padding: 16px 0;
   &__item {
     position: relative;
-    padding-top: 154px - 70 + 15;
-    font-size: 1.125rem;
+    padding-top: 154px - 70 + 16;
     font-weight: 500;
     text-transform: uppercase;
     text-align: center;
@@ -13,7 +11,7 @@
       position: absolute;
       content: '';
       height: 70px;
-      top: 15px;
+      top: 16px;
       left: 0;
       right: 0;
       background-repeat: no-repeat;
@@ -28,6 +26,15 @@
     }
     &._i3:before {
       background-image: url(../../assets/svg/icon_achievment.svg);
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .service {
+    padding: 70px - 16 0 92px - 16;
+    &__item {
+      font-size: 1.125rem;
     }
   }
 }
