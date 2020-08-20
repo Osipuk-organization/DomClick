@@ -77,9 +77,9 @@ body {
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, .body0 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 400;
   color: #ff7373;
 }
@@ -89,9 +89,20 @@ h1 {
   font-weight: 700;
   text-align: center;
 }
+h2 {
+  font-size: 1.25rem;
+}
+h3 {
+  font-weight: 500;
+}
+
+.body0 {
+  font-size: 1rem;
+  font-weight: 400;
+}
 
 .body1 {
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 400;
 }
 
@@ -170,24 +181,24 @@ strong {
 }
 
 .input {
-  max-width: 280px;
   background-color: $background-color;
-  border-color: $p-active-color;
+  border-bottom-color: $p-text-color;
   text-align: left;
+  font-size: 1rem;
   user-select: auto;
+  &:focus, &:active, &:hover {
+    border-bottom-color: $b-text-color;
+  }
   &._s {
     color: $p-text-color;
-    border-radius: 0;
-    border-color: transparent;
-    border-bottom-color: $p-active-color;
-  }
-  &:focus, &:active, &:hover {
-    border: 1px solid $b-text-color;
-    border-radius: 4px;
+    border-color: $p-text-color;
+    &:focus, &:active, &:hover {
+      border-color: $b-text-color;
+    }
   }
   &:invalid:not(:placeholder-shown),
   &._error {
-    background-color: rgba(255, 117, 117, 0.8);
+    border-color: $p-active-color;
   }
   &:focus + label,
   &:valid:not(:placeholder-shown) + label {

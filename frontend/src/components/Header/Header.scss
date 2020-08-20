@@ -3,24 +3,24 @@
   flex-direction: column;
   justify-content: center;
   min-height: 400px;
-  padding: 15px 0;
+  padding: 16px 0;
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../assets/img/header-bg.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   box-sizing: border-box;
   &__caption {
-    padding: 0 15px;
+    padding: 0 16px;
   }
   &__top-text {
-    padding: 8px 15px;
+    padding: 8px 16px;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.125rem;
   }
   &__bot-text {
     font-size: 1.125rem;
     font-weight: 500;
-    padding: 8px 15px;
+    padding: 8px 16px;
     white-space: nowrap;
     text-align: center;
   }
@@ -45,6 +45,22 @@
       &._left {
         justify-content: flex-end;
       }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    &__top-text {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    &__top-text {
+      font-size: 1.5rem;
     }
   }
 }

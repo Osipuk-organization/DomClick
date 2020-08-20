@@ -37,9 +37,6 @@
     list-style: none;
     align-items: stretch;
   }
-  &__space {
-    flex-grow: 1;
-  }
   &__right {
     display: flex;
     align-items: center;
@@ -47,14 +44,14 @@
   &__icon {
     display: block;
     position: relative;
-    min-width: 25px + 30;
-    min-height: 25px + 30;
+    min-width: 32px + 32;
+    min-height: 32px + 32;
     border-radius: 50%;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: auto 25px;
+    background-size: auto 32px;
     &._user {
-      background-image: url(../../assets/svg/user.svg);
+      background-image: url(../../assets/svg/person.svg);
     }
     &._heart {
       background-image: url(../../assets/svg/heart.svg);
@@ -90,6 +87,9 @@
   }
   &__item {
     height: 100%;
+    &._space {
+      flex-grow: 1;
+    }
   }
   &__link {
     display: flex;
@@ -121,6 +121,7 @@
   &__nav {
     display: flex;
     flex-wrap: nowrap;
+    flex-grow: 1;
   }
 }
 
@@ -131,12 +132,13 @@
     }
     &__link {
       min-height: auto;
+      font-size: 0.875rem;
     }
     &__button {
       display: block;
-      width: 25px + 30;
-      height: 25px + 30;
-      padding: 9px 7px 7px;
+      width: 32px + 32;
+      height: 32px + 32;
+      padding: 13px 12px 7px;
       order: 1;
       border-radius: 50%;
       box-sizing: border-box;
@@ -215,6 +217,7 @@
       transition: all 0.3s ease-in-out;
     }
     &__list {
+      display: block;
       position: absolute;
       z-index: 101;
       width: 100%;
@@ -224,8 +227,6 @@
       right: 0;
       bottom: 0;
       padding: 80px 0 20px;
-      flex-direction: column;
-      justify-content: flex-start;
       overflow-y: auto;
       transform: translateX(100%);
       transition: all 0.3s ease-in-out;
@@ -249,6 +250,11 @@
     }
     &__link {
       width: 100%;
+      text-align: center;
+      justify-content: center;
+      &:after {
+        display: none;
+      }
     }
   }
 }

@@ -18,7 +18,9 @@
     "build-storybook": "build-storybook",
     "cc": "node cli/createComponent.js --name",
     "ccc": "node cli/createContainer.js --name",
-    "update": "ncu -u && npm i && npm audit fix"
+    "update": "ncu -u && npm i && npm audit fix",
+    "pug": "webpack-dev-server --mode development --open --config=webpack-pug.config.js",
+    "html": "rimraf ./html && webpack --mode production --config=webpack-pug.config.js"
   },
   "dependencies": {
     "classnames": "^2.2.6",
@@ -105,6 +107,8 @@
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-loader": "^3.0.0",
     "prettier": "^2.0.5",
+    "pug": "^3.0.0",
+    "pug-loader": "^2.4.0",
     "react-docgen-typescript-loader": "^3.7.2",
     "rimraf": "^3.0.2",
     "sass-loader": "^9.0.2",

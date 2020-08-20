@@ -1,0 +1,13 @@
+doctype html
+html(lang="ru-RU")
+  head
+    include _head
+  body
+    .wrapper
+      include _counters
+      .wrap-container
+        block top-menu
+        main.main
+          block content
+      block footer
+    block end
