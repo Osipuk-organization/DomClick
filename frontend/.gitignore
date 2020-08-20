@@ -15,9 +15,6 @@ node_modules/
 .idea/
 html/
 dist/
-pug/
-*.pug
-webpack-pug*
 
 #dotenv environment variables file
 .env

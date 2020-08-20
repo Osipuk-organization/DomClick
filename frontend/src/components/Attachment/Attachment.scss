@@ -1,7 +1,10 @@
 .attachment {
   background-color: #ebf5fb;
+  &__container {
+    padding: 16px 0;
+  }
   &__caption {
-    padding: 15px 15px 16px;
+    padding: 16px;
   }
   &__text {
     padding: 0 15px;
@@ -44,8 +47,7 @@
 @media (min-width: 992px) {
   .attachment {
     &__container {
-      padding-top: 77px - 15;
-      padding-bottom: 117px - 15;
+      padding: 77px - 15 0 117px - 15;
       position: relative;
       &:before {
         display: block;
