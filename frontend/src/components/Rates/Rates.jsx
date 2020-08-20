@@ -4,7 +4,7 @@ import './Rates.scss';
 export const Rates = function(props) {
     return (
       <section className="rates _container _row">
-          <h3 className="rates__caption _col-12">Тарифы</h3>
+          <h2 className="rates__caption _col-12">Тарифы</h2>
           <div className="_col-12 _col-md-6 _col-lg-4">
               <div className="rates__item">
                   <div className="rates__title _01">VIP</div>

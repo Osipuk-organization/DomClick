@@ -2,7 +2,23 @@
 
 .offers {
   &__sub-caption {
-    font-size: 1.5rem;
+    font-size: 1.125rem;
     padding-bottom: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .offers {
+    &__sub-caption {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .offers {
+    &__sub-caption {
+      font-size: 1.5rem;
+    }
   }
 }

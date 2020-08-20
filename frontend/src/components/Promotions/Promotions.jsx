@@ -4,9 +4,9 @@ import './Promotions.scss';
 export const Promotions = function(props) {
     return (
       <section className="promotions _container _row">
-          <h3 className="promotions__caption _col-12">Наши акции
+          <h2 className="promotions__caption _col-12">Наши акции
             <a className="link promotions__link" href="#">Смотреть все</a>
-          </h3>
+          </h2>
           <div className="_col-12 _col-md-6 _col-lg-4 _col-xl-3">
               <div className="promotions__item">
                   <div className="promotions__title">

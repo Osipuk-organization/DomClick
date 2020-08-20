@@ -4,7 +4,7 @@ import './Additional.scss';
 export const Additional = function(props) {
     return (
       <section className="additional _container _row">
-          <h3 className="additional__caption _col-12">Дополнительные услуги</h3>
+          <h2 className="additional__caption _col-12">Дополнительные услуги</h2>
           <div className="_col-12 _col-md-6 _col-lg-4">
               <div className="additional__item">
                   <div className="additional__title">Медиация</div>
