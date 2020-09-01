@@ -5,14 +5,20 @@ import { withRouter } from "react-router";
 import { getFlats } from 'actions/flatsActions';
 import { CardInfo } from 'components/CardInfo';
 
+import { getFlatItem } from 'utils/getFlatItem';
+
 function mapStateToProps(state, ownProps) {
   const { id } = ownProps.match.params;
+  const flat = state.flats.flats.filter(i => i.id == id || i._id == id)[0];
+  const similar = state.flats.flats
+    .filter(i => i.flat.rooms == flat.flat.rooms && i.deal.type_deal == flat.deal.type_deal)
+    .map(getFlatItem);
 
   return {
     ...ownProps,
     id,
-    flat: state.flats.flats.filter(i => i.id == id || i._id == id)[0],
-    similar: state.flats.flats.filter(i => i.flat.rooms == 1 && i.deal.type_deal == "Продажа"),
+    flat,
+    similar,
   }
 }
 

@@ -3,7 +3,7 @@ import React, {
 } from "react";
 
 export const useFormFiles = function ({accept=[], size}, name="", callback) {
-  const [files, setFiles] = useState("");
+  const [files, setFiles] = useState([]);
 
   const stopProp = function(e) {
     e.stopPropagation();

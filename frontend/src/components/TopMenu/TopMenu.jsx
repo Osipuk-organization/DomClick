@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './TopMenu.scss';
-
+import menu from '@/menu';
 import { Link } from 'react-router-dom';
 
 export const TopMenu = function(props) {
@@ -22,23 +22,19 @@ export const TopMenu = function(props) {
                   <i className="top-menu__button-icon"></i>
               </label>
               <nav className="top-menu__nav">
-                  <label className="top-menu__background" htmlFor="menu"></label>
+                  <label className="top-menu__background" htmlFor="menu">
+                      <span className="_v-hidden">Закрыть меню</span>
+                  </label>
                   <label className="top-menu__button _close" htmlFor="menu">
+                      <span className="_v-hidden">Закрыть меню</span>
                       <i className="top-menu__button-icon"></i>
                   </label>
                   <ul className="top-menu__list">
-                      <li className="top-menu__item">
-                          <Link className="link top-menu__link" to="/">Услуги</Link>
-                      </li>
-                      <li className="top-menu__item">
-                          <Link className="link top-menu__link" to="/">Застройщики</Link>
-                      </li>
-                      <li className="top-menu__item">
-                          <Link className="link top-menu__link" to="/">Ипотека</Link>
-                      </li>
-                      <li className="top-menu__item">
-                          <Link className="link top-menu__link" to="/">Контакты</Link>
-                      </li>
+                      {
+                          menu.map(({link, title}, idx) => <li className="top-menu__item" key={idx}>
+                              <Link className="link top-menu__link" to={link}>{title}</Link>
+                          </li>)
+                      }
                       <li className="top-menu__item _space"></li>
                       <li className="top-menu__item">
                           <label className="link top-menu__link" htmlFor="modal-close">Связаться с экспертом</label>

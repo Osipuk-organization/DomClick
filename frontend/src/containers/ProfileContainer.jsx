@@ -9,11 +9,14 @@ import {
 import { logoutAuth } from 'actions/authActions';
 import {withRouter} from "react-router";
 
+import { getFlatItem } from 'utils/getFlatItem';
+
 function mapStateToProps(state, ownProps) {
+  console.log(state.flats.flats)
   return {
     ...ownProps,
     isAuth: state.auth.isAuth,
-    flats: state.flats.flats,
+    flats: state.flats.flats.map(getFlatItem),
   }
 }
 

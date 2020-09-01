@@ -38,10 +38,10 @@ export const Profile = function(props) {
         {flats.length > 0 &&
         <Fragment>
           <div className="offers__sub-caption _col-12">1-комнатные</div>
-          <SliderRow id="offers2">
+          <SliderRow id="offers">
             {flats.map((i, idx) => <FlatItem
               key={idx}
-              flat={i}
+              {...i}
               deleteFlats={deleteFlats}
               admin
             />)}

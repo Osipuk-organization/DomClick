@@ -4,12 +4,20 @@ import { compose } from 'redux';
 import { getFlats } from 'actions/flatsActions';
 import { Offers } from 'components/Offers';
 
+import { getFlatItem } from 'utils/getFlatItem';
 
 function mapStateToProps(state, ownProps) {
+  const flats1 = state.flats.flats
+    .filter(i => i.flat.rooms == 1 && i.deal.type_deal == "Продажа")
+    .map(getFlatItem);
+  const flats2 = state.flats.flats
+    .filter(i => i.flat.rooms == 2 && i.deal.type_deal == "Продажа")
+    .map(getFlatItem);
+
   return {
     ...ownProps,
-    flats1: state.flats.flats.filter(i => i.flat.rooms == 1 && i.deal.type_deal == "Продажа"),
-    flats2: state.flats.flats.filter(i => i.flat.rooms == 2 && i.deal.type_deal == "Продажа"),
+    flats1,
+    flats2,
   }
 }
 

@@ -62,31 +62,31 @@
     flex-grow: 1;
   }
   &__cost {
+    padding: 8px 15px 4px 0;
     font-size: 1.75rem;
     font-weight: 700;
-    padding: 8px 0 4px;
-  }
-  &__owner {
-    padding: 0 0 4px 32px;
-    font-size: 0.75rem;
-    background-image: url(../../assets/svg/user.svg);
-    background-repeat: no-repeat;
-    background-size: 10px 10px;
-    background-position: left 17px top;
+    white-space: nowrap;
+    box-sizing: border-box;
   }
   &__cost-m {
-    width: 100%;
+    padding: 4px 0;
     font-size: 0.875rem;
+    white-space: nowrap;
+    box-sizing: border-box;
   }
   &__info-box {
+    width: 100%;
     padding: 20px 0;
-    font-size: 0.875rem;
   }
   &__info-item {
     padding: 4px 0 4px 25px;
     background-repeat: no-repeat;
     background-position: left center;
     background-size: 17px auto;
+    font-size: 0.875rem;
+    &._owner {
+      background-image: url(../../assets/svg/user.svg);
+    }
     &._type {
       font-weight: 700;
       background-image: url(../../assets/svg/mdi_home.svg);
@@ -99,5 +99,8 @@
     display: flex;
     width: 100%;
     align-items: center;
+  }
+  &__button {
+    margin-right: 16px;
   }
 }

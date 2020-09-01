@@ -28,12 +28,12 @@ export const Offers = function(props) {
 
   return (
     <section className="offers _container _row _p-t">
-      <h3 className="_col-12 offers__caption">Горячие предложения</h3>
+      <h2 className="_col-12 offers__caption">Горячие предложения</h2>
       {flats1.length > 0 &&
       <Fragment>
         <div className="offers__sub-caption _col-12">1-комнатные</div>
         <SliderRow id="offers1">
-          {flats1.map((i, idx) => <FlatItem key={idx} flat={i}/>)}
+          {flats1.map((i, idx) => <FlatItem key={idx} {...i}/>)}
         </SliderRow>
       </Fragment>
       }
@@ -41,7 +41,7 @@ export const Offers = function(props) {
       <Fragment>
         <div className="offers__sub-caption _col-12">2-комнатные</div>
         <SliderRow id="offers2">
-          {flats2.map((i, idx) => <FlatItem key={idx} flat={i}/>)}
+          {flats2.map((i, idx) => <FlatItem key={idx} {...i}/>)}
         </SliderRow>
       </Fragment>
       }

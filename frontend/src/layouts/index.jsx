@@ -6,9 +6,9 @@ import {Service} from 'components/Service';
 import {Attachment} from 'components/Attachment';
 import {Cost} from 'components/Cost';
 import {OffersContainer} from 'containers/OffersContainer';
-// import {Promotions} from 'components/Promotions';
-// import {Rates} from 'components/Rates';
-// import {Additional} from 'components/Additional';
+import {Promotions} from 'components/Promotions';
+import {Rates} from 'components/Rates';
+import {Additional} from 'components/Additional';
 
 const Index = function(props) {
 
@@ -22,6 +22,9 @@ const Index = function(props) {
       <Attachment />
       <Cost />
       <OffersContainer />
+      <Promotions />
+      <Rates />
+      <Additional />
     </Fragment>
   );
 };

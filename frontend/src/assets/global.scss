@@ -49,8 +49,6 @@ body {
     color: $s-text-color;
   }
   &:hover,
-  &:active,
-  &:focus,
   &._active {
     color: $p-active-color;
     cursor: pointer;

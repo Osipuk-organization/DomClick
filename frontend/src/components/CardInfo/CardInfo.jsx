@@ -21,13 +21,13 @@ export const CardInfo = function(props) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   useEffect(function() {
-    if (similar.length < 1) {
-      getFlats();
-    }
     if (!flat) {
       getFlats({id});
     }
-  }, [null]);
+    if (flat && similar.length < 10) {
+      getFlats({search:`"flat.rooms":"${flat.flat.rooms}"`});
+    }
+  }, [null, flat]);
 
   let card2 = {
     onSwiper: setThumbsSwiper,
@@ -172,7 +172,7 @@ export const CardInfo = function(props) {
               </div>
               <div className="card-info__numbers-item">
                 <div className="card-info__numbers-text">Вид из окон</div>
-                <div className="card-info__numbers-text"></div>
+                <div className="card-info__numbers-text">{flat.additionally.view_from_windows.value.join(', ')}</div>
               </div>
             </div>
           </div>
@@ -196,7 +196,7 @@ export const CardInfo = function(props) {
       <section className="offers _container _row _p-t">
         <h3 className="_col-12 additional__caption">Похожие объявления рядом</h3>
         <SliderRow id="offers1">
-          {similar && similar.map( (i, idx) => <FlatItem key={idx} flat={i} />)}
+          {similar && similar.filter(i => i.id != id && i._id != id).map( (i, idx) => <FlatItem key={idx} {...i} />)}
         </SliderRow>
       </section>
     </Fragment>

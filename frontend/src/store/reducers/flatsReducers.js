@@ -86,9 +86,12 @@ export default handleActions({
       /**
        * need add filter
        */
+      const arr = (action.payload.flats || [action.payload])
+        .filter(i => state.flats.every(element => element.id != i.id || element._id != i._id));
+
       res = {
         ...state,
-        flats: state.flats.concat(action.payload.flats),
+        flats: state.flats.concat(arr),
         error: null,
       };
     } else {
