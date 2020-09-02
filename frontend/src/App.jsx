@@ -7,6 +7,7 @@ import 'assets/global.scss';
 
 import { TopMenuContainer } from 'containers/TopMenuContainer';
 import { Footer } from 'components/Footer';
+import { ErrorBoundary } from 'components/ErrorBoundary';
 
 function App() {
   const { pathname } = useLocation();
@@ -18,25 +19,35 @@ function App() {
   return(
     <Fragment>
       <div className="wrap-container">
-        <TopMenuContainer menu={menu} />
+        <ErrorBoundary>
+          <TopMenuContainer menu={menu} />
+        </ErrorBoundary>
         <main className="main">
-          <Suspense fallback={<div>Loading...</div>}>
-            <Switch>
-              {routes.map(
-                function(route, idx) {
-                  return (
-                    <Route
-                      key={idx}
-                      {...route}
-                    />
-                  )
-                }
-              )}
-            </Switch>
-          </Suspense>
+          <ErrorBoundary>
+            <Suspense fallback={
+              <div className="_container _row">
+                <div className="_col-12">Loading...</div>
+              </div>
+            }>
+              <Switch>
+                {routes.map(
+                  function(route, idx) {
+                    return (
+                      <Route
+                        key={idx}
+                        {...route}
+                      />
+                    )
+                  }
+                )}
+              </Switch>
+            </Suspense>
+          </ErrorBoundary>
         </main>
       </div>
-      <Footer />
+      <ErrorBoundary>
+        <Footer />
+      </ErrorBoundary>
     </Fragment>
   );
 }
