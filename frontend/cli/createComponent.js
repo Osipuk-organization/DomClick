@@ -44,6 +44,6 @@ fs.writeFileSync(
 );
 
 fs.writeFileSync(
-    path.resolve(__dirname, '..', 'src', 'components', componentName, 'index.js'),
+    path.resolve(__dirname, '..', 'src', 'components', componentName, 'store.js'),
     `export { ${componentName} } from './${componentName}';`
 );

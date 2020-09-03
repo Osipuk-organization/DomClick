@@ -12,7 +12,6 @@ import {withRouter} from "react-router";
 import { getFlatItem } from 'utils/getFlatItem';
 
 function mapStateToProps(state, ownProps) {
-  console.log(state.flats.flats)
   return {
     ...ownProps,
     isAuth: state.auth.isAuth,
